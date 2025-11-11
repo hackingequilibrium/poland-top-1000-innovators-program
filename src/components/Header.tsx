@@ -20,7 +20,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
           </Link>
           {simplified ? (
             <div className="text-white">
-              <h1 className="font-inter font-semibold text-sm md:text-base uppercase whitespace-nowrap">
+              <h1 className="font-inter font-semibold text-xl md:text-2xl lg:text-3xl uppercase whitespace-nowrap">
                 Top 1000 Innovators of Poland in Silicon Valley
               </h1>
             </div>
