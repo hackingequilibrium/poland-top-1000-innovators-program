@@ -98,12 +98,12 @@ const VideoHero = () => {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-4">
-        <div className="text-center max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <h1 className="text-5xl md:text-7xl font-bold text-hero-text mb-6 tracking-tight">
-            Welcome to the Future
+      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px]">
+        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-6 tracking-tight leading-tight">
+            Top 1000<br />Innovators
           </h1>
-          <p className="text-xl md:text-2xl text-hero-text/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-hero-text/90 mb-8 max-w-2xl">
             Experience innovation like never before
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
