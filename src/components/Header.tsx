@@ -9,8 +9,9 @@ interface HeaderProps {
 const Header = ({ simplified = false }: HeaderProps) => {
   return (
     <header className="relative z-10">
-      <nav className="absolute top-0 right-0 left-0 flex justify-between items-start px-8 lg:px-[100px] pt-8">
-        <div className="flex flex-row items-center gap-4">
+      <nav className="absolute top-0 right-0 left-0 px-8 lg:px-[100px] pt-8">
+        <div className={simplified ? "max-w-4xl mx-auto flex justify-between items-start" : "flex justify-between items-start"}>
+          <div className="flex flex-row items-center gap-4">
           <Link to="/">
             <img 
               src={polsvLogo} 
@@ -35,15 +36,16 @@ const Header = ({ simplified = false }: HeaderProps) => {
               </p>
             </div>
           )}
-        </div>
+          </div>
         
-        {!simplified && (
+          {!simplified && (
           <div className="hidden md:flex gap-8 items-center pt-2">
             <HeaderLink href="https://polsv.org/home/" external>About PolSV</HeaderLink>
             <HeaderLink href="/lead-session">Lead a Session</HeaderLink>
             <HeaderLink href="https://polsv.org/contact/" external>Contact</HeaderLink>
           </div>
-        )}
+          )}
+        </div>
       </nav>
     </header>
   );
