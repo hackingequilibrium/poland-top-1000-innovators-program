@@ -31,7 +31,7 @@ const LeadSession = () => {
           <div className="mb-8 flex flex-col md:flex-row gap-8 md:gap-8 items-start">
             <div className="md:max-w-[340px]">
               <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
-                Workshop 1<br />Building Industry Partnerships
+                Workshop 1<br />Building Industry<br />Partnerships
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
                 Learn how to position research outcomes for meaningful engagement with corporate R&D teams and investors. This session connects Silicon Valley innovation leaders with Polish research teams to exchange practical insights and real-world case studies on transforming breakthrough technologies from lab to market. As a U.S. moderator, you'll gain a unique opportunity to share best practices, identify co-development pathways, and explore new models of university–industry collaboration with Poland's top scientific talent.
