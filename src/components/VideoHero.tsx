@@ -5,6 +5,10 @@ import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";
 import box3Icon from "@/assets/box3.png";
 import box4Icon from "@/assets/box4.png";
+import box5Icon from "@/assets/box5.png";
+import box6Icon from "@/assets/box6.png";
+import box7Icon from "@/assets/box7.png";
+import box8Icon from "@/assets/box8.png";
 
 const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -230,21 +234,21 @@ const VideoHero = () => {
             
             {/* Third Instance - Red Boxes */}
             <div className="mt-[20px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">4</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Intensive Days</div>
+              <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
+                <img src={box5Icon} alt="Electronics Icon" className="w-auto h-auto scale-[0.77]" />
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Electronics Box 5</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">200</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Elite Researchers</div>
+              <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
+                <img src={box6Icon} alt="Engineering Icon" className="w-auto h-auto scale-[0.77]" />
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Engineering Box 6</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">100+</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Innovation Projects</div>
+              <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
+                <img src={box7Icon} alt="Construction Icon" className="w-auto h-auto scale-[0.77]" />
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Construction Box 7</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">12</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Top Universities</div>
+              <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
+                <img src={box8Icon} alt="Network Icon" className="w-auto h-auto scale-[0.77]" />
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Network Box 8</div>
               </div>
             </div>
           </div>
