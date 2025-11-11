@@ -166,7 +166,7 @@ const VideoHero = () => {
                     For Companies & Investors
                   </span>
                 </div>
-                <div className="font-inter font-bold text-lg md:text-xl lg:text-2xl text-white">Access world-class innovation, ready to scale</div>
+                <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">Access world-class innovation, ready to scale</div>
               </div>
               <div className="bg-[#C70828] flex flex-col items-start justify-center pl-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
