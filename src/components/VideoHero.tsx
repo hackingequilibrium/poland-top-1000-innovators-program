@@ -160,7 +160,7 @@ const VideoHero = () => {
             
             {/* Red Boxes */}
             <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 gap-[20px]">
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-start justify-center pl-8 gap-2">
+              <div className="bg-[#C70828] flex flex-col items-start justify-center pl-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
                   <span className="font-inter font-semibold uppercase text-white text-sm">
                     Dec 9–12, 2025
@@ -169,7 +169,7 @@ const VideoHero = () => {
                 <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-start justify-center pl-8 gap-2">
+              <div className="bg-[#C70828] flex flex-col items-start justify-center pl-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
                   <span className="font-inter font-semibold uppercase text-white text-sm">
                     Dec 9–12, 2025
