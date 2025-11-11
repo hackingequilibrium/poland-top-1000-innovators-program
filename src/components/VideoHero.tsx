@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import polsvLogo from "@/assets/polsv-logo.png";
+import { useCountUp } from "@/hooks/useCountUp";
 import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";
 import box3Icon from "@/assets/box3.png";
@@ -12,6 +13,10 @@ import box8Icon from "@/assets/box8.png";
 
 const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const counter4 = useCountUp(4, 2000);
+  const counter200 = useCountUp(200, 2000);
+  const counter100 = useCountUp(100, 2000);
+  const counter12 = useCountUp(12, 2000);
 
   return (
     <section className="relative h-screen w-full overflow-visible">
@@ -130,20 +135,20 @@ const VideoHero = () => {
           <div className="w-screen -ml-4 md:-ml-12 lg:-ml-[100px] px-4 md:px-12 lg:px-[100px]">
             {/* First Row / Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px] mb-[20px]">
-              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">4</div>
+              <div ref={counter4.elementRef} className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">{counter4.count}</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
               </div>
-              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">200</div>
+              <div ref={counter200.elementRef} className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">{counter200.count}</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
               </div>
-              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">100+</div>
+              <div ref={counter100.elementRef} className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">{counter100.count}+</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
               </div>
-              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">12</div>
+              <div ref={counter12.elementRef} className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">{counter12.count}</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Top Universities</div>
               </div>
             </div>
