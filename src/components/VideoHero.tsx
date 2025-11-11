@@ -20,7 +20,7 @@ const VideoHero = () => {
       <div className="absolute inset-0 bg-hero-overlay/30 backdrop-blur-[1px]" />
       
       {/* Gradient Overlay - Left to Right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">
