@@ -28,83 +28,54 @@ const Admin = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
 
   useEffect(() => {
-    let mounted = true;
-
-    // Check for existing session first
-    const initAuth = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      
-      if (!mounted) return;
-      
-      if (!session?.user) {
-        setLoading(false);
-        navigate("/auth");
-        return;
-      }
-      
-      setSession(session);
-      setUser(session.user);
-      await checkAdminRole(session.user.id);
-    };
-
-    initAuth();
-
-    // Set up auth state listener
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        if (!mounted) return;
-        
-        setSession(session);
-        setUser(session?.user ?? null);
+    const checkAuth = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
         
         if (!session?.user) {
-          setIsAdmin(false);
           setLoading(false);
           navigate("/auth");
+          return;
+        }
+        
+        setSession(session);
+        setUser(session.user);
+        
+        // Check admin role
+        const { data: roleData } = await supabase
+          .from('user_roles')
+          .select('role')
+          .eq('user_id', session.user.id)
+          .eq('role', 'admin')
+          .maybeSingle();
+        
+        setIsAdmin(!!roleData);
+        setLoading(false);
+        
+        if (!roleData) {
+          toast.error("You don't have admin access");
+        }
+      } catch (error) {
+        console.error('Auth check error:', error);
+        setLoading(false);
+      }
+    };
+
+    checkAuth();
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        if (!session?.user) {
+          navigate("/auth");
         } else {
-          await checkAdminRole(session.user.id);
+          checkAuth();
         }
       }
     );
 
-    return () => {
-      mounted = false;
-      subscription.unsubscribe();
-    };
+    return () => subscription.unsubscribe();
   }, [navigate]);
-
-  const checkAdminRole = async (userId: string) => {
-    console.log('Checking admin role for user:', userId);
-    try {
-      const { data, error } = await supabase
-        .from('user_roles')
-        .select('role')
-        .eq('user_id', userId)
-        .eq('role', 'admin')
-        .maybeSingle();
-
-      console.log('Admin role check result:', { data, error });
-
-      if (error) {
-        console.error('Error checking admin role:', error);
-        toast.error("Failed to verify admin access");
-        setIsAdmin(false);
-      } else {
-        setIsAdmin(!!data);
-        if (!data) {
-          toast.error("You don't have admin access");
-        } else {
-          console.log('User is admin!');
-        }
-      }
-    } catch (error) {
-      console.error('Unexpected error:', error);
-      setIsAdmin(false);
-    } finally {
-      console.log('Setting loading to false');
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
     if (isAdmin && user) {
