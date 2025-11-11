@@ -76,7 +76,7 @@ const LeadSession = () => {
             <div className="space-y-2">
               <Label htmlFor="workshop">Workshop</Label>
               <Select>
-                <SelectTrigger id="workshop">
+                <SelectTrigger id="workshop" className="rounded-none">
                   <SelectValue placeholder="Select a workshop" />
                 </SelectTrigger>
                 <SelectContent>
@@ -89,7 +89,7 @@ const LeadSession = () => {
             <div className="space-y-2">
               <Label htmlFor="track">Track</Label>
               <Select>
-                <SelectTrigger id="track">
+                <SelectTrigger id="track" className="rounded-none">
                   <SelectValue placeholder="Select a track" />
                 </SelectTrigger>
                 <SelectContent>
@@ -104,7 +104,7 @@ const LeadSession = () => {
               <Label>Location</Label>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="stanford" />
+                  <Checkbox id="stanford" className="rounded-none" />
                   <label
                     htmlFor="stanford"
                     className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -113,7 +113,7 @@ const LeadSession = () => {
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="berkeley" />
+                  <Checkbox id="berkeley" className="rounded-none" />
                   <label
                     htmlFor="berkeley"
                     className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -126,22 +126,22 @@ const LeadSession = () => {
 
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Enter your name" />
+              <Input id="name" placeholder="Enter your name" className="rounded-none" />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="email">E-mail</Label>
-              <Input id="email" type="email" placeholder="Enter your email" />
+              <Input id="email" type="email" placeholder="Enter your email" className="rounded-none" />
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="linkedin">LinkedIn Profile</Label>
-              <Input id="linkedin" placeholder="Enter your LinkedIn profile URL" />
+              <Input id="linkedin" placeholder="Enter your LinkedIn profile URL" className="rounded-none" />
             </div>
 
             <Button 
               type="submit" 
-              className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase px-6 py-3"
+              className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase px-6 py-3 rounded-none"
             >
               Submit Application →
             </Button>
