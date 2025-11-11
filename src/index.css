@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Hero specific tokens */
-    --hero-overlay: 220 30% 5%;
+    --hero-overlay: 232 56% 13%;
     --hero-text: 0 0% 100%;
     --hero-accent: 340 85% 55%;
     
@@ -93,7 +93,7 @@ All colors MUST be HSL.
     --input: 220 25% 15%;
     --ring: 220 90% 55%;
     
-    --hero-overlay: 220 30% 5%;
+    --hero-overlay: 232 56% 13%;
     --hero-text: 0 0% 100%;
     --hero-accent: 340 85% 60%;
     
