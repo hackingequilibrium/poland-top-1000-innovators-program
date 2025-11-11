@@ -180,7 +180,7 @@ const VideoHero = () => {
               <div className="bg-gradient-to-br from-[#C70828] to-[#A80E34] flex flex-col items-start justify-start p-[40px] gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
                   <span className="font-inter font-bold uppercase text-white text-lg">
-                    For Companies & Investors
+                    For universities
                   </span>
                 </div>
                 <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">
