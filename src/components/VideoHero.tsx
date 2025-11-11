@@ -154,7 +154,7 @@ const VideoHero = () => {
                 The Largest Polish Tech and Science <span className="hidden lg:inline"><br /></span>
                 Delegation Ever in Silicon Valley
               </h2>
-              <p className="font-inter font-light text-[16px] md:text-[18px] lg:text-[20px] text-[#797B8E] leading-relaxed">
+              <p className="font-inter font-light text-base md:text-lg text-[#797B8E] leading-relaxed">
                 200 elite researchers from 12 Polish universities bring over 100 breakthrough projects during four intensive days. <span className="whitespace-nowrap">A unique</span> opportunity to access one of Europe's most talented pools of scientists and engineers, cost-effective R&D partnerships, €95 billion of EU funding, and commercialization-ready innovations – all concentrated in one transformational week.
               </p>
             </div>
