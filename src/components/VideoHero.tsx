@@ -141,16 +141,12 @@ const VideoHero = () => {
             </div>
             
             {/* Second Row */}
-            <div className="bg-white py-[30px] px-[30px] flex items-center justify-start">
-              <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase">
+            <div className="bg-white py-[30px] px-[30px]">
+              <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase mb-4">
                 The Largest Polish Tech and Science <span className="hidden lg:inline"><br /></span>
                 Delegation Ever in Silicon Valley
               </h2>
-            </div>
-            
-            {/* Description Text */}
-            <div className="mt-[20px] px-[30px]">
-              <p className="font-inter font-normal text-[20px] text-[#797B8E] leading-relaxed">
+              <p className="font-inter font-light text-[16px] md:text-[18px] lg:text-[20px] text-[#797B8E] leading-relaxed">
                 200 elite researchers from 12 Polish universities bring over 100 breakthrough projects during four intensive days. A unique opportunity to access one of Europe's most talented pools of scientists and engineers, cost-effective R&D partnerships, €95 billion of EU funding, and commercialization-ready innovations – all concentrated in one transformational week.
               </p>
             </div>
