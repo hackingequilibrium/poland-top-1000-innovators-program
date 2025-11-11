@@ -117,6 +117,14 @@ const VideoHero = () => {
           <p className="font-inter font-normal text-base lg:text-[20px] text-hero-text">
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
+          
+          {/* Four Boxes */}
+          <div className="flex gap-[40px] mt-8 w-full">
+            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+          </div>
         </div>
       </div>
 
