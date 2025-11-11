@@ -26,7 +26,7 @@ const VideoHero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
 
       {/* Navigation */}
-      <nav className="absolute top-0 right-0 z-20 p-6 pr-12 md:p-8 md:pr-16">
+      <nav className="absolute top-0 right-0 z-20 p-6 pr-8 md:p-8 md:pr-12 lg:px-[100px] lg:py-8">
         {/* Desktop & Tablet Navigation */}
         <ul className="hidden md:flex gap-6 lg:gap-8 font-inter font-normal text-base lg:text-[20px] text-hero-text">
           <li>
