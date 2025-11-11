@@ -31,7 +31,7 @@ const LeadSession = () => {
           <div className="mb-8 flex flex-col md:flex-row gap-8 md:gap-8 items-start">
             <div className="md:max-w-[340px]">
               <h3 className="font-inter font-extrabold mb-3 uppercase">
-                <span className="text-sm md:text-base text-[#9CA3AF]">Workshop 1</span><br />
+                <span className="text-sm md:text-base text-[#D1D5DB]">Workshop 1</span><br />
                 <span className="text-base md:text-lg text-[#0F1435]">Building Industry<br />Partnerships</span>
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
@@ -43,7 +43,7 @@ const LeadSession = () => {
 
             <div className="md:max-w-[340px]">
               <h3 className="font-inter font-extrabold mb-3 uppercase">
-                <span className="text-sm md:text-base text-[#9CA3AF]">Workshop 2</span><br />
+                <span className="text-sm md:text-base text-[#D1D5DB]">Workshop 2</span><br />
                 <span className="text-base md:text-lg text-[#0F1435]">Advancing Academic<br />Collaboration</span>
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
