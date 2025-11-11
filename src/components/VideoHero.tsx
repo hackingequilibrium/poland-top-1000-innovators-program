@@ -224,7 +224,7 @@ const VideoHero = () => {
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box4Icon} alt="Universities Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Top Universities</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Energy & Environmental<br />Engineering</div>
               </div>
             </div>
             
