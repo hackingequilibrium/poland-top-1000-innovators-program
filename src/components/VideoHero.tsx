@@ -1,6 +1,10 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import polsvLogo from "@/assets/polsv-logo.png";
+import box1Icon from "@/assets/box1.png";
+import box2Icon from "@/assets/box2.png";
+import box3Icon from "@/assets/box3.png";
+import box4Icon from "@/assets/box4.png";
 
 const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -206,20 +210,20 @@ const VideoHero = () => {
             
             {/* Second Instance - Red Boxes */}
             <div className="mt-[40px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">4</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center gap-3">
+                <img src={box1Icon} alt="Innovation Icon" className="w-12 h-12 md:w-14 md:h-14" />
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Intensive Days</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">200</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center gap-3">
+                <img src={box2Icon} alt="Researchers Icon" className="w-12 h-12 md:w-14 md:h-14" />
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Elite Researchers</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">100+</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center gap-3">
+                <img src={box3Icon} alt="Projects Icon" className="w-12 h-12 md:w-14 md:h-14" />
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Innovation Projects</div>
               </div>
-              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">12</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center gap-3">
+                <img src={box4Icon} alt="Universities Icon" className="w-12 h-12 md:w-14 md:h-14" />
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Top Universities</div>
               </div>
             </div>
