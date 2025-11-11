@@ -127,9 +127,18 @@ const VideoHero = () => {
             <div className="font-inter font-extrabold text-[64px] text-hero-text leading-none">4</div>
             <div className="font-inter font-normal text-base lg:text-[20px] text-hero-text">Intensive Days</div>
           </div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px] flex flex-col items-center justify-center">
+            <div className="font-inter font-extrabold text-[64px] text-hero-text leading-none">200</div>
+            <div className="font-inter font-normal text-base lg:text-[20px] text-hero-text">Elite Researchers</div>
+          </div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px] flex flex-col items-center justify-center">
+            <div className="font-inter font-extrabold text-[64px] text-hero-text leading-none">100+</div>
+            <div className="font-inter font-normal text-base lg:text-[20px] text-hero-text">Innovation Projects</div>
+          </div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px] flex flex-col items-center justify-center">
+            <div className="font-inter font-extrabold text-[64px] text-hero-text leading-none">12</div>
+            <div className="font-inter font-normal text-base lg:text-[20px] text-hero-text">Top Universities</div>
+          </div>
         </div>
       </div>
     </section>
