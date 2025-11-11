@@ -179,7 +179,7 @@ const VideoHero = () => {
             </div>
             
             {/* Second Instance - New Header */}
-            <div className="mt-[100px]">
+            <div className="mt-[70px]">
               <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-white leading-tight uppercase text-left">
                 Innovation Across 8 Critical Sectors
               </h2>
