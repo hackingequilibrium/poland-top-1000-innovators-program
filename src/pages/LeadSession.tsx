@@ -20,6 +20,26 @@ const LeadSession = () => {
             Join an elite circle of 30 participants — the best scientists and innovators from Poland — and share your Silicon Valley experience in an interactive, semi-structured format where live dialogue, real-world use cases, and best practices replace passive video sessions.
           </p>
 
+          <div className="mb-8 space-y-6">
+            <div>
+              <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3">
+                Workshop 1 - Building Industry Partnerships
+              </h3>
+              <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
+                Learn how to position research outcomes for meaningful engagement with corporate R&D teams and investors. This session connects Silicon Valley innovation leaders with Polish research teams to exchange practical insights and real-world case studies on transforming breakthrough technologies from lab to market. As a U.S. moderator, you'll gain a unique opportunity to share best practices, identify co-development pathways, and explore new models of university–industry collaboration with Poland's top scientific talent.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3">
+                Workshop 2 – Advancing Academic Collaboration
+              </h3>
+              <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
+                Discover models for international co-development, research exchange, and joint innovation programs. Silicon Valley academic leaders serving as moderators will engage directly with Poland's leading universities to co-design future partnerships, explore joint IP opportunities, and open channels for talent exchange and shared infrastructure that connect the Bay Area with Poland's most dynamic research ecosystems.
+              </p>
+            </div>
+          </div>
+
           <form className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
