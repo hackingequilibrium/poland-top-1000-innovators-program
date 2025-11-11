@@ -6,21 +6,21 @@ const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-visible">
       {/* Video Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover -z-10"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1435] to-[#0F23A3]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1435] to-[#0F23A3]/20 -z-10" />
 
       {/* Logo */}
       <div className="absolute top-8 left-6 md:left-12 lg:left-[100px] z-20">
