@@ -102,10 +102,10 @@ const VideoHero = () => {
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
-          <h2 className="font-inter font-semibold uppercase text-2xl md:text-[36px] text-hero-text mb-4 tracking-tight">
+          <h2 className="font-inter font-semibold uppercase text-2xl md:text-[36px] text-hero-text mb-8 tracking-tight">
             of Poland in Silicon Valley
           </h2>
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-4">
             <div className="inline-block bg-[#C70828] px-4 py-2">
               <span className="font-inter font-semibold uppercase text-white text-sm">
                 Dec 9–12, 2025
@@ -117,6 +117,9 @@ const VideoHero = () => {
               </span>
             </div>
           </div>
+          <p className="font-inter font-normal text-base lg:text-[20px] text-hero-text">
+            Stanford + Berkeley + triple Ring Innovation Center
+          </p>
         </div>
       </div>
 
