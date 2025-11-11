@@ -30,9 +30,9 @@ const LeadSession = () => {
 
           <div className="mb-8 flex flex-col md:flex-row gap-8 md:gap-8 items-start">
             <div className="md:max-w-[340px]">
-              <h3 className="font-inter font-extrabold mb-3 uppercase">
-                <span className="text-sm md:text-base text-[#D1D5DB]">Workshop 1</span><br />
-                <span className="text-base md:text-lg text-[#0F1435]">Building Industry<br />Partnerships</span>
+              <h3 className="font-inter mb-3 uppercase">
+                <span className="text-sm md:text-base text-[#D1D5DB] font-bold">Workshop 1</span><br />
+                <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Building Industry<br />Partnerships</span>
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
                 Learn how to position research outcomes for meaningful engagement with corporate R&D teams and investors. This session connects Silicon Valley innovation leaders with Polish research teams to exchange practical insights and real-world case studies on transforming breakthrough technologies from lab to market. As a U.S. moderator, you'll gain a unique opportunity to share best practices, identify co-development pathways, and explore new models of university–industry collaboration with Poland's top scientific talent.
@@ -42,9 +42,9 @@ const LeadSession = () => {
             <Separator orientation="vertical" className="hidden md:block self-stretch" />
 
             <div className="md:max-w-[340px]">
-              <h3 className="font-inter font-extrabold mb-3 uppercase">
-                <span className="text-sm md:text-base text-[#D1D5DB]">Workshop 2</span><br />
-                <span className="text-base md:text-lg text-[#0F1435]">Advancing Academic<br />Collaboration</span>
+              <h3 className="font-inter mb-3 uppercase">
+                <span className="text-sm md:text-base text-[#D1D5DB] font-bold">Workshop 2</span><br />
+                <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Advancing Academic<br />Collaboration</span>
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
                 Discover models for international co-development, research exchange, and joint innovation programs. Silicon Valley academic leaders serving as moderators will engage directly with Poland's leading universities to co-design future partnerships, explore joint IP opportunities, and open channels for talent exchange and shared infrastructure that connect the Bay Area with Poland's most dynamic research ecosystems.
