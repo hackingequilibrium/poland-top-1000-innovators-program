@@ -232,7 +232,7 @@ const VideoHero = () => {
           <h2 className="font-inter font-extrabold text-[20px] md:text-[24px] lg:text-[26px] text-white leading-tight uppercase text-left">
             Ready to Collaborate?
           </h2>
-          <p className="font-inter font-light text-base lg:text-[20px] text-white mt-4">
+          <p className="font-inter font-light text-base lg:text-[20px] text-white mt-2">
             Join the network shaping Poland&apos;s innovation bridge to Silicon Valley.
           </p>
         </div>
