@@ -160,7 +160,7 @@ const VideoHero = () => {
             
             {/* Red Boxes */}
             <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 gap-[20px]">
-              <div className="bg-[#C70828] flex flex-col items-start justify-center pl-8 py-6 gap-2">
+              <div className="bg-[#C70828] flex flex-col items-start justify-center px-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
                   <span className="font-inter font-bold uppercase text-white text-lg">
                     For Companies & Investors
@@ -168,7 +168,7 @@ const VideoHero = () => {
                 </div>
                 <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">Access world-class innovation, ready to scale</div>
               </div>
-              <div className="bg-[#C70828] flex flex-col items-start justify-center pl-8 py-6 gap-2">
+              <div className="bg-[#C70828] flex flex-col items-start justify-center px-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
                   <span className="font-inter font-semibold uppercase text-white text-sm">
                     Dec 9–12, 2025
