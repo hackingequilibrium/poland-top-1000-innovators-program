@@ -94,8 +94,8 @@ const VideoHero = () => {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px]">
-        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
+      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px] flex-col">
+        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000 w-full">
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
@@ -117,14 +117,14 @@ const VideoHero = () => {
           <p className="font-inter font-normal text-base lg:text-[20px] text-hero-text">
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
-          
-          {/* Four Boxes */}
-          <div className="flex gap-[40px] mt-8 w-full">
-            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-            <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-          </div>
+        </div>
+        
+        {/* Four Boxes - Full Width */}
+        <div className="flex gap-[20px] mt-8 w-full">
+          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
         </div>
       </div>
 
