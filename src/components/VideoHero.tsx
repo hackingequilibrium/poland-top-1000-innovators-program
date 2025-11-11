@@ -240,7 +240,7 @@ const VideoHero = () => {
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box6Icon} alt="Engineering Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Engineering Box 6</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Mechanical & Materials<br />Engineering</div>
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box7Icon} alt="Construction Icon" className="w-auto h-auto scale-[0.77]" />
