@@ -291,11 +291,6 @@ const VideoHero = () => {
                 Lead a Session →
               </span>
             </button>
-            <button className="inline-block bg-[#C70828] px-4 py-2 hover:bg-[#A00620] transition-colors">
-              <span className="font-inter font-semibold uppercase text-white text-sm">
-                meet the innovators →
-              </span>
-            </button>
           </div>
         </div>
         
