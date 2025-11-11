@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 const LeadSession = () => {
   return (
     <main className="min-h-screen bg-[#0F1435]">
-      <Header />
+      <Header simplified />
       
       <div className="pt-[280px] pb-[100px] px-8 lg:px-[100px]">
         <div className="bg-white rounded-lg p-8 lg:p-12 max-w-4xl">
