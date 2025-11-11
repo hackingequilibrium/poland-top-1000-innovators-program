@@ -22,6 +22,27 @@ const VideoHero = () => {
       {/* Gradient Overlay - Left to Right */}
       <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
 
+      {/* Navigation */}
+      <nav className="absolute top-0 right-0 z-20 p-8">
+        <ul className="flex gap-8 font-inter font-medium text-[20px] text-hero-text">
+          <li>
+            <a href="#about" className="hover:text-hero-text/80 transition-colors">
+              About PolSV
+            </a>
+          </li>
+          <li>
+            <a href="#lead-session" className="hover:text-hero-text/80 transition-colors">
+              Lead a Session
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-hero-text/80 transition-colors">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-4">
         <div className="text-center max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-1000">
