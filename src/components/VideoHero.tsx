@@ -248,6 +248,18 @@ const VideoHero = () => {
             </button>
           </div>
         </div>
+        
+        {/* Footer */}
+        <div className="mt-[70px] w-screen -ml-4 md:-ml-12 lg:-ml-[100px]">
+          <div className="bg-[#0C0F24] h-[70px] flex items-center justify-between px-4 md:px-12 lg:px-[100px]">
+            <span className="font-inter text-white text-xs md:text-sm">
+              Copyright© 2025 Poland in Silicon Valley Center
+            </span>
+            <span className="font-inter text-white text-xs md:text-sm">
+              Palo Alto, California
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
