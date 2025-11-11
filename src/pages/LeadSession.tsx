@@ -12,8 +12,61 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useForm, Controller } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const formSchema = z.object({
+  workshop: z.string().min(1, { message: "Please select a workshop" }),
+  track: z.string().min(1, { message: "Please select a track" }),
+  locations: z.object({
+    stanford: z.boolean(),
+    berkeley: z.boolean(),
+  }).refine((data) => data.stanford || data.berkeley, {
+    message: "Please select at least one location",
+  }),
+  name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
+  email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email must be less than 255 characters" }),
+  linkedin: z.string().trim().min(1, { message: "LinkedIn profile is required" }).url({ message: "Please enter a valid LinkedIn URL" }).max(500, { message: "URL must be less than 500 characters" }),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const LeadSession = () => {
+  const { toast } = useToast();
+  const [stanfordChecked, setStanfordChecked] = useState(false);
+  const [berkeleyChecked, setBerkeleyChecked] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      workshop: "",
+      track: "",
+      locations: {
+        stanford: false,
+        berkeley: false,
+      },
+      name: "",
+      email: "",
+      linkedin: "",
+    },
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log("Form submitted:", data);
+    toast({
+      title: "Application Submitted!",
+      description: "Thank you for your interest. We'll be in touch soon.",
+    });
+  };
+
   return (
     <main className="min-h-screen bg-[#0F1435]">
       <Header simplified />
@@ -77,39 +130,71 @@ const LeadSession = () => {
             Choose your workshop:
           </h3>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="workshop">Workshop</Label>
-              <Select>
-                <SelectTrigger id="workshop" className="rounded-none">
-                  <SelectValue placeholder="Select a workshop" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
-                  <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
-                </SelectContent>
-              </Select>
+              <Label htmlFor="workshop">Workshop *</Label>
+              <Controller
+                name="workshop"
+                control={control}
+                render={({ field }) => (
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <SelectTrigger id="workshop" className="rounded-none">
+                      <SelectValue placeholder="Select a workshop" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
+                      <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.workshop && (
+                <p className="text-sm text-red-600">{errors.workshop.message}</p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="track">Track</Label>
-              <Select>
-                <SelectTrigger id="track" className="rounded-none">
-                  <SelectValue placeholder="Select a track" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="life-sciences">Life Sciences</SelectItem>
-                  <SelectItem value="deeptech">DeepTech</SelectItem>
-                  <SelectItem value="energy">Energy & Sustainability</SelectItem>
-                </SelectContent>
-              </Select>
+              <Label htmlFor="track">Track *</Label>
+              <Controller
+                name="track"
+                control={control}
+                render={({ field }) => (
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <SelectTrigger id="track" className="rounded-none">
+                      <SelectValue placeholder="Select a track" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="life-sciences">Life Sciences</SelectItem>
+                      <SelectItem value="deeptech">DeepTech</SelectItem>
+                      <SelectItem value="energy">Energy & Sustainability</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
+              {errors.track && (
+                <p className="text-sm text-red-600">{errors.track.message}</p>
+              )}
             </div>
 
             <div className="space-y-3">
-              <Label>Location</Label>
+              <Label>Location *</Label>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="stanford" className="rounded-none" />
+                  <Controller
+                    name="locations.stanford"
+                    control={control}
+                    render={({ field }) => (
+                      <Checkbox 
+                        id="stanford" 
+                        className="rounded-none"
+                        checked={field.value}
+                        onCheckedChange={(checked) => {
+                          field.onChange(checked);
+                          setStanfordChecked(checked as boolean);
+                        }}
+                      />
+                    )}
+                  />
                   <label
                     htmlFor="stanford"
                     className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -118,7 +203,21 @@ const LeadSession = () => {
                   </label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="berkeley" className="rounded-none" />
+                  <Controller
+                    name="locations.berkeley"
+                    control={control}
+                    render={({ field }) => (
+                      <Checkbox 
+                        id="berkeley" 
+                        className="rounded-none"
+                        checked={field.value}
+                        onCheckedChange={(checked) => {
+                          field.onChange(checked);
+                          setBerkeleyChecked(checked as boolean);
+                        }}
+                      />
+                    )}
+                  />
                   <label
                     htmlFor="berkeley"
                     className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -127,21 +226,49 @@ const LeadSession = () => {
                   </label>
                 </div>
               </div>
+              {errors.locations && (
+                <p className="text-sm text-red-600">{errors.locations.message}</p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Enter your name" className="rounded-none" />
+              <Label htmlFor="name">Name *</Label>
+              <Input 
+                id="name" 
+                placeholder="Enter your name" 
+                className="rounded-none" 
+                {...register("name")}
+              />
+              {errors.name && (
+                <p className="text-sm text-red-600">{errors.name.message}</p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">E-mail</Label>
-              <Input id="email" type="email" placeholder="Enter your email" className="rounded-none" />
+              <Label htmlFor="email">E-mail *</Label>
+              <Input 
+                id="email" 
+                type="email" 
+                placeholder="Enter your email" 
+                className="rounded-none"
+                {...register("email")}
+              />
+              {errors.email && (
+                <p className="text-sm text-red-600">{errors.email.message}</p>
+              )}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="linkedin">LinkedIn Profile</Label>
-              <Input id="linkedin" placeholder="Enter your LinkedIn profile URL" className="rounded-none" />
+              <Label htmlFor="linkedin">LinkedIn Profile *</Label>
+              <Input 
+                id="linkedin" 
+                placeholder="Enter your LinkedIn profile URL" 
+                className="rounded-none"
+                {...register("linkedin")}
+              />
+              {errors.linkedin && (
+                <p className="text-sm text-red-600">{errors.linkedin.message}</p>
+              )}
             </div>
 
             <Button 
