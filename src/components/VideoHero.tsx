@@ -170,7 +170,7 @@ const VideoHero = () => {
                   Access world-class innovation,<br />
                   ready to scale
                 </div>
-                <ul className="font-inter font-normal text-sm md:text-base text-white space-y-2 mt-2 list-disc list-inside">
+                <ul className="font-inter font-normal text-sm md:text-base text-white space-y-2 mt-2 list-disc list-outside ml-5">
                   <li>First-mover advantage on 100+ commercialization-ready projects</li>
                   <li>Cost-effective R&D — 50–70% lower than US costs, with EU-level quality</li>
                   <li>Exceptional talent — Poland ranks #3 globally in math and CS education</li>
