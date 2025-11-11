@@ -114,7 +114,7 @@ const VideoHero = () => {
               </span>
             </div>
           </div>
-          <p className="font-inter font-light text-base lg:text-[20px] text-hero-text mb-[100px]">
+          <p className="font-inter font-light text-base lg:text-[20px] text-hero-text mb-[70px]">
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
           
