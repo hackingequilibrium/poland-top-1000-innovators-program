@@ -16,7 +16,7 @@ const LeadSession = () => {
             Lead a Session at Stanford or Berkeley (or Both!)
           </h2>
           
-          <p className="font-inter font-light text-base md:text-lg text-[#0F1435] mb-8 leading-relaxed">
+          <p className="font-inter font-light text-base md:text-lg text-[#797B8E] mb-8 leading-relaxed">
             Join an elite circle of 30 participants — the best scientists and innovators from Poland — and share your Silicon Valley experience in an interactive, semi-structured format where live dialogue, real-world use cases, and best practices replace passive video sessions.
           </p>
 
