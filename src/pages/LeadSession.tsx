@@ -40,6 +40,29 @@ const LeadSession = () => {
             </div>
           </div>
 
+          <div className="mb-8">
+            <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3">
+              Session Details
+            </h3>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-3">
+              Both workshops are in person and will take place at:
+            </p>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-1">
+              Stanford University — December 9, 1:30–2:45 PM
+            </p>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-3">
+              UC Berkeley — December 11, 1:15–2:45 PM
+            </p>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
+              Each workshop will host 90 participants, divided into three focused tracks:
+            </p>
+            <ul className="list-disc list-inside font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4">
+              <li>Life Sciences</li>
+              <li>DeepTech</li>
+              <li>Energy & Sustainability</li>
+            </ul>
+          </div>
+
           <form className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
