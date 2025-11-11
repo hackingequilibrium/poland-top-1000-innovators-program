@@ -121,10 +121,10 @@ const VideoHero = () => {
         
         {/* Four Boxes - Full Width */}
         <div className="flex gap-[20px] mt-8 w-full">
-          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
-          <div className="flex-1 bg-[#0F1435] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
         </div>
       </div>
 
