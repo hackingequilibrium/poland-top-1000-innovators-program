@@ -216,7 +216,7 @@ const VideoHero = () => {
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box2Icon} alt="Researchers Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Elite Researchers</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Biomedical Engineering<br />& Healthcare</div>
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box3Icon} alt="Projects Icon" className="w-auto h-auto scale-[0.77]" />
