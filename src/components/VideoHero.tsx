@@ -94,8 +94,8 @@ const VideoHero = () => {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px] flex-col">
-        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000 w-full">
+      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px]">
+        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
@@ -118,20 +118,15 @@ const VideoHero = () => {
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
         </div>
-        
-        {/* Four Boxes - Full Width */}
-        <div className="flex gap-[20px] mt-8 w-full">
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
-        </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-hero-text/50 flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-hero-text/70 rounded-full" />
+      {/* Four Boxes - Full Width at Bottom */}
+      <div className="absolute bottom-8 left-0 right-0 z-10 px-4 md:px-12 lg:px-[100px]">
+        <div className="flex gap-[20px] w-full">
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
         </div>
       </div>
     </section>
