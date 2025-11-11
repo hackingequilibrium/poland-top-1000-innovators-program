@@ -229,7 +229,7 @@ const VideoHero = () => {
 
         {/* Ready to Collaborate Section */}
         <div className="mt-[70px]">
-          <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-white leading-tight uppercase text-left">
+          <h2 className="font-inter font-extrabold text-[24px] md:text-[28px] lg:text-[30px] text-white leading-tight uppercase text-left">
             Ready to Collaborate?
           </h2>
         </div>
