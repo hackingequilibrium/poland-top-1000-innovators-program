@@ -63,8 +63,8 @@ const LeadSession = () => {
   const onSubmit = (data: FormData) => {
     console.log("Form submitted:", data);
     toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. We'll be in touch soon.",
+      title: "Thank you for your submission!",
+      description: "Your application to lead a session has been received. Our coordination team will review it and follow up shortly with next steps.",
     });
   };
 
