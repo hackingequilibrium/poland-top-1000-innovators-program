@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Play, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const VideoHero = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
@@ -23,24 +26,69 @@ const VideoHero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
 
       {/* Navigation */}
-      <nav className="absolute top-0 right-0 z-20 p-8">
-        <ul className="flex gap-8 font-inter font-medium text-[20px] text-hero-text">
+      <nav className="absolute top-0 right-0 z-20 p-6 pr-12 md:p-8 md:pr-16">
+        {/* Desktop & Tablet Navigation */}
+        <ul className="hidden md:flex gap-6 lg:gap-8 font-inter font-normal text-base lg:text-[20px] text-hero-text">
           <li>
-            <a href="#about" className="hover:text-hero-text/80 transition-colors">
+            <a href="#about" className="hover:underline transition-all">
               About PolSV
             </a>
           </li>
           <li>
-            <a href="#lead-session" className="hover:text-hero-text/80 transition-colors">
+            <a href="#lead-session" className="hover:underline transition-all">
               Lead a Session
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-hero-text/80 transition-colors">
+            <a href="#contact" className="hover:underline transition-all">
               Contact
             </a>
           </li>
         </ul>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden text-hero-text z-50 relative"
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 bg-hero-overlay/95 z-40 md:hidden">
+            <ul className="flex flex-col items-center justify-center h-full gap-8 font-inter font-normal text-2xl text-hero-text">
+              <li>
+                <a 
+                  href="#about" 
+                  className="hover:underline transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About PolSV
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#lead-session" 
+                  className="hover:underline transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Lead a Session
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contact" 
+                  className="hover:underline transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
 
       {/* Content */}
