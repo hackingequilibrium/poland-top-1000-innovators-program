@@ -187,41 +187,41 @@ const VideoHero = () => {
             
             {/* Second Instance - Red Boxes */}
             <div className="mt-[40px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">4</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Intensive Days</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">200</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Elite Researchers</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">200</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Elite Researchers</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">100+</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Innovation Projects</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">100+</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Innovation Projects</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">12</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Top Universities</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">12</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Top Universities</div>
               </div>
             </div>
             
             {/* Third Instance - Red Boxes */}
             <div className="mt-[20px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">4</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Intensive Days</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">200</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Elite Researchers</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">200</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Elite Researchers</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">100+</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Innovation Projects</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">100+</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Innovation Projects</div>
               </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">12</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Top Universities</div>
+              <div className="bg-white h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-[#0F1435] leading-none">12</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Top Universities</div>
               </div>
             </div>
           </div>
