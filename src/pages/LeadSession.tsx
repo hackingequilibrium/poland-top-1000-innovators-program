@@ -28,7 +28,7 @@ const LeadSession = () => {
             Join an elite circle of 30 participants — the best scientists and innovators from Poland — and share your Silicon Valley experience in an interactive, semi-structured format where live dialogue, real-world use cases, and best practices replace passive video sessions.
           </p>
 
-          <div className="mb-8 flex flex-col md:flex-row md:justify-center gap-8 md:gap-8 items-start">
+          <div className="mb-8 flex flex-col md:flex-row gap-8 md:gap-8 items-start">
             <div className="md:max-w-[340px]">
               <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
                 Workshop 1<br />Building Industry Partnerships
