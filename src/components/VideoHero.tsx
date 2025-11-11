@@ -141,8 +141,8 @@ const VideoHero = () => {
             </div>
             
             {/* Second Row */}
-            <div className="bg-white py-16 flex items-center justify-start px-8 md:px-16 lg:px-24">
-              <h2 className="font-inter font-extrabold text-[32px] md:text-[40px] lg:text-[48px] text-[#0F1435] leading-tight uppercase">
+            <div className="bg-white py-[30px] px-[30px] flex items-center justify-start">
+              <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase">
                 The Largest Polish Tech and Science Delegation Ever in Silicon Valley
               </h2>
             </div>
