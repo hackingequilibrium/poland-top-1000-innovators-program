@@ -42,7 +42,7 @@ const LeadSession = () => {
 
             <div className="md:max-w-[340px]">
               <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
-                Workshop 2 – Advancing Academic Collaboration
+                Workshop 2<br />Advancing Academic Collaboration
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
                 Discover models for international co-development, research exchange, and joint innovation programs. Silicon Valley academic leaders serving as moderators will engage directly with Poland's leading universities to co-design future partnerships, explore joint IP opportunities, and open channels for talent exchange and shared infrastructure that connect the Bay Area with Poland's most dynamic research ecosystems.
