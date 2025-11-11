@@ -71,18 +71,13 @@ const LeadSession = () => {
       <div className="pt-[120px] pb-[100px] px-8 lg:px-[100px]">
         <div className="bg-white p-8 lg:p-12 max-w-4xl mx-auto">
           <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
-            Lead a Session at Stanford or Berkeley (or Both!)
+            {isSubmitted ? "Thank you for your submission!" : "Lead a Session at Stanford or Berkeley (or Both!)"}
           </h2>
           
           {isSubmitted ? (
-            <div className="py-8">
-              <h3 className="font-inter font-bold text-xl md:text-2xl text-[#0F1435] mb-4">
-                Thank you for your submission!
-              </h3>
-              <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
-                Your application to lead a session has been received. Our coordination team will review it and follow up shortly with next steps.
-              </p>
-            </div>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
+              Your application to lead a session has been received. Our coordination team will review it and follow up shortly with next steps.
+            </p>
           ) : (
             <>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-8 leading-relaxed">
