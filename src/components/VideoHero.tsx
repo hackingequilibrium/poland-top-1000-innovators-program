@@ -173,7 +173,7 @@ const VideoHero = () => {
                 <ul className="font-inter font-normal text-sm md:text-base text-white space-y-2 mt-2 list-disc list-outside ml-5">
                   <li>First-mover advantage on 100+ commercialization-ready projects</li>
                   <li>Cost-effective R&D — 50–70% lower<br className="hidden md:block" /> than US costs, with EU-level quality</li>
-                  <li>Exceptional talent — Poland ranks #3<br className="hidden lg:block" /> globally in math and CS education</li>
+                  <li>Exceptional talent — Poland ranks #3<br className="hidden md:block" /> globally in math and CS education</li>
                   <li>Partnerships with startups ready for global scale</li>
                 </ul>
               </div>
