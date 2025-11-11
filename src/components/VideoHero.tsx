@@ -118,25 +118,25 @@ const VideoHero = () => {
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
           
-          {/* Four Boxes - Two Rows */}
-          <div className="flex flex-col gap-[20px] w-screen -ml-4 md:-ml-12 lg:-ml-[100px] px-4 md:px-12 lg:px-[100px]">
-            {/* First Row */}
-            <div className="flex gap-[20px]">
-              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[48px] text-hero-text leading-none">4</div>
-                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
+          {/* Four Boxes - Responsive Grid */}
+          <div className="w-screen -ml-4 md:-ml-12 lg:-ml-[100px] px-4 md:px-12 lg:px-[100px]">
+            {/* First Row / Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] mb-[20px]">
+              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">4</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
               </div>
-              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[48px] text-hero-text leading-none">200</div>
-                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
+              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">200</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
               </div>
-              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[48px] text-hero-text leading-none">100+</div>
-                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
+              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">100+</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
               </div>
-              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[48px] text-hero-text leading-none">12</div>
-                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Top Universities</div>
+              <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">12</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Top Universities</div>
               </div>
             </div>
             
