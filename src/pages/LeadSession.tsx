@@ -16,6 +16,8 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   workshop: z.string().min(1, { message: "Please select a workshop" }),
@@ -59,9 +61,32 @@ const LeadSession = () => {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log("Form submitted:", data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const { error } = await supabase
+        .from('session_submissions')
+        .insert({
+          workshop: data.workshop,
+          track: data.track,
+          stanford: data.locations.stanford,
+          berkeley: data.locations.berkeley,
+          name: data.name,
+          email: data.email,
+          linkedin: data.linkedin
+        });
+
+      if (error) {
+        console.error('Submission error:', error);
+        toast.error("Failed to submit application. Please try again.");
+        return;
+      }
+
+      setIsSubmitted(true);
+      toast.success("Application submitted successfully!");
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred. Please try again.");
+    }
   };
 
   return (
