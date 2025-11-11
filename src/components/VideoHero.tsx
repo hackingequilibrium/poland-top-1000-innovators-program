@@ -103,7 +103,7 @@ const VideoHero = () => {
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
-          <h2 className="font-inter font-semibold uppercase text-3xl md:text-[48px] text-hero-text mb-6 tracking-tight">
+          <h2 className="font-inter font-semibold uppercase text-2xl md:text-[36px] text-hero-text mb-6 tracking-tight">
             of Poland in Silicon Valley
           </h2>
           <p className="text-xl md:text-2xl text-hero-text/90 mb-8 max-w-2xl">
