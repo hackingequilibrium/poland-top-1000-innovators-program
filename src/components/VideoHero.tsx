@@ -13,14 +13,14 @@ const VideoHero = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover -z-10"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1435] to-[#0F23A3]/20 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1435] to-[#0F23A3]/20" />
 
       {/* Logo */}
       <div className="absolute top-8 left-6 md:left-12 lg:left-[100px] z-20">
@@ -119,7 +119,7 @@ const VideoHero = () => {
           </p>
           
           {/* Four Boxes - Two Rows */}
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col gap-[20px] w-screen -ml-4 md:-ml-12 lg:-ml-[100px] px-4 md:px-12 lg:px-[100px]">
             {/* First Row */}
             <div className="flex gap-[20px]">
               <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
