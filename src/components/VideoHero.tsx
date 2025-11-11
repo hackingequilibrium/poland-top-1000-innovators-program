@@ -19,11 +19,8 @@ const VideoHero = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-hero-overlay/30 backdrop-blur-[1px]" />
-      
-      {/* Gradient Overlay - Left to Right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1a2640] via-[#3d4a72] to-[#b5b8d5]" />
 
       {/* Logo */}
       <div className="absolute top-16 left-6 md:left-12 lg:left-[100px] z-20">
