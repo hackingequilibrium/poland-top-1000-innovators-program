@@ -100,9 +100,12 @@ const VideoHero = () => {
       {/* Content */}
       <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px]">
         <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-6 tracking-tight leading-tight">
+          <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
+          <h2 className="font-inter font-semibold uppercase text-3xl md:text-[48px] text-hero-text mb-6 tracking-tight">
+            of Poland in Silicon Valley
+          </h2>
           <p className="text-xl md:text-2xl text-hero-text/90 mb-8 max-w-2xl">
             Experience innovation like never before
           </p>
