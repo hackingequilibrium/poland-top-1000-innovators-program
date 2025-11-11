@@ -94,8 +94,8 @@ const VideoHero = () => {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px] -mt-16">
-        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
+      <div className="relative z-10 flex flex-col h-full justify-center px-4 md:px-12 lg:px-[100px]">
+        <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000 -mt-16">
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
           </h1>
@@ -114,52 +114,50 @@ const VideoHero = () => {
               </span>
             </div>
           </div>
-          <p className="font-inter font-light text-base lg:text-[20px] text-hero-text">
+          <p className="font-inter font-light text-base lg:text-[20px] text-hero-text mb-[100px]">
             Stanford + Berkeley + Triple Ring Innovation Center
           </p>
-        </div>
-      </div>
-
-      {/* Four Boxes - Full Width at Bottom */}
-      <div className="absolute bottom-24 left-0 right-0 z-10 px-4 md:px-12 lg:px-[100px]">
-        <div className="flex flex-col gap-[20px] w-full">
-          {/* First Row */}
-          <div className="flex gap-[20px] w-full">
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">4</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
-            </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">200</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
-            </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">100+</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
-            </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">12</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Top Universities</div>
-            </div>
-          </div>
           
-          {/* Second Row */}
-          <div className="flex gap-[20px] w-full">
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">4</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
+          {/* Four Boxes - Two Rows */}
+          <div className="flex flex-col gap-[20px]">
+            {/* First Row */}
+            <div className="flex gap-[20px]">
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">4</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">200</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">100+</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">12</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Top Universities</div>
+              </div>
             </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">200</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
-            </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">100+</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
-            </div>
-            <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">12</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Top Universities</div>
+            
+            {/* Second Row */}
+            <div className="flex gap-[20px]">
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">4</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">200</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Elite Researchers</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">100+</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Innovation Projects</div>
+              </div>
+              <div className="flex-1 bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
+                <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">12</div>
+                <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Top Universities</div>
+              </div>
             </div>
           </div>
         </div>
