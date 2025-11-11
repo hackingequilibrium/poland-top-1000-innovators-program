@@ -74,6 +74,7 @@ const Admin = () => {
   }, [navigate]);
 
   const checkAdminRole = async (userId: string) => {
+    console.log('Checking admin role for user:', userId);
     try {
       const { data, error } = await supabase
         .from('user_roles')
@@ -81,6 +82,8 @@ const Admin = () => {
         .eq('user_id', userId)
         .eq('role', 'admin')
         .maybeSingle();
+
+      console.log('Admin role check result:', { data, error });
 
       if (error) {
         console.error('Error checking admin role:', error);
@@ -90,12 +93,15 @@ const Admin = () => {
         setIsAdmin(!!data);
         if (!data) {
           toast.error("You don't have admin access");
+        } else {
+          console.log('User is admin!');
         }
       }
     } catch (error) {
       console.error('Unexpected error:', error);
       setIsAdmin(false);
     } finally {
+      console.log('Setting loading to false');
       setLoading(false);
     }
   };
