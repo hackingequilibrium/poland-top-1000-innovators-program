@@ -200,8 +200,7 @@ const VideoHero = () => {
                   </span>
                 </div>
                 <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">
-                  Collaborate, co-fund,<br className="lg:hidden" />
-                  and co-create the future
+                  Collaborate, co-fund,<br className="lg:hidden" /> and co-create the future
                 </div>
                 <ul className="font-inter font-normal text-base md:text-lg text-white space-y-2 mt-2 list-disc list-outside ml-5">
                   <li>Research collaboration with Poland's top scientists and engineering talent</li>
