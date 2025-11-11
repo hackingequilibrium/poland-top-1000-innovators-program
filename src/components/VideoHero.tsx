@@ -181,7 +181,7 @@ const VideoHero = () => {
             {/* Second Instance - New Header */}
             <div className="mt-[100px]">
               <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-white leading-tight uppercase text-left">
-                partner with poland's top innovators
+                Innovation Across 8 Critical Sectors
               </h2>
             </div>
             
