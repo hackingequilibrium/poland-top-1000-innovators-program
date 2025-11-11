@@ -26,6 +26,7 @@ const formSchema = z.object({
     berkeley: z.boolean(),
   }).refine((data) => data.stanford || data.berkeley, {
     message: "Please select at least one location",
+    path: ["root"],
   }),
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
   email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email must be less than 255 characters" }),
@@ -226,8 +227,8 @@ const LeadSession = () => {
                   </label>
                 </div>
               </div>
-              {errors.locations && (
-                <p className="text-sm text-red-600">{errors.locations.message}</p>
+              {errors.locations?.root && (
+                <p className="text-sm text-red-600">{errors.locations.root.message}</p>
               )}
             </div>
 
