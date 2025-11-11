@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
   SelectContent,
@@ -99,17 +100,28 @@ const LeadSession = () => {
               </Select>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="location">Location</Label>
-              <Select>
-                <SelectTrigger id="location">
-                  <SelectValue placeholder="Select a location" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="stanford">Stanford University — December 9, 1:30–2:45 PM</SelectItem>
-                  <SelectItem value="berkeley">UC Berkeley — December 11, 1:15–2:45 PM</SelectItem>
-                </SelectContent>
-              </Select>
+            <div className="space-y-3">
+              <Label>Location</Label>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="stanford" />
+                  <label
+                    htmlFor="stanford"
+                    className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Stanford University — December 9, 1:30–2:45 PM
+                  </label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Checkbox id="berkeley" />
+                  <label
+                    htmlFor="berkeley"
+                    className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    UC Berkeley — December 11, 1:15–2:45 PM
+                  </label>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-2">
