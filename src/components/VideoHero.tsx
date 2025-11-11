@@ -123,7 +123,10 @@ const VideoHero = () => {
       {/* Four Boxes - Full Width at Bottom */}
       <div className="absolute bottom-8 left-0 right-0 z-10 px-4 md:px-12 lg:px-[100px]">
         <div className="flex gap-[20px] w-full">
-          <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
+          <div className="flex-1 bg-[#0C0F24] h-[175px] flex flex-col items-center justify-center">
+            <div className="font-inter font-extrabold text-[64px] text-hero-text leading-none">4</div>
+            <div className="font-inter font-normal text-[24px] text-hero-text">Intensive Days</div>
+          </div>
           <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
           <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
           <div className="flex-1 bg-[#0C0F24] h-[175px]"></div>
