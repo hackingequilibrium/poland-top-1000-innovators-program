@@ -179,12 +179,20 @@ const VideoHero = () => {
               </div>
               <div className="bg-gradient-to-br from-[#C70828] to-[#A80E34] flex flex-col items-start justify-center p-[40px] gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
-                  <span className="font-inter font-semibold uppercase text-white text-sm">
-                    Dec 9–12, 2025
+                  <span className="font-inter font-bold uppercase text-white text-lg">
+                    For Companies & Investors
                   </span>
                 </div>
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
+                <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">
+                  Access world-class innovation,<br className="lg:hidden" />
+                  ready to scale
+                </div>
+                <ul className="font-inter font-normal text-base md:text-lg text-white space-y-2 mt-2 list-disc list-outside ml-5">
+                  <li>First-mover advantage on <strong>100+</strong><br className="hidden md:block" /> commercialization-ready projects</li>
+                  <li>Cost-effective R&D — <strong>50–70%</strong> lower<br className="hidden md:block" /> than US costs, with EU-level quality</li>
+                  <li>Exceptional talent — Poland ranks <strong>#3</strong><br className="hidden md:block" /> globally in math and CS education</li>
+                  <li>Partnerships with startups ready for global scale</li>
+                </ul>
               </div>
             </div>
             
