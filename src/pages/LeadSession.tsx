@@ -10,7 +10,7 @@ const LeadSession = () => {
     <main className="min-h-screen bg-[#0F1435]">
       <Header simplified />
       
-      <div className="pt-[150px] pb-[100px] px-8 lg:px-[100px]">
+      <div className="pt-[120px] pb-[100px] px-8 lg:px-[100px]">
         <div className="bg-white p-8 lg:p-12 max-w-4xl">
           <h2 className="font-inter font-extrabold text-xl md:text-2xl lg:text-3xl text-[#0F1435] mb-6 uppercase">
             Lead a Session at Stanford or Berkeley (or Both!)
