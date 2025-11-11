@@ -150,6 +150,13 @@ const VideoHero = () => {
                 200 elite researchers from 12 Polish universities bring over 100 breakthrough projects during four intensive days. <span className="whitespace-nowrap">A unique</span> opportunity to access one of Europe's most talented pools of scientists and engineers, cost-effective R&D partnerships, €95 billion of EU funding, and commercialization-ready innovations – all concentrated in one transformational week.
               </p>
             </div>
+            
+            {/* New Header */}
+            <div className="mt-[100px] px-[30px]">
+              <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-white leading-tight uppercase">
+                partner with poland's top innovators
+              </h2>
+            </div>
           </div>
         </div>
       </div>
