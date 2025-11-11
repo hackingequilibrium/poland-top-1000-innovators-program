@@ -141,7 +141,7 @@ const VideoHero = () => {
             </div>
             
             {/* Second Row */}
-            <div className="bg-white pt-[50px] pb-[30px] pl-[50px] pr-[100px]">
+            <div className="bg-white py-[40px] pl-[50px] pr-[100px]">
               <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase mb-4">
                 The Largest Polish Tech and Science <span className="hidden lg:inline"><br /></span>
                 Delegation Ever in Silicon Valley
