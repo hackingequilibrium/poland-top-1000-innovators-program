@@ -235,6 +235,13 @@ const VideoHero = () => {
           <p className="font-inter font-light text-base lg:text-[20px] text-white mt-2">
             Join the network shaping Poland&apos;s innovation bridge to Silicon Valley.
           </p>
+          <div className="mt-6">
+            <button className="inline-block bg-[#C70828] px-4 py-2 hover:bg-[#A00620] transition-colors">
+              <span className="font-inter font-semibold uppercase text-white text-sm">
+                Lead a Session →
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
