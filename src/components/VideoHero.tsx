@@ -188,9 +188,9 @@ const VideoHero = () => {
                   ready to scale
                 </div>
                 <ul className="font-inter font-normal text-base md:text-lg text-white space-y-2 mt-2 list-disc list-outside ml-5">
-                  <li>First-mover advantage on <strong>100+</strong><br className="hidden md:block" /> commercialization-ready projects</li>
-                  <li>Cost-effective R&D — <strong>50–70%</strong> lower<br className="hidden md:block" /> than US costs, with EU-level quality</li>
-                  <li>Exceptional talent — Poland ranks <strong>#3</strong><br className="hidden md:block" /> globally in math and CS education</li>
+                  <li>First-mover advantage on <strong>100+</strong> commercialization-ready projects</li>
+                  <li>Cost-effective R&D — <strong>50–70%</strong> lower than US costs, with EU-level quality</li>
+                  <li>Exceptional talent — Poland ranks <strong>#3</strong> globally in math and CS education</li>
                   <li>Partnerships with startups ready for global scale</li>
                 </ul>
               </div>
@@ -205,9 +205,9 @@ const VideoHero = () => {
                   and co-create the future
                 </div>
                 <ul className="font-inter font-normal text-base md:text-lg text-white space-y-2 mt-2 list-disc list-outside ml-5">
-                  <li>Research collaboration with Poland's<br className="hidden md:block" /> top scientists and engineering talent</li>
+                  <li>Research collaboration with Poland's top scientists and engineering talent</li>
                   <li>Joint US–EU funding opportunities</li>
-                  <li>Student pipelines: PhD / Post-doc<br className="hidden md:block" /> exchange programs</li>
+                  <li>Student pipelines: PhD / Post-doc exchange programs</li>
                   <li>Poland–US Research Fellowships</li>
                   <li>Faculty Innovation Sabbaticals</li>
                 </ul>
