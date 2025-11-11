@@ -13,10 +13,10 @@ import box8Icon from "@/assets/box8.png";
 
 const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const counter4 = useCountUp(4, 2000);
-  const counter200 = useCountUp(200, 2000);
-  const counter100 = useCountUp(100, 2000);
-  const counter12 = useCountUp(12, 2000);
+  const counter4 = useCountUp(4, 2000, true, 500);
+  const counter200 = useCountUp(200, 2000, true, 500);
+  const counter100 = useCountUp(100, 2000, true, 500);
+  const counter12 = useCountUp(12, 2000, true, 500);
 
   return (
     <section className="relative h-screen w-full overflow-visible">

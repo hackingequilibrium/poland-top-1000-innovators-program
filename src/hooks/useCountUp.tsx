@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true) => {
+export const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true, delay: number = 0) => {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(!startOnView);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -14,7 +14,9 @@ export const useCountUp = (end: number, duration: number = 2000, startOnView: bo
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !hasStarted) {
-          setHasStarted(true);
+          setTimeout(() => {
+            setHasStarted(true);
+          }, delay);
         }
       },
       { threshold: 0.1 }
@@ -25,7 +27,7 @@ export const useCountUp = (end: number, duration: number = 2000, startOnView: bo
     }
 
     return () => observer.disconnect();
-  }, [startOnView, hasStarted]);
+  }, [startOnView, hasStarted, delay]);
 
   useEffect(() => {
     if (!hasStarted) return;
