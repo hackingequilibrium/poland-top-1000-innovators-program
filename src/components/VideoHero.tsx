@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, Menu, X } from "lucide-react";
 import { useState } from "react";
+import polsvLogo from "@/assets/polsv-logo.png";
 
 const VideoHero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,6 +25,11 @@ const VideoHero = () => {
       
       {/* Gradient Overlay - Left to Right */}
       <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/60 to-transparent" />
+
+      {/* Logo */}
+      <div className="absolute top-16 left-6 md:left-12 lg:left-[100px] z-20">
+        <img src={polsvLogo} alt="PolSV Logo" className="h-20 md:h-24 lg:h-28 w-auto" />
+      </div>
 
       {/* Navigation */}
       <nav className="absolute top-0 right-0 z-20 p-6 pr-8 md:p-8 md:pr-12 lg:px-[100px] lg:py-8">
