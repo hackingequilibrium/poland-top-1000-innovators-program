@@ -29,7 +29,7 @@ const LeadSession = () => {
 
           <div className="mb-8 space-y-6">
             <div>
-              <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
+              <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
                 Workshop 1 - Building Industry Partnerships
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
@@ -38,7 +38,7 @@ const LeadSession = () => {
             </div>
 
             <div>
-              <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
+              <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
                 Workshop 2 – Advancing Academic Collaboration
               </h3>
               <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
@@ -48,7 +48,7 @@ const LeadSession = () => {
           </div>
 
           <div className="mb-8">
-            <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
+            <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
               Session Details
             </h3>
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
