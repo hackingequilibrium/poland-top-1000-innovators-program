@@ -45,7 +45,7 @@ const VideoHero = () => {
         {/* Desktop & Tablet Navigation */}
         <ul className="hidden md:flex gap-6 lg:gap-8 font-inter font-normal text-base lg:text-[20px] text-hero-text">
           <li>
-            <a href="#about" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+            <a href="https://polsv.org/home/" target="_blank" rel="noopener noreferrer" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               About PolSV
             </a>
           </li>
@@ -76,7 +76,9 @@ const VideoHero = () => {
             <ul className="flex flex-col items-center justify-center h-full gap-8 font-inter font-normal text-2xl text-hero-text">
               <li>
                 <a 
-                  href="#about" 
+                  href="https://polsv.org/home/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
