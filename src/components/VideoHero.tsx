@@ -121,7 +121,7 @@ const VideoHero = () => {
           {/* Four Boxes - Responsive Grid */}
           <div className="w-screen -ml-4 md:-ml-12 lg:-ml-[100px] px-4 md:px-12 lg:px-[100px]">
             {/* First Row / Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] mb-[20px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px] mb-[20px]">
               <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
                 <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-hero-text leading-none">4</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
@@ -143,7 +143,8 @@ const VideoHero = () => {
             {/* Second Row */}
             <div className="bg-white py-[30px] px-[30px] flex items-center justify-start">
               <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase">
-                The Largest Polish Tech and Science Delegation Ever in Silicon Valley
+                The Largest Polish Tech and Science <span className="hidden lg:inline"><br /></span>
+                Delegation Ever in Silicon Valley
               </h2>
             </div>
           </div>
