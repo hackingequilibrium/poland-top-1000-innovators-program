@@ -94,7 +94,7 @@ const VideoHero = () => {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px]">
+      <div className="relative z-10 flex h-full items-center px-4 md:px-12 lg:px-[100px] -mt-16">
         <div className="text-left max-w-4xl animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <h1 className="font-inter font-extrabold uppercase text-5xl md:text-7xl text-hero-text mb-2 tracking-tight leading-tight">
             Top 1000<br />Innovators
