@@ -115,7 +115,7 @@ const VideoHero = () => {
             </div>
           </div>
           <p className="font-inter font-normal text-base lg:text-[20px] text-hero-text">
-            Stanford + Berkeley + triple Ring Innovation Center
+            Stanford + Berkeley + Triple Ring Innovation Center
           </p>
         </div>
       </div>
