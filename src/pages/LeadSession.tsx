@@ -2,8 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const LeadSession = () => {
   return (
@@ -61,34 +67,64 @@ const LeadSession = () => {
             </ul>
           </div>
 
+          <h3 className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-4">
+            Choose your workshop:
+          </h3>
+
           <form className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
-              <Input id="name" placeholder="Enter your full name" />
+              <Label htmlFor="workshop">Workshop</Label>
+              <Select>
+                <SelectTrigger id="workshop">
+                  <SelectValue placeholder="Select a workshop" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
+                  <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="track">Track</Label>
+              <Select>
+                <SelectTrigger id="track">
+                  <SelectValue placeholder="Select a track" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="life-sciences">Life Sciences</SelectItem>
+                  <SelectItem value="deeptech">DeepTech</SelectItem>
+                  <SelectItem value="energy">Energy & Sustainability</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="location">Location</Label>
+              <Select>
+                <SelectTrigger id="location">
+                  <SelectValue placeholder="Select a location" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="stanford">Stanford University — December 9, 1:30–2:45 PM</SelectItem>
+                  <SelectItem value="berkeley">UC Berkeley — December 11, 1:15–2:45 PM</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" placeholder="Enter your name" />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="email">E-mail</Label>
               <Input id="email" type="email" placeholder="Enter your email" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="organization">Organization</Label>
-              <Input id="organization" placeholder="Enter your organization" />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="topic">Session Topic</Label>
-              <Input id="topic" placeholder="What would you like to share?" />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="description">Session Description</Label>
-              <Textarea 
-                id="description" 
-                placeholder="Describe your session and what participants will learn"
-                className="min-h-[120px]"
-              />
+              <Label htmlFor="linkedin">LinkedIn Profile</Label>
+              <Input id="linkedin" placeholder="Enter your LinkedIn profile URL" />
             </div>
 
             <Button 
