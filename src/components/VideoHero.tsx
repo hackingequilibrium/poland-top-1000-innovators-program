@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Play, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import polsvLogo from "@/assets/polsv-logo.png";
 
@@ -106,25 +105,6 @@ const VideoHero = () => {
           <h2 className="font-inter font-semibold uppercase text-2xl md:text-[36px] text-hero-text mb-6 tracking-tight">
             of Poland in Silicon Valley
           </h2>
-          <p className="text-xl md:text-2xl text-hero-text/90 mb-8 max-w-2xl">
-            Experience innovation like never before
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-xl shadow-[var(--shadow-glow)] transition-[var(--transition-smooth)]"
-            >
-              Get Started
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-hero-text/30 text-hero-text hover:bg-hero-text/10 hover:border-hero-text/50 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-[var(--transition-smooth)]"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Demo
-            </Button>
-          </div>
         </div>
       </div>
 
