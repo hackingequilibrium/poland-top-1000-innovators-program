@@ -28,7 +28,7 @@ const VideoHero = () => {
 
       {/* Logo */}
       <div className="absolute top-16 left-6 md:left-12 lg:left-[100px] z-20">
-        <img src={polsvLogo} alt="PolSV Logo" className="h-20 md:h-24 lg:h-28 w-auto" />
+        <img src={polsvLogo} alt="PolSV Logo" className="h-16 md:h-[77px] lg:h-[90px] w-auto" />
       </div>
 
       {/* Navigation */}
