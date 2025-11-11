@@ -28,38 +28,49 @@ const Admin = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
 
   useEffect(() => {
-    // Set up auth state listener FIRST
+    let mounted = true;
+
+    // Check for existing session first
+    const initAuth = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (!mounted) return;
+      
+      if (!session?.user) {
+        setLoading(false);
+        navigate("/auth");
+        return;
+      }
+      
+      setSession(session);
+      setUser(session.user);
+      await checkAdminRole(session.user.id);
+    };
+
+    initAuth();
+
+    // Set up auth state listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
+      async (event, session) => {
+        if (!mounted) return;
+        
         setSession(session);
         setUser(session?.user ?? null);
         
-        // Check admin role when session changes
-        if (session?.user) {
-          setTimeout(() => {
-            checkAdminRole(session.user.id);
-          }, 0);
-        } else {
+        if (!session?.user) {
           setIsAdmin(false);
           setLoading(false);
+          navigate("/auth");
+        } else {
+          await checkAdminRole(session.user.id);
         }
       }
     );
 
-    // THEN check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      
-      if (session?.user) {
-        checkAdminRole(session.user.id);
-      } else {
-        setLoading(false);
-        navigate("/auth");
-      }
-    });
-
-    return () => subscription.unsubscribe();
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
   }, [navigate]);
 
   const checkAdminRole = async (userId: string) => {
@@ -130,18 +141,27 @@ const Admin = () => {
 
   if (!user || !isAdmin) {
     return (
-      <div className="min-h-screen bg-[#0F1435] flex items-center justify-center">
-        <Card className="rounded-none">
-          <CardContent className="pt-6">
-            <p className="font-inter text-[#797B8E] mb-4">
+      <div className="min-h-screen bg-[#0F1435] flex items-center justify-center p-4">
+        <Card className="rounded-none max-w-md w-full">
+          <CardContent className="pt-6 space-y-4">
+            <p className="font-inter text-[#797B8E] text-center">
               You need admin access to view this page
             </p>
-            <Button
-              onClick={() => navigate("/auth")}
-              className="bg-[#C70828] hover:bg-[#A80E34] rounded-none"
-            >
-              Go to Login
-            </Button>
+            <div className="space-y-2">
+              <Button
+                onClick={() => window.location.href = "/auth"}
+                className="w-full bg-[#C70828] hover:bg-[#A80E34] rounded-none"
+              >
+                Go to Login
+              </Button>
+              <Button
+                onClick={() => window.location.href = "/"}
+                variant="outline"
+                className="w-full rounded-none"
+              >
+                Return to Home
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
