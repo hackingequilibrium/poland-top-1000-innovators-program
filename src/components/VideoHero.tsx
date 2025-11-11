@@ -212,19 +212,19 @@ const VideoHero = () => {
             <div className="mt-[40px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box1Icon} alt="Innovation Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Space Engineering<br />& Aerospace</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Space Engineering<br />& Aerospace</div>
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box2Icon} alt="Researchers Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Elite Researchers</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Elite Researchers</div>
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box3Icon} alt="Projects Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Innovation Projects</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Innovation Projects</div>
               </div>
               <div className="bg-white h-auto pt-4 pb-8 flex flex-col items-center justify-center gap-1">
                 <img src={box4Icon} alt="Universities Icon" className="w-auto h-auto scale-[0.77]" />
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435]">Top Universities</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Top Universities</div>
               </div>
             </div>
             
