@@ -20,7 +20,7 @@ const VideoHero = () => {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1a2640]/60 via-[#3d4a72]/40 to-[#b5b8d5]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F23A3] to-[#0F1435]/20" />
 
       {/* Logo */}
       <div className="absolute top-16 left-6 md:left-12 lg:left-[100px] z-20">
