@@ -141,9 +141,10 @@ const VideoHero = () => {
             </div>
             
             {/* Second Row */}
-            <div className="bg-[#0C0F24] h-[130px] flex flex-col items-center justify-center">
-              <div className="font-inter font-extrabold text-[56px] text-hero-text leading-none">4</div>
-              <div className="font-inter font-light text-sm lg:text-[18px] text-hero-text">Intensive Days</div>
+            <div className="bg-white h-[130px] flex items-center justify-start px-8 md:px-16 lg:px-24">
+              <h2 className="font-inter font-extrabold text-[48px] text-[#0F1435] leading-tight uppercase">
+                The Largest Polish Tech and Science Delegation Ever in Silicon Valley
+              </h2>
             </div>
           </div>
         </div>
