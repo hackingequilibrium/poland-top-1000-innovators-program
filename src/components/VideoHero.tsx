@@ -166,7 +166,16 @@ const VideoHero = () => {
                     For Companies & Investors
                   </span>
                 </div>
-                <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">Access world-class innovation, ready to scale</div>
+                <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">
+                  Access world-class innovation,<br />
+                  ready to scale
+                </div>
+                <ul className="font-inter font-normal text-sm md:text-base text-white space-y-2 mt-2 list-disc list-inside">
+                  <li>First-mover advantage on 100+ commercialization-ready projects</li>
+                  <li>Cost-effective R&D — 50–70% lower than US costs, with EU-level quality</li>
+                  <li>Exceptional talent — Poland ranks #3 globally in math and CS education</li>
+                  <li>Partnerships with startups ready for global scale</li>
+                </ul>
               </div>
               <div className="bg-[#C70828] flex flex-col items-start justify-center px-8 py-6 gap-2">
                 <div className="inline-block bg-[#0F1435] px-4 py-2">
