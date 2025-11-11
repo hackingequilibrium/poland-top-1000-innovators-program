@@ -226,6 +226,13 @@ const VideoHero = () => {
             </div>
           </div>
         </div>
+
+        {/* Ready to Collaborate Section */}
+        <div className="mt-[70px]">
+          <h2 className="text-white font-extrabold uppercase text-2xl lg:text-4xl mb-[40px] text-left pl-[50px]">
+            Ready to Collaborate?
+          </h2>
+        </div>
       </div>
     </section>
   );
