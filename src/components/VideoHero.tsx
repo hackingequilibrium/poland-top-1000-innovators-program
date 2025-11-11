@@ -45,17 +45,17 @@ const VideoHero = () => {
         {/* Desktop & Tablet Navigation */}
         <ul className="hidden md:flex gap-6 lg:gap-8 font-inter font-normal text-base lg:text-[20px] text-hero-text">
           <li>
-            <a href="#about" className="hover:underline transition-all">
+            <a href="#about" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               About PolSV
             </a>
           </li>
           <li>
-            <a href="#lead-session" className="hover:underline transition-all">
+            <a href="#lead-session" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Lead a Session
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:underline transition-all">
+            <a href="#contact" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Contact
             </a>
           </li>
@@ -77,7 +77,7 @@ const VideoHero = () => {
               <li>
                 <a 
                   href="#about" 
-                  className="hover:underline transition-all"
+                  className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About PolSV
@@ -86,7 +86,7 @@ const VideoHero = () => {
               <li>
                 <a 
                   href="#lead-session" 
-                  className="hover:underline transition-all"
+                  className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Lead a Session
@@ -95,7 +95,7 @@ const VideoHero = () => {
               <li>
                 <a 
                   href="#contact" 
-                  className="hover:underline transition-all"
+                  className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
