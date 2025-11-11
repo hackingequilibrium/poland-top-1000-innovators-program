@@ -184,8 +184,7 @@ const VideoHero = () => {
                   </span>
                 </div>
                 <div className="font-inter font-semibold text-base md:text-lg lg:text-xl text-white">
-                  Access world-class innovation,<br className="lg:hidden" />
-                  ready to scale
+                  Access world-class innovation,<br className="lg:hidden" /> ready to scale
                 </div>
                 <ul className="font-inter font-normal text-base md:text-lg text-white space-y-2 mt-2 list-disc list-outside ml-5">
                   <li>First-mover advantage on <strong>100+</strong> commercialization-ready projects</li>
