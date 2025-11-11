@@ -159,22 +159,14 @@ const VideoHero = () => {
             </div>
             
             {/* Red Boxes */}
-            <div className="mt-[40px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
+            <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 gap-[20px]">
               <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
                 <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
                 <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
               </div>
               <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">200</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Elite Researchers</div>
-              </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">100+</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Innovation Projects</div>
-              </div>
-              <div className="bg-[#C70828] h-[130px] flex flex-col items-center justify-center">
-                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">12</div>
-                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Top Universities</div>
+                <div className="font-inter font-extrabold text-[36px] md:text-[42px] lg:text-[48px] text-white leading-none">4</div>
+                <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-white">Intensive Days</div>
               </div>
             </div>
             
