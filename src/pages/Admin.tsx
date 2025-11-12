@@ -176,6 +176,32 @@ const Admin = () => {
     navigate("/auth");
   };
 
+  const handleDeleteAdmin = async (userId: string) => {
+    if (userId === user?.id) {
+      toast.error("You cannot delete your own admin account");
+      return;
+    }
+
+    if (!confirm("Are you sure you want to remove admin access for this user?")) {
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('user_roles')
+        .delete()
+        .eq('user_id', userId)
+        .eq('role', 'admin');
+
+      if (error) throw error;
+
+      toast.success("Admin access removed successfully");
+      fetchAdminUsers();
+    } catch (error) {
+      toast.error("Failed to remove admin access");
+    }
+  };
+
   const adminSchema = z.object({
     email: z.string().trim().email({ message: "Please enter a valid email address" }),
     password: z.string().min(8, { message: "Password must be at least 8 characters" }),
@@ -276,9 +302,16 @@ const Admin = () => {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
             <img src={polsvLogo} alt="PolSV Logo" className="h-16 w-auto" />
-            <h1 className="font-inter font-extrabold text-2xl text-white uppercase">
-              Admin Panel
-            </h1>
+            <div>
+              <h1 className="font-inter font-extrabold text-2xl text-white uppercase">
+                Admin Panel
+              </h1>
+              {user && (
+                <p className="font-inter text-sm text-gray-400 mt-1">
+                  Logged in as: {user.email}
+                </p>
+              )}
+            </div>
           </div>
           <Button
             onClick={handleSignOut}
@@ -356,6 +389,9 @@ const Admin = () => {
                             <div className="space-y-1">
                               <p className="font-inter font-bold text-base text-[#0F1435]">
                                 {admin.full_name || 'No name'}
+                                {admin.user_id === user?.id && (
+                                  <span className="ml-2 text-xs font-normal text-[#C70828]">(You)</span>
+                                )}
                               </p>
                               <p className="font-inter text-sm text-[#797B8E]">
                                 {admin.email}
@@ -364,6 +400,16 @@ const Admin = () => {
                                 Added: {new Date(admin.created_at).toLocaleDateString()}
                               </p>
                             </div>
+                            {admin.user_id !== user?.id && (
+                              <Button
+                                onClick={() => handleDeleteAdmin(admin.user_id)}
+                                variant="destructive"
+                                size="sm"
+                                className="rounded-none"
+                              >
+                                Remove Access
+                              </Button>
+                            )}
                           </div>
                         </CardContent>
                       </Card>
