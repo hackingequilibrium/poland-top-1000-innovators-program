@@ -23,6 +23,13 @@ interface Submission {
   created_at: string;
 }
 
+interface AdminUser {
+  user_id: string;
+  email: string;
+  full_name: string | null;
+  created_at: string;
+}
+
 const Admin = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
@@ -30,9 +37,11 @@ const Admin = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
   const [creatingAdmin, setCreatingAdmin] = useState(false);
+  const [showCreateAdmin, setShowCreateAdmin] = useState(false);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -87,6 +96,7 @@ const Admin = () => {
   useEffect(() => {
     if (isAdmin && user) {
       fetchSubmissions();
+      fetchAdminUsers();
     }
   }, [isAdmin, user]);
 
@@ -103,6 +113,57 @@ const Admin = () => {
       } else {
         setSubmissions(data || []);
       }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred");
+    }
+  };
+
+  const fetchAdminUsers = async () => {
+    try {
+      // First fetch user_roles for admins
+      const { data: rolesData, error: rolesError } = await supabase
+        .from('user_roles')
+        .select('user_id, created_at')
+        .eq('role', 'admin')
+        .order('created_at', { ascending: false });
+
+      if (rolesError) {
+        console.error('Error fetching admin roles:', rolesError);
+        toast.error("Failed to load admin users");
+        return;
+      }
+
+      if (!rolesData || rolesData.length === 0) {
+        setAdminUsers([]);
+        return;
+      }
+
+      // Then fetch profiles for these user IDs
+      const userIds = rolesData.map(role => role.user_id);
+      const { data: profilesData, error: profilesError } = await supabase
+        .from('profiles')
+        .select('id, email, full_name')
+        .in('id', userIds);
+
+      if (profilesError) {
+        console.error('Error fetching profiles:', profilesError);
+        toast.error("Failed to load admin user details");
+        return;
+      }
+
+      // Combine the data
+      const formattedData = rolesData.map(role => {
+        const profile = profilesData?.find(p => p.id === role.user_id);
+        return {
+          user_id: role.user_id,
+          email: profile?.email || 'No email',
+          full_name: profile?.full_name || null,
+          created_at: role.created_at
+        };
+      });
+      
+      setAdminUsers(formattedData);
     } catch (error) {
       console.error('Unexpected error:', error);
       toast.error("An unexpected error occurred");
@@ -163,6 +224,8 @@ const Admin = () => {
       toast.success("Admin user created successfully!");
       setNewAdminEmail("");
       setNewAdminPassword("");
+      setShowCreateAdmin(false);
+      fetchAdminUsers(); // Refresh the admin list
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Failed to create admin user");
     } finally {
@@ -265,51 +328,108 @@ const Admin = () => {
             )}
           </TabsContent>
 
-          <TabsContent value="admins">
-            <Card className="rounded-none">
-              <CardHeader>
-                <CardTitle className="font-inter font-bold text-xl text-[#0F1435]">
-                  Create New Admin User
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleCreateAdmin} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="adminEmail">Email</Label>
-                    <Input
-                      id="adminEmail"
-                      type="email"
-                      placeholder="Enter admin email"
-                      value={newAdminEmail}
-                      onChange={(e) => setNewAdminEmail(e.target.value)}
-                      className="rounded-none"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="adminPassword">Password</Label>
-                    <Input
-                      id="adminPassword"
-                      type="password"
-                      placeholder="Enter password (min 8 characters)"
-                      value={newAdminPassword}
-                      onChange={(e) => setNewAdminPassword(e.target.value)}
-                      className="rounded-none"
-                      required
-                    />
-                  </div>
-
+          <TabsContent value="admins" className="space-y-6">
+            {!showCreateAdmin ? (
+              <>
+                <div className="flex justify-between items-center">
+                  <h2 className="font-inter font-extrabold text-xl text-white">Admin Users</h2>
                   <Button
-                    type="submit"
-                    disabled={creatingAdmin}
-                    className="w-full bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
+                    onClick={() => setShowCreateAdmin(true)}
+                    className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold rounded-none"
                   >
-                    {creatingAdmin ? "Creating..." : "Create Admin User"}
+                    + Create New Admin
                   </Button>
-                </form>
-              </CardContent>
-            </Card>
+                </div>
+
+                {adminUsers.length === 0 ? (
+                  <Card className="rounded-none">
+                    <CardContent className="py-12 text-center">
+                      <p className="font-inter text-[#797B8E]">No admin users found</p>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <div className="grid gap-4">
+                    {adminUsers.map((admin) => (
+                      <Card key={admin.user_id} className="rounded-none">
+                        <CardContent className="py-4">
+                          <div className="flex justify-between items-start">
+                            <div className="space-y-1">
+                              <p className="font-inter font-bold text-base text-[#0F1435]">
+                                {admin.full_name || 'No name'}
+                              </p>
+                              <p className="font-inter text-sm text-[#797B8E]">
+                                {admin.email}
+                              </p>
+                              <p className="font-inter text-xs text-[#797B8E]">
+                                Added: {new Date(admin.created_at).toLocaleDateString()}
+                              </p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Card className="rounded-none">
+                <CardHeader>
+                  <div className="flex justify-between items-center">
+                    <CardTitle className="font-inter font-bold text-xl text-[#0F1435]">
+                      Create New Admin User
+                    </CardTitle>
+                    <Button
+                      onClick={() => {
+                        setShowCreateAdmin(false);
+                        setNewAdminEmail("");
+                        setNewAdminPassword("");
+                      }}
+                      variant="ghost"
+                      className="rounded-none"
+                    >
+                      Cancel
+                    </Button>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleCreateAdmin} className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="adminEmail">Email</Label>
+                      <Input
+                        id="adminEmail"
+                        type="email"
+                        placeholder="Enter admin email"
+                        value={newAdminEmail}
+                        onChange={(e) => setNewAdminEmail(e.target.value)}
+                        className="rounded-none"
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="adminPassword">Password</Label>
+                      <Input
+                        id="adminPassword"
+                        type="password"
+                        placeholder="Enter password (min 8 characters)"
+                        value={newAdminPassword}
+                        onChange={(e) => setNewAdminPassword(e.target.value)}
+                        className="rounded-none"
+                        required
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      disabled={creatingAdmin}
+                      className="w-full bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
+                    >
+                      {creatingAdmin ? "Creating..." : "Create Admin User"}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            )}
           </TabsContent>
         </Tabs>
       </div>
