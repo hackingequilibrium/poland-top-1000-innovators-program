@@ -145,9 +145,6 @@ const LeadSession = () => {
               </Accordion>
 
               <div className="mb-8">
-                <h3 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-3 uppercase">
-                  Session Details
-                </h3>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
                   Both workshops are in person and will take place at:
                 </p>
