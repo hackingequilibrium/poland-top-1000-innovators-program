@@ -16,11 +16,9 @@ const authSchema = z.object({
 
 const Auth = () => {
   const navigate = useNavigate();
-  const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
 
   useEffect(() => {
     // Check if user is already logged in
@@ -58,42 +56,19 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: email.trim(),
-          password,
-        });
+      const { error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password,
+      });
 
-        if (error) {
-          if (error.message.includes("Invalid login credentials")) {
-            toast.error("Invalid email or password");
-          } else {
-            toast.error(error.message);
-          }
+      if (error) {
+        if (error.message.includes("Invalid login credentials")) {
+          toast.error("Invalid email or password");
         } else {
-          toast.success("Logged in successfully!");
+          toast.error(error.message);
         }
       } else {
-        const { error } = await supabase.auth.signUp({
-          email: email.trim(),
-          password,
-          options: {
-            emailRedirectTo: `${window.location.origin}/`,
-            data: {
-              full_name: fullName,
-            },
-          },
-        });
-
-        if (error) {
-          if (error.message.includes("already registered")) {
-            toast.error("This email is already registered. Please log in.");
-          } else {
-            toast.error(error.message);
-          }
-        } else {
-          toast.success("Account created successfully!");
-        }
+        toast.success("Logged in successfully!");
       }
     } catch (error) {
       toast.error("An unexpected error occurred");
@@ -111,29 +86,14 @@ const Auth = () => {
       <Card className="w-full max-w-md rounded-none border-none">
         <CardHeader>
           <CardTitle className="font-inter font-extrabold text-2xl text-[#0F1435]">
-            {isLogin ? "Admin Login" : "Create Admin Account"}
+            Admin Login
           </CardTitle>
           <CardDescription className="font-inter text-[#797B8E]">
-            {isLogin ? "Sign in to access the admin panel" : "Sign up to create an admin account"}
+            Sign in to access the admin panel
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            {!isLogin && (
-              <div className="space-y-2">
-                <Label htmlFor="fullName">Full Name</Label>
-                <Input
-                  id="fullName"
-                  type="text"
-                  placeholder="Enter your full name"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  className="rounded-none"
-                  required={!isLogin}
-                />
-              </div>
-            )}
-            
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -165,18 +125,8 @@ const Auth = () => {
               disabled={loading}
               className="w-full bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
             >
-              {loading ? "Loading..." : isLogin ? "Sign In" : "Sign Up"}
+              {loading ? "Loading..." : "Sign In"}
             </Button>
-
-            <div className="text-center">
-              <button
-                type="button"
-                onClick={() => setIsLogin(!isLogin)}
-                className="font-inter text-sm text-[#797B8E] hover:text-[#0F1435]"
-              >
-                {isLogin ? "Don't have an account? Sign up" : "Already have an account? Log in"}
-              </button>
-            </div>
           </form>
         </CardContent>
       </Card>
