@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import polsvLogo from "@/assets/polsv-logo.png";
 import { useCountUp } from "@/hooks/useCountUp";
 import box1Icon from "@/assets/box1.png";
@@ -50,9 +51,9 @@ const VideoHero = () => {
             </a>
           </li>
           <li>
-            <a href="#lead-session" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+            <Link to="/lead-session" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
               Lead a Session
-            </a>
+            </Link>
           </li>
           <li>
             <a href="https://polsv.org/contact/" target="_blank" rel="noopener noreferrer" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
@@ -86,13 +87,13 @@ const VideoHero = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#lead-session" 
+                <Link 
+                  to="/lead-session" 
                   className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Lead a Session
-                </a>
+                </Link>
               </li>
               <li>
                 <a 
@@ -286,11 +287,11 @@ const VideoHero = () => {
             Join the network shaping Poland&apos;s innovation bridge to Silicon Valley.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
-            <button className="inline-block bg-[#C70828] px-4 py-2 hover:bg-[#A00620] transition-colors">
+            <Link to="/lead-session" className="inline-block bg-[#C70828] px-4 py-2 hover:bg-[#A00620] transition-colors">
               <span className="font-inter font-semibold uppercase text-white text-sm">
                 Lead a Session →
               </span>
-            </button>
+            </Link>
           </div>
         </div>
         
