@@ -149,7 +149,7 @@ const LeadSession = () => {
                   Both workshops are in person and will take place at:
                 </p>
                 <ul className="list-disc list-inside font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4 mb-3">
-                  <li>Stanford University — December 9, 1:30–2:45 PM</li>
+                  <li>Stanford University — December 9, 2:30–3:45 PM</li>
                   <li>UC Berkeley — December 11, 1:15–2:45 PM</li>
                 </ul>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
@@ -235,7 +235,7 @@ const LeadSession = () => {
                         htmlFor="stanford"
                         className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        Stanford University — December 9, 1:30–2:45 PM
+                        Stanford University — December 9, 2:30–3:45 PM
                       </label>
                     </div>
                     <div className="flex items-center space-x-2">
