@@ -11,12 +11,12 @@ import box8Icon from "@/assets/box8.png";
 
 const Sectors = () => {
   return (
-    <main className="bg-[#0F1435] min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       {/* Header */}
       <header className="flex items-center justify-between px-6 md:px-12 lg:px-[100px] py-8">
         <div className="flex items-center gap-4">
           <img src={polsvLogo} alt="PolSV Logo" className="h-12 md:h-16 w-auto" />
-          <div className="font-inter font-semibold text-white text-lg md:text-xl lg:text-2xl">
+          <div className="font-inter font-semibold text-[#0F1435] text-lg md:text-xl lg:text-2xl">
             Top 1000 Innovators of Poland in Silicon Valley
           </div>
         </div>
@@ -27,7 +27,7 @@ const Sectors = () => {
         <div className="w-full">
           {/* Header */}
           <div className="mb-[40px]">
-            <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-white leading-tight uppercase text-left">
+            <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] leading-tight uppercase text-left">
               Innovation Across 8 Critical Sectors
             </h2>
           </div>
