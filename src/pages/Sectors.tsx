@@ -34,25 +34,25 @@ const Sectors = () => {
           
           {/* First Row - Boxes 1-4 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px] mb-[20px]">
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box1Icon} alt="Innovation Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Space Engineering<br />& Aerospace</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box2Icon} alt="Researchers Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Biomedical Engineering<br />& Healthcare</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box3Icon} alt="Projects Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Computer Science<br />& AI</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box4Icon} alt="Universities Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
@@ -62,25 +62,25 @@ const Sectors = () => {
           
           {/* Second Row - Boxes 5-8 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box5Icon} alt="Electronics Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Chip Technology<br />& Data centers</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box6Icon} alt="Engineering Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Mechanical & Materials<br />Engineering</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box7Icon} alt="Construction Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
               <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">Civil Engineering<br />& Infrastructure</div>
             </div>
-            <div className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
+            <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box8Icon} alt="Network Icon" className="w-auto h-auto scale-[0.77]" />
               </div>
