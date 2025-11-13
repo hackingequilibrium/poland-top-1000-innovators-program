@@ -33,7 +33,7 @@ const Sectors = () => {
           </div>
           
           {/* First Row - Boxes 1-4 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px] mb-[20px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[20px]">
             <div className="pt-4 pb-8 flex flex-col items-center justify-start gap-1 min-h-[200px]">
               <div className="h-[100px] flex items-center justify-center">
                 <img src={box1Icon} alt="Innovation Icon" className="w-auto h-auto scale-[0.77]" />
