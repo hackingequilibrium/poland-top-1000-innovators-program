@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LeadSession from "./pages/LeadSession";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
+import Sectors from "./pages/Sectors";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/lead-session" element={<LeadSession />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/sectors" element={<Sectors />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
