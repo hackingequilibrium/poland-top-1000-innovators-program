@@ -297,7 +297,7 @@ const VideoHero = () => {
         
         {/* Small print disclaimer */}
         <p className="font-inter text-sm text-white/60 mt-16">
-          * Day 4 at Triple Ring Innovation Center by Parallax Global Advisors, LLC
+          *Day 4 at Triple Ring Innovation Center, organized by Parallax Global Advisors, LLC.
         </p>
         
         {/* Footer */}
