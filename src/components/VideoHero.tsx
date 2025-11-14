@@ -133,7 +133,7 @@ const VideoHero = () => {
             </div>
           </div>
           <p className="font-inter font-light text-base lg:text-[20px] text-hero-text mb-[70px]">
-            Stanford + Berkeley + Triple Ring Innovation Center
+            Stanford + Berkeley + Triple Ring Innovation Center*
           </p>
           
           {/* Four Boxes - Responsive Grid */}
@@ -294,6 +294,11 @@ const VideoHero = () => {
             </Link>
           </div>
         </div>
+        
+        {/* Small print disclaimer */}
+        <p className="font-inter text-xs text-white/60 mt-8">
+          * by Parallax Global Advisors, LLC
+        </p>
         
         {/* Footer */}
         <div className="mt-[70px] w-screen -ml-4 md:-ml-12 lg:-ml-[100px]">
