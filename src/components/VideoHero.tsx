@@ -296,12 +296,12 @@ const VideoHero = () => {
         </div>
         
         {/* Small print disclaimer */}
-        <p className="font-inter text-xs text-white/60 mt-8">
+        <p className="font-inter text-xs text-white/60 mt-16">
           * by Parallax Global Advisors, LLC
         </p>
         
         {/* Footer */}
-        <div className="mt-[70px] w-screen -ml-4 md:-ml-12 lg:-ml-[100px]">
+        <div className="mt-6 w-screen -ml-4 md:-ml-12 lg:-ml-[100px]">
           <div className="bg-[#0C0F24] h-[70px] flex items-center justify-between px-4 md:px-12 lg:px-[100px]">
             <span className="font-inter text-white text-xs md:text-sm">
               Copyright© 2025 Poland in Silicon Valley Center
