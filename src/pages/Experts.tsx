@@ -13,7 +13,7 @@ const Experts = () => {
               Suggest Silicon Valley based subject matter experts<br className="hidden md:block" /> for the Top 1000 innovators summit
             </h2>
             
-            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
+            <p className="font-inter font-bold text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
               December 9–12, 2025 · Stanford · UC Berkeley · Triple Ring Innovation Center
             </p>
             
