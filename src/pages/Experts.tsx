@@ -113,10 +113,10 @@ const Experts = () => {
       <Header simplified />
       
       <div className="flex-grow pt-[120px] pb-[100px] px-8 lg:px-[100px]">
-        <div className="bg-white p-8 lg:p-12 max-w-4xl mx-auto">
+        <div className="bg-white max-w-4xl mx-auto">
           {isSubmitted ? (
-            <div className="space-y-6 text-[#0F1435] py-12">
-              <h2 className="font-inter font-extrabold text-2xl md:text-3xl lg:text-4xl text-[#0F1435] uppercase">
+            <div className="space-y-6 text-[#0F1435] py-[40px] pl-[50px] pr-[100px]">
+              <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] uppercase leading-tight">
                 Thank you for your recommendations!
               </h2>
               
@@ -129,7 +129,7 @@ const Experts = () => {
               </p>
             </div>
           ) : (
-            <>
+            <div className="p-8 lg:p-12">
               <div className="space-y-6 text-[#0F1435]">
             <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
               Suggest Silicon Valley based subject matter experts<br className="hidden md:block" /> for the Top 1000 innovators summit
@@ -406,7 +406,7 @@ const Experts = () => {
               </div>
             </form>
           </Form>
-            </>
+            </div>
           )}
         </div>
       </div>
