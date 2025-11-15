@@ -30,8 +30,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
 
 const sectors = [
   "Space Engineering & Aerospace",
@@ -63,6 +61,7 @@ type FormValues = z.infer<typeof formSchema>;
 
 const Experts = () => {
   const [experts, setExperts] = useState([0]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -106,7 +105,7 @@ const Experts = () => {
 
   const onSubmit = (data: FormValues) => {
     console.log(data);
-    toast.success("Expert recommendations submitted successfully!");
+    setIsSubmitted(true);
   };
 
   return (
@@ -115,7 +114,23 @@ const Experts = () => {
       
       <div className="flex-grow pt-[120px] pb-[100px] px-8 lg:px-[100px]">
         <div className="bg-white p-8 lg:p-12 max-w-4xl mx-auto">
-          <div className="space-y-6 text-[#0F1435]">
+          {isSubmitted ? (
+            <div className="space-y-6 text-[#0F1435] py-12">
+              <h2 className="font-inter font-extrabold text-2xl md:text-3xl lg:text-4xl text-[#0F1435] uppercase">
+                Thank you for your recommendations!
+              </h2>
+              
+              <p className="font-inter font-light text-base md:text-lg text-[#797B8E] leading-relaxed">
+                Our team will review your suggestions as we build out the expert network for the summit. If you have additional experts to propose later, feel free to submit the form again.
+              </p>
+              
+              <p className="font-inter font-light text-base md:text-lg text-[#797B8E] leading-relaxed">
+                We appreciate your support in helping make this a transformational week of collaboration.
+              </p>
+            </div>
+          ) : (
+            <>
+              <div className="space-y-6 text-[#0F1435]">
             <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
               Suggest Silicon Valley based subject matter experts<br className="hidden md:block" /> for the Top 1000 innovators summit
             </h2>
@@ -391,6 +406,8 @@ const Experts = () => {
               </div>
             </form>
           </Form>
+            </>
+          )}
         </div>
       </div>
       
