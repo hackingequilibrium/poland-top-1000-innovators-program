@@ -10,7 +10,7 @@ const Experts = () => {
         <div className="bg-white p-8 lg:p-12 max-w-4xl mx-auto">
           <div className="space-y-6 text-[#0F1435]">
             <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
-              Suggest Silicon Valley based subject matter experts for the<br className="hidden md:block" /> Top 1000 innovators summit
+              Suggest Silicon Valley based subject matter experts<br className="hidden md:block" /> for the Top 1000 innovators summit
             </h2>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
