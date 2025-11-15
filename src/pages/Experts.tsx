@@ -51,7 +51,6 @@ const expertSchema = z.object({
   linkedin: z.string().optional(),
   sector: z.string().min(1, "Sector is required"),
   warmIntro: z.boolean().default(false),
-  warmIntroDetails: z.string().optional(),
 });
 
 const formSchema = z.object({
@@ -78,7 +77,6 @@ const Experts = () => {
           linkedin: "",
           sector: "",
           warmIntro: false,
-          warmIntroDetails: "",
         },
       ],
     },
@@ -95,7 +93,6 @@ const Experts = () => {
         linkedin: "",
         sector: "",
         warmIntro: false,
-        warmIntroDetails: "",
       },
     ]);
     setExperts([...experts, experts.length]);
@@ -159,7 +156,7 @@ const Experts = () => {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-8">
               {/* Submitter Information Section */}
-              <div className="border-b border-[#E5E7EB] pb-8">
+              <div className="pb-8">
                 <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6 uppercase">
                   Your Information
                 </h3>
@@ -352,28 +349,6 @@ const Experts = () => {
                           </FormItem>
                         )}
                       />
-
-                      {form.watch(`experts.${index}.warmIntro`) && (
-                        <FormField
-                          control={form.control}
-                          name={`experts.${index}.warmIntroDetails`}
-                          render={({ field }) => (
-                            <FormItem>
-                          <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            How Do You Know This Expert?
-                          </FormLabel>
-                              <FormControl>
-                                <Textarea 
-                                  placeholder="Describe Your Relationship With This Expert" 
-                                  {...field}
-                                  className="bg-white border-[#E5E7EB] min-h-[100px]"
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      )}
                     </div>
                   </div>
                 </div>
