@@ -7,6 +7,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Rocket, Heart, Brain, Leaf, Cpu, Cog, Building, Users } from "lucide-react";
 import {
   Form,
   FormControl,
@@ -109,9 +110,27 @@ const Experts = () => {
               December 9–12, 2025 · Stanford · UC Berkeley · Triple Ring Innovation Center
             </p>
             
-            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-8">
               We're bringing 200 elite researchers from 12 Polish universities, each presenting breakthrough projects across eight critical sectors, for four intensive days in Silicon Valley.
             </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {[
+                { icon: Rocket, name: "Space Engineering & Aerospace" },
+                { icon: Heart, name: "Biomedical Engineering & Healthcare" },
+                { icon: Brain, name: "Computer Science & AI" },
+                { icon: Leaf, name: "Energy & Environmental Engineering" },
+                { icon: Cpu, name: "Chip Technology & Data Centers" },
+                { icon: Cog, name: "Mechanical & Materials Engineering" },
+                { icon: Building, name: "Civil Engineering & Infrastructure" },
+                { icon: Users, name: "Humanities & Social Sciences" },
+              ].map((sector, idx) => (
+                <div key={idx} className="flex flex-col items-center justify-center p-4 border border-[#E5E7EB] bg-gray-50 rounded-lg min-h-[120px]">
+                  <sector.icon className="w-8 h-8 mb-2 text-[#0F1435]" />
+                  <p className="font-inter font-medium text-xs text-center text-[#0F1435]">{sector.name}</p>
+                </div>
+              ))}
+            </div>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
               The summit is designed to spark meaningful collaboration between these researchers and Silicon Valley professionals, entrepreneurs, investors, and academic partners. To build the strongest sector tracks and expert networks, we're gathering recommendations for subject-matter experts who should be included.
@@ -253,6 +272,7 @@ const Experts = () => {
                               <Checkbox
                                 checked={field.value}
                                 onCheckedChange={field.onChange}
+                                className="rounded-none"
                               />
                             </FormControl>
                             <div className="space-y-1 leading-none">
