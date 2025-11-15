@@ -55,6 +55,8 @@ const expertSchema = z.object({
 });
 
 const formSchema = z.object({
+  submitterName: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
+  submitterEmail: z.string().trim().email("Invalid email").max(255, "Email must be less than 255 characters"),
   experts: z.array(expertSchema).min(1, "At least one expert is required"),
 });
 
@@ -66,6 +68,8 @@ const Experts = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      submitterName: "",
+      submitterEmail: "",
       experts: [
         {
           fullName: "",
@@ -148,12 +152,64 @@ const Experts = () => {
             </p>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed">
-              Please submit one or multiple experts using the fields below.
+              Please submit one or multiple experts using the form below.
             </p>
           </div>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-8">
+              {/* Submitter Information Section */}
+              <div className="border-b border-[#E5E7EB] pb-8">
+                <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6 uppercase">
+                  Your Information
+                </h3>
+
+                <div className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="submitterName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-inter text-sm text-[#0F1435]">
+                          Full Name
+                          <span className="text-red-600 ml-1">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Enter Full Name" 
+                            {...field}
+                            className="bg-white border-[#E5E7EB]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="submitterEmail"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-inter text-sm text-[#0F1435]">
+                          Email
+                          <span className="text-red-600 ml-1">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="email"
+                            placeholder="Enter Email Address" 
+                            {...field}
+                            className="bg-white border-[#E5E7EB]"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+              </div>
+
               {experts.map((expertIndex, index) => (
                 <div key={expertIndex} className="border-t border-[#E5E7EB] pt-8 first:border-t-0 first:pt-0">
                   <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6 uppercase">
