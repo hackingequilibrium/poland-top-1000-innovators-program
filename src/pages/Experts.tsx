@@ -164,7 +164,7 @@ const Experts = () => {
                   Your Information
                 </h3>
 
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
                     name="submitterName"
@@ -217,7 +217,7 @@ const Experts = () => {
                     {index === 0 && <span className="text-red-600 ml-1">*</span>}
                   </h3>
 
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
                       name={`experts.${index}.fullName`}
@@ -300,7 +300,9 @@ const Experts = () => {
                         </FormItem>
                       )}
                     />
+                  </div>
 
+                  <div className="space-y-6 mt-6">
                     <FormField
                       control={form.control}
                       name={`experts.${index}.sector`}
