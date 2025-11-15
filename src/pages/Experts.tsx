@@ -98,6 +98,12 @@ const Experts = () => {
     setExperts([...experts, experts.length]);
   };
 
+  const removeExpert = (indexToRemove: number) => {
+    const currentExperts = form.getValues("experts");
+    form.setValue("experts", currentExperts.filter((_, i) => i !== indexToRemove));
+    setExperts(experts.filter((_, i) => i !== indexToRemove));
+  };
+
   const onSubmit = (data: FormValues) => {
     console.log(data);
     toast.success("Expert recommendations submitted successfully!");
@@ -209,10 +215,22 @@ const Experts = () => {
 
               {experts.map((expertIndex, index) => (
                 <div key={expertIndex} className="border-t border-[#E5E7EB] pt-8 first:border-t-0 first:pt-0">
-                  <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6 uppercase">
-                    Expert #{index + 1}
-                    {index === 0 && <span className="text-red-600 ml-1">*</span>}
-                  </h3>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] uppercase">
+                      Expert #{index + 1}
+                      {index === 0 && <span className="text-red-600 ml-1">*</span>}
+                    </h3>
+                    {index > 0 && (
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => removeExpert(index)}
+                        className="font-inter rounded-none text-red-600 border-red-600 hover:bg-red-50"
+                      >
+                        Remove Expert
+                      </Button>
+                    )}
+                  </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
