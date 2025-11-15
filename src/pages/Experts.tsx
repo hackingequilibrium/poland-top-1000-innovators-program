@@ -132,8 +132,8 @@ const Experts = () => {
                 { icon: box7Icon, name: "Civil Engineering", subtitle: "& Infrastructure" },
                 { icon: box8Icon, name: "Humanities", subtitle: "& Social Sciences" },
               ].map((sector, idx) => (
-                <div key={idx} className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 border border-[#E5E7EB] min-h-[200px]">
-                  <div className="h-[80px] flex items-center justify-center">
+                <div key={idx} className="bg-white pt-3 pb-4 flex flex-col items-center justify-start gap-1 border border-[#E5E7EB] min-h-[140px]">
+                  <div className="h-[60px] flex items-center justify-center">
                     <img src={sector.icon} alt={sector.name} className="w-auto h-auto scale-[0.55]" />
                   </div>
                   <div className="font-inter font-light text-[10px] md:text-xs lg:text-sm text-[#0F1435] text-center">
@@ -173,7 +173,7 @@ const Experts = () => {
                           </FormLabel>
                           <FormControl>
                             <Input 
-                              placeholder="Enter full name" 
+                              placeholder="Enter Full Name" 
                               {...field}
                               className="bg-white border-[#E5E7EB]"
                             />
@@ -194,7 +194,7 @@ const Experts = () => {
                           <FormControl>
                             <Input 
                               type="email"
-                              placeholder="Enter email address" 
+                              placeholder="Enter Email Address" 
                               {...field}
                               className="bg-white border-[#E5E7EB]"
                             />
@@ -215,7 +215,7 @@ const Experts = () => {
                           <FormControl>
                             <Input 
                               type="tel"
-                              placeholder="Enter phone number" 
+                              placeholder="Enter Phone Number" 
                               {...field}
                               className="bg-white border-[#E5E7EB]"
                             />
@@ -257,7 +257,7 @@ const Experts = () => {
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
                               <SelectTrigger className="bg-white border-[#E5E7EB]">
-                                <SelectValue placeholder="Select a sector" />
+                                <SelectValue placeholder="Select a Sector" />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent className="bg-white z-50">
@@ -306,7 +306,7 @@ const Experts = () => {
                           </FormLabel>
                               <FormControl>
                                 <Textarea 
-                                  placeholder="Describe your relationship with this expert" 
+                                  placeholder="Describe Your Relationship With This Expert" 
                                   {...field}
                                   className="bg-white border-[#E5E7EB] min-h-[100px]"
                                 />
