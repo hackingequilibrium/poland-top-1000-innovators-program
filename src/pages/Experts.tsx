@@ -181,7 +181,7 @@ const Experts = () => {
                           <Input 
                             placeholder="Enter Full Name" 
                             {...field}
-                            className="bg-white border-[#E5E7EB]"
+                            className="bg-white border-[#E5E7EB] rounded-none"
                           />
                         </FormControl>
                         <FormMessage />
@@ -203,7 +203,7 @@ const Experts = () => {
                             type="email"
                             placeholder="Enter Email Address" 
                             {...field}
-                            className="bg-white border-[#E5E7EB]"
+                            className="bg-white border-[#E5E7EB] rounded-none"
                           />
                         </FormControl>
                         <FormMessage />
@@ -225,7 +225,7 @@ const Experts = () => {
                         type="button"
                         variant="outline"
                         onClick={() => removeExpert(index)}
-                        className="font-inter rounded-none text-red-600 border-red-600 hover:bg-red-50"
+                        className="font-inter rounded-none text-red-600 border-red-600 hover:bg-red-600 hover:text-white"
                       >
                         Remove Expert
                       </Button>
@@ -246,7 +246,7 @@ const Experts = () => {
                             <Input 
                               placeholder="Enter Full Name" 
                               {...field}
-                              className="bg-white border-[#E5E7EB]"
+                              className="bg-white border-[#E5E7EB] rounded-none"
                             />
                           </FormControl>
                           <FormMessage />
@@ -267,7 +267,7 @@ const Experts = () => {
                               type="email"
                               placeholder="Enter Email Address" 
                               {...field}
-                              className="bg-white border-[#E5E7EB]"
+                              className="bg-white border-[#E5E7EB] rounded-none"
                             />
                           </FormControl>
                           <FormMessage />
@@ -288,7 +288,7 @@ const Experts = () => {
                               type="tel"
                               placeholder="Enter Phone Number" 
                               {...field}
-                              className="bg-white border-[#E5E7EB]"
+                              className="bg-white border-[#E5E7EB] rounded-none"
                             />
                           </FormControl>
                           <FormMessage />
@@ -308,7 +308,7 @@ const Experts = () => {
                             <Input 
                               placeholder="Enter LinkedIn URL" 
                               {...field}
-                              className="bg-white border-[#E5E7EB]"
+                              className="bg-white border-[#E5E7EB] rounded-none"
                             />
                           </FormControl>
                           <FormMessage />
@@ -329,7 +329,7 @@ const Experts = () => {
                           </FormLabel>
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
-                              <SelectTrigger className="bg-white border-[#E5E7EB]">
+                              <SelectTrigger className="bg-white border-[#E5E7EB] rounded-none">
                                 <SelectValue placeholder="Select a Sector" />
                               </SelectTrigger>
                             </FormControl>
@@ -377,14 +377,14 @@ const Experts = () => {
                   type="button"
                   variant="outline"
                   onClick={addExpert}
-                  className="font-inter rounded-none"
+                  className="font-inter rounded-none border-[#0F1435] text-[#0F1435] hover:bg-red-600 hover:text-white hover:border-red-600"
                 >
                   + Add another expert
                 </Button>
 
                 <Button
                   type="submit"
-                  className="font-inter bg-[#0F1435] text-white hover:bg-[#1a1f4a] rounded-none"
+                  className="font-inter bg-[#0F1435] text-white hover:bg-red-600 rounded-none"
                 >
                   Submit Recommendations
                 </Button>
