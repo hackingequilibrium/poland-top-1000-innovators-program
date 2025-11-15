@@ -133,10 +133,10 @@ const Experts = () => {
                 { icon: box8Icon, name: "Humanities", subtitle: "& Social Sciences" },
               ].map((sector, idx) => (
                 <div key={idx} className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 border border-[#E5E7EB] min-h-[200px]">
-                  <div className="h-[100px] flex items-center justify-center">
-                    <img src={sector.icon} alt={sector.name} className="w-auto h-auto scale-[0.77]" />
+                  <div className="h-[80px] flex items-center justify-center">
+                    <img src={sector.icon} alt={sector.name} className="w-auto h-auto scale-[0.55]" />
                   </div>
-                  <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">
+                  <div className="font-inter font-light text-[10px] md:text-xs lg:text-sm text-[#0F1435] text-center">
                     {sector.name}<br />{sector.subtitle}
                   </div>
                 </div>
