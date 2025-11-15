@@ -7,7 +7,14 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Rocket, Heart, Brain, Leaf, Cpu, Cog, Building, Users } from "lucide-react";
+import box1Icon from "@/assets/box1.png";
+import box2Icon from "@/assets/box2.png";
+import box3Icon from "@/assets/box3.png";
+import box4Icon from "@/assets/box4.png";
+import box5Icon from "@/assets/box5.png";
+import box6Icon from "@/assets/box6.png";
+import box7Icon from "@/assets/box7.png";
+import box8Icon from "@/assets/box8.png";
 import {
   Form,
   FormControl,
@@ -114,20 +121,24 @@ const Experts = () => {
               We're bringing 200 elite researchers from 12 Polish universities, each presenting breakthrough projects across eight critical sectors, for four intensive days in Silicon Valley.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-[20px] mb-8">
               {[
-                { icon: Rocket, name: "Space Engineering & Aerospace" },
-                { icon: Heart, name: "Biomedical Engineering & Healthcare" },
-                { icon: Brain, name: "Computer Science & AI" },
-                { icon: Leaf, name: "Energy & Environmental Engineering" },
-                { icon: Cpu, name: "Chip Technology & Data Centers" },
-                { icon: Cog, name: "Mechanical & Materials Engineering" },
-                { icon: Building, name: "Civil Engineering & Infrastructure" },
-                { icon: Users, name: "Humanities & Social Sciences" },
+                { icon: box1Icon, name: "Space Engineering", subtitle: "& Aerospace" },
+                { icon: box2Icon, name: "Biomedical Engineering", subtitle: "& Healthcare" },
+                { icon: box3Icon, name: "Computer Science", subtitle: "& AI" },
+                { icon: box4Icon, name: "Energy & Environmental", subtitle: "Engineering" },
+                { icon: box5Icon, name: "Chip Technology", subtitle: "& Data centers" },
+                { icon: box6Icon, name: "Mechanical & Materials", subtitle: "Engineering" },
+                { icon: box7Icon, name: "Civil Engineering", subtitle: "& Infrastructure" },
+                { icon: box8Icon, name: "Humanities", subtitle: "& Social Sciences" },
               ].map((sector, idx) => (
-                <div key={idx} className="flex flex-col items-center justify-center p-4 border border-[#E5E7EB] bg-gray-50 rounded-lg min-h-[120px]">
-                  <sector.icon className="w-8 h-8 mb-2 text-[#0F1435]" />
-                  <p className="font-inter font-medium text-xs text-center text-[#0F1435]">{sector.name}</p>
+                <div key={idx} className="bg-white pt-4 pb-8 flex flex-col items-center justify-start gap-1 border border-[#E5E7EB] min-h-[200px]">
+                  <div className="h-[100px] flex items-center justify-center">
+                    <img src={sector.icon} alt={sector.name} className="w-auto h-auto scale-[0.77]" />
+                  </div>
+                  <div className="font-inter font-light text-xs md:text-sm lg:text-[18px] text-[#0F1435] text-center">
+                    {sector.name}<br />{sector.subtitle}
+                  </div>
                 </div>
               ))}
             </div>
@@ -157,7 +168,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's full name
+                            Expert's Full Name
                             <span className="text-red-600 ml-1">*</span>
                           </FormLabel>
                           <FormControl>
@@ -178,7 +189,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's email
+                            Expert's Email
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -199,7 +210,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's phone number
+                            Expert's Phone Number
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -290,9 +301,9 @@ const Experts = () => {
                           name={`experts.${index}.warmIntroDetails`}
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="font-inter text-sm text-[#0F1435]">
-                                How do you know this expert?
-                              </FormLabel>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            How Do You Know This Expert?
+                          </FormLabel>
                               <FormControl>
                                 <Textarea 
                                   placeholder="Describe your relationship with this expert" 
@@ -310,19 +321,19 @@ const Experts = () => {
                 </div>
               ))}
 
-              <div className="flex gap-4">
+              <div className="flex flex-col gap-4">
                 <Button
                   type="button"
                   variant="outline"
                   onClick={addExpert}
-                  className="font-inter"
+                  className="font-inter rounded-none"
                 >
                   + Add another expert
                 </Button>
 
                 <Button
                   type="submit"
-                  className="font-inter bg-[#0F1435] text-white hover:bg-[#1a1f4a]"
+                  className="font-inter bg-[#0F1435] text-white hover:bg-[#1a1f4a] rounded-none"
                 >
                   Submit Recommendations
                 </Button>
