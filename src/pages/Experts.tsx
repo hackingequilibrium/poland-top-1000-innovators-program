@@ -126,8 +126,9 @@ const Experts = () => {
             <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-8">
               {experts.map((expertIndex, index) => (
                 <div key={expertIndex} className="border-t border-[#E5E7EB] pt-8 first:border-t-0 first:pt-0">
-                  <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6">
-                    Expert #{index + 1} {index === 0 && "(Required)"}
+                  <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6 uppercase">
+                    Expert #{index + 1}
+                    {index === 0 && <span className="text-red-600 ml-1">*</span>}
                   </h3>
 
                   <div className="space-y-6">
@@ -137,7 +138,8 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's full name (required)
+                            Expert's full name
+                            <span className="text-red-600 ml-1">*</span>
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -157,7 +159,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's email (optional)
+                            Expert's email
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -178,7 +180,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's phone number (optional)
+                            Expert's phone number
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -199,7 +201,7 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Expert's LinkedIn (optional)
+                            Expert's LinkedIn
                           </FormLabel>
                           <FormControl>
                             <Input 
@@ -219,7 +221,8 @@ const Experts = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="font-inter text-sm text-[#0F1435]">
-                            Sector (required — single choice)
+                            Sector
+                            <span className="text-red-600 ml-1">*</span>
                           </FormLabel>
                           <Select onValueChange={field.onChange} value={field.value}>
                             <FormControl>
@@ -268,7 +271,7 @@ const Experts = () => {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel className="font-inter text-sm text-[#0F1435]">
-                                How do you know this expert? (optional)
+                                How do you know this expert?
                               </FormLabel>
                               <FormControl>
                                 <Textarea 
