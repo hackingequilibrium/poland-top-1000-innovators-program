@@ -18,7 +18,7 @@ const Experts = () => {
             </p>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
-              We're bringing 200 elite researchers from 12 Polish universities, each presenting breakthrough projects across eight critical sectors, for four intensive days in Silicon Valley. It's a unique opportunity to access one of Europe's most talented pools of scientists and engineers, explore cost-effective R&D partnerships, tap into €95 billion of EU funding, and engage with commercialization-ready innovations — all concentrated in one transformational week.
+              We're bringing 200 elite researchers from 12 Polish universities, each presenting breakthrough projects across eight critical sectors, for four intensive days in Silicon Valley.
             </p>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
