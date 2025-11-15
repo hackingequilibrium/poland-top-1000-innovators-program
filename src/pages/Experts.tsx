@@ -15,6 +15,7 @@ import box5Icon from "@/assets/box5.png";
 import box6Icon from "@/assets/box6.png";
 import box7Icon from "@/assets/box7.png";
 import box8Icon from "@/assets/box8.png";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Form,
   FormControl,
@@ -103,9 +104,33 @@ const Experts = () => {
     setExperts(experts.filter((_, i) => i !== indexToRemove));
   };
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    setIsSubmitted(true);
+  const onSubmit = async (data: FormValues) => {
+    try {
+      // Submit each expert recommendation
+      const submissions = data.experts.map(expert => ({
+        submitter_name: data.submitterName,
+        submitter_email: data.submitterEmail,
+        expert_full_name: expert.fullName,
+        expert_email: expert.email || null,
+        expert_phone: expert.phone || null,
+        expert_linkedin: expert.linkedin || null,
+        expert_sector: expert.sector,
+        warm_intro: expert.warmIntro,
+      }));
+
+      const { error } = await supabase
+        .from('expert_recommendations')
+        .insert(submissions);
+
+      if (error) {
+        console.error('Error submitting recommendations:', error);
+        return;
+      }
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting recommendations:', error);
+    }
   };
 
   return (

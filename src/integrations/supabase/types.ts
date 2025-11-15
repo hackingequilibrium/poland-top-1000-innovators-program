@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      expert_recommendations: {
+        Row: {
+          created_at: string
+          expert_email: string | null
+          expert_full_name: string
+          expert_linkedin: string | null
+          expert_phone: string | null
+          expert_sector: string
+          id: string
+          submitter_email: string
+          submitter_name: string
+          warm_intro: boolean
+        }
+        Insert: {
+          created_at?: string
+          expert_email?: string | null
+          expert_full_name: string
+          expert_linkedin?: string | null
+          expert_phone?: string | null
+          expert_sector: string
+          id?: string
+          submitter_email: string
+          submitter_name: string
+          warm_intro?: boolean
+        }
+        Update: {
+          created_at?: string
+          expert_email?: string | null
+          expert_full_name?: string
+          expert_linkedin?: string | null
+          expert_phone?: string | null
+          expert_sector?: string
+          id?: string
+          submitter_email?: string
+          submitter_name?: string
+          warm_intro?: boolean
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

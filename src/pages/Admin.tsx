@@ -23,6 +23,19 @@ interface Submission {
   created_at: string;
 }
 
+interface ExpertRecommendation {
+  id: string;
+  submitter_name: string;
+  submitter_email: string;
+  expert_full_name: string;
+  expert_email: string | null;
+  expert_phone: string | null;
+  expert_linkedin: string | null;
+  expert_sector: string;
+  warm_intro: boolean;
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -37,6 +50,7 @@ const Admin = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(true);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [expertRecommendations, setExpertRecommendations] = useState<ExpertRecommendation[]>([]);
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
@@ -96,6 +110,7 @@ const Admin = () => {
   useEffect(() => {
     if (isAdmin && user) {
       fetchSubmissions();
+      fetchExpertRecommendations();
       fetchAdminUsers();
     }
   }, [isAdmin, user]);
@@ -112,6 +127,25 @@ const Admin = () => {
         toast.error("Failed to load submissions");
       } else {
         setSubmissions(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred");
+    }
+  };
+
+  const fetchExpertRecommendations = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('expert_recommendations')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching expert recommendations:', error);
+        toast.error("Failed to load expert recommendations");
+      } else {
+        setExpertRecommendations(data || []);
       }
     } catch (error) {
       console.error('Unexpected error:', error);
@@ -322,9 +356,12 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="submissions" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8 bg-[#0C0F24] rounded-none">
+          <TabsList className="grid w-full grid-cols-3 mb-8 bg-[#0C0F24] rounded-none">
             <TabsTrigger value="submissions" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Session Submissions
+            </TabsTrigger>
+            <TabsTrigger value="experts" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+              Expert Recommendations
             </TabsTrigger>
             <TabsTrigger value="admins" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               User Management
@@ -354,6 +391,46 @@ const Admin = () => {
                       <p><strong>Track:</strong> {submission.track === 'life-sciences' ? 'Life Sciences' : submission.track === 'deeptech' ? 'DeepTech' : 'Energy & Sustainability'}</p>
                       <p><strong>Locations:</strong> {[submission.stanford && 'Stanford', submission.berkeley && 'Berkeley'].filter(Boolean).join(', ')}</p>
                       <p className="text-[#797B8E] text-xs"><strong>Submitted:</strong> {new Date(submission.created_at).toLocaleString()}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="experts">
+            {expertRecommendations.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No expert recommendations yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {expertRecommendations.map((recommendation) => (
+                  <Card key={recommendation.id} className="rounded-none">
+                    <CardHeader>
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {recommendation.expert_full_name}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3 font-inter text-sm">
+                      <div className="border-b border-gray-200 pb-3">
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Expert Information</p>
+                        {recommendation.expert_email && <p><strong>Email:</strong> {recommendation.expert_email}</p>}
+                        {recommendation.expert_phone && <p><strong>Phone:</strong> {recommendation.expert_phone}</p>}
+                        {recommendation.expert_linkedin && (
+                          <p><strong>LinkedIn:</strong> <a href={recommendation.expert_linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">{recommendation.expert_linkedin}</a></p>
+                        )}
+                        <p><strong>Sector:</strong> {recommendation.expert_sector}</p>
+                        <p><strong>Warm Introduction:</strong> {recommendation.warm_intro ? 'Yes' : 'No'}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Submitted By</p>
+                        <p><strong>Name:</strong> {recommendation.submitter_name}</p>
+                        <p><strong>Email:</strong> {recommendation.submitter_email}</p>
+                        <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(recommendation.created_at).toLocaleString()}</p>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
