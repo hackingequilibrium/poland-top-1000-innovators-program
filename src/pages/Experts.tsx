@@ -1,7 +1,99 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
+
+const sectors = [
+  "Space Engineering & Aerospace",
+  "Biomedical Engineering & Healthcare",
+  "Computer Science & AI",
+  "Energy & Environmental Engineering",
+  "Chip Technology & Data Centers",
+  "Mechanical & Materials Engineering",
+  "Civil Engineering & Infrastructure",
+  "Humanities & Social Sciences",
+];
+
+const expertSchema = z.object({
+  fullName: z.string().min(1, "Full name is required"),
+  email: z.string().email("Invalid email").optional().or(z.literal("")),
+  phone: z.string().optional(),
+  linkedin: z.string().optional(),
+  sector: z.string().min(1, "Sector is required"),
+  warmIntro: z.boolean().default(false),
+  warmIntroDetails: z.string().optional(),
+});
+
+const formSchema = z.object({
+  experts: z.array(expertSchema).min(1, "At least one expert is required"),
+});
+
+type FormValues = z.infer<typeof formSchema>;
 
 const Experts = () => {
+  const [experts, setExperts] = useState([0]);
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      experts: [
+        {
+          fullName: "",
+          email: "",
+          phone: "",
+          linkedin: "",
+          sector: "",
+          warmIntro: false,
+          warmIntroDetails: "",
+        },
+      ],
+    },
+  });
+
+  const addExpert = () => {
+    const currentExperts = form.getValues("experts");
+    form.setValue("experts", [
+      ...currentExperts,
+      {
+        fullName: "",
+        email: "",
+        phone: "",
+        linkedin: "",
+        sector: "",
+        warmIntro: false,
+        warmIntroDetails: "",
+      },
+    ]);
+    setExperts([...experts, experts.length]);
+  };
+
+  const onSubmit = (data: FormValues) => {
+    console.log(data);
+    toast.success("Expert recommendations submitted successfully!");
+  };
+
   return (
     <main className="min-h-screen bg-[#0F1435] flex flex-col">
       <Header simplified />
@@ -29,6 +121,191 @@ const Experts = () => {
               Please submit one or multiple experts using the fields below.
             </p>
           </div>
+
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-8">
+              {experts.map((expertIndex, index) => (
+                <div key={expertIndex} className="border-t border-[#E5E7EB] pt-8 first:border-t-0 first:pt-0">
+                  <h3 className="font-inter font-bold text-base md:text-lg text-[#0F1435] mb-6">
+                    Expert #{index + 1} {index === 0 && "(Required)"}
+                  </h3>
+
+                  <div className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name={`experts.${index}.fullName`}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Expert's full name (required)
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter full name" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name={`experts.${index}.email`}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Expert's email (optional)
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="email"
+                              placeholder="Enter email address" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name={`experts.${index}.phone`}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Expert's phone number (optional)
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="tel"
+                              placeholder="Enter phone number" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name={`experts.${index}.linkedin`}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Expert's LinkedIn (optional)
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter LinkedIn URL" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name={`experts.${index}.sector`}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Sector (required — single choice)
+                          </FormLabel>
+                          <Select onValueChange={field.onChange} value={field.value}>
+                            <FormControl>
+                              <SelectTrigger className="bg-white border-[#E5E7EB]">
+                                <SelectValue placeholder="Select a sector" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent className="bg-white z-50">
+                              {sectors.map((sector) => (
+                                <SelectItem key={sector} value={sector}>
+                                  {sector}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <div className="space-y-4">
+                      <FormField
+                        control={form.control}
+                        name={`experts.${index}.warmIntro`}
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel className="font-inter text-sm text-[#0F1435]">
+                                I'm willing to provide a warm introduction to this expert.
+                              </FormLabel>
+                            </div>
+                          </FormItem>
+                        )}
+                      />
+
+                      {form.watch(`experts.${index}.warmIntro`) && (
+                        <FormField
+                          control={form.control}
+                          name={`experts.${index}.warmIntroDetails`}
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="font-inter text-sm text-[#0F1435]">
+                                How do you know this expert? (optional)
+                              </FormLabel>
+                              <FormControl>
+                                <Textarea 
+                                  placeholder="Describe your relationship with this expert" 
+                                  {...field}
+                                  className="bg-white border-[#E5E7EB] min-h-[100px]"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              <div className="flex gap-4">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={addExpert}
+                  className="font-inter"
+                >
+                  + Add another expert
+                </Button>
+
+                <Button
+                  type="submit"
+                  className="font-inter bg-[#0F1435] text-white hover:bg-[#1a1f4a]"
+                >
+                  Submit Recommendations
+                </Button>
+              </div>
+            </form>
+          </Form>
         </div>
       </div>
       
