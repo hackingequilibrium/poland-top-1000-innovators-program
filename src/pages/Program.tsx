@@ -336,6 +336,11 @@ const Program = () => {
                       <p className="font-inter text-sm text-[#0F1435]">Gala Dinner (by invitation) — Keynote: Adm. (Ret.) James O. Ellis Jr., Chair, National Academy of Engineering</p>
                     </div>
                   </div>
+
+                  {/* Transportation footnote */}
+                  <div className="mt-6 text-left">
+                    <p className="font-inter text-xs text-[#0F1435]">Transportation provided from Westin SFO hotel to and from the venue.</p>
+                  </div>
                 </div>
               </div>
             </TabsContent>
@@ -694,6 +699,11 @@ const Program = () => {
                   <div className="md:hidden mt-6 text-left">
                     <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center 3:25PM - 4 PM</p>
                   </div>
+
+                  {/* Transportation footnote */}
+                  <div className="mt-6 text-left">
+                    <p className="font-inter text-xs text-[#0F1435]">Transportation provided from Westin SFO hotel to and from the venue.</p>
+                  </div>
                 </div>
               </div>
             </TabsContent>
@@ -832,6 +842,11 @@ const Program = () => {
                   {/* Posters note (mobile only) */}
                   <div className="md:hidden mt-6 text-left">
                     <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector 9:30 AM - 4 PM</p>
+                  </div>
+
+                  {/* Transportation footnote */}
+                  <div className="mt-6 text-left">
+                    <p className="font-inter text-xs text-[#0F1435]">Transportation provided from Westin SFO hotel to and from the venue.</p>
                   </div>
                 </div>
               </div>
