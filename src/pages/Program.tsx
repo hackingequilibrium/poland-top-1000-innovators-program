@@ -639,8 +639,8 @@ const Program = () => {
                   </div>
 
                   {/* Poster note (mobile only) */}
-                  <div className="md:hidden mt-6 text-center">
-                    <p className="font-inter text-sm text-white">Poster Session at Grimes Engineering Center 3:25PM - 4 PM</p>
+                  <div className="md:hidden mt-6 text-left">
+                    <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center 3:25PM - 4 PM</p>
                   </div>
                 </div>
               </div>
@@ -778,8 +778,8 @@ const Program = () => {
                   </div>
 
                   {/* Posters note (mobile only) */}
-                  <div className="md:hidden mt-6 text-center">
-                    <p className="font-inter text-sm text-white">Posters on Location by Sector 9:30 AM - 4 PM</p>
+                  <div className="md:hidden mt-6 text-left">
+                    <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector 9:30 AM - 4 PM</p>
                   </div>
                 </div>
               </div>
