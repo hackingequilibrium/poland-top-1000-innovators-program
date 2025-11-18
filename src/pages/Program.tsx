@@ -581,7 +581,7 @@ const Program = () => {
                         3:25 PM
                         <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
-                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[104px]">
+                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[120px]">
                         3:55 PM
                         <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
