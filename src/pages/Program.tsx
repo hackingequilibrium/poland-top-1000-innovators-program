@@ -17,7 +17,7 @@ const Program = () => {
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-4 bg-transparent h-auto p-0 mb-8">
               <TabsTrigger 
                 value="day1" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
+                className="font-inter text-sm border border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white data-[state=active]:border-2 py-4 px-3 min-h-[100px]"
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 1 - Dec 9</span>
@@ -26,7 +26,7 @@ const Program = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="day2" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
+                className="font-inter text-sm border border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white data-[state=active]:border-2 py-4 px-3 min-h-[100px]"
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 2 - Dec 10</span>
@@ -35,7 +35,7 @@ const Program = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="day3" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
+                className="font-inter text-sm border border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white data-[state=active]:border-2 py-4 px-3 min-h-[100px]"
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 3 - Dec 11</span>
@@ -44,7 +44,7 @@ const Program = () => {
               </TabsTrigger>
               <TabsTrigger 
                 value="day4" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
+                className="font-inter text-sm border border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white data-[state=active]:border-2 py-4 px-3 min-h-[100px]"
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 4 - Dec 12</span>
