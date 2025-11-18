@@ -119,7 +119,7 @@ const Program = () => {
                           9:30 AM
                           <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                         </div>
-                        <div className="flex-1 bg-[#F3F3F3] p-4">
+                        <div className="flex-1 bg-[#F5EEDC] p-4">
                           <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Endless Innovation</p>
                         </div>
                       </div>
@@ -130,7 +130,7 @@ const Program = () => {
                           9:50 AM
                           <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                         </div>
-                        <div className="flex-1 bg-[#F3F3F3] p-4">
+                        <div className="flex-1 bg-[#F3DDD3] p-4">
                           <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Poland in Silicon Valley</p>
                         </div>
                       </div>
@@ -141,7 +141,7 @@ const Program = () => {
                           10:20 AM
                           <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                         </div>
-                        <div className="flex-1 bg-[#F3F3F3] p-4">
+                        <div className="flex-1 bg-[#F3DDD3] p-4">
                           <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: From Idea to Market</p>
                         </div>
                       </div>
@@ -170,9 +170,9 @@ const Program = () => {
                       11:10 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: US Patent Best Practice</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: US Patent Best Practice</p>
+                      </div>
                   </div>
 
                   {/* 12:00 PM */}
@@ -192,9 +192,9 @@ const Program = () => {
                       12:45 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: International Academic Collaboration</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: International Academic Collaboration</p>
+                      </div>
                   </div>
 
                   {/* 1:15 PM */}
@@ -215,13 +215,13 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Academic Collaboration
                         </p>
                       </div>
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Industry Partnership
@@ -305,9 +305,9 @@ const Program = () => {
                       9:15 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside chat: Artificial Intelligence Trends</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside chat: Artificial Intelligence Trends</p>
+                      </div>
                   </div>
 
                   {/* 9:45 AM */}
@@ -316,9 +316,9 @@ const Program = () => {
                       9:45 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI - Engineering, Regulation, Societal Impact</p>
-                    </div>
+                      <div className="flex-1 bg-[#F5EEDC] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI - Engineering, Regulation, Societal Impact</p>
+                      </div>
                   </div>
 
                   {/* 10:15 AM */}
@@ -338,9 +338,9 @@ const Program = () => {
                       11:00 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI in Life Science</p>
-                    </div>
+                      <div className="flex-1 bg-[#F5EEDC] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI in Life Science</p>
+                      </div>
                   </div>
 
                   {/* 11:30 AM */}
@@ -349,9 +349,9 @@ const Program = () => {
                       11:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI Enhanced On-Demand Work</p>
-                    </div>
+                      <div className="flex-1 bg-[#F5EEDC] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI Enhanced On-Demand Work</p>
+                      </div>
                   </div>
 
                   {/* 12:00 PM */}
@@ -372,13 +372,13 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Assisting Development of US Patent
                         </p>
                       </div>
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Global Innovation Readiness
@@ -405,13 +405,13 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Assisting Development of US Patent
                         </p>
                       </div>
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Global Innovation Readiness
@@ -480,9 +480,9 @@ const Program = () => {
                       9:35 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
+                      </div>
                   </div>
 
                   {/* 10:10 AM */}
@@ -491,9 +491,9 @@ const Program = () => {
                       10:10 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Science, Society, and the Ethics of the Future</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Science, Society, and the Ethics of the Future</p>
+                      </div>
                   </div>
 
                   {/* 10:40 AM */}
@@ -513,9 +513,9 @@ const Program = () => {
                       11:10 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
+                      </div>
                   </div>
 
                   {/* 11:40 AM */}
@@ -524,9 +524,9 @@ const Program = () => {
                       11:40 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Health & Robotics - Humanity & Technology</p>
-                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Health & Robotics - Humanity & Technology</p>
+                      </div>
                   </div>
 
                   {/* 12:10 PM */}
@@ -535,9 +535,9 @@ const Program = () => {
                       12:10 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Public Private Partnerships & Endowment: the Berkeley Model</p>
-                    </div>
+                      <div className="flex-1 bg-[#F5EEDC] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Public Private Partnerships & Endowment: the Berkeley Model</p>
+                      </div>
                   </div>
 
                   {/* 12:40 PM */}
@@ -558,13 +558,13 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Academic Collaboration
                         </p>
                       </div>
-                      <div className="bg-[#F3F3F3] p-4">
+                      <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
                           Industry Partnership
@@ -643,9 +643,9 @@ const Program = () => {
                             9:10 AM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3F3F3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Framing the Day</p>
-                          </div>
+                            <div className="flex-1 bg-[#F3DDD3] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Framing the Day</p>
+                            </div>
                         </div>
 
                         {/* 9:40 AM */}
@@ -654,9 +654,9 @@ const Program = () => {
                             9:40 AM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3F3F3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: The Art of Commercialization</p>
-                          </div>
+                            <div className="flex-1 bg-[#F3DDD3] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: The Art of Commercialization</p>
+                            </div>
                         </div>
 
                         {/* 10:10 AM */}
@@ -665,9 +665,9 @@ const Program = () => {
                             10:10 AM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3F3F3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Workshop: From Research to Impact</p>
-                          </div>
+                            <div className="flex-1 bg-[#D7F0F0] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Workshop: From Research to Impact</p>
+                            </div>
                         </div>
 
                         {/* 11:25 AM */}
@@ -676,9 +676,9 @@ const Program = () => {
                             11:25 AM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3F3F3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Workshop: Building a Commercialization Strategy</p>
-                          </div>
+                            <div className="flex-1 bg-[#D7F0F0] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Workshop: Building a Commercialization Strategy</p>
+                            </div>
                         </div>
 
                         {/* 12:40 PM */}
