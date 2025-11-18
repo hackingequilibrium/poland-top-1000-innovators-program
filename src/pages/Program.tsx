@@ -54,7 +54,188 @@ const Program = () => {
             </TabsList>
 
             <TabsContent value="day1" className="mt-6">
-              {/* Day 1 content */}
+              <div className="relative">
+                {/* Timeline vertical line */}
+                <div className="absolute left-[70px] top-8 bottom-8 w-[2px] bg-[#0F1435]" />
+                
+                <div className="space-y-4">
+                  {/* 7:30 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      7:30 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Registration Opens, Coffee & Light Bites</p>
+                    </div>
+                  </div>
+
+                  {/* 8:30 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      8:30 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Opening Remarks</p>
+                    </div>
+                  </div>
+
+                  {/* 8:35 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      8:35 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">PolSV Welcome Top 1000 Innovators of Poland in Silicon Valley</p>
+                    </div>
+                  </div>
+
+                  {/* 8:40 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      8:40 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">Welcome Addresses:</p>
+                      <ul className="font-inter text-sm text-[#0F1435] space-y-1 ml-4">
+                        <li>• Deputy Prime Minister Gawkowski, Minister of Digital Affairs (via video)</li>
+                        <li>• Head of Mission, Embassy of Poland in Washington, D.C.</li>
+                        <li>• Consul General of the Republic of Poland in Los Angeles</li>
+                        <li>• San Francisco Bay Area & Poland Overview — Director of International Affairs, City of San Francisco</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* 9:30 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      9:30 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Endless Innovation</p>
+                    </div>
+                  </div>
+
+                  {/* 9:50 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      9:50 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Poland in Silicon Valley</p>
+                    </div>
+                  </div>
+
+                  {/* 10:20 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      10:20 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: From Idea to Market</p>
+                    </div>
+                  </div>
+
+                  {/* 10:40 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      10:40 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    </div>
+                  </div>
+
+                  {/* 11:10 AM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      11:10 AM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: US Patent Best Practice</p>
+                    </div>
+                  </div>
+
+                  {/* 12:00 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      12:00 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
+                    </div>
+                  </div>
+
+                  {/* 12:45 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      12:45 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: International Academic Collaboration</p>
+                    </div>
+                  </div>
+
+                  {/* 1:15 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      1:15 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Stanford Campus Walk</p>
+                    </div>
+                  </div>
+
+                  {/* 2:30 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      2:30 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Workshops (by assignment)</p>
+                    </div>
+                  </div>
+
+                  {/* 3:45 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      3:45 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    </div>
+                  </div>
+
+                  {/* 4:00 PM - Poster Session */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      4:00 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Poster Session</p>
+                    </div>
+                  </div>
+
+                  {/* 4:00 PM - Meetup */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      4:00 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Stanford</p>
+                    </div>
+                  </div>
+
+                  {/* 6:00 PM */}
+                  <div className="flex gap-6">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                      6:00 PM
+                    </div>
+                    <div className="flex-1 bg-[#E5E7EB] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Gala Dinner — Keynote: Adm. (Ret.) James O. Ellis Jr., Chair, National Academy of Engineering</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </TabsContent>
 
             <TabsContent value="day2" className="mt-6">
