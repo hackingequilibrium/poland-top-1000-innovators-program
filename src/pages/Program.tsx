@@ -21,7 +21,7 @@ const Program = () => {
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 1 - Dec 9</span>
-                  <span className="text-xs font-normal h-8 flex items-center">Stanford University</span>
+                  <span className="text-xs font-normal h-8 flex items-center text-center leading-tight">Stanford<br />University</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
@@ -30,7 +30,7 @@ const Program = () => {
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 2 - Dec 10</span>
-                  <span className="text-xs font-normal h-8 flex items-center">Westin SFO</span>
+                  <span className="text-xs font-normal h-8 flex items-center text-center leading-tight">Westin<br />SFO</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
@@ -48,7 +48,7 @@ const Program = () => {
               >
                 <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 4 - Dec 12</span>
-                  <span className="text-xs font-normal h-8 flex items-center">TripleRing (Newark)</span>
+                  <span className="text-xs font-normal h-8 flex items-center text-center leading-tight">TripleRing,<br />Newark</span>
                 </div>
               </TabsTrigger>
             </TabsList>
