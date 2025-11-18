@@ -609,7 +609,7 @@ const Program = () => {
                 {/* Timeline Column */}
                 <div className="flex-shrink-0 relative">
                   {/* Vertical Line */}
-                  <div className="absolute left-[52px] top-0 bottom-0 w-[1px] bg-[#0F1435]" />
+                  <div className="absolute left-[52px] top-0 bottom-0 w-[1px] bg-[#0F1435] z-0" />
                   
                   {/* Timeline Items */}
                   <div className="">
