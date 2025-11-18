@@ -717,7 +717,7 @@ const Program = () => {
 
                       {/* Right column - Posters box (desktop only) */}
                       <div className="hidden md:block md:w-[45%] md:pl-2">
-                        <div className="bg-[#F3F3F3] p-4 h-full flex items-start">
+                        <div className="bg-[#F3F3F3] p-4 h-full flex items-center justify-center">
                           <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
                         </div>
                       </div>
