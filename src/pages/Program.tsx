@@ -590,23 +590,23 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 3:25 PM - Grid container for both rows */}
-                  <div className="grid grid-cols-1 md:grid-cols-[72px_1fr] gap-2 md:gap-10">
+                  {/* 3:25 PM & 3:55 PM - Desktop version with grid */}
+                  <div className="hidden md:grid md:grid-cols-[72px_1fr] gap-2 md:gap-10">
                     {/* Timeline column for both times */}
                     <div className="">
                       <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
                         3:25 PM
-                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                        <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
                       <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[30px]">
                         3:55 PM
-                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                        <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
                     </div>
                     
                     {/* Content columns */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-min">
-                      <div className="bg-[#F3F3F3] p-4 md:row-span-2 flex items-start">
+                    <div className="grid grid-cols-2 gap-4 auto-rows-min">
+                      <div className="bg-[#F3F3F3] p-4 row-span-2 flex items-start">
                         <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center</p>
                       </div>
                       <div className="bg-[#F3F3F3] p-4">
@@ -616,6 +616,31 @@ const Program = () => {
                         <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Berkeley</p>
                       </div>
                     </div>
+                  </div>
+
+                  {/* 3:25 PM - Mobile version */}
+                  <div className="md:hidden flex flex-col gap-2">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435]">
+                      3:25 PM
+                    </div>
+                    <div className="bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">7 x 3 minutes Pitch Session</p>
+                    </div>
+                  </div>
+
+                  {/* 3:55 PM - Mobile version */}
+                  <div className="md:hidden flex flex-col gap-2">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435]">
+                      3:55 PM
+                    </div>
+                    <div className="bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Berkeley</p>
+                    </div>
+                  </div>
+
+                  {/* Poster note (mobile only) */}
+                  <div className="md:hidden mt-6 text-center">
+                    <p className="font-inter text-sm text-white">Poster Session at Grimes Engineering Center 3:25PM - 4 PM</p>
                   </div>
                 </div>
               </div>
