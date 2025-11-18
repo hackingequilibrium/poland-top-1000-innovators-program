@@ -14,7 +14,7 @@ const Program = () => {
               Program
             </h1>
             
-            <div className="hidden md:flex flex-col gap-2 text-xs">
+            <div className="hidden md:flex items-center gap-4 text-xs">
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-[#F5EEDC] border border-[#0F1435]/10"></div>
                 <span className="font-inter text-[#0F1435]">Plenary Talks</span>
