@@ -41,6 +41,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
           {!simplified && (
           <div className="hidden md:flex gap-8 items-center pt-2">
             <HeaderLink href="https://polsv.org/home/" external>About PolSV</HeaderLink>
+            <HeaderLink href="/program">Program</HeaderLink>
             <HeaderLink href="/lead-session">Lead a Session</HeaderLink>
             <HeaderLink href="https://polsv.org/contact/" external>Contact</HeaderLink>
           </div>
