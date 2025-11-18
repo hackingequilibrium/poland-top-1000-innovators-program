@@ -73,7 +73,7 @@ const Program = () => {
             <TabsContent value="day1" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
-                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[126px] w-[1px] bg-[#0F1435]" />
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[80px] w-[1px] bg-[#0F1435]" />
                 
                 <div className="space-y-4">
                   {/* 7:30 AM */}
@@ -348,7 +348,7 @@ const Program = () => {
             <TabsContent value="day2" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
-                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[100px] w-[1px] bg-[#0F1435]" />
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[60px] w-[1px] bg-[#0F1435]" />
                 
                 <div className="space-y-4">
                   {/* 8:30 AM */}
@@ -511,7 +511,7 @@ const Program = () => {
             <TabsContent value="day3" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
-                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[168px] w-[1px] bg-[#0F1435]" />
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[120px] w-[1px] bg-[#0F1435]" />
                 
                 <div className="space-y-4">
                   {/* 8:30 AM */}
@@ -711,7 +711,7 @@ const Program = () => {
             <TabsContent value="day4" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
-                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[125px] w-[1px] bg-[#0F1435]" />
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[80px] w-[1px] bg-[#0F1435]" />
                 
                 <div className="space-y-4">
                   {/* 8:30 AM */}
