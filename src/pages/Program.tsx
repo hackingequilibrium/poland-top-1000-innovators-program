@@ -622,122 +622,108 @@ const Program = () => {
                   </div>
 
                   {/* 9:00 AM to 3:10 PM - Special layout with spanning poster box */}
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-10 relative">
-                    {/* Timeline dots - positioned absolutely for alignment */}
-                    <div className="hidden md:block absolute left-[84px] top-[8px] bottom-0 w-[1px] bg-[#0F1435]" />
-                    
-                    <div className="flex-1 space-y-4">
-                      {/* 9:00 AM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          9:00 AM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="bg-[#F3F3F3] p-4">
+                  <div className="relative">
+                    <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+                      {/* Left column - Timeline and event boxes */}
+                      <div className="flex-1 space-y-4 md:pr-2">
+                        {/* 9:00 AM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            9:00 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Day 3 Retrospection</p>
                           </div>
-                          <div className="bg-[#F3F3F3] p-4 md:hidden">
-                            <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
-                          </div>
                         </div>
-                      </div>
 
-                      {/* 9:10 AM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          9:10 AM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 9:10 AM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            9:10 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Framing the Day</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 9:40 AM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          9:40 AM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 9:40 AM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            9:40 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: The Art of Commercialization</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 10:10 AM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          10:10 AM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 10:10 AM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            10:10 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Workshop: From Research to Impact</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 11:25 AM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          11:25 AM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 11:25 AM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            11:25 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Workshop: Building a Commercialization Strategy</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 12:40 PM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          12:40 PM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 12:40 PM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            12:40 PM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 1:40 PM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          1:40 PM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 1:40 PM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            1:40 PM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Innovation Matchmaking Session: Science Meets Industry</p>
                           </div>
                         </div>
-                      </div>
 
-                      {/* 3:10 PM */}
-                      <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                          3:10 PM
-                          <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                        </div>
-                        <div className="flex-1 md:w-1/2">
-                          <div className="bg-[#F3F3F3] p-4">
+                        {/* 3:10 PM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            3:10 PM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                          <div className="flex-1 bg-[#F3F3F3] p-4">
                             <p className="font-inter text-sm text-[#0F1435]">Pitch Session</p>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Posters box - spans the right half on desktop */}
-                    <div className="hidden md:block absolute right-0 top-0 w-[calc(50%-52px)] h-full">
-                      <div className="bg-[#F3F3F3] p-4 h-full flex items-start">
+                      {/* Right column - Posters box (desktop only) */}
+                      <div className="hidden md:block md:w-[45%] md:pl-2">
+                        <div className="bg-[#F3F3F3] p-4 h-full flex items-start">
+                          <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
+                        </div>
+                      </div>
+                      
+                      {/* Posters box (mobile only - shown after 9:00 AM) */}
+                      <div className="md:hidden bg-[#F3F3F3] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
                       </div>
                     </div>
