@@ -576,7 +576,7 @@ const Program = () => {
                   {/* 3:25 PM - Grid container for both rows */}
                   <div className="grid grid-cols-1 md:grid-cols-[72px_1fr] gap-2 md:gap-10">
                     {/* Timeline column for both times */}
-                    <div className="space-y-4">
+                    <div className="">
                       <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
                         3:25 PM
                         <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
