@@ -8,7 +8,7 @@ const Program = () => {
       
       <main className="flex-1 px-8 lg:px-[100px] pt-32 pb-16">
         <div className="max-w-4xl mx-auto bg-white p-8 lg:py-12 lg:px-16">
-          <h1 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] mb-8 uppercase">
+          <h1 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
             Program
           </h1>
           
