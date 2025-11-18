@@ -214,15 +214,12 @@ const Program = () => {
                       2:30 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1">
-                      <p className="font-inter text-sm text-[#0F1435] mb-2">Workshops (by assignment)</p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-[#F3F3F3] p-4">
-                          <p className="font-inter text-sm text-[#0F1435]">Workshop: Academic Collaboration</p>
-                        </div>
-                        <div className="bg-[#F3F3F3] p-4">
-                          <p className="font-inter text-sm text-[#0F1435]">Workshop: Industry Partnership</p>
-                        </div>
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Workshop (by assignment): Academic Collaboration</p>
+                      </div>
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Workshop (by assignment): Industry Partnership</p>
                       </div>
                     </div>
                   </div>
