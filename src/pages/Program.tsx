@@ -306,7 +306,7 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside chat - Artificial Intelligence Trends</p>
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside chat: Artificial Intelligence Trends</p>
                     </div>
                   </div>
 
