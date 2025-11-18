@@ -17,38 +17,38 @@ const Program = () => {
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-4 bg-transparent h-auto p-0 mb-8">
               <TabsTrigger 
                 value="day1" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3"
+                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
               >
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 1 - Dec 9</span>
-                  <span className="text-xs font-normal">Stanford University</span>
+                  <span className="text-xs font-normal h-8 flex items-center">Stanford University</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="day2" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3"
+                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
               >
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 2 - Dec 10</span>
-                  <span className="text-xs font-normal">Westin SFO</span>
+                  <span className="text-xs font-normal h-8 flex items-center">Westin SFO</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="day3" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3"
+                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
               >
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 3 - Dec 11</span>
-                  <span className="text-xs font-normal">University of<br />California, Berkeley</span>
+                  <span className="text-xs font-normal h-8 flex items-center text-center leading-tight">University of<br />California, Berkeley</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
                 value="day4" 
-                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3"
+                className="font-inter text-sm border-2 border-[#0F1435] rounded-none bg-transparent data-[state=active]:bg-[#0F1435] data-[state=active]:text-white py-4 px-3 min-h-[100px]"
               >
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center justify-center gap-1 h-full">
                   <span className="font-semibold">Day 4 - Dec 12</span>
-                  <span className="text-xs font-normal">TripleRing (Newark)</span>
+                  <span className="text-xs font-normal h-8 flex items-center">TripleRing (Newark)</span>
                 </div>
               </TabsTrigger>
             </TabsList>
