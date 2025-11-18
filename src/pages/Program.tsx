@@ -39,7 +39,7 @@ const Program = () => {
               >
                 <div className="flex flex-col items-center gap-1">
                   <span className="font-semibold">Day 3 - Dec 11</span>
-                  <span className="text-xs font-normal">University of California, Berkeley</span>
+                  <span className="text-xs font-normal">University of<br />California, Berkeley</span>
                 </div>
               </TabsTrigger>
               <TabsTrigger 
