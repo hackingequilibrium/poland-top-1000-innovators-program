@@ -216,10 +216,16 @@ const Program = () => {
                     </div>
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="bg-[#F3F3F3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Workshop (by assignment): Academic Collaboration</p>
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by assignment):<br />
+                          Academic Collaboration
+                        </p>
                       </div>
                       <div className="bg-[#F3F3F3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Workshop (by assignment): Industry Partnership</p>
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by assignment):<br />
+                          Industry Partnership
+                        </p>
                       </div>
                     </div>
                   </div>
