@@ -56,14 +56,14 @@ const Program = () => {
             <TabsContent value="day1" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line */}
-                <div className="absolute left-[70px] top-0 bottom-16 w-[2px] bg-[#0F1435]" />
+                <div className="absolute left-[105px] top-0 bottom-16 w-[2px] bg-[#0F1435]" />
                 
                 <div className="space-y-4">
                   {/* 7:30 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       7:30 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Registration Opens, Coffee & Light Bites</p>
@@ -72,9 +72,9 @@ const Program = () => {
 
                   {/* 8:30 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       8:30 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Opening Remarks</p>
@@ -83,9 +83,9 @@ const Program = () => {
 
                   {/* 8:35 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       8:35 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">PolSV Welcome Top 1000 Innovators of Poland in Silicon Valley</p>
@@ -94,9 +94,9 @@ const Program = () => {
 
                   {/* 8:40 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       8:40 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435] mb-2">Welcome Addresses:</p>
@@ -111,9 +111,9 @@ const Program = () => {
 
                   {/* 9:30 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       9:30 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Endless Innovation</p>
@@ -122,9 +122,9 @@ const Program = () => {
 
                   {/* 9:50 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       9:50 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Poland in Silicon Valley</p>
@@ -133,9 +133,9 @@ const Program = () => {
 
                   {/* 10:20 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       10:20 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: From Idea to Market</p>
@@ -144,9 +144,9 @@ const Program = () => {
 
                   {/* 10:40 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       10:40 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
@@ -155,9 +155,9 @@ const Program = () => {
 
                   {/* 11:10 AM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       11:10 AM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: US Patent Best Practice</p>
@@ -166,9 +166,9 @@ const Program = () => {
 
                   {/* 12:00 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       12:00 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
@@ -177,9 +177,9 @@ const Program = () => {
 
                   {/* 12:45 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       12:45 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: International Academic Collaboration</p>
@@ -188,9 +188,9 @@ const Program = () => {
 
                   {/* 1:15 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       1:15 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Stanford Campus Walk</p>
@@ -199,9 +199,9 @@ const Program = () => {
 
                   {/* 2:30 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       2:30 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Workshops (by assignment)</p>
@@ -210,9 +210,9 @@ const Program = () => {
 
                   {/* 3:45 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       3:45 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
@@ -221,9 +221,9 @@ const Program = () => {
 
                   {/* 4:00 PM - Poster Session */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       4:00 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Poster Session</p>
@@ -232,9 +232,9 @@ const Program = () => {
 
                   {/* 4:00 PM - Meetup */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       4:00 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Stanford</p>
@@ -243,9 +243,9 @@ const Program = () => {
 
                   {/* 6:00 PM */}
                   <div className="flex gap-6">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[60px] flex-shrink-0 relative z-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] w-[90px] flex-shrink-0 relative z-10">
                       6:00 PM
-                      <div className="absolute top-1 -right-[17px] w-3 h-3 rounded-full bg-[#0F1435]" />
+                      <div className="absolute top-1 -right-[20px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Gala Dinner — Keynote: Adm. (Ret.) James O. Ellis Jr., Chair, National Academy of Engineering</p>
