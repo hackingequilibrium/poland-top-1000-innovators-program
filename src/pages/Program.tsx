@@ -738,11 +738,6 @@ const Program = () => {
                           <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
                         </div>
                       </div>
-                      
-                      {/* Posters box (mobile only - shown after 9:00 AM) */}
-                      <div className="md:hidden bg-[#F3F3F3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
-                      </div>
                     </div>
                   </div>
 
@@ -755,6 +750,11 @@ const Program = () => {
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Closing Remarks & Networking</p>
                     </div>
+                  </div>
+
+                  {/* Posters note (mobile only) */}
+                  <div className="md:hidden mt-6 text-center">
+                    <p className="font-inter text-sm text-white">Posters on Location by Sector 9:30 AM - 4 PM</p>
                   </div>
                 </div>
               </div>
