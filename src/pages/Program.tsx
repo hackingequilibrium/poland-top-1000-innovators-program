@@ -435,7 +435,156 @@ const Program = () => {
             </TabsContent>
 
             <TabsContent value="day3" className="mt-6">
-              {/* Day 3 content */}
+              <div className="relative">
+                {/* Timeline vertical line - desktop only */}
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[44px] w-[1px] bg-[#0F1435]" />
+                
+                <div className="space-y-4">
+                  {/* 8:30 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      8:30 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Arrival, Coffee & Light Bites</p>
+                    </div>
+                  </div>
+
+                  {/* 9:00 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:00 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Day 2 Retrospection</p>
+                    </div>
+                  </div>
+
+                  {/* 9:10 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">CITRIS & The Banatao Institute - Welcome Top 1000 Innovators</p>
+                      <p className="font-inter text-sm text-[#0F1435]">Orbiting Innovation: Science and Collaboration in the New Space Era</p>
+                    </div>
+                  </div>
+
+                  {/* 9:35 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:35 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
+                    </div>
+                  </div>
+
+                  {/* 10:10 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      10:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Science, Society, and the Ethics of the Future</p>
+                    </div>
+                  </div>
+
+                  {/* 10:40 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      10:40 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    </div>
+                  </div>
+
+                  {/* 11:10 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      11:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
+                    </div>
+                  </div>
+
+                  {/* 11:40 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      11:40 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Health & Robotics - Humanity & Technology</p>
+                    </div>
+                  </div>
+
+                  {/* 12:10 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:10 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Public Private Partnerships & Endowment: the Berkeley Model</p>
+                    </div>
+                  </div>
+
+                  {/* 12:40 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:40 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
+                    </div>
+                  </div>
+
+                  {/* 1:40 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      1:40 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by Assignment):<br />
+                          Academic Collaboration
+                        </p>
+                      </div>
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by Assignment):<br />
+                          Industry Partnership
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 3:25 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      3:25 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </TabsContent>
 
             <TabsContent value="day4" className="mt-6">
