@@ -573,29 +573,28 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 3:25 PM */}
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      3:25 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                  {/* 3:25 PM - Grid container for both rows */}
+                  <div className="grid grid-cols-1 md:grid-cols-[72px_1fr] gap-2 md:gap-10">
+                    {/* Timeline column for both times */}
+                    <div className="space-y-4">
+                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
+                        3:25 PM
+                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      </div>
+                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[88px]">
+                        3:55 PM
+                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      </div>
                     </div>
-                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#F3F3F3] p-4 md:row-span-2">
+                    
+                    {/* Content columns */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-min">
+                      <div className="bg-[#F3F3F3] p-4 md:row-span-2 flex items-start">
                         <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center</p>
                       </div>
                       <div className="bg-[#F3F3F3] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">7 x 3 minutes Pitch Session</p>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* 3:55 PM */}
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      3:55 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="flex-1 md:pl-[calc(50%+8px)]">
                       <div className="bg-[#F3F3F3] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Berkeley</p>
                       </div>
