@@ -609,49 +609,49 @@ const Program = () => {
                 {/* Timeline Column */}
                 <div className="flex-shrink-0 relative">
                   {/* Vertical Line */}
-                  <div className="absolute left-[52px] top-0 bottom-0 w-[1px] bg-[#0F1435] z-0" />
+                  <div className="absolute left-[68px] top-0 bottom-0 w-[1px] bg-[#0F1435] z-0" />
                   
                   {/* Timeline Items */}
                   <div className="">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
                       8:30 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
                       9:00 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
                       9:10 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
                       9:40 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
                       10:10 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[115px]">
                       11:25 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[115px]">
                       12:40 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[96px]">
                       1:40 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[96px]">
                       3:10 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                     <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
                       4:00 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      <div className="hidden md:block absolute top-0 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435] z-10" />
                     </div>
                   </div>
                 </div>
