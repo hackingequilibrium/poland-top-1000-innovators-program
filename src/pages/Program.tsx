@@ -605,230 +605,170 @@ const Program = () => {
             </TabsContent>
 
             <TabsContent value="day4" className="mt-6">
-              <div className="hidden md:flex gap-8">
-                {/* Timeline Column */}
-                <div className="flex-shrink-0 relative">
-                  {/* Vertical Line */}
-                  <div className="absolute left-[52px] top-0 bottom-0 w-[1px] bg-[#0F1435]" />
-                  
-                  {/* Timeline Items */}
-                  <div className="">
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
+              <div className="relative">
+                {/* Timeline vertical line - desktop only */}
+                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[60px] w-[1px] bg-[#0F1435]" />
+                
+                <div className="space-y-4">
+                  {/* 8:30 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
                       8:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
-                      9:00 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Arrival, Coffee & Light Bites</p>
                     </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
-                      9:10 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
-                      9:40 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
-                      10:10 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[115px]">
-                      11:25 AM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[115px]">
-                      12:40 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[96px]">
-                      1:40 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[96px]">
-                      3:10 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                    <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[60px]">
-                      4:00 PM
-                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Content Column */}
-                <div className="flex-1 space-y-4">
-                  {/* 8:30 AM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Arrival, Coffee & Light Bites
-                    </p>
                   </div>
 
                   {/* 9:00 AM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Day 3 Retrospection
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:00 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Day 2 Retrospection</p>
+                    </div>
                   </div>
 
                   {/* 9:10 AM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Fireside Chat: Framing the Day
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">CITRIS & The Banatao Institute - Welcome Top 1000 Innovators</p>
+                      <p className="font-inter text-sm text-[#0F1435]">Orbiting Innovation: Science and Collaboration in the New Space Era</p>
+                    </div>
                   </div>
 
-                  {/* 9:40 AM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Fireside Chat: The Art of Commercialization
-                    </p>
+                  {/* 9:35 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      9:35 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
+                    </div>
                   </div>
 
                   {/* 10:10 AM */}
-                  <div className="bg-[#F3F3F3] p-4 h-[107px]">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Workshop: From Research to Impact
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      10:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Science, Society, and the Ethics of the Future</p>
+                    </div>
                   </div>
 
-                  {/* 11:25 AM */}
-                  <div className="bg-[#F3F3F3] p-4 h-[107px]">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Workshop: Building a Commercialization Strategy
-                    </p>
+                  {/* 10:40 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      10:40 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    </div>
+                  </div>
+
+                  {/* 11:10 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      11:10 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
+                    </div>
+                  </div>
+
+                  {/* 11:40 AM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      11:40 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Health & Robotics - Humanity & Technology</p>
+                    </div>
+                  </div>
+
+                  {/* 12:10 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:10 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Public Private Partnerships & Endowment: the Berkeley Model</p>
+                    </div>
                   </div>
 
                   {/* 12:40 PM */}
-                  <div className="bg-[#F3F3F3] p-4 h-[88px]">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Networking Lunch
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:40 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
+                    </div>
                   </div>
 
                   {/* 1:40 PM */}
-                  <div className="bg-[#F3F3F3] p-4 h-[88px]">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Innovation Matchmaking Session: Science Meets Industry
-                    </p>
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      1:40 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by assignment):<br />
+                          Academic Collaboration
+                        </p>
+                      </div>
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">
+                          Workshop (by assignment):<br />
+                          Industry Partnership
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* 3:10 PM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Pitch Session
-                    </p>
-                  </div>
-
-                  {/* 4:00 PM */}
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Closing Remarks & Networking
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile View */}
-              <div className="md:hidden space-y-4">
-                {/* 8:30 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">8:30 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Arrival, Coffee & Light Bites
-                    </p>
-                  </div>
-                </div>
-
-                {/* 9:00 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">9:00 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Day 3 Retrospection
-                    </p>
-                  </div>
-                </div>
-
-                {/* 9:10 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">9:10 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Fireside Chat: Framing the Day
-                    </p>
-                  </div>
-                </div>
-
-                {/* 9:40 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">9:40 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Fireside Chat: The Art of Commercialization
-                    </p>
-                  </div>
-                </div>
-
-                {/* 10:10 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">10:10 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Workshop: From Research to Impact
-                    </p>
-                  </div>
-                </div>
-
-                {/* 11:25 AM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">11:25 AM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Workshop: Building a Commercialization Strategy
-                    </p>
-                  </div>
-                </div>
-
-                {/* 12:40 PM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">12:40 PM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Networking Lunch
-                    </p>
-                  </div>
-                </div>
-
-                {/* 1:40 PM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">1:40 PM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Innovation Matchmaking Session: Science Meets Industry
-                    </p>
-                  </div>
-                </div>
-
-                {/* 3:10 PM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">3:10 PM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Pitch Session
-                    </p>
-                  </div>
-                </div>
-
-                {/* 4:00 PM */}
-                <div>
-                  <p className="font-inter text-sm font-semibold text-[#0F1435] mb-2">4:00 PM</p>
-                  <div className="bg-[#F3F3F3] p-4">
-                    <p className="font-inter text-sm text-[#0F1435]">
-                      Closing Remarks & Networking
-                    </p>
+                  {/* 3:25 PM - Grid container for both rows */}
+                  <div className="grid grid-cols-1 md:grid-cols-[72px_1fr] gap-2 md:gap-10">
+                    {/* Timeline column for both times */}
+                    <div className="">
+                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
+                        3:25 PM
+                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      </div>
+                      <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[30px]">
+                        3:55 PM
+                        <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                      </div>
+                    </div>
+                    
+                    {/* Content columns */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-min">
+                      <div className="bg-[#F3F3F3] p-4 md:row-span-2 flex items-start">
+                        <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center</p>
+                      </div>
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">7 x 3 minutes Pitch Session</p>
+                      </div>
+                      <div className="bg-[#F3F3F3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Berkeley</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
