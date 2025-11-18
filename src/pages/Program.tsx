@@ -643,14 +643,14 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 9:35 AM */}
+                  {/* 9:40 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      9:35 AM
+                      9:40 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
+                      <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: The Art of Commercialization</p>
                     </div>
                   </div>
 
