@@ -101,10 +101,10 @@ const Program = () => {
                     <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435] mb-2">Welcome Addresses:</p>
                       <ul className="font-inter text-sm text-[#0F1435] space-y-1">
-                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span>Deputy Prime Minister Gawkowski, Minister of Digital Affairs (via video)</span></li>
-                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span>Head of Mission, Embassy of Poland in Washington, D.C.</span></li>
-                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span>Consul General of the Republic of Poland in Los Angeles</span></li>
-                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span>San Francisco Bay Area & Poland Overview — Director of International Affairs, City of San Francisco</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Deputy Prime Minister Gawkowski, Minister of Digital Affairs (via video)</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Head of Mission, Embassy of Poland in Washington, D.C.</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Consul General of the Republic of Poland in Los Angeles</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">San Francisco Bay Area & Poland Overview — Director of International Affairs, City of San Francisco</span></li>
                       </ul>
                     </div>
                   </div>
