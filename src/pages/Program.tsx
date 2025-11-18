@@ -9,9 +9,26 @@ const Program = () => {
       
       <main className="flex-1 px-8 lg:px-[100px] pt-32 pb-16">
         <div className="max-w-4xl mx-auto bg-white p-8 lg:py-12 lg:px-16">
-          <h1 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
-            Program
-          </h1>
+          <div className="flex justify-between items-start mb-6">
+            <h1 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] uppercase">
+              Program
+            </h1>
+            
+            <div className="hidden md:flex flex-col gap-2 text-xs">
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-[#F5EEDC] border border-[#0F1435]/10"></div>
+                <span className="font-inter text-[#0F1435]">Plenary Talks</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-[#F3DDD3] border border-[#0F1435]/10"></div>
+                <span className="font-inter text-[#0F1435]">Fireside Chats</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 bg-[#D7F0F0] border border-[#0F1435]/10"></div>
+                <span className="font-inter text-[#0F1435]">Workshops</span>
+              </div>
+            </div>
+          </div>
           
           <Tabs defaultValue="day1" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-4 bg-transparent h-auto p-0 mb-8">
