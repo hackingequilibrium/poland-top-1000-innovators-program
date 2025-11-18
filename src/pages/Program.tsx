@@ -56,7 +56,7 @@ const Program = () => {
             <TabsContent value="day1" className="mt-6">
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
-                <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[44px] w-[1px] bg-[#0F1435]" />
+                <div className="hidden md:block absolute left-[88px] top-[8px] bottom-[44px] w-[1px] bg-[#0F1435] z-0" />
                 
                 <div className="space-y-4">
                   {/* 7:30 AM */}
