@@ -9,10 +9,7 @@ import box3Icon from "@/assets/box3.png";
 import box4Icon from "@/assets/box4.png";
 import box5Icon from "@/assets/box5.png";
 import box6Icon from "@/assets/box6.png";
-import patronLogo1 from "@/assets/patron-logo1.png";
-import patronLogo2 from "@/assets/patron-logo2.png";
-import patronLogo3 from "@/assets/patron-logo3.png";
-import patronLogo4 from "@/assets/patron-logo4.png";
+import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import box7Icon from "@/assets/box7.png";
 import box8Icon from "@/assets/box8.png";
 
@@ -191,19 +188,8 @@ const VideoHero = () => {
                 <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg mb-6">
                   Honorary patronage
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-                  <div className="flex items-center justify-center">
-                    <img src={patronLogo1} alt="Minister of Science and Higher Education" className="w-full h-auto max-h-20 object-contain" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <img src={patronLogo2} alt="Embassy of the Republic of Poland" className="w-full h-auto max-h-20 object-contain" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <img src={patronLogo3} alt="NCBR" className="w-full h-auto max-h-20 object-contain" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <img src={patronLogo4} alt="Polish Investment & Trade Agency" className="w-full h-auto max-h-20 object-contain" />
-                  </div>
+                <div className="flex justify-start">
+                  <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto max-w-5xl object-contain" />
                 </div>
               </div>
             </div>
