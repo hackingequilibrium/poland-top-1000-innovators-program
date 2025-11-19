@@ -320,11 +320,19 @@ const VideoHero = () => {
           </div>
         </div>
         
-        {/* Small print disclaimer */}
-        <div className="mt-16">
+        {/* Small print disclaimer and registration link */}
+        <div className="mt-16 flex justify-between items-start">
           <p className="font-inter text-sm text-white/60">
             *Day 4 at Triple Ring Innovation Center, organized by Parallax Global Advisors, LLC
           </p>
+          <a 
+            href="https://forms.office.com/e/B8rsLc5Pa5" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-inter text-sm text-white/60 hover:text-white transition-colors"
+          >
+            Registration
+          </a>
         </div>
         
         {/* Footer */}
