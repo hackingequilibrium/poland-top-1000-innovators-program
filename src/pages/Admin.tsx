@@ -134,6 +134,63 @@ const Admin = () => {
     }
   };
 
+  const handleDeleteSubmission = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this submission?')) {
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('session_submissions')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        console.error('Error deleting submission:', error);
+        toast.error("Failed to delete submission");
+      } else {
+        toast.success("Submission deleted successfully");
+        fetchSubmissions();
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error("Failed to delete submission");
+    }
+  };
+
+  const handleExportSubmissions = () => {
+    if (submissions.length === 0) {
+      toast.error("No submissions to export");
+      return;
+    }
+
+    const csvContent = [
+      ['Name', 'Email', 'LinkedIn', 'Workshop', 'Track', 'Stanford', 'Berkeley', 'Submitted At'].join(','),
+      ...submissions.map(s => [
+        `"${s.name}"`,
+        `"${s.email}"`,
+        `"${s.linkedin}"`,
+        `"${s.workshop === 'industry' ? 'Workshop 1 - Building Industry Partnerships' : 'Workshop 2 – Advancing Academic Collaboration'}"`,
+        `"${s.track === 'life-sciences' ? 'Life Sciences' : s.track === 'deeptech' ? 'DeepTech' : 'Energy & Sustainability'}"`,
+        s.stanford ? 'Yes' : 'No',
+        s.berkeley ? 'Yes' : 'No',
+        `"${new Date(s.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `session-submissions-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    toast.success("Submissions exported successfully");
+  };
+
   const fetchExpertRecommendations = async () => {
     try {
       const { data, error } = await supabase
