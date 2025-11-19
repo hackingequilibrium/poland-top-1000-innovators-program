@@ -369,6 +369,16 @@ const Admin = () => {
           </TabsList>
 
           <TabsContent value="submissions">
+            {submissions.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportSubmissions}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export All Sessions to CSV
+                </Button>
+              </div>
+            )}
             {submissions.length === 0 ? (
               <Card className="rounded-none">
                 <CardContent className="py-12 text-center">
@@ -379,10 +389,18 @@ const Admin = () => {
               <div className="grid gap-6">
                 {submissions.map((submission) => (
                   <Card key={submission.id} className="rounded-none">
-                    <CardHeader>
+                    <CardHeader className="flex flex-row items-center justify-between">
                       <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
                         {submission.name}
                       </CardTitle>
+                      <Button
+                        onClick={() => handleDeleteSubmission(submission.id)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-none bg-[#C70828] hover:bg-[#A80E34]"
+                      >
+                        Delete
+                      </Button>
                     </CardHeader>
                     <CardContent className="space-y-2 font-inter text-sm">
                       <p><strong>Email:</strong> {submission.email}</p>
