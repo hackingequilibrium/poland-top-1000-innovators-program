@@ -7,6 +7,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { supabase } from "@/integrations/supabase/client";
 import {
   Form,
@@ -162,23 +163,43 @@ const RSVP = () => {
                     control={form.control}
                     name="attendance"
                     render={({ field }) => (
-                      <FormItem>
+                      <FormItem className="space-y-3">
                         <FormLabel className="font-inter text-sm text-[#0F1435]">
                           Will you attend?
                           <span className="text-red-600 ml-1">*</span>
                         </FormLabel>
-                        <Select onValueChange={field.onChange} value={field.value}>
-                          <FormControl>
-                            <SelectTrigger className="bg-white border-[#E5E7EB] rounded-none">
-                              <SelectValue placeholder="Select your attendance status" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent className="bg-white z-50">
-                            <SelectItem value="yes">Yes</SelectItem>
-                            <SelectItem value="maybe">Maybe</SelectItem>
-                            <SelectItem value="no">No</SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <FormControl>
+                          <RadioGroup
+                            onValueChange={field.onChange}
+                            value={field.value}
+                            className="flex flex-col space-y-2"
+                          >
+                            <FormItem className="flex items-center space-x-3 space-y-0">
+                              <FormControl>
+                                <RadioGroupItem value="yes" />
+                              </FormControl>
+                              <FormLabel className="font-inter text-sm text-[#0F1435] font-normal">
+                                Yes
+                              </FormLabel>
+                            </FormItem>
+                            <FormItem className="flex items-center space-x-3 space-y-0">
+                              <FormControl>
+                                <RadioGroupItem value="maybe" />
+                              </FormControl>
+                              <FormLabel className="font-inter text-sm text-[#0F1435] font-normal">
+                                Maybe
+                              </FormLabel>
+                            </FormItem>
+                            <FormItem className="flex items-center space-x-3 space-y-0">
+                              <FormControl>
+                                <RadioGroupItem value="no" />
+                              </FormControl>
+                              <FormLabel className="font-inter text-sm text-[#0F1435] font-normal">
+                                No
+                              </FormLabel>
+                            </FormItem>
+                          </RadioGroup>
+                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
