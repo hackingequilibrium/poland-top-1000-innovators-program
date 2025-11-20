@@ -89,15 +89,11 @@ const RSVP = () => {
           {isSubmitted ? (
             <div className="space-y-6 text-[#0F1435] py-[40px] pl-[50px] pr-[100px]">
               <h2 className="font-inter font-extrabold text-[28px] md:text-[32px] lg:text-[36px] text-[#0F1435] uppercase leading-tight">
-                Thank you for your RSVP!
+                Thank you!
               </h2>
               
               <p className="font-inter font-light text-base md:text-lg text-[#797B8E] leading-relaxed">
-                We've received your response and will send you the participant and project profiles shortly.
-              </p>
-              
-              <p className="font-inter font-light text-base md:text-lg text-[#797B8E] leading-relaxed">
-                Looking forward to seeing you at the summit!
+                We have received your response. If you selected Yes or Maybe, we will follow up shortly with event details and access to participant and project profiles.
               </p>
             </div>
           ) : (
