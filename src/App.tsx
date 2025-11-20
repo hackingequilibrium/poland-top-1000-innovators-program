@@ -9,6 +9,7 @@ import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import Sectors from "./pages/Sectors";
 import Experts from "./pages/Experts";
+import RSVP from "./pages/RSVP";
 import Program from "./pages/Program";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="/sectors" element={<Sectors />} />
           <Route path="/experts" element={<Experts />} />
+          <Route path="/rsvp" element={<RSVP />} />
           <Route path="/program" element={<Program />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
