@@ -40,7 +40,7 @@ const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
   email: z.string().trim().email("Invalid email").max(255, "Email must be less than 255 characters"),
   attendance: z.string().min(1, "Please select your attendance status"),
-  interestedSectors: z.array(z.string()).min(1, "Please select at least one sector"),
+  interestedSectors: z.array(z.string()),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -212,7 +212,6 @@ const RSVP = () => {
                       <FormItem>
                         <FormLabel className="font-inter text-sm text-[#0F1435]">
                           Sectors you're most interested in:
-                          <span className="text-red-600 ml-1">*</span>
                         </FormLabel>
                         <div className="space-y-3 mt-2">
                           {sectors.map((sector) => (
