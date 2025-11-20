@@ -77,6 +77,33 @@ export type Database = {
         }
         Relationships: []
       }
+      rsvp_submissions: {
+        Row: {
+          attendance: string
+          created_at: string
+          email: string
+          id: string
+          interested_sectors: string[]
+          name: string
+        }
+        Insert: {
+          attendance: string
+          created_at?: string
+          email: string
+          id?: string
+          interested_sectors: string[]
+          name: string
+        }
+        Update: {
+          attendance?: string
+          created_at?: string
+          email?: string
+          id?: string
+          interested_sectors?: string[]
+          name?: string
+        }
+        Relationships: []
+      }
       session_submissions: {
         Row: {
           berkeley: boolean
