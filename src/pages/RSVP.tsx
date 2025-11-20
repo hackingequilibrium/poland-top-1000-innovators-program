@@ -161,7 +161,7 @@ const RSVP = () => {
             </h2>
             
             <p className="font-inter font-bold text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
-              December 9–12, 2025 · Stanford · UC Berkeley · Triple Ring Innovation Center
+              Confirm your attendance for the Dec 9–12 program and receive participant and project profiles.
             </p>
             
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-8">
