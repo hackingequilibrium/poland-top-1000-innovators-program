@@ -156,11 +156,11 @@ const RSVP = () => {
           ) : (
             <div className="p-8 lg:p-12">
               <div className="space-y-6 text-[#0F1435]">
-            <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
+            <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-2 uppercase">
               RSVP
             </h2>
             
-            <p className="font-inter font-bold text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
+            <p className="font-inter font-normal text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
               Confirm your attendance for the Dec 9–12 program and receive participant and project profiles.
             </p>
             
