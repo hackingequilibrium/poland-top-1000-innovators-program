@@ -653,19 +653,14 @@ const Program = () => {
                       1:40 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-[#D7F0F0] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">
-                          Workshop (by assignment):<br />
-                          Academic Collaboration
-                        </p>
-                      </div>
-                      <div className="bg-[#D7F0F0] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">
-                          Workshop (by assignment):<br />
-                          Industry Partnership
-                        </p>
-                      </div>
+                    <div className="flex-1 bg-[#D7F0F0] p-4">
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">Academic & Industry Partnership Workshops:</p>
+                      <ul className="font-inter text-sm text-[#0F1435] list-disc pl-5 space-y-1">
+                        <li>Energy & Sustainability</li>
+                        <li>Life Sciences</li>
+                        <li>Deeptech</li>
+                        <li>Roundtable Tech Transfer</li>
+                      </ul>
                     </div>
                   </div>
 
