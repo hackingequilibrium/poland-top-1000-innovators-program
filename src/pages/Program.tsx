@@ -655,12 +655,12 @@ const Program = () => {
                     </div>
                     <div className="flex-1 bg-[#D7F0F0] p-4">
                       <p className="font-inter text-sm text-[#0F1435] mb-2">Academic & Industry Partnership Workshops:</p>
-                      <ul className="font-inter text-sm text-[#0F1435] list-disc pl-5 space-y-1">
+                      <ul className="font-inter text-sm text-[#0F1435] list-disc pl-5 space-y-1 mb-2">
                         <li>Energy & Sustainability</li>
                         <li>Life Sciences</li>
                         <li>Deeptech</li>
-                        <li>Roundtable Tech Transfer</li>
                       </ul>
+                      <p className="font-inter text-sm text-[#0F1435]">Roundtable Tech Transfer</p>
                     </div>
                   </div>
 
