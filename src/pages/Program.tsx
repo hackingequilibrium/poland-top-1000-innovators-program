@@ -802,21 +802,32 @@ const Program = () => {
                             </div>
                         </div>
 
-                        {/* 11:25 AM */}
+                        {/* 10:30 AM */}
                         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                           <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                            11:25 AM
+                            10:30 AM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
                             <div className="flex-1 bg-[#D7F0F0] p-4">
-                              <p className="font-inter text-sm text-[#0F1435]">Workshop: Building a Commercialization Strategy</p>
+                              <p className="font-inter text-sm text-[#0F1435]">Workshop: From Idea to Prototype</p>
                             </div>
                         </div>
 
-                        {/* 12:40 PM */}
+                        {/* 11:30 AM */}
                         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                           <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                            12:40 PM
+                            11:30 AM
+                            <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                          </div>
+                            <div className="flex-1 bg-[#D7F0F0] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Workshop: From Prototype to Product</p>
+                            </div>
+                        </div>
+
+                        {/* 12:30 PM */}
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                          <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                            12:30 PM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
                           <div className="flex-1 bg-[#F3F3F3] p-4">
@@ -824,21 +835,21 @@ const Program = () => {
                           </div>
                         </div>
 
-                        {/* 1:40 PM */}
+                        {/* 1:30 PM */}
                         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                           <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                            1:40 PM
+                            1:30 PM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3F3F3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Innovation Matchmaking Session: Science Meets Industry</p>
-                          </div>
+                            <div className="flex-1 bg-[#D7F0F0] p-4">
+                              <p className="font-inter text-sm text-[#0F1435]">Workshop: From Product to Market</p>
+                            </div>
                         </div>
 
-                        {/* 3:10 PM */}
+                        {/* 2:30 PM */}
                         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                           <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                            3:10 PM
+                            2:30 PM
                             <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
                           <div className="flex-1 bg-[#F3F3F3] p-4">
