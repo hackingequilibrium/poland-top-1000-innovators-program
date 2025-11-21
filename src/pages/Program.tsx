@@ -565,7 +565,7 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435] mb-2">CITRIS & The Banatao Institute - Welcome Top 1000 Innovators</p>
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">Grimes Engineering Center - Welcome Top 1000 Innovators</p>
                       <p className="font-inter text-sm text-[#0F1435]">Orbiting Innovation: Science and Collaboration in the New Space Era</p>
                     </div>
                   </div>
