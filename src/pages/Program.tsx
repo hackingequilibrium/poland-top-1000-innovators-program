@@ -899,7 +899,7 @@ const Program = () => {
                   </div>
 
                   {/* Transportation footnote */}
-                  <div className="mt-6 text-left md:ml-[112px]">
+                  <div className="mt-2 text-left md:ml-[112px]">
                     <p className="font-inter text-xs text-[#0F1435]">Transportation provided from Westin SFO hotel to and from the venue.</p>
                   </div>
                 </div>
