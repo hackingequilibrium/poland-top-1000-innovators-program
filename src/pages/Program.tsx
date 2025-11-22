@@ -868,13 +868,6 @@ const Program = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* Right column - Posters box (desktop only) */}
-                      <div className="hidden md:block md:w-[45%] md:pl-2">
-                        <div className="bg-[#F3F3F3] p-4 h-full flex items-center justify-center">
-                          <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
@@ -900,9 +893,9 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* Posters note (mobile only) */}
-                  <div className="md:hidden mt-6 text-left">
-                    <p className="font-inter text-sm text-[#0F1435]">Posters on Location by Sector 9:30 AM - 4 PM</p>
+                  {/* Disclaimer */}
+                  <div className="mt-6 text-left md:ml-[112px]">
+                    <p className="font-inter text-xs text-[#0F1435]">Posters on location by sector from 9 AM to 5 PM.</p>
                   </div>
 
                   {/* Transportation footnote */}
