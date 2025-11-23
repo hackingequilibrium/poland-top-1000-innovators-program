@@ -30,7 +30,8 @@ const formSchema = z.object({
   locations: z.object({
     stanford: z.boolean(),
     berkeley: z.boolean(),
-  }).refine((data) => data.stanford || data.berkeley, {
+    triplering: z.boolean(),
+  }).refine((data) => data.stanford || data.berkeley || data.triplering, {
     message: "Please select at least one location",
     path: ["root"],
   }),
@@ -45,6 +46,7 @@ const LeadSession = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [stanfordChecked, setStanfordChecked] = useState(false);
   const [berkeleyChecked, setBerkeleyChecked] = useState(false);
+  const [tripleringChecked, setTripleringChecked] = useState(false);
   
   const {
     register,
@@ -59,6 +61,7 @@ const LeadSession = () => {
       locations: {
         stanford: false,
         berkeley: false,
+        triplering: false,
       },
       name: "",
       email: "",
@@ -75,6 +78,7 @@ const LeadSession = () => {
           track: data.track,
           stanford: data.locations.stanford,
           berkeley: data.locations.berkeley,
+          triplering: data.locations.triplering,
           name: data.name,
           email: data.email,
           linkedin: data.linkedin
@@ -159,6 +163,33 @@ const LeadSession = () => {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
+
+                <AccordionItem value="workshop4" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 4</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Idea to Prototype</span>
+                    </div>
+                  </AccordionTrigger>
+                </AccordionItem>
+
+                <AccordionItem value="workshop5" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 5</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Prototype to Product</span>
+                    </div>
+                  </AccordionTrigger>
+                </AccordionItem>
+
+                <AccordionItem value="workshop6" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 6</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Product to Market</span>
+                    </div>
+                  </AccordionTrigger>
+                </AccordionItem>
               </Accordion>
 
               <div className="mb-8">
@@ -179,6 +210,18 @@ const LeadSession = () => {
                   <div>
                     <p className="mb-1">• Workshop 3: Global Innovation Readiness</p>
                     <p className="ml-4">– Westin SFO — December 10, 1:30–2:45 PM and 3:15–4:30 PM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 4: From Idea to Prototype</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 10:30 AM–11:30 AM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 5: From Prototype to Product</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 11:30 AM–12:30 PM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 6: From Product to Market</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 1:30 PM–2:30 PM</p>
                   </div>
                 </div>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2 mt-4">
@@ -210,6 +253,9 @@ const LeadSession = () => {
                           <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
                           <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
                           <SelectItem value="global">Workshop 3 - Global Innovation Readiness</SelectItem>
+                          <SelectItem value="idea-to-prototype">Workshop 4 - From Idea to Prototype</SelectItem>
+                          <SelectItem value="prototype-to-product">Workshop 5 - From Prototype to Product</SelectItem>
+                          <SelectItem value="product-to-market">Workshop 6 - From Product to Market</SelectItem>
                         </SelectContent>
                       </Select>
                     )}
@@ -289,6 +335,29 @@ const LeadSession = () => {
                         className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
                         UC Berkeley — December 11, 1:15–2:45 PM
+                      </label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Controller
+                        name="locations.triplering"
+                        control={control}
+                        render={({ field }) => (
+                          <Checkbox 
+                            id="triplering" 
+                            className="rounded-none"
+                            checked={field.value}
+                            onCheckedChange={(checked) => {
+                              field.onChange(checked);
+                              setTripleringChecked(checked as boolean);
+                            }}
+                          />
+                        )}
+                      />
+                      <label
+                        htmlFor="triplering"
+                        className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      >
+                        TripleRing, Newark — December 12 (various times)
                       </label>
                     </div>
                   </div>
