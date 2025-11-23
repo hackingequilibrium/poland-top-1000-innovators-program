@@ -114,6 +114,7 @@ export type Database = {
           name: string
           stanford: boolean
           track: string
+          triplering: boolean | null
           workshop: string
         }
         Insert: {
@@ -125,6 +126,7 @@ export type Database = {
           name: string
           stanford?: boolean
           track: string
+          triplering?: boolean | null
           workshop: string
         }
         Update: {
@@ -136,6 +138,7 @@ export type Database = {
           name?: string
           stanford?: boolean
           track?: string
+          triplering?: boolean | null
           workshop?: string
         }
         Relationships: []
