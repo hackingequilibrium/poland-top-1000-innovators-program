@@ -142,6 +142,23 @@ const LeadSession = () => {
                     </p>
                   </AccordionContent>
                 </AccordionItem>
+
+                <AccordionItem value="workshop3" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 3</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Global Innovation Readiness</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                      This hands-on workshop empowers Polish innovators, scientists, and university spin-offs to expand their reach and competitiveness on the global stage. Participants will assess and strengthen the key dimensions that determine international success — from intellectual property protection and funding strategies to team development, customer engagement, technology validation, and business scalability.
+                    </p>
+                    <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                      By the end of the session, participants will have a clearer view of their project's readiness for international collaboration, investment, and market entry — and a practical roadmap to accelerate their journey from local innovation to global impact.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
               </Accordion>
 
               <div className="mb-8">
@@ -180,6 +197,7 @@ const LeadSession = () => {
                         <SelectContent>
                           <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
                           <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
+                          <SelectItem value="global">Workshop 3 - Global Innovation Readiness</SelectItem>
                         </SelectContent>
                       </Select>
                     )}
