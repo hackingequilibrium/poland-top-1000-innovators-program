@@ -162,14 +162,26 @@ const LeadSession = () => {
               </Accordion>
 
               <div className="mb-8">
-                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
-                  Both workshops are in person and will take place at:
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-3">
+                  Workshops are held in person at the following locations:
                 </p>
-                <ul className="list-disc list-inside font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4 mb-3">
-                  <li>Stanford University — December 9, 2:30–3:45 PM</li>
-                  <li>UC Berkeley — December 11, 1:15–2:45 PM</li>
-                </ul>
-                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
+                <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4 space-y-3">
+                  <div>
+                    <p className="mb-1">• Workshop 1: Building Industry Partnerships</p>
+                    <p className="ml-4">– Stanford University — December 9, 2:30–3:45 PM</p>
+                    <p className="ml-4">– UC Berkeley — December 11, 1:15–2:45 PM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 2: Advancing Academic Collaboration</p>
+                    <p className="ml-4">– Stanford University — December 9, 2:30–3:45 PM</p>
+                    <p className="ml-4">– UC Berkeley — December 11, 1:15–2:45 PM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 3: Global Innovation Readiness</p>
+                    <p className="ml-4">– Westin SFO — December 10, 1:30–2:45 PM and 3:15–4:30 PM</p>
+                  </div>
+                </div>
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2 mt-4">
                   Each workshop will host 90 participants, divided into three focused tracks:
                 </p>
                 <ul className="list-disc list-inside font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4">
