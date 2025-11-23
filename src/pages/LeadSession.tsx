@@ -30,23 +30,28 @@ const formSchema = z.object({
   locations: z.object({
     stanford: z.boolean(),
     berkeley: z.boolean(),
-    triplering: z.boolean(),
-  }).refine((data) => data.stanford || data.berkeley || data.triplering, {
-    message: "Please select at least one location",
-    path: ["root"],
-  }),
+  }).optional(),
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
   email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email must be less than 255 characters" }),
   linkedin: z.string().trim().min(1, { message: "LinkedIn profile is required" }).url({ message: "Please enter a valid LinkedIn URL" }).max(500, { message: "URL must be less than 500 characters" }),
+}).superRefine((data, ctx) => {
+  // Only validate locations for workshops 1 and 2
+  if (data.workshop === "industry" || data.workshop === "academic") {
+    if (data.locations && !data.locations.stanford && !data.locations.berkeley) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Please select at least one location",
+        path: ["locations", "root"],
+      });
+    }
+  }
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 const LeadSession = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [stanfordChecked, setStanfordChecked] = useState(false);
-  const [berkeleyChecked, setBerkeleyChecked] = useState(false);
-  const [tripleringChecked, setTripleringChecked] = useState(false);
+  const [selectedWorkshop, setSelectedWorkshop] = useState("");
   
   const {
     register,
@@ -61,7 +66,6 @@ const LeadSession = () => {
       locations: {
         stanford: false,
         berkeley: false,
-        triplering: false,
       },
       name: "",
       email: "",
@@ -76,9 +80,9 @@ const LeadSession = () => {
         .insert({
           workshop: data.workshop,
           track: data.track,
-          stanford: data.locations.stanford,
-          berkeley: data.locations.berkeley,
-          triplering: data.locations.triplering,
+          stanford: data.locations?.stanford || false,
+          berkeley: data.locations?.berkeley || false,
+          triplering: false,
           name: data.name,
           email: data.email,
           linkedin: data.linkedin
@@ -248,7 +252,13 @@ const LeadSession = () => {
                     name="workshop"
                     control={control}
                     render={({ field }) => (
-                      <Select onValueChange={field.onChange} value={field.value}>
+                      <Select 
+                        onValueChange={(value) => {
+                          field.onChange(value);
+                          setSelectedWorkshop(value);
+                        }} 
+                        value={field.value}
+                      >
                         <SelectTrigger id="workshop" className="rounded-none">
                           <SelectValue placeholder="Select a workshop" />
                         </SelectTrigger>
@@ -291,83 +301,60 @@ const LeadSession = () => {
                   )}
                 </div>
 
-                <div className="space-y-3">
-                  <Label>Location *</Label>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <Controller
-                        name="locations.stanford"
-                        control={control}
-                        render={({ field }) => (
-                          <Checkbox 
-                            id="stanford" 
-                            className="rounded-none"
-                            checked={field.value}
-                            onCheckedChange={(checked) => {
-                              field.onChange(checked);
-                              setStanfordChecked(checked as boolean);
-                            }}
-                          />
-                        )}
-                      />
-                      <label
-                        htmlFor="stanford"
-                        className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Stanford University — December 9, 2:30–3:45 PM
-                      </label>
+                {(selectedWorkshop === "industry" || selectedWorkshop === "academic") && (
+                  <div className="space-y-3">
+                    <Label>Location *</Label>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <Controller
+                          name="locations.stanford"
+                          control={control}
+                          render={({ field }) => (
+                            <Checkbox 
+                              id="stanford" 
+                              className="rounded-none"
+                              checked={field.value}
+                              onCheckedChange={(checked) => {
+                                field.onChange(checked);
+                              }}
+                            />
+                          )}
+                        />
+                        <label
+                          htmlFor="stanford"
+                          className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          Stanford University — December 9, 2:30–3:45 PM
+                        </label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Controller
+                          name="locations.berkeley"
+                          control={control}
+                          render={({ field }) => (
+                            <Checkbox 
+                              id="berkeley" 
+                              className="rounded-none"
+                              checked={field.value}
+                              onCheckedChange={(checked) => {
+                                field.onChange(checked);
+                              }}
+                            />
+                          )}
+                        />
+                        <label
+                          htmlFor="berkeley"
+                          className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          UC Berkeley — December 11, 1:15–2:45 PM
+                        </label>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <Controller
-                        name="locations.berkeley"
-                        control={control}
-                        render={({ field }) => (
-                          <Checkbox 
-                            id="berkeley" 
-                            className="rounded-none"
-                            checked={field.value}
-                            onCheckedChange={(checked) => {
-                              field.onChange(checked);
-                              setBerkeleyChecked(checked as boolean);
-                            }}
-                          />
-                        )}
-                      />
-                      <label
-                        htmlFor="berkeley"
-                        className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        UC Berkeley — December 11, 1:15–2:45 PM
-                      </label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Controller
-                        name="locations.triplering"
-                        control={control}
-                        render={({ field }) => (
-                          <Checkbox 
-                            id="triplering" 
-                            className="rounded-none"
-                            checked={field.value}
-                            onCheckedChange={(checked) => {
-                              field.onChange(checked);
-                              setTripleringChecked(checked as boolean);
-                            }}
-                          />
-                        )}
-                      />
-                      <label
-                        htmlFor="triplering"
-                        className="text-sm font-inter font-light text-[#797B8E] leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        TripleRing, Newark — December 12 (various times)
-                      </label>
-                    </div>
+                    {errors.locations?.root && (
+                      <p className="text-sm text-red-600">{errors.locations.root.message}</p>
+                    )}
                   </div>
-                  {errors.locations?.root && (
-                    <p className="text-sm text-red-600">{errors.locations.root.message}</p>
-                  )}
-                </div>
+                )}
 
                 <div className="space-y-2">
                   <Label htmlFor="name">Name *</Label>
