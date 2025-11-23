@@ -26,7 +26,7 @@ import { toast } from "sonner";
 
 const formSchema = z.object({
   workshop: z.string().min(1, { message: "Please select a workshop" }),
-  track: z.string().min(1, { message: "Please select a track" }),
+  track: z.string().optional(),
   locations: z.object({
     stanford: z.boolean(),
     berkeley: z.boolean(),
@@ -35,6 +35,17 @@ const formSchema = z.object({
   email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email must be less than 255 characters" }),
   linkedin: z.string().trim().min(1, { message: "LinkedIn profile is required" }).url({ message: "Please enter a valid LinkedIn URL" }).max(500, { message: "URL must be less than 500 characters" }),
 }).superRefine((data, ctx) => {
+  // Only validate track for workshops 1, 2, and 3
+  if (data.workshop === "industry" || data.workshop === "academic" || data.workshop === "global") {
+    if (!data.track) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Please select a track",
+        path: ["track"],
+      });
+    }
+  }
+  
   // Only validate locations for workshops 1 and 2
   if (data.workshop === "industry" || data.workshop === "academic") {
     if (data.locations && !data.locations.stanford && !data.locations.berkeley) {
@@ -79,7 +90,7 @@ const LeadSession = () => {
         .from('session_submissions')
         .insert({
           workshop: data.workshop,
-          track: data.track,
+          track: data.track || '',
           stanford: data.locations?.stanford || false,
           berkeley: data.locations?.berkeley || false,
           triplering: false,
@@ -278,28 +289,30 @@ const LeadSession = () => {
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="track">Track *</Label>
-                  <Controller
-                    name="track"
-                    control={control}
-                    render={({ field }) => (
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <SelectTrigger id="track" className="rounded-none">
-                          <SelectValue placeholder="Select a track" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="life-sciences">Life Sciences</SelectItem>
-                          <SelectItem value="deeptech">DeepTech</SelectItem>
-                          <SelectItem value="energy">Energy & Sustainability</SelectItem>
-                        </SelectContent>
-                      </Select>
+{(selectedWorkshop === "industry" || selectedWorkshop === "academic" || selectedWorkshop === "global") && (
+                  <div className="space-y-2">
+                    <Label htmlFor="track">Track *</Label>
+                    <Controller
+                      name="track"
+                      control={control}
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="track" className="rounded-none">
+                            <SelectValue placeholder="Select a track" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="life-sciences">Life Sciences</SelectItem>
+                            <SelectItem value="deeptech">DeepTech</SelectItem>
+                            <SelectItem value="energy">Energy & Sustainability</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                    {errors.track && (
+                      <p className="text-sm text-red-600">{errors.track.message}</p>
                     )}
-                  />
-                  {errors.track && (
-                    <p className="text-sm text-red-600">{errors.track.message}</p>
-                  )}
-                </div>
+                  </div>
+                )}
 
                 {(selectedWorkshop === "industry" || selectedWorkshop === "academic") && (
                   <div className="space-y-3">
