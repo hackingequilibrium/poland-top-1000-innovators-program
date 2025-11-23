@@ -101,7 +101,7 @@ const LeadSession = () => {
       <div className="flex-grow pt-[120px] pb-[100px] px-8 lg:px-[100px]">
         <div className="bg-white p-8 lg:p-12 max-w-4xl mx-auto">
           <h2 className="font-inter font-extrabold text-lg md:text-xl lg:text-2xl text-[#0F1435] mb-6 uppercase">
-            {isSubmitted ? "Thank you for your submission!" : "Lead a Session at Stanford or Berkeley (or Both!)"}
+            {isSubmitted ? "Thank you for your submission!" : "Lead a Session"}
           </h2>
           
           {isSubmitted ? (
