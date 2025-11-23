@@ -165,7 +165,7 @@ const LeadSession = () => {
                 </AccordionItem>
 
                 <AccordionItem value="workshop4" className="border-border">
-                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline [&>svg]:hidden">
                     <div className="text-left">
                       <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 4</span>
                       <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Idea to Prototype</span>
@@ -174,7 +174,7 @@ const LeadSession = () => {
                 </AccordionItem>
 
                 <AccordionItem value="workshop5" className="border-border">
-                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline [&>svg]:hidden">
                     <div className="text-left">
                       <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 5</span>
                       <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Prototype to Product</span>
@@ -183,7 +183,7 @@ const LeadSession = () => {
                 </AccordionItem>
 
                 <AccordionItem value="workshop6" className="border-border">
-                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline [&>svg]:hidden">
                     <div className="text-left">
                       <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 6</span>
                       <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Product to Market</span>
@@ -225,7 +225,10 @@ const LeadSession = () => {
                   </div>
                 </div>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2 mt-4">
-                  Each workshop will host 90 participants, divided into three focused tracks:
+                  Each workshop will host 90 participants.
+                </p>
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2">
+                  Workshops 1-3 will be divided into three focused tracks:
                 </p>
                 <ul className="list-disc list-inside font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed ml-4">
                   <li>Life Sciences</li>
