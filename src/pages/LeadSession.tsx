@@ -147,15 +147,40 @@ const LeadSession = () => {
                   <AccordionTrigger className="font-inter uppercase hover:no-underline">
                     <div className="text-left">
                       <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 3</span>
-                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Global Innovation Readiness</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Idea to Prototype</span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                      This hands-on workshop empowers Polish innovators, scientists, and university spin-offs to expand their reach and competitiveness on the global stage. Participants will assess and strengthen the key dimensions that determine international success — from intellectual property protection and funding strategies to team development, customer engagement, technology validation, and business scalability.
+                      This workshop guides participants through the critical early stages of innovation, from conceptualizing an idea to building a functional prototype.
                     </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="workshop4" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 4</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Prototype to Product</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
                     <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                      By the end of the session, participants will have a clearer view of their project's readiness for international collaboration, investment, and market entry — and a practical roadmap to accelerate their journey from local innovation to global impact.
+                      Learn how to transition from a working prototype to a market-ready product, addressing manufacturing, quality assurance, and product refinement.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="workshop5" className="border-border">
+                  <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                    <div className="text-left">
+                      <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 5</span>
+                      <span className="text-base md:text-lg text-[#0F1435] font-extrabold">From Product to Market</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                      Explore go-to-market strategies, customer acquisition, scaling operations, and building sustainable business models for global expansion.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -177,8 +202,16 @@ const LeadSession = () => {
                     <p className="ml-4">– UC Berkeley — December 11, 1:15–2:45 PM</p>
                   </div>
                   <div>
-                    <p className="mb-1">• Workshop 3: Global Innovation Readiness</p>
-                    <p className="ml-4">– Westin SFO — December 10, 1:30–2:45 PM and 3:15–4:30 PM</p>
+                    <p className="mb-1">• Workshop 3: From Idea to Prototype</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 10:30–11:30 AM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 4: From Prototype to Product</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 11:30 AM–12:30 PM</p>
+                  </div>
+                  <div>
+                    <p className="mb-1">• Workshop 5: From Product to Market</p>
+                    <p className="ml-4">– TripleRing, Newark — December 12, 1:30–2:30 PM</p>
                   </div>
                 </div>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed mb-2 mt-4">
@@ -209,7 +242,9 @@ const LeadSession = () => {
                         <SelectContent>
                           <SelectItem value="industry">Workshop 1 - Building Industry Partnerships</SelectItem>
                           <SelectItem value="academic">Workshop 2 – Advancing Academic Collaboration</SelectItem>
-                          <SelectItem value="global">Workshop 3 - Global Innovation Readiness</SelectItem>
+                          <SelectItem value="idea-to-prototype">Workshop 3 - From Idea to Prototype</SelectItem>
+                          <SelectItem value="prototype-to-product">Workshop 4 - From Prototype to Product</SelectItem>
+                          <SelectItem value="product-to-market">Workshop 5 - From Product to Market</SelectItem>
                         </SelectContent>
                       </Select>
                     )}
