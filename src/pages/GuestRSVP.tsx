@@ -123,7 +123,7 @@ const GuestRSVP = () => {
                     After you confirm your attendance, you will receive participant and project profiles to help you prepare and connect with the right people during the event.
                   </p>
                   <p>
-                    Program: <a href="https://top1000.polsv.org/program" target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">https://top1000.polsv.org/program</a>
+                    <a href="https://top1000.polsv.org/program" target="_blank" rel="noopener noreferrer" className="text-[#0F1435] font-semibold hover:underline">Summit Program</a>
                   </p>
                 </div>
               </div>
