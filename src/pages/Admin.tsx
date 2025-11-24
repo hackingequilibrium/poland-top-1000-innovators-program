@@ -45,6 +45,19 @@ interface RSVPSubmission {
   created_at: string;
 }
 
+interface GuestRSVPSubmission {
+  id: string;
+  name: string;
+  surname: string;
+  organization: string | null;
+  role: string | null;
+  email: string;
+  linkedin: string | null;
+  attendance: string;
+  interested_sectors: string[];
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -61,6 +74,7 @@ const Admin = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [expertRecommendations, setExpertRecommendations] = useState<ExpertRecommendation[]>([]);
   const [rsvpSubmissions, setRsvpSubmissions] = useState<RSVPSubmission[]>([]);
+  const [guestRsvpSubmissions, setGuestRsvpSubmissions] = useState<GuestRSVPSubmission[]>([]);
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
@@ -122,6 +136,7 @@ const Admin = () => {
       fetchSubmissions();
       fetchExpertRecommendations();
       fetchRSVPSubmissions();
+      fetchGuestRSVPSubmissions();
       fetchAdminUsers();
     }
   }, [isAdmin, user]);
@@ -268,6 +283,59 @@ const Admin = () => {
     document.body.removeChild(link);
     
     toast.success("RSVP submissions exported successfully");
+  };
+
+  const fetchGuestRSVPSubmissions = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('guest_rsvp_submissions')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        console.error('Error fetching guest RSVP submissions:', error);
+        toast.error("Failed to load guest RSVP submissions");
+      } else {
+        setGuestRsvpSubmissions(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error("An unexpected error occurred");
+    }
+  };
+
+  const handleExportGuestRSVPs = () => {
+    if (guestRsvpSubmissions.length === 0) {
+      toast.error("No guest RSVP submissions to export");
+      return;
+    }
+
+    const csvContent = [
+      ['Name', 'Surname', 'Organization', 'Role', 'Email', 'LinkedIn', 'Attendance', 'Interested Sectors', 'Submitted At'].join(','),
+      ...guestRsvpSubmissions.map(r => [
+        `"${r.name}"`,
+        `"${r.surname}"`,
+        `"${r.organization || ''}"`,
+        `"${r.role || ''}"`,
+        `"${r.email}"`,
+        `"${r.linkedin || ''}"`,
+        `"${r.attendance}"`,
+        `"${r.interested_sectors.join('; ')}"`,
+        `"${new Date(r.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `guest-rsvp-submissions-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    toast.success("Guest RSVP submissions exported successfully");
   };
 
   const fetchAdminUsers = async () => {
@@ -473,12 +541,15 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="submissions" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8 bg-[#0C0F24] rounded-none">
+          <TabsList className="grid w-full grid-cols-5 mb-8 bg-[#0C0F24] rounded-none">
             <TabsTrigger value="submissions" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Session Submissions
             </TabsTrigger>
             <TabsTrigger value="rsvp" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               RSVP Submissions
+            </TabsTrigger>
+            <TabsTrigger value="guest-rsvp" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+              Guest RSVPs
             </TabsTrigger>
             <TabsTrigger value="experts" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Expert Recommendations
@@ -564,6 +635,64 @@ const Admin = () => {
                     </CardHeader>
                     <CardContent className="space-y-2 font-inter text-sm">
                       <p><strong>Email:</strong> {rsvp.email}</p>
+                      <p><strong>Attendance:</strong> <span className={`font-semibold ${
+                        rsvp.attendance === 'yes' ? 'text-green-600' : 
+                        rsvp.attendance === 'maybe' ? 'text-yellow-600' : 
+                        'text-red-600'
+                      }`}>
+                        {rsvp.attendance.charAt(0).toUpperCase() + rsvp.attendance.slice(1)}
+                      </span></p>
+                      {rsvp.interested_sectors && rsvp.interested_sectors.length > 0 && (
+                        <div>
+                          <p className="font-semibold mb-1">Interested Sectors:</p>
+                          <ul className="list-disc list-inside pl-2 space-y-1 text-[#797B8E]">
+                            {rsvp.interested_sectors.map((sector, idx) => (
+                              <li key={idx}>{sector}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      <p className="text-[#797B8E] text-xs pt-2"><strong>Submitted:</strong> {new Date(rsvp.created_at).toLocaleString()}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="guest-rsvp">
+            {guestRsvpSubmissions.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportGuestRSVPs}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export All Guest RSVPs to CSV
+                </Button>
+              </div>
+            )}
+            {guestRsvpSubmissions.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No guest RSVP submissions yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {guestRsvpSubmissions.map((rsvp) => (
+                  <Card key={rsvp.id} className="rounded-none">
+                    <CardHeader>
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {rsvp.name} {rsvp.surname}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2 font-inter text-sm">
+                      <p><strong>Email:</strong> {rsvp.email}</p>
+                      {rsvp.organization && <p><strong>Organization:</strong> {rsvp.organization}</p>}
+                      {rsvp.role && <p><strong>Role:</strong> {rsvp.role}</p>}
+                      {rsvp.linkedin && (
+                        <p><strong>LinkedIn:</strong> <a href={rsvp.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">{rsvp.linkedin}</a></p>
+                      )}
                       <p><strong>Attendance:</strong> <span className={`font-semibold ${
                         rsvp.attendance === 'yes' ? 'text-green-600' : 
                         rsvp.attendance === 'maybe' ? 'text-yellow-600' : 
