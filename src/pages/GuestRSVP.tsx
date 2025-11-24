@@ -38,7 +38,11 @@ const sectors = [
 
 const formSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  surname: z.string().trim().min(1, "Surname is required").max(100, "Surname must be less than 100 characters"),
+  organization: z.string().trim().max(200, "Organization must be less than 200 characters").optional(),
+  role: z.string().trim().max(100, "Role must be less than 100 characters").optional(),
   email: z.string().trim().email("Invalid email").max(255, "Email must be less than 255 characters"),
+  linkedin: z.string().trim().max(500, "LinkedIn URL must be less than 500 characters").optional(),
   attendance: z.string().min(1, "Please select your attendance status"),
   interestedSectors: z.array(z.string()),
 });
@@ -52,7 +56,11 @@ const GuestRSVP = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      surname: "",
+      organization: "",
+      role: "",
       email: "",
+      linkedin: "",
       attendance: "",
       interestedSectors: [],
     },
@@ -61,22 +69,26 @@ const GuestRSVP = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       const { error } = await supabase
-        .from('rsvp_submissions')
+        .from('guest_rsvp_submissions')
         .insert({
           name: data.name,
+          surname: data.surname,
+          organization: data.organization || null,
+          role: data.role || null,
           email: data.email,
+          linkedin: data.linkedin || null,
           attendance: data.attendance,
           interested_sectors: data.interestedSectors,
         });
 
       if (error) {
-        console.error('Error submitting RSVP:', error);
+        console.error('Error submitting guest RSVP:', error);
         return;
       }
 
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting RSVP:', error);
+      console.error('Error submitting guest RSVP:', error);
     }
   };
 
@@ -134,6 +146,67 @@ const GuestRSVP = () => {
 
                     <FormField
                       control={form.control}
+                      name="surname"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Surname
+                            <span className="text-red-600 ml-1">*</span>
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter your surname" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB] rounded-none"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="organization"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Organization
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter your organization" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB] rounded-none"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="role"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            Role
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter your role" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB] rounded-none"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
                       name="email"
                       render={({ field }) => (
                         <FormItem>
@@ -145,6 +218,26 @@ const GuestRSVP = () => {
                             <Input 
                               type="email"
                               placeholder="Enter your email" 
+                              {...field}
+                              className="bg-white border-[#E5E7EB] rounded-none"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="linkedin"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="font-inter text-sm text-[#0F1435]">
+                            LinkedIn
+                          </FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Enter your LinkedIn URL" 
                               {...field}
                               className="bg-white border-[#E5E7EB] rounded-none"
                             />

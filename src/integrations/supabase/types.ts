@@ -53,6 +53,45 @@ export type Database = {
         }
         Relationships: []
       }
+      guest_rsvp_submissions: {
+        Row: {
+          attendance: string
+          created_at: string
+          email: string
+          id: string
+          interested_sectors: string[]
+          linkedin: string | null
+          name: string
+          organization: string | null
+          role: string | null
+          surname: string
+        }
+        Insert: {
+          attendance: string
+          created_at?: string
+          email: string
+          id?: string
+          interested_sectors: string[]
+          linkedin?: string | null
+          name: string
+          organization?: string | null
+          role?: string | null
+          surname: string
+        }
+        Update: {
+          attendance?: string
+          created_at?: string
+          email?: string
+          id?: string
+          interested_sectors?: string[]
+          linkedin?: string | null
+          name?: string
+          organization?: string | null
+          role?: string | null
+          surname?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
