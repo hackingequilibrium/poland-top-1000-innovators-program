@@ -115,9 +115,17 @@ const GuestRSVP = () => {
                   RSVP
                 </h2>
                 
-                <p className="font-inter font-normal text-sm md:text-base text-[#797B8E] leading-relaxed mb-4">
-                  Confirm your attendance for the Dec 9–12 program and receive participant and project profiles.
-                </p>
+                <div className="font-inter font-normal text-sm md:text-base text-[#797B8E] leading-relaxed mb-4 space-y-3">
+                  <p>
+                    You are invited to join the Top 1000 Innovators of Poland in Silicon Valley, a four-day program (Dec 9–12) connecting leading Polish researchers with the Bay Area ecosystem.
+                  </p>
+                  <p>
+                    After you confirm your attendance, you will receive participant and project profiles to help you prepare and connect with the right people during the event.
+                  </p>
+                  <p>
+                    Program: <a href="https://top1000.polsv.org/program" target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">https://top1000.polsv.org/program</a>
+                  </p>
+                </div>
               </div>
 
               <Form {...form}>
