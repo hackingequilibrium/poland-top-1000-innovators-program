@@ -581,10 +581,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 10:10 AM */}
+                  {/* 10:00 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      10:10 AM
+                      10:00 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F3DDD3] p-4">
@@ -592,10 +592,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 10:40 AM */}
+                  {/* 10:30 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      10:40 AM
+                      10:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
@@ -603,10 +603,10 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 11:10 AM */}
+                  {/* 11:00 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      11:10 AM
+                      11:00 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F3DDD3] p-4">
@@ -614,10 +614,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 11:40 AM */}
+                  {/* 11:30 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      11:40 AM
+                      11:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F3DDD3] p-4">
@@ -625,10 +625,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 12:10 PM */}
+                  {/* 12:00 PM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      12:10 PM
+                      12:00 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F5EEDC] p-4">
@@ -636,10 +636,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 12:40 PM */}
+                  {/* 12:15 PM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      12:40 PM
+                      12:15 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
@@ -647,10 +647,10 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 1:40 PM */}
+                  {/* 1:30 PM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      1:40 PM
+                      1:30 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#D7F0F0] p-4">
@@ -664,16 +664,16 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 3:25 PM & 3:55 PM - Desktop version with grid */}
+                  {/* 3:20 PM & 3:45 PM - Desktop version with grid */}
                   <div className="hidden md:grid md:grid-cols-[72px_1fr] gap-2 md:gap-10">
                     {/* Timeline column for both times */}
                     <div className="">
                       <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10">
-                        3:25 PM
+                        3:20 PM
                         <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
                       <div className="font-inter text-sm font-semibold text-[#0F1435] relative z-10 mt-[40px]">
-                        3:55 PM
+                        3:45 PM
                         <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                       </div>
                     </div>
@@ -692,20 +692,20 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 3:25 PM - Mobile version */}
+                  {/* 3:20 PM - Mobile version */}
                   <div className="md:hidden flex flex-col gap-2">
                     <div className="font-inter text-sm font-semibold text-[#0F1435]">
-                      3:25 PM
+                      3:20 PM
                     </div>
                     <div className="bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">7 x 3 minutes Pitch Session</p>
                     </div>
                   </div>
 
-                  {/* 3:55 PM - Mobile version */}
+                  {/* 3:45 PM - Mobile version */}
                   <div className="md:hidden flex flex-col gap-2">
                     <div className="font-inter text-sm font-semibold text-[#0F1435]">
-                      3:55 PM
+                      3:45 PM
                     </div>
                     <div className="bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Meetup: Polish Students at Berkeley</p>
@@ -725,7 +725,7 @@ const Program = () => {
 
                   {/* Poster note (mobile only) */}
                   <div className="md:hidden mt-6 text-left">
-                    <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center 3:25PM - 4 PM</p>
+                    <p className="font-inter text-sm text-[#0F1435]">Poster Session at Grimes Engineering Center 3:20PM - 4 PM</p>
                   </div>
 
                   {/* Transportation footnote */}
