@@ -255,6 +255,30 @@ const Admin = () => {
     }
   };
 
+  const handleDeleteRSVP = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this RSVP submission?')) {
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('rsvp_submissions')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        console.error('Error deleting RSVP:', error);
+        toast.error("Failed to delete RSVP submission");
+      } else {
+        toast.success("RSVP submission deleted successfully");
+        fetchRSVPSubmissions();
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error("Failed to delete RSVP submission");
+    }
+  };
+
   const handleExportRSVPs = () => {
     if (rsvpSubmissions.length === 0) {
       toast.error("No RSVP submissions to export");
@@ -301,6 +325,30 @@ const Admin = () => {
     } catch (error) {
       console.error('Unexpected error:', error);
       toast.error("An unexpected error occurred");
+    }
+  };
+
+  const handleDeleteGuestRSVP = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this guest RSVP submission?')) {
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('guest_rsvp_submissions')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        console.error('Error deleting guest RSVP:', error);
+        toast.error("Failed to delete guest RSVP submission");
+      } else {
+        toast.success("Guest RSVP submission deleted successfully");
+        fetchGuestRSVPSubmissions();
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error("Failed to delete guest RSVP submission");
     }
   };
 
@@ -628,10 +676,18 @@ const Admin = () => {
               <div className="grid gap-6">
                 {rsvpSubmissions.map((rsvp) => (
                   <Card key={rsvp.id} className="rounded-none">
-                    <CardHeader>
+                    <CardHeader className="flex flex-row items-center justify-between">
                       <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
                         {rsvp.name}
                       </CardTitle>
+                      <Button
+                        onClick={() => handleDeleteRSVP(rsvp.id)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-none bg-[#C70828] hover:bg-[#A80E34]"
+                      >
+                        Delete
+                      </Button>
                     </CardHeader>
                     <CardContent className="space-y-2 font-inter text-sm">
                       <p><strong>Email:</strong> {rsvp.email}</p>
@@ -681,10 +737,18 @@ const Admin = () => {
               <div className="grid gap-6">
                 {guestRsvpSubmissions.map((rsvp) => (
                   <Card key={rsvp.id} className="rounded-none">
-                    <CardHeader>
+                    <CardHeader className="flex flex-row items-center justify-between">
                       <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
                         {rsvp.name} {rsvp.surname}
                       </CardTitle>
+                      <Button
+                        onClick={() => handleDeleteGuestRSVP(rsvp.id)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-none bg-[#C70828] hover:bg-[#A80E34]"
+                      >
+                        Delete
+                      </Button>
                     </CardHeader>
                     <CardContent className="space-y-2 font-inter text-sm">
                       <p><strong>Email:</strong> {rsvp.email}</p>
