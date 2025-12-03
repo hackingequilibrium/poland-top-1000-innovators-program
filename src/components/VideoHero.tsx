@@ -185,9 +185,14 @@ const VideoHero = () => {
               
               {/* Honorary Patronage Section */}
               <div>
-                <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg mb-6">
-                  Honorary Patronage
-                </h3>
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                    Honorary Patronage
+                  </h3>
+                  <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                    Business Partners
+                  </h3>
+                </div>
                 <div className="flex justify-start">
                   <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto max-w-5xl object-contain" />
                 </div>
