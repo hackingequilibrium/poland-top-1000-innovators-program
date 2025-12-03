@@ -10,6 +10,8 @@ import box4Icon from "@/assets/box4.png";
 import box5Icon from "@/assets/box5.png";
 import box6Icon from "@/assets/box6.png";
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
+import honoraryPatronage from "@/assets/honorary-patronage.png";
+import businessPartners from "@/assets/business-partners.png";
 import box7Icon from "@/assets/box7.png";
 import box8Icon from "@/assets/box8.png";
 
@@ -185,16 +187,32 @@ const VideoHero = () => {
               
               {/* Honorary Patronage Section */}
               <div>
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                {/* Desktop Layout */}
+                <div className="hidden md:block">
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                      Honorary Patronage
+                    </h3>
+                    <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                      Business Partners
+                    </h3>
+                  </div>
+                  <div className="flex justify-start">
+                    <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto max-w-5xl object-contain" />
+                  </div>
+                </div>
+                
+                {/* Mobile Layout */}
+                <div className="md:hidden">
+                  <h3 className="font-inter font-bold text-[#0F1435] text-base mb-4">
                     Honorary Patronage
                   </h3>
-                  <h3 className="font-inter font-bold text-[#0F1435] text-base md:text-lg">
+                  <img src={honoraryPatronage} alt="Honorary Patronage Logos" className="w-full h-auto object-contain mb-6" />
+                  
+                  <h3 className="font-inter font-bold text-[#0F1435] text-base mb-4">
                     Business Partners
                   </h3>
-                </div>
-                <div className="flex justify-start">
-                  <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto max-w-5xl object-contain" />
+                  <img src={businessPartners} alt="Business Partners Logos" className="w-full h-auto object-contain" />
                 </div>
               </div>
             </div>
