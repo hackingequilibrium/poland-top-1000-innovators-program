@@ -198,7 +198,7 @@ const VideoHero = () => {
                     </h3>
                   </div>
                   <div className="flex justify-start">
-                    <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto max-w-5xl object-contain" />
+                    <img src={patronLogosCombined} alt="Honorary Patronage Logos" className="w-full h-auto object-contain" />
                   </div>
                 </div>
                 
