@@ -77,13 +77,26 @@ const Workshops = () => {
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
                         <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 1</span>
-                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Building Industry Partnerships</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Find your workshop</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                        Learn how to position research outcomes for meaningful engagement with corporate R&D teams and investors. This session connects Silicon Valley innovation leaders with Polish research teams to exchange practical insights and real-world case studies on transforming breakthrough technologies from lab to market. As a U.S. moderator, you'll gain a unique opportunity to share best practices, identify co-development pathways, and explore new models of university–industry collaboration with Poland's top scientific talent.
-                      </p>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        <p className="mb-2">Use the lookup sheet to see:</p>
+                        <ul className="list-disc ml-5 mb-4 space-y-1">
+                          <li>Your assigned workshop (Industry or Academia)</li>
+                          <li>Your theme (Deep Tech, Life Sciences, Energy)</li>
+                          <li>Your table number</li>
+                        </ul>
+                        <a 
+                          href="/downloads/Day1_Workshop_Assignments.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#0F1435] font-medium hover:underline"
+                        >
+                          → Download: Find Your Workshop (PDF)
+                        </a>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
 
