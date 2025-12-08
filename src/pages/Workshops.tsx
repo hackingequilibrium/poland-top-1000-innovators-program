@@ -104,7 +104,7 @@ const Workshops = () => {
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
                         <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 2</span>
-                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Workbooks (Industry Partnership & Academic Collaboration)</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Workbooks</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
@@ -112,17 +112,17 @@ const Workshops = () => {
                         <div>
                           <p className="font-bold text-[#0F1435] mb-2">Industry Partnership Workbooks</p>
                           <div className="space-y-1">
-                            <a href="#" className="block text-[#0F1435] hover:underline">Deep Tech (document link)</a>
-                            <a href="#" className="block text-[#0F1435] hover:underline">Life Sciences (document link)</a>
-                            <a href="#" className="block text-[#0F1435] hover:underline">Energy (document link)</a>
+                            <a href="/downloads/Industry_Partnership_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="#" className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="#" className="block text-[#0F1435] hover:underline">Energy</a>
                           </div>
                         </div>
                         <div>
                           <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration Workbooks</p>
                           <div className="space-y-1">
-                            <a href="#" className="block text-[#0F1435] hover:underline">Deep Tech (document link)</a>
-                            <a href="#" className="block text-[#0F1435] hover:underline">Life Sciences (document link)</a>
-                            <a href="#" className="block text-[#0F1435] hover:underline">Energy (document link)</a>
+                            <a href="#" className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="#" className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="#" className="block text-[#0F1435] hover:underline">Energy</a>
                           </div>
                         </div>
                       </div>
