@@ -12,6 +12,7 @@ import Experts from "./pages/Experts";
 import RSVP from "./pages/RSVP";
 import GuestRSVP from "./pages/GuestRSVP";
 import Program from "./pages/Program";
+import Workshops from "./pages/Workshops";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/rsvp" element={<RSVP />} />
           <Route path="/guest_rsvp" element={<GuestRSVP />} />
           <Route path="/program" element={<Program />} />
+          <Route path="/workshops" element={<Workshops />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
