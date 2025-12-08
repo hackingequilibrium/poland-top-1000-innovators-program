@@ -85,7 +85,7 @@ const Workshops = () => {
                         <p className="mb-2">Use the lookup sheet to see:</p>
                         <ul className="list-disc ml-5 mb-4 space-y-1">
                           <li>Your assigned workshop (Industry or Academia)</li>
-                          <li>Your theme (Deep Tech, Life Sciences, Energy)</li>
+                          <li>Your track (Deep Tech, Life Sciences, Energy)</li>
                           <li>Your table number</li>
                         </ul>
                         <a 
