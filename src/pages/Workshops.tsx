@@ -64,8 +64,11 @@ const Workshops = () => {
             <TabsContent value="day1" className="mt-6">
               {/* Intro text */}
               <div className="mb-8">
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E]">
+                  Welcome to Day 1 of workshops.
+                </p>
                 <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-6">
-                  Welcome to Day 1 of workshops. Everything you need to find your workshop, prepare, and navigate your session is below.
+                  Everything you need to find your workshop, prepare, and navigate your session is below.
                 </p>
 
                 {/* Workshop accordions */}
@@ -73,7 +76,7 @@ const Workshops = () => {
                   <AccordionItem value="workshop1" className="border-border">
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
-                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 1</span>
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 1</span>
                         <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Building Industry Partnerships</span>
                       </div>
                     </AccordionTrigger>
@@ -87,7 +90,7 @@ const Workshops = () => {
                   <AccordionItem value="workshop2" className="border-border">
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
-                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 2</span>
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 2</span>
                         <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Advancing Academic Collaboration</span>
                       </div>
                     </AccordionTrigger>
@@ -101,7 +104,7 @@ const Workshops = () => {
                   <AccordionItem value="workshop3" className="border-border">
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
-                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 3</span>
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 3</span>
                         <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Global Innovation Readiness</span>
                       </div>
                     </AccordionTrigger>
