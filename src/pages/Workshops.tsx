@@ -121,7 +121,7 @@ const Workshops = () => {
                           <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
                           <div className="space-y-1">
                             <a href="/downloads/Academic_Collaboration_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
-                            <a href="#" className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Academic_Collaboration_LifeSciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
                             <a href="#" className="block text-[#0F1435] hover:underline">Energy</a>
                           </div>
                         </div>
