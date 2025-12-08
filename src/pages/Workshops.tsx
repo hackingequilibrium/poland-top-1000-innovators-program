@@ -120,9 +120,7 @@ const Workshops = () => {
                         <div>
                           <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
                           <div className="space-y-1">
-                            <a href="/downloads/Academic_Collaboration_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
-                            <a href="/downloads/Academic_Collaboration_LifeSciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
-                            <a href="/downloads/Academic_Collaboration_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                            <a href="/downloads/Advancing_Academic_Collaboration_FOR_ALL_3_TRACKS.docx" download className="block text-[#0F1435] hover:underline">Workbook for all tracks</a>
                           </div>
                         </div>
                       </div>
