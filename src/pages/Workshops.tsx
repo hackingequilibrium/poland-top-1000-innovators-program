@@ -1,6 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Workshops = () => {
   return (
@@ -56,6 +62,65 @@ const Workshops = () => {
             </TabsList>
 
             <TabsContent value="day1" className="mt-6">
+              {/* Intro text */}
+              <div className="mb-8">
+                <p className="font-inter font-semibold text-base md:text-lg text-[#0F1435] mb-2">
+                  Welcome to Day 1 of the Top 1000 Innovators Workshops.
+                </p>
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-6">
+                  Everything you need to find your workshop, prepare, and navigate your session is below.
+                </p>
+
+                {/* Workshop accordions */}
+                <Accordion type="single" collapsible className="mb-8">
+                  <AccordionItem value="workshop1" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 1</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Building Industry Partnerships</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        Learn how to position research outcomes for meaningful engagement with corporate R&D teams and investors. This session connects Silicon Valley innovation leaders with Polish research teams to exchange practical insights and real-world case studies on transforming breakthrough technologies from lab to market. As a U.S. moderator, you'll gain a unique opportunity to share best practices, identify co-development pathways, and explore new models of university–industry collaboration with Poland's top scientific talent.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="workshop2" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 2</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Advancing Academic Collaboration</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        Discover models for international co-development, research exchange, and joint innovation programs. Silicon Valley academic leaders serving as moderators will engage directly with Poland's leading universities to co-design future partnerships, explore joint IP opportunities, and open channels for talent exchange and shared infrastructure that connect the Bay Area with Poland's most dynamic research ecosystems.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="workshop3" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Workshop 3</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Global Innovation Readiness</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        This hands-on workshop empowers Polish innovators, scientists, and university spin-offs to expand their reach and competitiveness on the global stage. Participants will assess and strengthen the key dimensions that determine international success — from intellectual property protection and funding strategies to team development, customer engagement, technology validation, and business scalability.
+                      </p>
+                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        By the end of the session, participants will have a clearer view of their project's readiness for international collaboration, investment, and market entry — and a practical roadmap to accelerate their journey from local innovation to global impact.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Timeline section */}
               <div className="relative">
                 {/* Timeline vertical line - desktop only */}
                 <div className="hidden md:block absolute left-[84px] top-[8px] bottom-[95px] w-[1px] bg-[#0F1435]" />
