@@ -133,16 +133,28 @@ const Workshops = () => {
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
                         <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 3</span>
-                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Global Innovation Readiness</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Table Assignment</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                        This hands-on workshop empowers Polish innovators, scientists, and university spin-offs to expand their reach and competitiveness on the global stage. Participants will assess and strengthen the key dimensions that determine international success — from intellectual property protection and funding strategies to team development, customer engagement, technology validation, and business scalability.
-                      </p>
-                      <p className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                        By the end of the session, participants will have a clearer view of their project's readiness for international collaboration, investment, and market entry — and a practical roadmap to accelerate their journey from local innovation to global impact.
-                      </p>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-4">
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Industry Partnership</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Industry_Partnership_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="/downloads/Industry_Partnership_Life_Sciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Industry_Partnership_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                          </div>
+                        </div>
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Academic_Collaboration_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="/downloads/Academic_Collaboration_LifeSciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Academic_Collaboration_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                          </div>
+                        </div>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
