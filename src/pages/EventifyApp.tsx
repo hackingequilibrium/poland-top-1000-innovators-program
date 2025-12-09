@@ -34,20 +34,20 @@ const EventifyApp = () => {
             <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-4">
               You can download the Eventify app using these links:
             </p>
-            <div className="flex gap-4">
+            <div className="bg-[#0F1435] p-6 inline-flex gap-6">
               <a 
                 href="https://apps.apple.com/us/app/eventify/id1267750107" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <img src={appStoreBadge} alt="Download on the App Store" className="h-8" />
+                <img src={appStoreBadge} alt="Download on the App Store" className="h-16" />
               </a>
               <a 
                 href="https://play.google.com/store/apps/details?id=com.teks.eventify" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-8" />
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-16" />
               </a>
             </div>
           </div>
