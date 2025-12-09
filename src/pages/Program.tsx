@@ -679,13 +679,13 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#D7F0F0] p-4">
-                      <p className="font-inter text-sm text-[#0F1435] mb-2">Academic & Industry Partnership Workshops:</p>
-                      <ul className="font-inter text-sm text-[#0F1435] list-disc pl-5 space-y-1 mb-2">
-                        <li>Energy & Sustainability</li>
-                        <li>Life Sciences</li>
-                        <li>Deeptech</li>
+                      <ul className="font-inter text-sm text-[#0F1435] space-y-1">
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Workshop 1: Start ups (for TRL 6-7)</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Workshop 2: Round Table Tech Transfer</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Workshop 3: Energy & Sustainability: Academic & Industry partnerships</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Workshop 4: Life Sciences: Academic & Industry partnerships</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Workshop 5: From Lab to Market: Practical Pathways for Academic–Industry Partnership in Deep Tech</span></li>
                       </ul>
-                      <p className="font-inter text-sm text-[#0F1435]">Roundtable Tech Transfer</p>
                     </div>
                   </div>
 
