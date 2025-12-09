@@ -2,6 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import appStoreBadge from "@/assets/appstore.svg";
 import googlePlayBadge from "@/assets/google_play.svg";
+import eventifyStep2_1 from "@/assets/eventify-step2-1.png";
+import eventifyStep2_2 from "@/assets/eventify-step2-2.png";
+import eventifyStep2_3 from "@/assets/eventify-step2-3.png";
 
 const EventifyApp = () => {
   return (
@@ -51,6 +54,26 @@ const EventifyApp = () => {
               >
                 <img src={googlePlayBadge} alt="Get it on Google Play" className="h-16" />
               </a>
+            </div>
+          </div>
+
+          {/* Step 2: Open and Search */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              2. Open the App and Search for the Event
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>When you launch the app, you will see a search bar.</p>
+              <p>
+                Type "Top 1000".<br />
+                You will see the event Top 1000 Innovators of Poland in Silicon Valley.
+              </p>
+              <p>Tap on the event to open it.</p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-64 rounded-lg shadow-md" />
+              <img src={eventifyStep2_2} alt="Eventify search screen" className="h-64 rounded-lg shadow-md" />
+              <img src={eventifyStep2_3} alt="Eventify event search results" className="h-64 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
