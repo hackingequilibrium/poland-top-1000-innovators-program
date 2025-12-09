@@ -81,9 +81,9 @@ const EventifyApp = () => {
               <p>Tap on the event to open it.</p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep2_2} alt="Eventify search screen" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep2_3} alt="Eventify event search results" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep2_2} alt="Eventify search screen" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep2_3} alt="Eventify event search results" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
 
@@ -106,8 +106,8 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep3_1} alt="Eventify login screen" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep3_2} alt="Eventify passcode entry screen" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep3_1} alt="Eventify login screen" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep3_2} alt="Eventify passcode entry screen" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
 
@@ -133,8 +133,8 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep4_1} alt="Eventify event homepage" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep4_2} alt="Eventify schedules view" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep4_1} alt="Eventify event homepage" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep4_2} alt="Eventify schedules view" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
 
@@ -177,9 +177,9 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep5_1} alt="Eventify attendee list" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep5_2} alt="Eventify filters" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep5_3} alt="Eventify profile view" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep5_1} alt="Eventify attendee list" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep5_2} alt="Eventify filters" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep5_3} alt="Eventify profile view" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
 
@@ -199,9 +199,9 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep6_1} alt="Eventify profile Let's Meet" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep6_2} alt="Eventify select date" className="h-80 rounded-lg shadow-md" />
-              <img src={eventifyStep6_3} alt="Eventify available time slots" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep6_1} alt="Eventify profile Let's Meet" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep6_2} alt="Eventify select date" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep6_3} alt="Eventify available time slots" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
