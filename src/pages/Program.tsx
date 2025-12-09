@@ -645,9 +645,9 @@ const Program = () => {
                       12:00 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                      <div className="flex-1 bg-[#F5EEDC] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Public Private Partnerships & Endowment: the Berkeley Model</p>
-                      </div>
+                    <div className="flex-1 bg-[#F5EEDC] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Public Private Partnerships & Endowment</p>
+                    </div>
                   </div>
 
                   {/* 12:15 PM */}
