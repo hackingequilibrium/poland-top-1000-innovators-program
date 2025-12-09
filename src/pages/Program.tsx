@@ -707,7 +707,7 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F5EEDC] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: Innovation & Entrepreneurship at Berkeley</p>
+                      <p className="font-inter text-sm text-[#0F1435]">UC Berkeley Entrepreneurship Ecosystem Overview</p>
                     </div>
                   </div>
 
