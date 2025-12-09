@@ -109,17 +109,18 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 8:40 AM */}
+                  {/* 8:45 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      8:40 AM
+                      8:45 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435] mb-2">Welcome Addresses:</p>
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">Welcoming Addresses:</p>
                       <ul className="font-inter text-sm text-[#0F1435] space-y-1">
                         <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Deputy Prime Minister Gawkowski, Minister of Digital Affairs (via video)</span></li>
                         <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Head of Mission, Embassy of Poland in Washington, D.C.</span></li>
+                        <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Prof. (Rector of Lodz University of Technology) Chairman, Conference of Rectors of Polish Technical Universities</span></li>
                         <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">Consul General of the Republic of Poland in Los Angeles</span></li>
                         <li className="flex gap-2"><span className="flex-shrink-0">•</span><span className="flex-1">San Francisco Bay Area & Poland Overview — Director of International Affairs, City of San Francisco</span></li>
                       </ul>
