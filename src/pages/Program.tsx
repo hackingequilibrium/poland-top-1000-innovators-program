@@ -268,13 +268,13 @@ const Program = () => {
                       <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
-                          Academic Collaboration
+                          Advancing Academic Collaboration
                         </p>
                       </div>
                       <div className="bg-[#D7F0F0] p-4">
                         <p className="font-inter text-sm text-[#0F1435]">
                           Workshop (by assignment):<br />
-                          Industry Partnership
+                          Building Industry Partnership
                         </p>
                       </div>
                     </div>
