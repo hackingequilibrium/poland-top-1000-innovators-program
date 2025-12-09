@@ -12,6 +12,9 @@ import eventifyStep4_2 from "@/assets/eventify-step4-2.png";
 import eventifyStep5_1 from "@/assets/eventify-step5-1.png";
 import eventifyStep5_2 from "@/assets/eventify-step5-2.png";
 import eventifyStep5_3 from "@/assets/eventify-step5-3.png";
+import eventifyStep6_1 from "@/assets/eventify-step6-1.png";
+import eventifyStep6_2 from "@/assets/eventify-step6-2.png";
+import eventifyStep6_3 from "@/assets/eventify-step6-3.png";
 
 const EventifyApp = () => {
   return (
@@ -177,6 +180,28 @@ const EventifyApp = () => {
               <img src={eventifyStep5_1} alt="Eventify attendee list" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep5_2} alt="Eventify filters" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep5_3} alt="Eventify profile view" className="h-80 rounded-lg shadow-md" />
+            </div>
+          </div>
+
+          {/* Step 6: Scheduling Meetings */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              6. Scheduling One-on-One Meetings
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>
+                From a profile, tap Let's Meet.<br />
+                Select the date (Dec 9–12).<br />
+                Choose from available 15-minute meeting slots.
+              </p>
+              <p>
+                Confirm the meeting. The other person will get a notification and once they accept your meeting will appear in My Agenda under the Schedules tab.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep6_1} alt="Eventify profile Let's Meet" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep6_2} alt="Eventify select date" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep6_3} alt="Eventify available time slots" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
