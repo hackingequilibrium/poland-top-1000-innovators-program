@@ -44,6 +44,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
             <HeaderLink href="/program">Program</HeaderLink>
             <HeaderLink href="/lead-session">Lead a Session</HeaderLink>
             <HeaderLink href="https://polsv.org/contact/" external>Contact</HeaderLink>
+            <HeaderLink href="/eventify-app">Eventify App</HeaderLink>
           </div>
           )}
         </div>
