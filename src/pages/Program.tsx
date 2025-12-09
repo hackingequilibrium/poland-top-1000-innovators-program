@@ -657,6 +657,17 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">AI Policy & Transition to Lunch</p>
+                    </div>
+                  </div>
+
+                  {/* 12:20 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:20 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
                       <p className="font-inter text-sm text-[#0F1435]">Networking Lunch</p>
                     </div>
                   </div>
