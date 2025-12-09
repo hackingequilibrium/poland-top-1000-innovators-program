@@ -387,21 +387,21 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 9:45 AM */}
+                  {/* 10:10 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      9:45 AM
+                      10:10 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F5EEDC] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI - Engineering, Regulation, Societal Impact</p>
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: How to Understand Modern Artificial Intelligence</p>
                       </div>
                   </div>
 
-                  {/* 10:15 AM */}
+                  {/* 10:50 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      10:15 AM
+                      10:50 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
@@ -409,21 +409,32 @@ const Program = () => {
                     </div>
                   </div>
 
-                  {/* 11:00 AM */}
+                  {/* 11:10 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      11:00 AM
+                      11:10 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F5EEDC] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI in Life Science</p>
+                        <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: AI in Healthcare</p>
                       </div>
                   </div>
 
-                  {/* 11:30 AM */}
+                  {/* 11:50 AM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      11:30 AM
+                      11:50 AM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                      <div className="flex-1 bg-[#F3DDD3] p-4">
+                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Poland in Silicon Valley</p>
+                      </div>
+                  </div>
+
+                  {/* 12:30 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      12:30 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                       <div className="flex-1 bg-[#F5EEDC] p-4">
@@ -431,10 +442,10 @@ const Program = () => {
                       </div>
                   </div>
 
-                  {/* 12:15 PM */}
+                  {/* 1:10 PM */}
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                      12:15 PM
+                      1:10 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
@@ -512,6 +523,28 @@ const Program = () => {
                   <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                     <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
                       6:00 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Reception</p>
+                    </div>
+                  </div>
+
+                  {/* 6:30 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      6:30 PM
+                      <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
+                    </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Universities Coordinators meet Piotr Moncarz</p>
+                    </div>
+                  </div>
+
+                  {/* 7:00 PM */}
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-10">
+                    <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
+                      7:00 PM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
