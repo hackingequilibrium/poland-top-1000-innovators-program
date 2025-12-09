@@ -241,10 +241,10 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <img src={eventifyStep7_0a} alt="Eventify Scan button location" className="h-96 rounded-lg shadow-md" />
-              <img src={eventifyStep7_0b} alt="Attendee badge with QR code" className="h-96 rounded-lg shadow-md" />
-              <img src={eventifyStep7_1} alt="Eventify QR scanner" className="h-96 rounded-lg shadow-md" />
-              <img src={eventifyStep7_2} alt="Eventify profile after scan" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep7_0a} alt="Eventify Scan button location" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep7_0b} alt="Attendee badge with QR code" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep7_1} alt="Eventify QR scanner" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep7_2} alt="Eventify profile after scan" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
