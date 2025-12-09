@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import appStoreBadge from "@/assets/appstore.svg";
+import googlePlayBadge from "@/assets/google_play.svg";
 
 const EventifyApp = () => {
   return (
@@ -22,6 +24,32 @@ const EventifyApp = () => {
             <p className="pt-4">
               Follow the steps below to get started:
             </p>
+          </div>
+
+          {/* Step 1: Download */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              1. Download the Eventify App
+            </h2>
+            <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-4">
+              You can download the Eventify app using these links:
+            </p>
+            <div className="flex gap-4">
+              <a 
+                href="https://apps.apple.com/us/app/eventify/id1267750107" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src={appStoreBadge} alt="Download on the App Store" className="h-8" />
+              </a>
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.teks.eventify" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-8" />
+              </a>
+            </div>
           </div>
         </div>
       </main>
