@@ -70,10 +70,10 @@ const EventifyApp = () => {
               </p>
               <p>Tap on the event to open it.</p>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-64 rounded-lg shadow-md" />
-              <img src={eventifyStep2_2} alt="Eventify search screen" className="h-64 rounded-lg shadow-md" />
-              <img src={eventifyStep2_3} alt="Eventify event search results" className="h-64 rounded-lg shadow-md" />
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep2_2} alt="Eventify search screen" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep2_3} alt="Eventify event search results" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
