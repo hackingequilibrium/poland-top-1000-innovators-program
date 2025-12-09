@@ -9,6 +9,9 @@ import eventifyStep3_1 from "@/assets/eventify-step3-1.png";
 import eventifyStep3_2 from "@/assets/eventify-step3-2.png";
 import eventifyStep4_1 from "@/assets/eventify-step4-1.png";
 import eventifyStep4_2 from "@/assets/eventify-step4-2.png";
+import eventifyStep5_1 from "@/assets/eventify-step5-1.png";
+import eventifyStep5_2 from "@/assets/eventify-step5-2.png";
+import eventifyStep5_3 from "@/assets/eventify-step5-3.png";
 
 const EventifyApp = () => {
   return (
@@ -129,6 +132,51 @@ const EventifyApp = () => {
             <div className="flex flex-wrap gap-4">
               <img src={eventifyStep4_1} alt="Eventify event homepage" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep4_2} alt="Eventify schedules view" className="h-80 rounded-lg shadow-md" />
+            </div>
+          </div>
+
+          {/* Step 5: Networking */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              5. Networking With Other Attendees
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>
+                We strongly encourage you to use the app to meet people, find collaborators, and schedule conversations.
+              </p>
+              <p className="font-inter font-semibold text-[#0F1435]">
+                Finding Attendees
+              </p>
+              <p>
+                Tap Attendee List in the bottom menu.<br />
+                Browse all participants or use the search bar to find someone by name, job title, or organization.
+              </p>
+              <p className="font-inter font-semibold text-[#0F1435]">
+                Using Filters
+              </p>
+              <p>
+                Filters help you find exactly the people you want to meet.<br />
+                You can filter by: User group: Attendee, Speaker, Organizer, Exhibitor, Sponsor, Student, Attendee Bay Area.<br />
+                Interests / Industries: AI, Space Engineering, Biomed, Materials, Energy, Humanities, etc.
+              </p>
+              <p className="font-inter font-semibold text-[#0F1435]">
+                Viewing Profiles and Connecting
+              </p>
+              <p>
+                Tap on a person's name to open their profile.
+              </p>
+              <p>
+                There you can:<br />
+                View their background, interests, and affiliation<br />
+                Send a direct message<br />
+                Tap Let's Meet to schedule a one-on-one meeting<br />
+                Add private notes for yourself
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep5_1} alt="Eventify attendee list" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep5_2} alt="Eventify filters" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep5_3} alt="Eventify profile view" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
