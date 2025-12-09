@@ -156,14 +156,14 @@ const Program = () => {
                           </div>
                         </div>
 
-                        {/* 10:20 AM */}
+                        {/* 10:45 AM */}
                         <div className="flex flex-col md:flex-row gap-2 md:gap-10">
                           <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                            10:20 AM
+                            10:45 AM
                             <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                           </div>
-                          <div className="flex-1 bg-[#F3DDD3] p-4">
-                            <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: From Idea to Market</p>
+                          <div className="flex-1 bg-[#F5EEDC] p-4">
+                            <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: From Idea to Market</p>
                           </div>
                         </div>
                       </div>
@@ -174,16 +174,6 @@ const Program = () => {
                       </div>
                     </div>
 
-                    {/* 10:40 AM - Outside grid, after Round Table ends */}
-                    <div className="hidden md:flex flex-col md:flex-row gap-2 md:gap-10">
-                      <div className="font-inter text-sm font-semibold text-[#0F1435] md:w-[72px] flex-shrink-0 relative z-10">
-                        10:40 AM
-                        <div className="absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
-                      </div>
-                      <div className="flex-1 bg-[#F3F3F3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
-                      </div>
-                    </div>
 
                     {/* Mobile: Sequential layout with Round Table after 9:30 AM */}
                     <div className="md:hidden space-y-4">
@@ -212,23 +202,13 @@ const Program = () => {
                         </div>
                       </div>
 
-                      {/* 10:20 AM */}
+                      {/* 10:45 AM */}
                       <div className="flex flex-col gap-2">
                         <div className="font-inter text-sm font-semibold text-[#0F1435]">
-                          10:20 AM
+                          10:45 AM
                         </div>
-                        <div className="bg-[#F3DDD3] p-4">
-                          <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: From Idea to Market</p>
-                        </div>
-                      </div>
-
-                      {/* 10:40 AM */}
-                      <div className="flex flex-col gap-2">
-                        <div className="font-inter text-sm font-semibold text-[#0F1435]">
-                          10:40 AM
-                        </div>
-                        <div className="bg-[#F3F3F3] p-4">
-                          <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                        <div className="bg-[#F5EEDC] p-4">
+                          <p className="font-inter text-sm text-[#0F1435]">Plenary Talk: From Idea to Market</p>
                         </div>
                       </div>
                     </div>
