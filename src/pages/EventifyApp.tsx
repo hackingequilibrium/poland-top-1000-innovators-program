@@ -7,6 +7,8 @@ import eventifyStep2_2 from "@/assets/eventify-step2-2.png";
 import eventifyStep2_3 from "@/assets/eventify-step2-3.png";
 import eventifyStep3_1 from "@/assets/eventify-step3-1.png";
 import eventifyStep3_2 from "@/assets/eventify-step3-2.png";
+import eventifyStep4_1 from "@/assets/eventify-step4-1.png";
+import eventifyStep4_2 from "@/assets/eventify-step4-2.png";
 
 const EventifyApp = () => {
   return (
@@ -100,6 +102,33 @@ const EventifyApp = () => {
             <div className="flex flex-wrap gap-4">
               <img src={eventifyStep3_1} alt="Eventify login screen" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep3_2} alt="Eventify passcode entry screen" className="h-80 rounded-lg shadow-md" />
+            </div>
+          </div>
+
+          {/* Step 4: Navigating the App */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              4. Navigating the Eventify App During the Summit
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>
+                Once you're logged in, you will land on the Event Homepage. From here you can access the full program, view speakers, discover suggested contacts, and start networking.
+              </p>
+              <p className="font-inter font-semibold text-[#0F1435]">
+                Accessing the Event Schedule
+              </p>
+              <p>
+                To view all sessions for the four-day summit:<br />
+                Tap Schedules in the bottom navigation bar.<br />
+                The program is divided by day (Tue 9, Wed 10, Thu 11, Fri 12).
+              </p>
+              <p>
+                Tap each date to see the full list of sessions, their times, speakers, and locations.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep4_1} alt="Eventify event homepage" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep4_2} alt="Eventify schedules view" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
