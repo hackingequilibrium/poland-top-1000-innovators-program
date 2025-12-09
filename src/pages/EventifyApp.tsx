@@ -5,6 +5,8 @@ import googlePlayBadge from "@/assets/google_play.svg";
 import eventifyStep2_1 from "@/assets/eventify-step2-1.png";
 import eventifyStep2_2 from "@/assets/eventify-step2-2.png";
 import eventifyStep2_3 from "@/assets/eventify-step2-3.png";
+import eventifyStep3_1 from "@/assets/eventify-step3-1.png";
+import eventifyStep3_2 from "@/assets/eventify-step3-2.png";
 
 const EventifyApp = () => {
   return (
@@ -74,6 +76,30 @@ const EventifyApp = () => {
               <img src={eventifyStep2_1} alt="Eventify app launch screen" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep2_2} alt="Eventify search screen" className="h-80 rounded-lg shadow-md" />
               <img src={eventifyStep2_3} alt="Eventify event search results" className="h-80 rounded-lg shadow-md" />
+            </div>
+          </div>
+
+          {/* Step 3: Log In */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              3. Log In to Access the Full Program
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>
+                On the event screen, tap Login. Type in the same email address you used when registering for the summit. Make sure to check the Terms & Conditions box before continuing.
+              </p>
+              <p>
+                After entering your email, you'll be asked to enter a passcode.<br />
+                This is the passcode included in the welcome email you received from Eventify. Enter the code → tap Continue.
+              </p>
+              <p>
+                If you didn't receive the email, please check your Spam/Junk folder.<br />
+                If you still don't see it, tap "Resend OTP" or contact our team.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep3_1} alt="Eventify login screen" className="h-80 rounded-lg shadow-md" />
+              <img src={eventifyStep3_2} alt="Eventify passcode entry screen" className="h-80 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
