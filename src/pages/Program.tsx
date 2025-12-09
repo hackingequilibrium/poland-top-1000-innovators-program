@@ -601,9 +601,9 @@ const Program = () => {
                       10:00 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                      <div className="flex-1 bg-[#F3DDD3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Science, Society, and the Ethics of the Future</p>
-                      </div>
+                    <div className="flex-1 bg-[#F3F3F3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    </div>
                   </div>
 
                   {/* 10:30 AM */}
@@ -612,8 +612,8 @@ const Program = () => {
                       10:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                    <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435]">Networking Break</p>
+                    <div className="flex-1 bg-[#F3DDD3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Interview with Open AI Technical Lead Łukasz Kaiser</p>
                     </div>
                   </div>
 
@@ -623,9 +623,9 @@ const Program = () => {
                       11:00 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                      <div className="flex-1 bg-[#F3DDD3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
-                      </div>
+                    <div className="flex-1 bg-[#F3DDD3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Panel: Infrastructure Intelligence: Building Resilient Systems for a Complex World</p>
+                    </div>
                   </div>
 
                   {/* 11:30 AM */}
@@ -634,9 +634,9 @@ const Program = () => {
                       11:30 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                      <div className="flex-1 bg-[#F3DDD3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Health & Robotics - Humanity & Technology</p>
-                      </div>
+                    <div className="flex-1 bg-[#F3DDD3] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Panel: Health and Robotics, Humanity & Technology</p>
+                    </div>
                   </div>
 
                   {/* 12:00 PM */}
