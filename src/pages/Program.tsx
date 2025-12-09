@@ -579,8 +579,8 @@ const Program = () => {
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
                     <div className="flex-1 bg-[#F3F3F3] p-4">
-                      <p className="font-inter text-sm text-[#0F1435] mb-2">Grimes Engineering Center - Welcome Top 1000 Innovators</p>
-                      <p className="font-inter text-sm text-[#0F1435]">Orbiting Innovation: Science and Collaboration in the New Space Era</p>
+                      <p className="font-inter text-sm text-[#0F1435] mb-2">CITRIS & The Banatao Institute Welcomes the Top 1000 Innovators</p>
+                      <p className="font-inter text-sm text-[#0F1435]">Keynote: Orbiting Innovation: Science and Collaboration in the New Space Era</p>
                     </div>
                   </div>
 
@@ -590,9 +590,9 @@ const Program = () => {
                       9:35 AM
                       <div className="hidden md:block absolute top-1 -right-[16px] w-2 h-2 rounded-full bg-[#0F1435]" />
                     </div>
-                      <div className="flex-1 bg-[#F3DDD3] p-4">
-                        <p className="font-inter text-sm text-[#0F1435]">Fireside Chat: Space & Aeronautics: The Next Frontier of Human Ambition</p>
-                      </div>
+                    <div className="flex-1 bg-[#F5EEDC] p-4">
+                      <p className="font-inter text-sm text-[#0F1435]">Keynote: Richmond Field Station: Innovation Campus</p>
+                    </div>
                   </div>
 
                   {/* 10:00 AM */}
