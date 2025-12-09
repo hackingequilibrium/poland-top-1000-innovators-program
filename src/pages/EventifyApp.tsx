@@ -17,6 +17,8 @@ import eventifyStep6_2 from "@/assets/eventify-step6-2.png";
 import eventifyStep6_3 from "@/assets/eventify-step6-3.png";
 import eventifyStep7_1 from "@/assets/eventify-step7-1.png";
 import eventifyStep7_2 from "@/assets/eventify-step7-2.png";
+import eventifyStep7_0a from "@/assets/eventify-step7-0a.jpg";
+import eventifyStep7_0b from "@/assets/eventify-step7-0b.jpg";
 
 const EventifyApp = () => {
   return (
@@ -239,6 +241,8 @@ const EventifyApp = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep7_0a} alt="Eventify Scan button location" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep7_0b} alt="Attendee badge with QR code" className="h-96 rounded-lg shadow-md" />
               <img src={eventifyStep7_1} alt="Eventify QR scanner" className="h-96 rounded-lg shadow-md" />
               <img src={eventifyStep7_2} alt="Eventify profile after scan" className="h-96 rounded-lg shadow-md" />
             </div>
