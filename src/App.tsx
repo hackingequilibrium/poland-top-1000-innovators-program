@@ -13,6 +13,7 @@ import RSVP from "./pages/RSVP";
 import GuestRSVP from "./pages/GuestRSVP";
 import Program from "./pages/Program";
 import Workshops from "./pages/Workshops";
+import EventifyApp from "./pages/EventifyApp";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/guest_rsvp" element={<GuestRSVP />} />
           <Route path="/program" element={<Program />} />
           <Route path="/workshops" element={<Workshops />} />
+          <Route path="/eventify-app" element={<EventifyApp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
