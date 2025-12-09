@@ -68,6 +68,11 @@ const VideoHero = () => {
               Contact
             </a>
           </li>
+          <li>
+            <Link to="/eventify-app" className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+              Eventify App
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Hamburger Button */}
@@ -122,6 +127,15 @@ const VideoHero = () => {
                 >
                   Contact
                 </a>
+              </li>
+              <li>
+                <Link 
+                  to="/eventify-app" 
+                  className="relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:-bottom-1 after:left-0 after:bg-hero-text after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Eventify App
+                </Link>
               </li>
             </ul>
           </div>
