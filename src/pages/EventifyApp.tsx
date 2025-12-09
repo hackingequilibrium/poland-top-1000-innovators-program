@@ -15,6 +15,8 @@ import eventifyStep5_3 from "@/assets/eventify-step5-3.png";
 import eventifyStep6_1 from "@/assets/eventify-step6-1.png";
 import eventifyStep6_2 from "@/assets/eventify-step6-2.png";
 import eventifyStep6_3 from "@/assets/eventify-step6-3.png";
+import eventifyStep7_1 from "@/assets/eventify-step7-1.png";
+import eventifyStep7_2 from "@/assets/eventify-step7-2.png";
 
 const EventifyApp = () => {
   return (
@@ -202,6 +204,43 @@ const EventifyApp = () => {
               <img src={eventifyStep6_1} alt="Eventify profile Let's Meet" className="h-96 rounded-lg shadow-md" />
               <img src={eventifyStep6_2} alt="Eventify select date" className="h-96 rounded-lg shadow-md" />
               <img src={eventifyStep6_3} alt="Eventify available time slots" className="h-96 rounded-lg shadow-md" />
+            </div>
+          </div>
+
+          {/* Step 7: Scanning Badges */}
+          <div className="mt-8">
+            <h2 className="font-inter font-extrabold text-base md:text-lg text-[#0F1435] mb-4">
+              7. Scanning Someone's Badge During the Event
+            </h2>
+            <div className="font-inter font-light text-sm md:text-base text-[#797B8E] space-y-4 mb-6">
+              <p>
+                Every attendee will have a QR code printed on their badge.<br />
+                This QR code links directly to their Eventify profile.
+              </p>
+              <p>
+                You can use it to:
+              </p>
+              <p>
+                Open their profile instantly<br />
+                View their background, interests, and contact details<br />
+                Send a message<br />
+                Schedule a one-on-one meeting on the spot
+              </p>
+              <p className="font-inter font-semibold text-[#0F1435]">
+                How to Scan a Badge
+              </p>
+              <p>
+                Open the Eventify app.<br />
+                Tap Scan in the bottom navigation bar.<br />
+                Point your phone's camera at the QR code on the attendee's badge.
+              </p>
+              <p>
+                Their profile will appear immediately — from there you can message them or book a meeting. This is the fastest way to connect with people during the summit, especially in busy networking areas.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <img src={eventifyStep7_1} alt="Eventify QR scanner" className="h-96 rounded-lg shadow-md" />
+              <img src={eventifyStep7_2} alt="Eventify profile after scan" className="h-96 rounded-lg shadow-md" />
             </div>
           </div>
         </div>
