@@ -160,8 +160,100 @@ const Workshops = () => {
             </TabsContent>
 
             <TabsContent value="day2" className="mt-6">
-              <div className="font-inter text-sm md:text-base text-[#797B8E]">
-                Coming soon.
+              {/* Intro text */}
+              <div className="mb-8">
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E]">
+                  Welcome to Day 2 of workshops.
+                </p>
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-6">
+                  Everything you need to find your workshop, prepare, and navigate your session is below.
+                </p>
+
+                {/* Workshop accordions */}
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="day2-workshop1" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 1</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Find your workshop</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        <p className="mb-2">Use the lookup sheet to see:</p>
+                        <ul className="list-disc ml-5 mb-4 space-y-1">
+                          <li>Your assigned workshop (Industry or Academia)</li>
+                          <li>Your track (Deep Tech, Life Sciences, Energy)</li>
+                          <li>Your table number</li>
+                        </ul>
+                        <a 
+                          href="/downloads/Find_Your_Workshop_Day2.docx" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#0F1435] font-medium hover:underline"
+                        >
+                          → Download: Find Your Workshop (DOCX)
+                        </a>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="day2-workshop2" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 2</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Workbooks</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-4">
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Industry Partnership</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Building_Industry_Partnership_DEEP_TECH.docx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="/downloads/Life_Sciences_Workshop_Workbook.docx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Energy_Sustainability_Workshop_Workbook.docx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                          </div>
+                        </div>
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Advancing_Academic_Collaboration_FOR_ALL_3_TRACKS.docx" download className="block text-[#0F1435] hover:underline">Workbook for all tracks</a>
+                          </div>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="day2-workshop3" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 3</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Table Assignment</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-4">
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Industry Partnership</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Industry_Partnership_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="/downloads/Industry_Partnership_Life_Sciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Industry_Partnership_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                          </div>
+                        </div>
+                        <div>
+                          <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
+                          <div className="space-y-1">
+                            <a href="/downloads/Academic_Collaboration_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
+                            <a href="/downloads/Academic_Collaboration_LifeSciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
+                            <a href="/downloads/Academic_Collaboration_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
+                          </div>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </TabsContent>
 
