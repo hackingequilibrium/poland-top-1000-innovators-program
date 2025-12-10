@@ -202,25 +202,14 @@ const Workshops = () => {
                     <AccordionTrigger className="font-inter uppercase hover:no-underline">
                       <div className="text-left">
                         <span className="text-sm md:text-base text-[#D1D5DB] font-bold block">Step 2</span>
-                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Workbooks</span>
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Workbook</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-4">
-                        <div>
-                          <p className="font-bold text-[#0F1435] mb-2">Industry Partnership</p>
-                          <div className="space-y-1">
-                            <a href="/downloads/Building_Industry_Partnership_DEEP_TECH.docx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
-                            <a href="/downloads/Life_Sciences_Workshop_Workbook.docx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
-                            <a href="/downloads/Energy_Sustainability_Workshop_Workbook.docx" download className="block text-[#0F1435] hover:underline">Energy</a>
-                          </div>
-                        </div>
-                        <div>
-                          <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
-                          <div className="space-y-1">
-                            <a href="/downloads/Advancing_Academic_Collaboration_FOR_ALL_3_TRACKS.docx" download className="block text-[#0F1435] hover:underline">Workbook for all tracks</a>
-                          </div>
-                        </div>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        <a href="/downloads/Day2_Workshop_Guide.docx" download className="text-[#0F1435] font-medium hover:underline">
+                          → Download: Workbook for all tracks
+                        </a>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
