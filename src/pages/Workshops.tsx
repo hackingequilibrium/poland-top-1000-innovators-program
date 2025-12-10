@@ -182,8 +182,8 @@ const Workshops = () => {
                       <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
                         <p className="mb-2">Use the lookup sheet to see:</p>
                         <ul className="list-disc ml-5 mb-4 space-y-1">
-                          <li>Your assigned workshop (Industry or Academia)</li>
-                          <li>Your track (Deep Tech, Life Sciences, Energy)</li>
+                          <li>Your assigned workshop (Readiness or IP – Patent)</li>
+                          <li>Your track (A EXPLORERS (TRL 1-3), B BUILDERS (TRL 4-6), C SCALERS (TRL 7-9))</li>
                           <li>Your table number</li>
                         </ul>
                         <a 
