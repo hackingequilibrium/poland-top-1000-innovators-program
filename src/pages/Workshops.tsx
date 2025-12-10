@@ -208,7 +208,7 @@ const Workshops = () => {
                     <AccordionContent>
                       <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
                         <a href="/downloads/Day2_Workshop_Guide.docx" download className="text-[#0F1435] font-medium hover:underline">
-                          → Download: Workbook for all tracks
+                          → Download: Workbook for all tracks (DOCX)
                         </a>
                       </div>
                     </AccordionContent>
@@ -222,23 +222,10 @@ const Workshops = () => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-4">
-                        <div>
-                          <p className="font-bold text-[#0F1435] mb-2">Industry Partnership</p>
-                          <div className="space-y-1">
-                            <a href="/downloads/Industry_Partnership_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
-                            <a href="/downloads/Industry_Partnership_Life_Sciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
-                            <a href="/downloads/Industry_Partnership_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
-                          </div>
-                        </div>
-                        <div>
-                          <p className="font-bold text-[#0F1435] mb-2">Academic Collaboration</p>
-                          <div className="space-y-1">
-                            <a href="/downloads/Academic_Collaboration_DeepTech.xlsx" download className="block text-[#0F1435] hover:underline">Deep Tech</a>
-                            <a href="/downloads/Academic_Collaboration_LifeSciences.xlsx" download className="block text-[#0F1435] hover:underline">Life Sciences</a>
-                            <a href="/downloads/Academic_Collaboration_Energy.xlsx" download className="block text-[#0F1435] hover:underline">Energy</a>
-                          </div>
-                        </div>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        <a href="/downloads/Day2_Table_Assignments.xlsx" download className="text-[#0F1435] font-medium hover:underline">
+                          → Download: Table assignment for all tracks (XLSX)
+                        </a>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
