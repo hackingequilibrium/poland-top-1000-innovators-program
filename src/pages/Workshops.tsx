@@ -252,20 +252,22 @@ const Workshops = () => {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
-                        <p className="mb-2">Use the lookup sheet to see:</p>
-                        <ul className="list-disc ml-5 mb-4 space-y-1">
-                          <li>Your assigned workshop (Readiness or IP – Patent)</li>
-                          <li>Your track (A EXPLORERS (TRL 1-3), B BUILDERS (TRL 4-6), C SCALERS (TRL 7-9))</li>
-                          <li>Your table number</li>
-                        </ul>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2 space-y-2">
                         <a 
-                          href="/downloads/Find_Your_Workshop_Day2.docx" 
+                          href="/downloads/Day3_All_Participants_By_Name.docx" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-[#0F1435] font-medium hover:underline"
+                          className="text-[#0F1435] font-medium hover:underline block"
                         >
-                          → Download: Find Your Workshop (DOCX)
+                          → Workshop list by participant name (DOCX)
+                        </a>
+                        <a 
+                          href="/downloads/Day3_Find_My_Workshop_by_Theme.docx" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#0F1435] font-medium hover:underline block"
+                        >
+                          → Workshop list by theme (DOCX)
                         </a>
                       </div>
                     </AccordionContent>
