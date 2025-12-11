@@ -234,8 +234,43 @@ const Workshops = () => {
             </TabsContent>
 
             <TabsContent value="day3" className="mt-6">
-              <div className="font-inter text-sm md:text-base text-[#797B8E]">
-                Coming soon.
+              {/* Intro text */}
+              <div className="mb-8">
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E]">
+                  Welcome to Day 3 of workshops.
+                </p>
+                <p className="font-inter font-light text-sm md:text-base text-[#797B8E] mb-6">
+                  Everything you need to find your workshop, prepare, and navigate your session is below.
+                </p>
+
+                {/* Workshop accordions */}
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="day3-workshop1" className="border-border">
+                    <AccordionTrigger className="font-inter uppercase hover:no-underline">
+                      <div className="text-left">
+                        <span className="text-base md:text-lg text-[#0F1435] font-extrabold">Find your workshop</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="font-inter font-light text-sm md:text-base text-[#797B8E] leading-relaxed pt-2">
+                        <p className="mb-2">Use the lookup sheet to see:</p>
+                        <ul className="list-disc ml-5 mb-4 space-y-1">
+                          <li>Your assigned workshop (Readiness or IP – Patent)</li>
+                          <li>Your track (A EXPLORERS (TRL 1-3), B BUILDERS (TRL 4-6), C SCALERS (TRL 7-9))</li>
+                          <li>Your table number</li>
+                        </ul>
+                        <a 
+                          href="/downloads/Find_Your_Workshop_Day2.docx" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#0F1435] font-medium hover:underline"
+                        >
+                          → Download: Find Your Workshop (DOCX)
+                        </a>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </TabsContent>
 
