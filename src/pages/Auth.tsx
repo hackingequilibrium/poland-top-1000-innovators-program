@@ -80,7 +80,7 @@ const Auth = () => {
   return (
     <div className="min-h-screen bg-[#0F1435] flex flex-col items-center justify-center p-4">
       <div className="mb-8">
-        <img src={polsvLogo} alt="PolSV Logo" className="h-20 w-auto" />
+        <img src={polsvLogo.url} alt="PolSV Logo" className="h-20 w-auto" />
       </div>
 
       <Card className="w-full max-w-md rounded-none border-none">

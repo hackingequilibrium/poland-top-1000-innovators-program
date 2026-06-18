@@ -14,7 +14,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
           <div className="flex flex-row items-center gap-4">
           <Link to="/">
             <img 
-              src={polsvLogo} 
+              src={polsvLogo.url} 
               alt="PolSV Logo" 
               className={simplified ? "w-[60px] h-auto" : "w-[80%] h-auto"}
             />
