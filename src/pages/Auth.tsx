@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { z } from "zod";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Please enter a valid email address" }),
@@ -80,7 +80,7 @@ const Auth = () => {
   return (
     <div className="min-h-screen bg-[#0F1435] flex flex-col items-center justify-center p-4">
       <div className="mb-8">
-        <img src={polsvLogo} alt="PolSV Logo" className="h-20 w-auto" />
+        <img src={polsvLogo.url} alt="PolSV Logo" className="h-20 w-auto" />
       </div>
 
       <Card className="w-full max-w-md rounded-none border-none">

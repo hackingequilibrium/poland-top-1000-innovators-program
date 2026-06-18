@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";
 import box3Icon from "@/assets/box3.png";
@@ -15,7 +15,7 @@ const Sectors = () => {
       {/* Header */}
       <header className="flex items-center justify-between px-6 md:px-12 lg:px-[100px] py-8">
         <div className="flex items-center gap-4">
-          <img src={polsvLogo} alt="PolSV Logo" className="h-12 md:h-16 w-auto" />
+          <img src={polsvLogo.url} alt="PolSV Logo" className="h-12 md:h-16 w-auto" />
           <div className="font-inter font-semibold text-[#0F1435] text-lg md:text-xl lg:text-2xl">
             Top 1000 Innovators of Poland in Silicon Valley
           </div>

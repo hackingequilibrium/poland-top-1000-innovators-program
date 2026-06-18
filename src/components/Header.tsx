@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HeaderLink from "./HeaderLink";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 
 interface HeaderProps {
   simplified?: boolean;
@@ -14,7 +14,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
           <div className="flex flex-row items-center gap-4">
           <Link to="/">
             <img 
-              src={polsvLogo} 
+              src={polsvLogo.url} 
               alt="PolSV Logo" 
               className={simplified ? "w-[60px] h-auto" : "w-[80%] h-auto"}
             />

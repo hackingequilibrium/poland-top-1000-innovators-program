@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import type { User, Session } from "@supabase/supabase-js";
 import { z } from "zod";
 
@@ -568,7 +568,7 @@ const Admin = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <img src={polsvLogo} alt="PolSV Logo" className="h-16 w-auto" />
+            <img src={polsvLogo.url} alt="PolSV Logo" className="h-16 w-auto" />
             <div>
               <h1 className="font-inter font-extrabold text-2xl text-white uppercase">
                 Admin Panel

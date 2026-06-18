@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import { useCountUp } from "@/hooks/useCountUp";
 import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";
@@ -41,7 +41,7 @@ const VideoHero = () => {
 
       {/* Logo */}
       <div className="absolute top-8 left-6 md:left-12 lg:left-[100px] z-20">
-        <img src={polsvLogo} alt="PolSV Logo" className="h-16 md:h-[77px] lg:h-[90px] w-auto" />
+        <img src={polsvLogo.url} alt="PolSV Logo" className="h-16 md:h-[77px] lg:h-[90px] w-auto" />
       </div>
 
       {/* Navigation */}
