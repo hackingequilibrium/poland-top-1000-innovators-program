@@ -16,7 +16,7 @@ const Header = ({ simplified = false }: HeaderProps) => {
             <img 
               src={polsvLogo.url} 
               alt="PolSV Logo" 
-              className={simplified ? "w-[60px] h-auto" : "w-[80%] h-auto"}
+              className={simplified ? "h-20 w-auto" : "h-28 w-auto"}
             />
           </Link>
           {simplified ? (
