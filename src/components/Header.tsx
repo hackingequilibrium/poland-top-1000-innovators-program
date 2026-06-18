@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HeaderLink from "./HeaderLink";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 
 interface HeaderProps {
   simplified?: boolean;

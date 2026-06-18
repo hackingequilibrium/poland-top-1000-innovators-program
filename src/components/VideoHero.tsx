@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import { useCountUp } from "@/hooks/useCountUp";
 import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";

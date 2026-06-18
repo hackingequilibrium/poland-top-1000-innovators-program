@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import polsvLogo from "@/assets/polsv-logo.png";
+import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import box1Icon from "@/assets/box1.png";
 import box2Icon from "@/assets/box2.png";
 import box3Icon from "@/assets/box3.png";
