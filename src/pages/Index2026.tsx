@@ -86,25 +86,15 @@ const Index2026 = () => {
         <source src={bokehVideo.url} type="video/mp4" />
       </video>
 
-      {/* Dark Overlay — keeps text readable while showing the bokeh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a]/50 via-[#0a0a1a]/30 to-[#0a0a1a]/55 z-10" />
+      {/* Tinted overlay — dark enough for readability, light enough to let the bokeh glow through */}
+      <div className="absolute inset-0 bg-[#0a0a1a]/45 z-10" />
 
+      {/* Soft vignette that draws the eye toward the center */}
+      <div className="absolute inset-0 bg-radial-gradient z-10 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 80%)' }} />
 
       {/* Left Panel: Cinematic Branding */}
         <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
 
-
-          {/* Aurora background elements */}
-          <div
-            aria-hidden
-            className="absolute top-[-10%] left-[-10%] w-[80%] h-[80%] bg-[#4f46e5]/20 blur-[120px] rounded-full"
-          />
-          <div
-            aria-hidden
-            className="absolute bottom-[-5%] right-[-5%] w-[60%] h-[60%] bg-[#c4b5fd]/10 blur-[100px] rounded-full"
-          />
-
-          {/* Logo */}
           <a
             href="https://www.polsv.org"
             className="relative z-10 flex items-center gap-4"
