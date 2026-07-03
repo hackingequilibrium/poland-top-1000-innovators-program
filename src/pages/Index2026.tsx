@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
@@ -16,6 +17,11 @@ const sectors = [
   "Energy & Sustainability",
   "Artificial Intelligence",
 ];
+
+const waitlistSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name.").max(120, "Name must be less than 120 characters."),
+  email: z.string().trim().email("Please enter a valid email address.").max(255, "Email must be less than 255 characters."),
+});
 
 function useCountdown(target: number) {
   const compute = () => {
@@ -46,19 +52,27 @@ const Index2026 = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) {
-      toast.error("Please enter your name and email.");
+
+    const parsed = waitlistSchema.safeParse({ name, email });
+    if (!parsed.success) {
+      const firstError = parsed.error.errors[0]?.message;
+      toast.error(firstError || "Please check your inputs.");
       return;
     }
+
+    const { name: cleanName, email: cleanEmail } = parsed.data;
+
     setSubmitting(true);
     const { error } = await supabase
       .from("waitlist_2026" as any)
-      .insert({ name: name.trim(), email: email.trim() });
+      .insert({ name: cleanName, email: cleanEmail });
     setSubmitting(false);
+
     if (error) {
       toast.error("Something went wrong. Please try again.");
       return;
     }
+
     setSubmitted(true);
     setName("");
     setEmail("");
