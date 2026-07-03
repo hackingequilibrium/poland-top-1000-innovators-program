@@ -86,8 +86,9 @@ const Index2026 = () => {
         <source src={bokehVideo.url} type="video/mp4" />
       </video>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a]/80 via-[#0a0a1a]/60 to-[#0a0a1a]/85 z-10" />
+      {/* Dark Overlay — keeps text readable while showing the bokeh */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a]/50 via-[#0a0a1a]/30 to-[#0a0a1a]/55 z-10" />
+
 
       {/* Left Panel: Cinematic Branding */}
         <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
