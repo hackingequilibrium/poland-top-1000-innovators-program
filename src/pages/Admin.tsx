@@ -58,6 +58,13 @@ interface GuestRSVPSubmission {
   created_at: string;
 }
 
+interface WaitlistEntry {
+  id: string;
+  name: string;
+  email: string;
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -76,6 +83,7 @@ const Admin = () => {
   const [rsvpSubmissions, setRsvpSubmissions] = useState<RSVPSubmission[]>([]);
   const [guestRsvpSubmissions, setGuestRsvpSubmissions] = useState<GuestRSVPSubmission[]>([]);
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
+  const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
   const [creatingAdmin, setCreatingAdmin] = useState(false);
@@ -138,8 +146,64 @@ const Admin = () => {
       fetchRSVPSubmissions();
       fetchGuestRSVPSubmissions();
       fetchAdminUsers();
+      fetchWaitlistEntries();
     }
   }, [isAdmin, user]);
+
+  const fetchWaitlistEntries = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('waitlist_2026')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching waitlist:', error);
+        toast.error("Failed to load waitlist");
+      } else {
+        setWaitlistEntries(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleDeleteWaitlist = async (id: string) => {
+    if (!confirm('Delete this waitlist entry?')) return;
+    try {
+      const { error } = await supabase.from('waitlist_2026').delete().eq('id', id);
+      if (error) throw error;
+      toast.success("Waitlist entry deleted");
+      fetchWaitlistEntries();
+    } catch {
+      toast.error("Failed to delete waitlist entry");
+    }
+  };
+
+  const handleExportWaitlist = () => {
+    if (waitlistEntries.length === 0) {
+      toast.error("No waitlist entries to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Email', 'Submitted At'].join(','),
+      ...waitlistEntries.map(w => [
+        `"${w.name}"`,
+        `"${w.email}"`,
+        `"${new Date(w.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `waitlist-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Waitlist exported successfully");
+  };
+
 
   const fetchSubmissions = async () => {
     try {
@@ -589,7 +653,7 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="submissions" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8 bg-[#0C0F24] rounded-none">
+          <TabsList className="grid w-full grid-cols-6 mb-8 bg-[#0C0F24] rounded-none">
             <TabsTrigger value="submissions" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Session Submissions
             </TabsTrigger>
@@ -601,6 +665,9 @@ const Admin = () => {
             </TabsTrigger>
             <TabsTrigger value="experts" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Expert Recommendations
+            </TabsTrigger>
+            <TabsTrigger value="waitlist" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+              2026 Waitlist
             </TabsTrigger>
             <TabsTrigger value="admins" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               User Management
@@ -815,6 +882,50 @@ const Admin = () => {
                         <p><strong>Email:</strong> {recommendation.submitter_email}</p>
                         <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(recommendation.created_at).toLocaleString()}</p>
                       </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="waitlist">
+            {waitlistEntries.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportWaitlist}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export Waitlist to CSV
+                </Button>
+              </div>
+            )}
+            {waitlistEntries.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No waitlist entries yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-4">
+                {waitlistEntries.map((entry) => (
+                  <Card key={entry.id} className="rounded-none">
+                    <CardContent className="py-4 flex justify-between items-start">
+                      <div className="space-y-1 font-inter text-sm">
+                        <p className="font-bold text-base text-[#0F1435]">{entry.name}</p>
+                        <p className="text-[#0F1435]">{entry.email}</p>
+                        <p className="text-[#797B8E] text-xs">
+                          Signed up: {new Date(entry.created_at).toLocaleString()}
+                        </p>
+                      </div>
+                      <Button
+                        onClick={() => handleDeleteWaitlist(entry.id)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-none bg-[#C70828] hover:bg-[#A80E34]"
+                      >
+                        Delete
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
