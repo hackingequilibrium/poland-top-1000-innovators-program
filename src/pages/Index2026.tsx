@@ -131,30 +131,6 @@ const Index2026 = () => {
             </p>
           </div>
 
-          {/* Archive link */}
-          <div className="relative z-10 mt-12 lg:mt-0">
-            <Link
-              to="/2025"
-              className="group flex items-center gap-3 text-white/40 hover:text-white transition-colors duration-300"
-            >
-              <span className="text-xs font-semibold tracking-widest uppercase">
-                See the 2025 inaugural summit
-              </span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </div>
         </div>
 
         {/* Right Panel: Info & Interaction */}
