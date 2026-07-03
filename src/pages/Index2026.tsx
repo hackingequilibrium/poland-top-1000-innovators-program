@@ -224,7 +224,7 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="group w-full flex items-center justify-between h-16 px-8 rounded-full bg-white/10 backdrop-blur-[20px] border border-white/20 transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:backdrop-blur-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60"
+                  className="group w-full flex items-center justify-between h-14 px-8 rounded-full bg-white/10 backdrop-blur-[20px] border border-white/20 transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:backdrop-blur-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60"
                 >
                   <span className="text-lg font-bold text-white transition-colors duration-300 ease-out group-hover:text-[#0A0A0A]">
                     {submitting ? "Joining…" : "Join the waitlist"}
@@ -232,7 +232,7 @@ const Index2026 = () => {
                   <div className="relative h-10 w-10 flex items-center justify-center shrink-0">
                     {/* Black badge scales in behind the arrow */}
                     <div className="absolute inset-0 rounded-full bg-[#0A0A0A] scale-0 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100" />
-                    {/* Arrow rotates from diagonal to right as the badge appears */}
+                    {/* Arrow rotates clockwise from diagonal to right as the badge appears */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -243,7 +243,7 @@ const Index2026 = () => {
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="relative text-white transition-transform duration-300 ease-out rotate-0 group-hover:rotate-[-45deg]"
+                      className="relative text-white transition-transform duration-300 ease-out group-hover:rotate-45"
                     >
                       <path d="M7 17 17 7" />
                       <path d="M7 7h10v10" />
