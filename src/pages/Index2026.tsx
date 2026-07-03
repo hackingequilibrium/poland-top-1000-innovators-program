@@ -186,9 +186,10 @@ const Index2026 = () => {
           {/* Waitlist */}
           <div className="relative">
             <h3 className="font-display text-2xl mb-2">Join the waitlist</h3>
-            <p className="text-white/50 text-sm mb-6">
+            <p className="text-white/60 text-sm font-light mb-6">
               Be first to hear when applications and the full program open.
             </p>
+
 
             {submitted ? (
               <div className="text-white/80 text-sm">
