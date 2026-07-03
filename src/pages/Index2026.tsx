@@ -187,14 +187,10 @@ const Index2026 = () => {
               Impact Sectors
             </h3>
             <div className="flex flex-wrap gap-2">
-              {sectors.map((s, i) => (
+              {sectors.map((s) => (
                 <span
                   key={s}
-                  className={`rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm ${
-                    i === sectors.length - 1
-                      ? "border border-[#4f46e5]/40 bg-[#4f46e5]/10 text-white"
-                      : "border border-white/10 bg-white/5 text-white/80"
-                  }`}
+                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm border border-white/10 bg-white/5 text-white/80"
                 >
                   {s}
                 </span>
@@ -272,7 +268,7 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-[#4f46e5] hover:bg-[#4338ca] text-white text-sm font-semibold rounded-xl px-4 py-3.5 transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] active:scale-95 disabled:opacity-60"
+                  className="w-full bg-[#C70828] hover:bg-[#a30622] text-white text-sm font-semibold rounded-xl px-4 py-3.5 transition-all shadow-[0_0_20px_rgba(199,8,40,0.3)] active:scale-95 disabled:opacity-60"
                 >
                   {submitting ? "Joining…" : "Join the waitlist"}
                 </button>
