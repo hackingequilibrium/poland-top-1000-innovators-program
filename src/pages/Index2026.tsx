@@ -147,7 +147,7 @@ const Index2026 = () => {
               key={c.label}
               className="rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm py-6 md:py-10 text-center"
             >
-              <div className="font-serif text-4xl sm:text-5xl md:text-7xl font-light tabular-nums text-white">
+              <div className="font-display text-4xl sm:text-5xl md:text-7xl font-light tabular-nums tracking-tight text-white">
                 {c.value}
               </div>
               <div className="mt-2 text-[10px] md:text-xs tracking-[0.35em] text-white/50">
