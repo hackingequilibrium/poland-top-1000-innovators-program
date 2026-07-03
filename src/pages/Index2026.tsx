@@ -109,7 +109,7 @@ const Index2026 = () => {
           {/* Main visual text */}
           <div className="relative z-10 mt-8 lg:mt-10">
             <div className="flex items-center gap-3 mb-5">
-              <span className="text-[#c4b5fd] text-sm font-semibold tracking-[0.2em] uppercase">
+              <span className="text-blue-400 text-sm font-semibold tracking-[0.2em] uppercase">
                 Save the Date
               </span>
             </div>
@@ -175,7 +175,7 @@ const Index2026 = () => {
               {sectors.map((s) => (
                 <span
                   key={s}
-                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm bg-[#32447b] text-white/90"
+                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm bg-white/5 border border-white/10 text-white/80"
                 >
                   {s}
                 </span>
