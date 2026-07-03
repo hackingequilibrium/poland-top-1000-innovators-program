@@ -58,6 +58,13 @@ interface GuestRSVPSubmission {
   created_at: string;
 }
 
+interface WaitlistEntry {
+  id: string;
+  name: string;
+  email: string;
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
