@@ -13,6 +13,7 @@ const sectors = [
   "Space & Avionics",
   "Dual-Use Technologies",
   "Energy & Sustainability",
+  "Artificial Intelligence",
 ];
 
 function useCountdown(target: number) {
@@ -72,131 +73,171 @@ const Index2026 = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white relative overflow-hidden bg-[#05070f] font-sans antialiased flex flex-col">
-      {/* Gradient wash */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(1200px 800px at 15% 10%, rgba(56,110,255,0.35), transparent 60%), radial-gradient(900px 700px at 85% 20%, rgba(199,8,40,0.22), transparent 60%), radial-gradient(1000px 900px at 50% 100%, rgba(30,80,200,0.35), transparent 60%), linear-gradient(180deg, #030512 0%, #060b22 40%, #0a1330 100%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 opacity-[0.08] mix-blend-overlay"
-        style={{
-          backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)",
-          backgroundSize: "3px 3px",
-        }}
-      />
+    <div className="min-h-screen w-full flex items-center justify-center bg-[#0a0a1a] font-sans text-white p-4 md:p-8">
+      <div className="w-full max-w-7xl min-h-[85vh] flex flex-col lg:flex-row rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(79,70,229,0.15)] bg-[#0a0a1a] relative">
+        {/* Left Panel: Cinematic Branding */}
+        <div className="relative w-full lg:w-1/2 flex flex-col justify-between p-10 md:p-16 overflow-hidden">
+          {/* Aurora background elements */}
+          <div
+            aria-hidden
+            className="absolute top-[-10%] left-[-10%] w-[80%] h-[80%] bg-[#4f46e5]/20 blur-[120px] rounded-full"
+          />
+          <div
+            aria-hidden
+            className="absolute bottom-[-5%] right-[-5%] w-[60%] h-[60%] bg-[#c4b5fd]/10 blur-[100px] rounded-full"
+          />
 
-      {/* Nav */}
-      <header className="max-w-7xl w-full mx-auto px-6 pt-5 md:pt-6 flex items-center justify-between">
-        <a href="https://www.polsv.org" className="flex items-center gap-3">
-          <img src={polsvLogo.url} alt="PolSV" className="h-20 md:h-24 w-auto" />
-        </a>
-        <div className="inline-flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/60 border border-white/15 rounded-full px-3 py-1.5">
-          Save the Date
-        </div>
-      </header>
+          {/* Logo */}
+          <a
+            href="https://www.polsv.org"
+            className="relative z-10 flex items-center gap-4"
+          >
+            <img
+              src={polsvLogo.url}
+              alt="PolSV"
+              className="h-16 md:h-20 w-auto"
+            />
+          </a>
 
-      {/* Above-the-fold: hero + countdown + waitlist */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-6 md:py-8 grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-14 items-center">
-        {/* Left: hero copy */}
-        <div className="text-center lg:text-left">
-          <h1 className="font-display leading-[0.88] tracking-[-0.035em]">
-            <span className="block text-[15vw] sm:text-6xl md:text-7xl lg:text-[7.5rem] font-medium text-white">
-              TOP 1000
-            </span>
-            <span className="block mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#7fb0ff] via-white to-[#7fb0ff]">
-              Innovators of Poland in <span className="whitespace-nowrap">Silicon Valley</span>
-            </span>
-          </h1>
-
-          <div className="mt-5 inline-flex items-center gap-3">
-            <span className="inline-block h-px w-8 bg-[#C70828]" />
-            <span className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#ff6b81] font-medium">
-              Second Cohort
-            </span>
-            <span className="inline-block h-px w-8 bg-[#C70828]" />
-          </div>
-
-          <p className="mt-5 font-display text-2xl md:text-3xl lg:text-4xl font-light tracking-tight text-white">
-            9—12 November 2026
-          </p>
-          <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
-            Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco &nbsp;·&nbsp; <span className="whitespace-nowrap">Silicon Valley</span>
-          </p>
-
-          {/* Sector pills — inline, quiet */}
-          <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-2">
-            {sectors.map((s) => (
-              <span
-                key={s}
-                className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-[11px] md:text-xs text-white/75"
-              >
-                {s}
+          {/* Main visual text */}
+          <div className="relative z-10 mt-16 lg:mt-0">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="h-px w-8 bg-[#C70828]" />
+              <span className="text-[#c4b5fd] text-sm font-semibold tracking-[0.2em] uppercase">
+                Save the Date
               </span>
-            ))}
-            <span className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-[11px] md:text-xs text-white/75">
-              Artificial Intelligence
-            </span>
+            </div>
+
+            <h1 className="font-display text-7xl md:text-8xl lg:text-9xl font-extrabold text-white leading-[0.9] tracking-tighter">
+              TOP 1000
+            </h1>
+            <p className="mt-4 text-lg md:text-xl lg:text-2xl font-light text-white/80 max-w-md leading-relaxed">
+              Innovators of Poland in{" "}
+              <span className="whitespace-nowrap">Silicon Valley</span>
+            </p>
+
+            <div className="mt-5 inline-flex items-center gap-3">
+              <span className="inline-block h-px w-6 bg-[#C70828]" />
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#ff9aab] font-medium">
+                Second Cohort
+              </span>
+              <span className="inline-block h-px w-6 bg-[#C70828]" />
+            </div>
+
+            <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-light tracking-tight text-white">
+              9—12 November 2026
+            </p>
+            <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
+              Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco
+              &nbsp;·&nbsp;{" "}
+              <span className="whitespace-nowrap">Silicon Valley</span>
+            </p>
+          </div>
+
+          {/* Archive link */}
+          <div className="relative z-10 mt-12 lg:mt-0">
+            <Link
+              to="/2025"
+              className="group flex items-center gap-3 text-white/40 hover:text-white transition-colors duration-300"
+            >
+              <span className="text-xs font-semibold tracking-widest uppercase">
+                See the 2025 inaugural summit
+              </span>
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
 
-        {/* Right: countdown + waitlist */}
-        <div className="w-full max-w-md mx-auto lg:max-w-none space-y-5">
+        {/* Right Panel: Info & Interaction */}
+        <div className="w-full lg:w-1/2 bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
           {/* Countdown */}
-          <div className="grid grid-cols-4 gap-2 md:gap-3">
-            {countdownCells.map((c) => (
-              <div
-                key={c.label}
-                className="rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-sm py-3 md:py-4 text-center"
-              >
-                <div className="font-display text-2xl md:text-4xl font-light tabular-nums tracking-tight text-white">
-                  {c.value}
+          <div className="mb-12">
+            <h3 className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-8">
+              Event Countdown
+            </h3>
+            <div className="grid grid-cols-4 gap-3 md:gap-4">
+              {countdownCells.map((c) => (
+                <div key={c.label} className="flex flex-col">
+                  <span className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">
+                    {c.value}
+                  </span>
+                  <span className="text-white/30 text-[10px] uppercase tracking-widest mt-2">
+                    {c.label}
+                  </span>
                 </div>
-                <div className="mt-1 text-[9px] md:text-[10px] tracking-[0.35em] text-white/50">
-                  {c.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* Sectors */}
+          <div className="mb-12">
+            <h3 className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-6">
+              Impact Sectors
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {sectors.map((s, i) => (
+                <span
+                  key={s}
+                  className={`rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm ${
+                    i === sectors.length - 1
+                      ? "border border-[#4f46e5]/40 bg-[#4f46e5]/10 text-white"
+                      : "border border-white/10 bg-white/5 text-white/80"
+                  }`}
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Waitlist */}
-          <div className="rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md p-5 md:p-6">
-            <h2 className="font-display text-xl md:text-2xl font-medium tracking-tight">
-              Join the waitlist
-            </h2>
-            <p className="mt-1 text-white/60 text-xs md:text-sm">
+          <div className="relative">
+            <h3 className="font-display text-2xl mb-2">Join the waitlist</h3>
+            <p className="text-white/50 text-sm mb-6">
               Be first to hear when applications and the full program open.
             </p>
 
             {submitted ? (
-              <div className="mt-5 text-white/80 text-sm">
+              <div className="text-white/80 text-sm">
                 You're on the list. We'll be in touch.
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-4 space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Full name"
-                    className="w-full bg-white/[0.06] border border-white/15 rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#7fb0ff] transition-colors"
-                  />
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email address"
-                    className="w-full bg-white/[0.06] border border-white/15 rounded-lg px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#7fb0ff] transition-colors"
-                  />
+                  <div className="relative flex-grow group">
+                    <input
+                      type="text"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Full name"
+                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                    />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
+                  </div>
+                  <div className="relative flex-grow group">
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email address"
+                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                    />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
+                  </div>
                 </div>
 
                 <div>
@@ -218,8 +259,8 @@ const Index2026 = () => {
                         onClick={() => setInterest(opt.v)}
                         className={`text-xs rounded-full px-2.5 py-1.5 border transition-colors ${
                           interest === opt.v
-                            ? "bg-[#C70828] border-[#C70828] text-white"
-                            : "bg-white/[0.04] border-white/15 text-white/70 hover:text-white hover:border-white/30"
+                            ? "bg-[#4f46e5] border-[#4f46e5] text-white"
+                            : "bg-white/[0.04] border-white/10 text-white/70 hover:text-white hover:border-white/30"
                         }`}
                       >
                         {opt.l}
@@ -231,33 +272,22 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-white text-[#05070f] text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-white/90 transition-colors disabled:opacity-60"
+                  className="w-full bg-[#4f46e5] hover:bg-[#4338ca] text-white text-sm font-semibold rounded-xl px-4 py-3.5 transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] active:scale-95 disabled:opacity-60"
                 >
                   {submitting ? "Joining…" : "Join the waitlist"}
                 </button>
               </form>
             )}
           </div>
-        </div>
-      </main>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <div className="text-center sm:text-left">
+          {/* Footer note */}
+          <div className="mt-12 text-[10px] text-white/20 uppercase tracking-widest text-center lg:text-left">
             Organized by the Poland in Silicon Valley Center for Science,
             Innovation, and Entrepreneurship (PolSV).
           </div>
-          <Link
-            to="/2025"
-            className="text-white/70 hover:text-white transition-colors whitespace-nowrap"
-          >
-            See the 2025 inaugural summit →
-          </Link>
         </div>
-      </footer>
+      </div>
     </div>
-
   );
 };
 
