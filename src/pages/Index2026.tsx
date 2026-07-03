@@ -73,7 +73,7 @@ const Index2026 = () => {
   return (
     <div className="min-h-screen w-full flex flex-col lg:flex-row bg-[#0a0a1a] font-sans text-white relative overflow-hidden">
       {/* Left Panel: Cinematic Branding */}
-        <div className="relative w-full lg:w-1/2 flex flex-col justify-between p-10 md:p-16 overflow-hidden">
+        <div className="relative w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
           {/* Aurora background elements */}
           <div
             aria-hidden
@@ -92,12 +92,12 @@ const Index2026 = () => {
             <img
               src="/assets/polsv-logo-color-dark-bg.svg"
               alt="PolSV"
-              className="h-24 md:h-32 lg:h-40 w-auto"
+              className="h-20 md:h-24 lg:h-28 w-auto"
             />
           </a>
 
           {/* Main visual text */}
-          <div className="relative z-10 mt-16 lg:mt-0">
+          <div className="relative z-10 mt-8 lg:mt-10">
             <div className="flex items-center gap-3 mb-5">
               <span className="text-[#c4b5fd] text-sm font-semibold tracking-[0.2em] uppercase">
                 Save the Date
