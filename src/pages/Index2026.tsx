@@ -74,8 +74,24 @@ const Index2026 = () => {
 
   return (
     <div className="min-h-screen w-full flex flex-col lg:flex-row bg-[#0a0a1a] font-sans text-white relative overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+        poster=""
+      >
+        <source src={bokehVideo.url} type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-[#0a0a1a]/80 -z-10" />
+
       {/* Left Panel: Cinematic Branding */}
         <div className="relative w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
+
           {/* Aurora background elements */}
           <div
             aria-hidden
