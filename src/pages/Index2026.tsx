@@ -72,7 +72,7 @@ const Index2026 = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white relative overflow-hidden bg-[#05070f]">
+    <div className="min-h-screen text-white relative overflow-hidden bg-[#05070f] font-sans antialiased">
       {/* Gradient wash */}
       <div
         aria-hidden
