@@ -219,7 +219,7 @@ const Index2026 = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Full name"
-                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
+                      className="input-autofill-dark w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
                   </div>
                   <div className="relative flex-grow group">
@@ -229,7 +229,7 @@ const Index2026 = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email address"
-                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
+                      className="input-autofill-dark w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
                   </div>
 

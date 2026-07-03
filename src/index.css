@@ -120,3 +120,14 @@ All colors MUST be HSL.
     @apply bg-[#0F1435] text-foreground;
   }
 }
+
+/* Keep dark inputs dark when browsers autofill them */
+.input-autofill-dark:-webkit-autofill,
+.input-autofill-dark:-webkit-autofill:hover,
+.input-autofill-dark:-webkit-autofill:focus,
+.input-autofill-dark:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #0a0a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
