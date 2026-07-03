@@ -18,6 +18,11 @@ const sectors = [
   "Artificial Intelligence",
 ];
 
+const waitlistSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name.").max(120, "Name must be less than 120 characters."),
+  email: z.string().trim().email("Please enter a valid email address.").max(255, "Email must be less than 255 characters."),
+});
+
 function useCountdown(target: number) {
   const compute = () => {
     const diff = Math.max(0, target - Date.now());
