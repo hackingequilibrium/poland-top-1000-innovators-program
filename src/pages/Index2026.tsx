@@ -72,7 +72,7 @@ const Index2026 = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white relative overflow-hidden bg-[#05070f]">
+    <div className="min-h-screen text-white relative overflow-hidden bg-[#05070f] font-sans antialiased">
       {/* Gradient wash */}
       <div
         aria-hidden
@@ -111,30 +111,30 @@ const Index2026 = () => {
           Save the Date
         </div>
 
-        <h1 className="font-serif leading-[0.95] tracking-tight">
-          <span className="block text-[15vw] sm:text-7xl md:text-8xl lg:text-[9rem] font-light text-white/95">
+        <h1 className="font-display leading-[0.9] tracking-[-0.03em]">
+          <span className="block text-[16vw] sm:text-7xl md:text-8xl lg:text-[10rem] font-medium text-white">
             TOP 1000
           </span>
-          <span className="block mt-4 text-2xl sm:text-3xl md:text-5xl font-light bg-clip-text text-transparent bg-gradient-to-r from-[#7fb0ff] via-white to-[#7fb0ff]">
+          <span className="block mt-5 text-xl sm:text-2xl md:text-4xl font-light tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#7fb0ff] via-white to-[#7fb0ff]">
             Innovators of Poland in Silicon Valley
           </span>
         </h1>
 
-        <div className="mt-8 inline-flex items-center gap-3">
+        <div className="mt-10 inline-flex items-center gap-3">
           <span className="inline-block h-px w-10 bg-[#C70828]" />
-          <span className="text-xs md:text-sm uppercase tracking-[0.4em] text-[#ff6b81]">
+          <span className="text-[11px] md:text-xs uppercase tracking-[0.5em] text-[#ff6b81] font-medium">
             Second Cohort
           </span>
           <span className="inline-block h-px w-10 bg-[#C70828]" />
         </div>
 
-        <p className="mt-8 text-2xl md:text-4xl font-light text-white">
-          9–11 November 2026
+        <p className="mt-10 font-display text-3xl md:text-5xl font-light tracking-tight text-white">
+          9—11 November 2026
         </p>
-        <p className="mt-3 text-sm md:text-base text-white/70 tracking-wider">
-          Stanford &nbsp;|&nbsp; Berkeley &nbsp;|&nbsp; UC San Francisco &nbsp;|&nbsp; Silicon Valley
+        <p className="mt-4 text-[11px] md:text-xs uppercase tracking-[0.35em] text-white/60">
+          Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco &nbsp;·&nbsp; Silicon Valley
         </p>
-        <p className="mt-6 text-base md:text-lg text-white/60 italic">
+        <p className="mt-8 text-base md:text-lg text-white/60 max-w-xl mx-auto">
           Innovative Poland meets the Silicon Valley ecosystem.
         </p>
       </section>
@@ -147,7 +147,7 @@ const Index2026 = () => {
               key={c.label}
               className="rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm py-6 md:py-10 text-center"
             >
-              <div className="font-serif text-4xl sm:text-5xl md:text-7xl font-light tabular-nums text-white">
+              <div className="font-display text-4xl sm:text-5xl md:text-7xl font-light tabular-nums tracking-tight text-white">
                 {c.value}
               </div>
               <div className="mt-2 text-[10px] md:text-xs tracking-[0.35em] text-white/50">
@@ -161,7 +161,7 @@ const Index2026 = () => {
       {/* Waitlist */}
       <section className="max-w-2xl mx-auto px-6 pb-20">
         <div className="rounded-3xl bg-white/[0.04] border border-white/10 backdrop-blur-md p-8 md:p-10">
-          <h2 className="text-2xl md:text-3xl font-serif font-light text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-medium tracking-tight text-center">
             Join the waitlist
           </h2>
           <p className="mt-2 text-center text-white/60 text-sm">
