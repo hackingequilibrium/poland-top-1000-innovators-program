@@ -87,10 +87,10 @@ const Index2026 = () => {
       </video>
 
       {/* Tinted overlay — dark enough for readability, light enough to let the bokeh glow through */}
-      <div className="absolute inset-0 bg-[#0a0a1a]/45 z-10" />
+      <div className="absolute inset-0 bg-[#0a0a1a]/35 z-10" />
 
       {/* Soft vignette that draws the eye toward the center */}
-      <div className="absolute inset-0 bg-radial-gradient z-10 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 80%)' }} />
+      <div className="absolute inset-0 bg-radial-gradient z-10 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 85%)' }} />
 
       {/* Left Panel: Cinematic Branding */}
         <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
@@ -143,7 +143,7 @@ const Index2026 = () => {
         </div>
 
         {/* Right Panel: Info & Interaction */}
-        <div className="relative z-20 w-full lg:w-1/2 min-h-screen bg-[#0a0a1a]/20 backdrop-blur-sm p-10 md:p-16 flex flex-col justify-center">
+        <div className="relative z-20 w-full lg:w-1/2 min-h-screen bg-[#0a0a1a]/10 backdrop-blur-md p-10 md:p-16 flex flex-col justify-center">
 
 
 
@@ -175,7 +175,7 @@ const Index2026 = () => {
               {sectors.map((s) => (
                 <span
                   key={s}
-                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm border border-white/10 bg-white/5 text-white/80"
+                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm bg-[#32447b] text-white/90"
                 >
                   {s}
                 </span>
