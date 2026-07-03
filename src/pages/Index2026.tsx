@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
