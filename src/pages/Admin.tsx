@@ -146,8 +146,64 @@ const Admin = () => {
       fetchRSVPSubmissions();
       fetchGuestRSVPSubmissions();
       fetchAdminUsers();
+      fetchWaitlistEntries();
     }
   }, [isAdmin, user]);
+
+  const fetchWaitlistEntries = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('waitlist_2026')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching waitlist:', error);
+        toast.error("Failed to load waitlist");
+      } else {
+        setWaitlistEntries(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleDeleteWaitlist = async (id: string) => {
+    if (!confirm('Delete this waitlist entry?')) return;
+    try {
+      const { error } = await supabase.from('waitlist_2026').delete().eq('id', id);
+      if (error) throw error;
+      toast.success("Waitlist entry deleted");
+      fetchWaitlistEntries();
+    } catch {
+      toast.error("Failed to delete waitlist entry");
+    }
+  };
+
+  const handleExportWaitlist = () => {
+    if (waitlistEntries.length === 0) {
+      toast.error("No waitlist entries to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Email', 'Submitted At'].join(','),
+      ...waitlistEntries.map(w => [
+        `"${w.name}"`,
+        `"${w.email}"`,
+        `"${new Date(w.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `waitlist-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Waitlist exported successfully");
+  };
+
 
   const fetchSubmissions = async () => {
     try {
