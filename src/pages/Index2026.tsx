@@ -220,7 +220,7 @@ const Index2026 = () => {
           </div>
 
           {/* Footer note */}
-          <div className="mt-12 text-[10px] text-white/20 uppercase tracking-widest text-center lg:text-left">
+          <div className="mt-12 text-[10px] text-white/20 tracking-wide text-center lg:text-left">
             <div className="mb-2">
               Organized by the Poland in Silicon Valley Center for Science,
               Innovation, and Entrepreneurship (PolSV).
