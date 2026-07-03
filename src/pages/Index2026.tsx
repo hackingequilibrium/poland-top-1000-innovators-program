@@ -76,7 +76,7 @@ const Index2026 = () => {
     setSubmitted(true);
     setName("");
     setEmail("");
-    toast.success("You're on the waitlist. Talk soon.");
+    toast.success("You're on the waitlist.");
   };
 
   const countdownCells = [
