@@ -161,7 +161,7 @@ const Index2026 = () => {
       {/* Waitlist */}
       <section className="max-w-2xl mx-auto px-6 pb-20">
         <div className="rounded-3xl bg-white/[0.04] border border-white/10 backdrop-blur-md p-8 md:p-10">
-          <h2 className="text-2xl md:text-3xl font-serif font-light text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-medium tracking-tight text-center">
             Join the waitlist
           </h2>
           <p className="mt-2 text-center text-white/60 text-sm">
