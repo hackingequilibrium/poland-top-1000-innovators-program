@@ -224,9 +224,9 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="group w-full flex items-center justify-between h-16 px-8 rounded-full bg-white/12 backdrop-blur-[12px] border border-white/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] transition-all duration-[250ms] ease-out hover:bg-white hover:border-transparent hover:backdrop-blur-none hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60 disabled:hover:scale-100"
+                  className="group w-full flex items-center justify-between h-16 px-8 rounded-full bg-white/20 backdrop-blur-[20px] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:shadow-none hover:backdrop-blur-none hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60 disabled:hover:scale-100"
                 >
-                  <span className="text-lg font-bold text-white transition-colors duration-[250ms] ease-out group-hover:text-[#0A0A0A]">
+                  <span className="text-lg font-bold text-white transition-colors duration-300 ease-out group-hover:text-[#0A0A0A]">
                     {submitting ? "Joining…" : "Join the waitlist"}
                   </span>
                   <div className="relative h-10 w-10 flex items-center justify-center shrink-0">
@@ -238,16 +238,16 @@ const Index2026 = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="absolute text-white transition-all duration-[250ms] ease-out rotate-0 group-hover:opacity-0 group-hover:rotate-[-45deg]"
+                      className="absolute text-white transition-all duration-300 ease-out opacity-100 group-hover:opacity-0 group-hover:rotate-[-45deg]"
                     >
                       <path d="M7 17 17 7" />
                       <path d="M7 7h10v10" />
                     </svg>
                     {/* Hover arrow badge */}
-                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-[#0A0A0A] opacity-0 scale-75 transition-all duration-[250ms] ease-out group-hover:opacity-100 group-hover:scale-100">
+                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-[#0A0A0A] opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -255,10 +255,10 @@ const Index2026 = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="white"
-                        strokeWidth="2"
+                        strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="transition-transform duration-[250ms] ease-out"
+                        className="transition-transform duration-300 ease-out -translate-x-0.5 group-hover:translate-x-0"
                       >
                         <path d="M5 12h14" />
                         <path d="m12 5 7 7-7 7" />
