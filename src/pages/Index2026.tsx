@@ -111,7 +111,7 @@ const Index2026 = () => {
               TOP 1000
             </span>
             <span className="block mt-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#7fb0ff] via-white to-[#7fb0ff]">
-              Innovators of Poland in Silicon Valley
+              Innovators of Poland in <span className="whitespace-nowrap">Silicon Valley</span>
             </span>
           </h1>
 
@@ -127,7 +127,7 @@ const Index2026 = () => {
             9—11 November 2026
           </p>
           <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
-            Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco &nbsp;·&nbsp; Silicon Valley
+            Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco &nbsp;·&nbsp; <span className="whitespace-nowrap">Silicon Valley</span>
           </p>
 
           {/* Sector pills — inline, quiet */}
