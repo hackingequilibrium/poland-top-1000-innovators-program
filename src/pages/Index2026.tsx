@@ -95,7 +95,7 @@ const Index2026 = () => {
       {/* Nav */}
       <header className="max-w-7xl w-full mx-auto px-6 pt-5 md:pt-6 flex items-center justify-between">
         <a href="https://www.polsv.org" className="flex items-center gap-3">
-          <img src={polsvLogo.url} alt="PolSV" className="h-10 md:h-12 w-auto" />
+          <img src={polsvLogo.url} alt="PolSV" className="h-16 md:h-20 w-auto" />
         </a>
         <div className="inline-flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/60 border border-white/15 rounded-full px-3 py-1.5">
           Save the Date
@@ -140,8 +140,8 @@ const Index2026 = () => {
                 {s}
               </span>
             ))}
-            <span className="rounded-full border border-[#C70828]/40 bg-[#C70828]/10 px-3 py-1 text-[11px] md:text-xs text-[#ff9aab]">
-              AI — connective layer
+            <span className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1 text-[11px] md:text-xs text-white/75">
+              Artificial Intelligence
             </span>
           </div>
         </div>
