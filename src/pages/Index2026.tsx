@@ -136,7 +136,7 @@ const Index2026 = () => {
         <div className="w-full lg:w-1/2 min-h-screen bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
           {/* Countdown */}
           <div className="mb-12">
-            <h3 className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-8">
+            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-8">
               Event Countdown
             </h3>
             <div className="grid grid-cols-4 gap-3 md:gap-4">
@@ -145,7 +145,7 @@ const Index2026 = () => {
                   <span className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">
                     {c.value}
                   </span>
-                  <span className="text-white/30 text-[10px] uppercase tracking-widest mt-2">
+                  <span className="text-white/60 text-[10px] uppercase tracking-widest mt-2">
                     {c.label}
                   </span>
                 </div>
@@ -155,7 +155,7 @@ const Index2026 = () => {
 
           {/* Sectors */}
           <div className="mb-12">
-            <h3 className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-6">
+            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-6">
               Impact Sectors
             </h3>
             <div className="flex flex-wrap gap-2">
