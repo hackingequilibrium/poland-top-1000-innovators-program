@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
+
 
 const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
 
