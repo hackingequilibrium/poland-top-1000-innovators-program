@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
 
-type Interest = "researcher" | "company" | "university" | "other";
+
 
 const sectors = [
   "Life Sciences & Biomed",
@@ -39,7 +39,6 @@ const Index2026 = () => {
   const { days, hours, minutes, seconds } = useCountdown(EVENT_DATE);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [interest, setInterest] = useState<Interest>("researcher");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -52,7 +51,7 @@ const Index2026 = () => {
     setSubmitting(true);
     const { error } = await supabase
       .from("waitlist_2026" as any)
-      .insert({ name: name.trim(), email: email.trim(), interest });
+      .insert({ name: name.trim(), email: email.trim() });
     setSubmitting(false);
     if (error) {
       toast.error("Something went wrong. Please try again.");
@@ -206,35 +205,6 @@ const Index2026 = () => {
                       className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
                     />
                     <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.25em] text-white/50 mb-2">
-                    I'm interested as
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {(
-                      [
-                        { v: "researcher", l: "Researcher" },
-                        { v: "company", l: "Company" },
-                        { v: "university", l: "University" },
-                        { v: "other", l: "Other" },
-                      ] as { v: Interest; l: string }[]
-                    ).map((opt) => (
-                      <button
-                        type="button"
-                        key={opt.v}
-                        onClick={() => setInterest(opt.v)}
-                        className={`text-xs rounded-full px-2.5 py-1.5 border transition-colors ${
-                          interest === opt.v
-                            ? "bg-[#4f46e5] border-[#4f46e5] text-white"
-                            : "bg-white/[0.04] border-white/10 text-white/70 hover:text-white hover:border-white/30"
-                        }`}
-                      >
-                        {opt.l}
-                      </button>
-                    ))}
                   </div>
                 </div>
 
