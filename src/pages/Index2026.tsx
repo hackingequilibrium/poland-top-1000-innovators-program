@@ -104,10 +104,10 @@ const Index2026 = () => {
               </span>
             </div>
 
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[0.9] tracking-tighter">
+            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter">
               TOP 1000
             </h1>
-            <p className="mt-4 text-lg md:text-xl lg:text-2xl font-light text-white/80 max-w-md leading-relaxed">
+            <p className="mt-4 text-lg md:text-xl lg:text-2xl font-bold text-white/90 max-w-md leading-relaxed">
               Innovators of Poland in{" "}
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
@@ -120,7 +120,7 @@ const Index2026 = () => {
               <span className="inline-block h-px w-6 bg-[#C70828]" />
             </div>
 
-            <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-light tracking-tight text-white">
+            <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white">
               9—12 November 2026
             </p>
             <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
@@ -142,7 +142,7 @@ const Index2026 = () => {
             <div className="grid grid-cols-4 gap-3 md:gap-4">
               {countdownCells.map((c) => (
                 <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">
+                  <span className="font-display text-4xl md:text-5xl font-black text-white tabular-nums">
                     {c.value}
                   </span>
                   <span className="text-white/30 text-[10px] uppercase tracking-widest mt-2">
