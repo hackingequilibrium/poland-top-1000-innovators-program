@@ -121,7 +121,7 @@ const Index2026 = () => {
             </div>
 
             <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-white">
-              9—12 November 2026
+              9-12 November 2026
             </p>
             <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
               Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco
