@@ -73,9 +73,8 @@ const Index2026 = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-[#0a0a1a] font-sans text-white p-4 md:p-8">
-      <div className="w-full max-w-7xl min-h-[85vh] flex flex-col lg:flex-row rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(79,70,229,0.15)] bg-[#0a0a1a] relative">
-        {/* Left Panel: Cinematic Branding */}
+    <div className="min-h-screen w-full flex flex-col lg:flex-row bg-[#0a0a1a] font-sans text-white relative overflow-hidden">
+      {/* Left Panel: Cinematic Branding */}
         <div className="relative w-full lg:w-1/2 flex flex-col justify-between p-10 md:p-16 overflow-hidden">
           {/* Aurora background elements */}
           <div
@@ -95,7 +94,7 @@ const Index2026 = () => {
             <img
               src={polsvLogo.url}
               alt="PolSV"
-              className="h-20 md:h-24 lg:h-28 w-auto"
+              className="h-24 md:h-32 lg:h-40 w-auto"
             />
           </a>
 
@@ -161,7 +160,7 @@ const Index2026 = () => {
         </div>
 
         {/* Right Panel: Info & Interaction */}
-        <div className="w-full lg:w-1/2 bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
+        <div className="w-full lg:w-1/2 min-h-screen bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
           {/* Countdown */}
           <div className="mb-12">
             <h3 className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-8">
