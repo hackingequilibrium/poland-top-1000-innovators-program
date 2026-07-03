@@ -224,13 +224,15 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="group w-full flex items-center justify-between h-16 px-8 rounded-full bg-white/20 backdrop-blur-[20px] border border-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:shadow-none hover:backdrop-blur-none hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60 disabled:hover:scale-100"
+                  className="group w-full flex items-center justify-between h-16 px-8 rounded-full bg-white/10 backdrop-blur-[20px] border border-white/20 transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:backdrop-blur-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 disabled:opacity-60"
                 >
                   <span className="text-lg font-bold text-white transition-colors duration-300 ease-out group-hover:text-[#0A0A0A]">
                     {submitting ? "Joining…" : "Join the waitlist"}
                   </span>
                   <div className="relative h-10 w-10 flex items-center justify-center shrink-0">
-                    {/* Default diagonal arrow */}
+                    {/* Black badge scales in behind the arrow */}
+                    <div className="absolute inset-0 rounded-full bg-[#0A0A0A] scale-0 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100" />
+                    {/* Arrow rotates from diagonal to right as the badge appears */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -241,29 +243,11 @@ const Index2026 = () => {
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="absolute text-white transition-all duration-300 ease-out opacity-100 group-hover:opacity-0 group-hover:rotate-[-45deg]"
+                      className="relative text-white transition-transform duration-300 ease-out rotate-0 group-hover:rotate-[-45deg]"
                     >
                       <path d="M7 17 17 7" />
                       <path d="M7 7h10v10" />
                     </svg>
-                    {/* Hover arrow badge */}
-                    <div className="absolute inset-0 flex items-center justify-center rounded-full bg-[#0A0A0A] opacity-0 scale-50 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="transition-transform duration-300 ease-out -translate-x-0.5 group-hover:translate-x-0"
-                      >
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                      </svg>
-                    </div>
                   </div>
                 </button>
 
