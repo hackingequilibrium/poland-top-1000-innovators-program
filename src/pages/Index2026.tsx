@@ -224,25 +224,26 @@ const Index2026 = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-white hover:bg-white/90 text-[#0a0a1a] text-sm font-semibold rounded-xl px-4 py-3.5 transition-all active:scale-95 disabled:opacity-60 flex items-center justify-center gap-2 group"
+                  className="w-full bg-white text-[#0a0a1a] text-sm font-semibold tracking-wide rounded-full px-6 py-4 transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_40px_-8px_rgba(255,255,255,0.35)] active:scale-[0.98] disabled:opacity-60 flex items-center justify-center gap-2 group"
                 >
                   {submitting ? "Joining…" : "Join the waitlist"}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="transition-transform group-hover:translate-x-0.5"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
                   >
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
                   </svg>
                 </button>
+
               </form>
             )}
           </div>
