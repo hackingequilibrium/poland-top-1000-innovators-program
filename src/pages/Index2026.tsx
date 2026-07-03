@@ -91,7 +91,7 @@ const Index2026 = () => {
             className="relative z-10 flex items-center gap-4"
           >
             <img
-              src={polsvLogo.url}
+              src="/assets/polsv-logo-color-dark-bg.svg"
               alt="PolSV"
               className="h-24 md:h-32 lg:h-40 w-auto"
             />
