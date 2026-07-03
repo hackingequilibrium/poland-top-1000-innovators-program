@@ -251,8 +251,29 @@ const Index2026 = () => {
 
           {/* Footer note */}
           <div className="mt-12 text-[10px] text-white/20 uppercase tracking-widest text-center lg:text-left">
-            Organized by the Poland in Silicon Valley Center for Science,
-            Innovation, and Entrepreneurship (PolSV).
+            <div className="mb-2">
+              Organized by the Poland in Silicon Valley Center for Science,
+              Innovation, and Entrepreneurship (PolSV).
+            </div>
+            <Link
+              to="/2025"
+              className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors duration-300"
+            >
+              <span>2025 Inaugural Summit</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
     </div>
