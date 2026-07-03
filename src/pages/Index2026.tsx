@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
+
 
 const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
 
@@ -71,20 +73,28 @@ const Index2026 = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full flex flex-col lg:flex-row bg-[#0a0a1a] font-sans text-white relative overflow-hidden">
-      {/* Left Panel: Cinematic Branding */}
-        <div className="relative w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
-          {/* Aurora background elements */}
-          <div
-            aria-hidden
-            className="absolute top-[-10%] left-[-10%] w-[80%] h-[80%] bg-[#4f46e5]/20 blur-[120px] rounded-full"
-          />
-          <div
-            aria-hidden
-            className="absolute bottom-[-5%] right-[-5%] w-[60%] h-[60%] bg-[#c4b5fd]/10 blur-[100px] rounded-full"
-          />
+    <div className="min-h-screen w-full flex flex-col lg:flex-row font-sans text-white relative overflow-hidden bg-black">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src={bokehVideo.url} type="video/mp4" />
+      </video>
 
-          {/* Logo */}
+      {/* Tinted overlay — dark enough for readability, light enough to let the bokeh glow through */}
+      <div className="absolute inset-0 bg-[#0a0a1a]/45 z-10" />
+
+      {/* Soft vignette that draws the eye toward the center */}
+      <div className="absolute inset-0 bg-radial-gradient z-10 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 80%)' }} />
+
+      {/* Left Panel: Cinematic Branding */}
+        <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
+
           <a
             href="https://www.polsv.org"
             className="relative z-10 flex items-center gap-4"
@@ -133,7 +143,9 @@ const Index2026 = () => {
         </div>
 
         {/* Right Panel: Info & Interaction */}
-        <div className="w-full lg:w-1/2 min-h-screen bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
+        <div className="relative z-20 w-full lg:w-1/2 min-h-screen bg-[#0a0a1a]/20 backdrop-blur-sm p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/10">
+
+
           {/* Countdown */}
           <div className="mb-12">
             <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-8">
@@ -191,9 +203,8 @@ const Index2026 = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Full name"
-                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
                   </div>
                   <div className="relative flex-grow group">
                     <input
@@ -202,10 +213,10 @@ const Index2026 = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email address"
-                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
                   </div>
+
                 </div>
 
                 <button
