@@ -104,7 +104,7 @@ const Index2026 = () => {
               </span>
             </div>
 
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[0.9] tracking-tighter">
+            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter">
               TOP 1000
             </h1>
             <p className="mt-4 text-lg md:text-xl lg:text-2xl font-medium text-white/85 max-w-md leading-relaxed">
