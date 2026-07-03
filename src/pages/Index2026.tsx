@@ -281,6 +281,15 @@ const Index2026 = () => {
             >
               2025 Inaugural Summit
             </Link>
+            <span className="mx-2 text-white/20">|</span>
+            <a
+              href="https://polsv.org/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/30 hover:text-white transition-colors duration-300"
+            >
+              Contact us
+            </a>
           </div>
         </div>
     </div>
