@@ -203,9 +203,8 @@ const Index2026 = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Full name"
-                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
                   </div>
                   <div className="relative flex-grow group">
                     <input
@@ -214,10 +213,10 @@ const Index2026 = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email address"
-                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-[#4f46e5] transition-all"
+                      className="w-full bg-[#0a0a1a]/60 border border-white/15 rounded-xl px-5 py-3.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition-all backdrop-blur-sm"
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#4f46e5] to-[#c4b5fd] opacity-0 group-focus-within:opacity-10 -z-10 blur-md transition-opacity" />
                   </div>
+
                 </div>
 
                 <button
