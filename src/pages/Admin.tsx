@@ -889,6 +889,50 @@ const Admin = () => {
             )}
           </TabsContent>
 
+          <TabsContent value="waitlist">
+            {waitlistEntries.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportWaitlist}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export Waitlist to CSV
+                </Button>
+              </div>
+            )}
+            {waitlistEntries.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No waitlist entries yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-4">
+                {waitlistEntries.map((entry) => (
+                  <Card key={entry.id} className="rounded-none">
+                    <CardContent className="py-4 flex justify-between items-start">
+                      <div className="space-y-1 font-inter text-sm">
+                        <p className="font-bold text-base text-[#0F1435]">{entry.name}</p>
+                        <p className="text-[#0F1435]">{entry.email}</p>
+                        <p className="text-[#797B8E] text-xs">
+                          Signed up: {new Date(entry.created_at).toLocaleString()}
+                        </p>
+                      </div>
+                      <Button
+                        onClick={() => handleDeleteWaitlist(entry.id)}
+                        variant="destructive"
+                        size="sm"
+                        className="rounded-none bg-[#C70828] hover:bg-[#A80E34]"
+                      >
+                        Delete
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
           <TabsContent value="admins" className="space-y-6">
             {!showCreateAdmin ? (
               <>
