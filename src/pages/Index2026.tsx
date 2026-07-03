@@ -100,7 +100,6 @@ const Index2026 = () => {
           {/* Main visual text */}
           <div className="relative z-10 mt-16 lg:mt-0">
             <div className="flex items-center gap-3 mb-5">
-              <span className="h-px w-8 bg-[#C70828]" />
               <span className="text-[#c4b5fd] text-sm font-semibold tracking-[0.2em] uppercase">
                 Save the Date
               </span>
@@ -132,30 +131,6 @@ const Index2026 = () => {
             </p>
           </div>
 
-          {/* Archive link */}
-          <div className="relative z-10 mt-12 lg:mt-0">
-            <Link
-              to="/2025"
-              className="group flex items-center gap-3 text-white/40 hover:text-white transition-colors duration-300"
-            >
-              <span className="text-xs font-semibold tracking-widest uppercase">
-                See the 2025 inaugural summit
-              </span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-          </div>
         </div>
 
         {/* Right Panel: Info & Interaction */}
@@ -276,8 +251,29 @@ const Index2026 = () => {
 
           {/* Footer note */}
           <div className="mt-12 text-[10px] text-white/20 uppercase tracking-widest text-center lg:text-left">
-            Organized by the Poland in Silicon Valley Center for Science,
-            Innovation, and Entrepreneurship (PolSV).
+            <div className="mb-2">
+              Organized by the Poland in Silicon Valley Center for Science,
+              Innovation, and Entrepreneurship (PolSV).
+            </div>
+            <Link
+              to="/2025"
+              className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors duration-300"
+            >
+              <span>2025 Inaugural Summit</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
     </div>
