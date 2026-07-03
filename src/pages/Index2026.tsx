@@ -95,7 +95,7 @@ const Index2026 = () => {
       {/* Nav */}
       <header className="max-w-7xl w-full mx-auto px-6 pt-5 md:pt-6 flex items-center justify-between">
         <a href="https://www.polsv.org" className="flex items-center gap-3">
-          <img src={polsvLogo.url} alt="PolSV" className="h-16 md:h-20 w-auto" />
+          <img src={polsvLogo.url} alt="PolSV" className="h-20 md:h-24 w-auto" />
         </a>
         <div className="inline-flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/60 border border-white/15 rounded-full px-3 py-1.5">
           Save the Date
@@ -124,7 +124,7 @@ const Index2026 = () => {
           </div>
 
           <p className="mt-5 font-display text-2xl md:text-3xl lg:text-4xl font-light tracking-tight text-white">
-            9—11 November 2026
+            9—12 November 2026
           </p>
           <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
             Stanford &nbsp;·&nbsp; Berkeley &nbsp;·&nbsp; UC San Francisco &nbsp;·&nbsp; <span className="whitespace-nowrap">Silicon Valley</span>
