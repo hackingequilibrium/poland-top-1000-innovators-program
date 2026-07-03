@@ -26,7 +26,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Index2026 />} />
+          <Route path="/2025" element={<Index />} />
+          <Route path="/2025/lead-session" element={<LeadSession />} />
+          <Route path="/2025/program" element={<Program />} />
+          <Route path="/2025/workshops" element={<Workshops />} />
+          <Route path="/2025/eventify-app" element={<EventifyApp />} />
+          {/* Legacy 2025 paths kept live for existing links */}
           <Route path="/lead-session" element={<LeadSession />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<Admin />} />
