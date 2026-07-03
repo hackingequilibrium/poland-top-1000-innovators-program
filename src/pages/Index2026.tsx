@@ -208,7 +208,6 @@ const Index2026 = () => {
                   </div>
                 </div>
 
-
                 <button
                   type="submit"
                   disabled={submitting}
