@@ -152,7 +152,8 @@ const Index2026 = () => {
         </div>
 
         {/* Right Panel: Info & Interaction */}
-        <div className="w-full lg:w-1/2 min-h-screen bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
+        <div className="relative z-20 w-full lg:w-1/2 min-h-screen bg-[#1a1a2e]/30 backdrop-blur-xl p-10 md:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5">
+
           {/* Countdown */}
           <div className="mb-12">
             <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-8">
