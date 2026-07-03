@@ -100,7 +100,6 @@ const Index2026 = () => {
           {/* Main visual text */}
           <div className="relative z-10 mt-16 lg:mt-0">
             <div className="flex items-center gap-3 mb-5">
-              <span className="h-px w-8 bg-[#C70828]" />
               <span className="text-[#c4b5fd] text-sm font-semibold tracking-[0.2em] uppercase">
                 Save the Date
               </span>
