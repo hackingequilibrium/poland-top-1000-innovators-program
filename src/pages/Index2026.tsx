@@ -281,7 +281,6 @@ const Index2026 = () => {
             Innovation, and Entrepreneurship (PolSV).
           </div>
         </div>
-      </div>
     </div>
   );
 };
