@@ -52,19 +52,27 @@ const Index2026 = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) {
-      toast.error("Please enter your name and email.");
+
+    const parsed = waitlistSchema.safeParse({ name, email });
+    if (!parsed.success) {
+      const firstError = parsed.error.errors[0]?.message;
+      toast.error(firstError || "Please check your inputs.");
       return;
     }
+
+    const { name: cleanName, email: cleanEmail } = parsed.data;
+
     setSubmitting(true);
     const { error } = await supabase
       .from("waitlist_2026" as any)
-      .insert({ name: name.trim(), email: email.trim() });
+      .insert({ name: cleanName, email: cleanEmail });
     setSubmitting(false);
+
     if (error) {
       toast.error("Something went wrong. Please try again.");
       return;
     }
+
     setSubmitted(true);
     setName("");
     setEmail("");
