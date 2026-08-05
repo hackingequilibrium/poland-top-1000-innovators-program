@@ -1,35 +1,31 @@
-## Goal
-Make `https://top1000.polsv.org` stay in the browser address bar when visitors open the site, instead of redirecting to the `.lovable.app` URL.
+# Ticket purchase page with Zeffy embed
 
-## Important diagnosis
-If entering `top1000.polsv.org` changes the address bar to the Lovable URL, then the DNS is not connected as a real Lovable custom domain. It is currently acting like a redirect/forwarding setup at the DNS/registrar/proxy level.
+Add a standalone `/tickets` page that hosts the Zeffy ticketing form. Nothing links to it yet — you open it directly to test, and we wire up a "Buy Tickets" button later.
 
-Domain masking/iframe forwarding is not the right fix. It may keep the URL visually, but it can break routing, forms, cookies, analytics, SEO, and auth.
+## What the page looks like
 
-## Correct fix
-1. In Lovable, open **Project Settings → Project → Domains**.
-2. Click **Connect Domain** and enter exactly:
-   `top1000.polsv.org`
-3. If Lovable says the domain cannot be added, check these likely causes:
-   - The domain/subdomain is already attached to another Lovable project.
-   - The domain was previously added and is stuck in an incomplete setup state.
-   - You are adding the wrong value, such as `https://top1000.polsv.org` instead of only `top1000.polsv.org`.
-   - Your workspace/project permissions do not allow domain changes.
-   - The project is not published yet.
-4. In the manual DNS setup, do not use URL forwarding, redirect records, frame forwarding, or masking.
-5. Add the DNS record Lovable shows for `top1000.polsv.org` at the DNS provider.
-   - For a subdomain, Lovable may show either an A record or CNAME-style setup depending on the flow/proxy mode.
-   - If you use Cloudflare or another DNS proxy, enable **Domain uses Cloudflare or a similar proxy** in the Advanced section of the Lovable domain setup flow.
-6. Wait for the domain status in Lovable to become **Active**.
-7. Open the **⋯ menu** next to `top1000.polsv.org` and choose **Set as Primary**.
-8. Test in an incognito/private browser window:
-   - `https://top1000.polsv.org` should stay in the address bar.
-   - The `.lovable.app` URL should redirect to `top1000.polsv.org`.
+- Same dark brand background as the rest of the site (`#0F1435`), white text.
+- Simple header: PolSV logo linking home, plus the event title.
+- Heading: "Get Your Tickets" with a short line naming the 2026 summit dates (9–12 November 2026).
+- The Zeffy form rendered full width, centered, max ~900px, with generous vertical padding so it breathes on desktop and mobile.
+- Small footer line with a link back to the homepage and to PolSV contact.
 
-## If Lovable still will not let you add it
-Use this exact issue description when contacting Lovable support:
+## Technical notes
 
-> I need to connect `top1000.polsv.org` as a real custom domain for my published project. DNS currently forwards/redirects to the Lovable URL, but I do not want forwarding or masking. Lovable is not letting me add `top1000.polsv.org` in Project Settings → Domains. Please release or attach this subdomain so I can set it as Primary.
+New file `src/pages/Tickets.tsx`, new route `/tickets` in `src/App.tsx` (above the catch-all).
 
-## What not to do
-Do not use domain masking, iframe forwarding, or registrar URL forwarding. Those make the domain behave like a wrapper around the Lovable site instead of a real hosted custom domain.
+The Zeffy snippet you pasted is raw HTML with an inline `<script>`. React strips inline scripts from JSX, so the embed is wired up like this:
+
+- Render the two container divs (`data-zeffy-embed` and `data-zeffy-embed-fallback`) as normal JSX, keeping the exact `data-form-url` and `data-zeffy-embed-src` values from your snippet.
+- In a `useEffect`, create the `https://www.zeffy.com/embed/v2/zeffy-embed.js` script element, append it to the page, and attach the same fallback behaviour as an `onerror` handler: if the script fails to load, unhide the fallback div and set the iframe's `src` from `data-zeffy-embed-src`.
+- Clean up the script tag on unmount so navigating away and back doesn't stack duplicates.
+- The fallback iframe keeps its inline positioning styles as a React `style` object, and `allowTransparency` / `allowpaymentrequest` are passed through so payment requests work.
+
+The fallback wrapper uses a fixed 450px height as in your snippet; if the live Zeffy form renders taller than that in the fallback path, we can bump it after you test.
+
+## Not in this change
+
+- No "Buy Tickets" button added to the homepage or nav yet.
+- No backend, no order tracking — Zeffy handles the transaction entirely on their side.
+
+Once approved I'll build it, then you can visit `/tickets` in the preview to confirm the form loads.
