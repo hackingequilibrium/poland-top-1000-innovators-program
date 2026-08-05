@@ -54,18 +54,19 @@ const Tickets = () => {
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-3">
             Get Your Tickets
           </h1>
-          <p className="text-center font-inter font-light text-base md:text-lg text-white/60 mb-5">
+          <p className="text-center font-inter font-light text-xs md:text-sm text-white mb-5">
             Second Cohort Summit · 9–12 November 2026
             <br />
             Stanford University · UC Berkeley · UC San Francisco
           </p>
 
           <div className="flex justify-center mb-10">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#C70828] px-5 py-2 text-xs md:text-sm font-inter font-bold uppercase tracking-[0.15em] text-white shadow-[0_0_24px_rgba(199,8,40,0.55)]">
-              <span className="h-2 w-2 rounded-full bg-white/90 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#C70828] px-3.5 py-1 text-[10px] md:text-xs font-inter font-bold uppercase tracking-[0.12em] text-white shadow-[0_0_18px_rgba(199,8,40,0.5)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/90 animate-pulse" />
               Early bird ends Sep 30
             </span>
           </div>
+
 
 
 
