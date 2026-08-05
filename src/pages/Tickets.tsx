@@ -34,7 +34,7 @@ const Tickets = () => {
       <header className="px-6 md:px-12 lg:px-[100px] pt-8">
         <div className="max-w-[900px] mx-auto flex flex-col items-center text-center gap-4">
           <Link to="/">
-            <img src={polsvLogo.url} alt="PolSV" className="h-16 md:h-20 w-auto" />
+            <img src={polsvLogo.url} alt="PolSV" className="h-24 md:h-32 w-auto" />
           </Link>
           <h2 className="font-inter font-semibold text-sm md:text-lg uppercase tracking-tight text-white/80">
             Top 1000 Innovators of Poland in Silicon Valley
