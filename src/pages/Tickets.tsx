@@ -30,7 +30,7 @@ const Tickets = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0F1435] text-white font-sans">
+    <div className="min-h-screen flex flex-col bg-[#002266] text-white font-sans">
       <header className="px-6 md:px-12 lg:px-[100px] pt-8">
         <div className="flex items-center gap-4">
           <Link to="/">
@@ -60,7 +60,7 @@ const Tickets = () => {
               margin-right: 0 !important;
             }
           `}</style>
-          <div className="zeffy-wrap rounded-xl overflow-hidden">
+          <div className="zeffy-wrap">
 
 
             <div
