@@ -54,7 +54,7 @@ const Tickets = () => {
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-3">
             Get Your Tickets
           </h1>
-          <p className="text-center font-inter font-light text-xs md:text-sm text-white mb-5">
+          <p className="text-center font-inter font-light text-sm md:text-base text-white mb-5">
             Second Cohort Summit · 9–12 November 2026
             <br />
             Stanford University · UC Berkeley · UC San Francisco
