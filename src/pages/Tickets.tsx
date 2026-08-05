@@ -53,13 +53,15 @@ const Tickets = () => {
           </p>
 
           <style>{`
-            [data-zeffy-embed] > div {
+            .zeffy-wrap > div {
               max-width: 100% !important;
+              width: 100% !important;
               margin-left: 0 !important;
               margin-right: 0 !important;
             }
           `}</style>
-          <div className="rounded-xl overflow-hidden">
+          <div className="zeffy-wrap rounded-xl overflow-hidden">
+
 
             <div
               data-zeffy-embed
