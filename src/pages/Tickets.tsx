@@ -55,7 +55,7 @@ const Tickets = () => {
             Get Your Tickets
           </h1>
           <p className="text-center font-inter font-light text-sm md:text-base text-white mb-5">
-            Second Cohort Summit · 9–12 November 2026
+            Summit II · 9–12 November 2026
             <br />
             Stanford University · UC Berkeley · UC San Francisco
           </p>
