@@ -32,25 +32,33 @@ const Tickets = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#002266] text-white font-sans">
       <header className="px-6 md:px-12 lg:px-[100px] pt-8">
-        <div className="flex items-center gap-4">
+        <div className="max-w-[900px] mx-auto flex flex-col items-center text-center gap-4">
           <Link to="/">
             <img src={polsvLogo.url} alt="PolSV" className="h-16 md:h-20 w-auto" />
           </Link>
           <h2 className="font-inter font-semibold text-sm md:text-lg uppercase tracking-tight text-white/80">
             Top 1000 Innovators of Poland in Silicon Valley
           </h2>
+          <Link
+            to="/"
+            className="group inline-flex items-center gap-2 font-inter font-light text-sm text-white/60 hover:text-white transition-colors"
+          >
+            <span className="transition-transform group-hover:-translate-x-1">←</span>
+            Back to main site
+          </Link>
         </div>
       </header>
 
       <main className="flex-1 px-6 md:px-12 lg:px-[100px] py-12 md:py-16">
         <div className="max-w-[900px] mx-auto">
-          <h1 className="font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-3">
+          <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-3">
             Get Your Tickets
           </h1>
-          <p className="font-inter font-light text-base md:text-lg text-white/60 mb-10">
+          <p className="text-center font-inter font-light text-base md:text-lg text-white/60 mb-10">
             Second Cohort Summit · 9–12 November 2026 · Stanford · Berkeley · UC
             San Francisco
           </p>
+
 
           <style>{`
             .zeffy-wrap > div {
