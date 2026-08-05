@@ -60,7 +60,7 @@ const Tickets = () => {
               margin-right: 0 !important;
             }
           `}</style>
-          <div className="zeffy-wrap rounded-xl overflow-hidden">
+          <div className="zeffy-wrap">
 
 
             <div
