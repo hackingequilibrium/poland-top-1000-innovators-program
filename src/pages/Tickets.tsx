@@ -52,7 +52,17 @@ const Tickets = () => {
             San Francisco
           </p>
 
-          <div className="rounded-xl overflow-hidden">
+          <style>{`
+            .zeffy-wrap > div {
+              max-width: 100% !important;
+              width: 100% !important;
+              margin-left: 0 !important;
+              margin-right: 0 !important;
+            }
+          `}</style>
+          <div className="zeffy-wrap rounded-xl overflow-hidden">
+
+
             <div
               data-zeffy-embed
               data-form-url="/embed/ticketing/top-1000-innovators-of-poland-in-silicon-valley--2026"
