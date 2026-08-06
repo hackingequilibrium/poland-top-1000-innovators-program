@@ -119,30 +119,6 @@ const Index2026 = () => {
             </a>
           </div>
 
-          {/* Venue / Date */}
-          <div className="relative z-10 mt-12 flex flex-col sm:flex-row gap-8 sm:gap-16">
-            <div>
-              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
-                <MapPin className="h-4 w-4" />
-                Venue:
-              </div>
-              <div className="mt-2 text-white text-base md:text-lg font-normal">
-                Stanford University · UC San Francisco · UC Berkeley
-                <br />
-                <span className="whitespace-nowrap">Silicon Valley</span>
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
-                <CalendarDays className="h-4 w-4" />
-                Date:
-              </div>
-              <div className="mt-2 text-white text-base md:text-lg font-normal">
-                9-12 November 2026
-              </div>
-
-            </div>
-          </div>
 
           <div className="relative z-10 mt-12 text-[10px] text-white/25 tracking-wide">
             <div className="mb-2">
