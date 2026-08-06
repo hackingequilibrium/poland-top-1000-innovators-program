@@ -89,28 +89,13 @@ const Index2026 = () => {
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
             <div className="mt-5">
-              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.4em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
+              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.1em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
                 Summit II
               </span>
             </div>
           </div>
 
 
-          {/* Countdown */}
-          <div className="relative z-10 mt-10">
-            <div className="flex gap-8">
-              {countdownCells.map((c) => (
-                <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-3xl md:text-4xl font-light text-white tabular-nums">
-                    {c.value}
-                  </span>
-                  <span className="text-white/60 text-[10px] uppercase tracking-widest mt-1">
-                    {c.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
 
 
           {/* CTAs */}
