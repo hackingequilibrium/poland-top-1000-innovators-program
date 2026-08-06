@@ -324,12 +324,6 @@ export const PreviousSummitSection = () => (
         </Card>
       ))}
     </div>
-    <Link
-      to="/2025"
-      className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
-    >
-      View 2025 Highlights
-    </Link>
   </Section>
 );
 
