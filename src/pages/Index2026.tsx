@@ -125,9 +125,9 @@ const Index2026 = () => {
           <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               to="/tickets"
-              className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
+              className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#2f5bd0] bg-[#2f5bd0] transition-colors duration-300 hover:bg-[#24489f] hover:border-[#24489f]"
             >
-              <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+              <span className="text-base font-medium tracking-wide text-white">
                 Get Your Seat
               </span>
               <svg
@@ -140,12 +140,13 @@ const Index2026 = () => {
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]"
+                className="text-white"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Link>
+
 
             <a
               href="https://polsv.org/contact/"
