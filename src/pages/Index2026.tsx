@@ -63,7 +63,7 @@ const Index2026 = () => {
               </span>
             </h1>
             <div className="mt-5">
-              <span className="inline-block rounded-full px-6 py-3 text-sm md:text-base uppercase tracking-[0.05em] bg-[#C70828] border border-[#C70828] text-white">
+              <span className="inline-block rounded-none px-6 py-3 text-sm md:text-base uppercase tracking-[0.05em] bg-[#C70828] border border-[#C70828] text-white">
                 Summit II
               </span>
             </div>

@@ -38,7 +38,7 @@ export const Section = ({
 
 const Card = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <div
-    className={`rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 md:p-8 ${className}`}
+    className={`rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 md:p-8 ${className}`}
   >
     {children}
   </div>
@@ -174,14 +174,14 @@ export const SpeakersSection = () => (
       Leaders across science, policy, industry, investment, and innovation shaping the future of
       technology and commercialization.
     </p>
-    <div className="mt-10 flex items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03] py-16">
+    <div className="mt-10 flex items-center justify-center rounded-none border border-dashed border-white/15 bg-white/[0.03] py-16">
       <span className="text-white/50 text-xs uppercase tracking-[0.35em] font-light">Coming soon</span>
     </div>
     <a
       href="https://polsv.org/contact/"
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+      className="mt-8 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
     >
       Suggest a Speaker
     </a>
@@ -299,7 +299,7 @@ export const ProgramSection = () => (
 
 /* 8. Previous Summit */
 export const PreviousSummitSection = () => (
-  <Section id="2025" eyebrow="Previous Summit" title="Built on a successful inaugural cohort">
+  <Section id="2025" eyebrow="Previous Summit" title="Built on a successful inaugural cohort" className="bg-[#0B1A3F]">
     <p className="text-white/50 text-xs uppercase tracking-[0.3em] font-light">December 2025</p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
@@ -345,11 +345,11 @@ export const PartnersSection = () => (
         <div key={g.label}>
           <h3 className="text-white/50 text-[11px] uppercase tracking-[0.3em] font-light mb-4">{g.label}</h3>
           {g.img ? (
-            <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-6 md:p-8">
+            <div className="rounded-none border border-white/10 bg-white/[0.06] p-6 md:p-8">
               <img src={g.img} alt={g.label} className="w-full h-auto object-contain" loading="lazy" />
             </div>
           ) : (
-            <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.03] py-10 text-center">
+            <div className="rounded-none border border-dashed border-white/15 bg-white/[0.03] py-10 text-center">
               <span className="text-white/40 text-xs uppercase tracking-[0.3em] font-light">
                 Announced soon
               </span>
@@ -417,7 +417,7 @@ export const TicketsSection = () => (
           <p className="text-white/60 text-sm font-light leading-relaxed mt-4">{t.body}</p>
           <Link
             to="/tickets"
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+            className="mt-6 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
           >
             Get Your Seat
           </Link>
