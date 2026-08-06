@@ -299,7 +299,7 @@ export const ProgramSection = () => (
 
 /* 8. Previous Summit */
 export const PreviousSummitSection = () => (
-  <Section id="2025" eyebrow="Previous Summit" title="Built on a successful inaugural cohort">
+  <Section id="2025" eyebrow="Previous Summit" title="Built on a successful inaugural cohort" className="bg-[#0B1A3F]">
     <p className="text-white/50 text-xs uppercase tracking-[0.3em] font-light">December 2025</p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
