@@ -17,7 +17,7 @@ const Index2026 = () => {
 
 
   return (
-    <div className="w-full font-sans text-white bg-[#0a0a1a]">
+    <div className="font-inter-page w-full font-sans text-white bg-[#0a0a1a]">
       {/* ---------- 1. HERO ---------- */}
       <div className="min-h-screen w-full flex flex-col lg:flex-row relative overflow-hidden bg-black">
         <video

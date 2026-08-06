@@ -142,3 +142,8 @@ All colors MUST be HSL.
   transition: background-color 5000s ease-in-out 0s !important;
 }
 
+
+.font-inter-page,
+.font-inter-page * {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
+}
