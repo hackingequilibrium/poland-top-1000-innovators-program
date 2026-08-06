@@ -49,9 +49,9 @@ const Index2026 = () => {
 
           <div className="relative z-10 mt-8">
             <h1 className="font-display text-white leading-[0.88] tracking-tight uppercase">
-              <span className="block text-5xl md:text-6xl lg:text-7xl font-bold">TOP 1000</span>
-              <span className="block text-5xl md:text-6xl lg:text-7xl font-bold">Innovators</span>
-              <span className="block mt-2 text-2xl md:text-3xl lg:text-4xl font-bold">
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-bold">TOP 1000</span>
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-bold">Innovators</span>
+              <span className="block mt-2 text-xl md:text-2xl lg:text-3xl font-bold">
                 Of Poland in <span className="whitespace-nowrap">Silicon Valley</span>
               </span>
             </h1>
