@@ -337,16 +337,19 @@ export const PreviousSummitSection = () => (
         </Card>
       ))}
     </div>
-    <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-6">
-      {["Photos", "Highlight video", "Testimonials"].map((l) => (
-        <Card
-          key={l}
-          className="flex items-center justify-center min-h-[120px] border-dashed border-white/15"
-        >
-          <span className="text-white/40 text-xs uppercase tracking-[0.3em] font-light">{l} · coming soon</span>
-        </Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6">
+      {[
+        { src: summitStanfordGroup, alt: "Summit participants in front of Stanford Memorial Church" },
+        { src: summitStage, alt: "Opening remarks on stage at Stanford University" },
+        { src: summitPanel, alt: "Panel discussion at the 2025 inaugural summit" },
+        { src: summitCertificates, alt: "Participants receiving certificates of participation" },
+      ].map((p) => (
+        <div key={p.alt} className="rounded-none border border-white/10 overflow-hidden">
+          <img src={p.src} alt={p.alt} loading="lazy" className="block w-full h-64 md:h-72 object-cover" />
+        </div>
       ))}
     </div>
+
   </Section>
 );
 
