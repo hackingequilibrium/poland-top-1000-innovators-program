@@ -17,8 +17,9 @@ export const Section = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <section id={id} className={`px-6 md:px-12 lg:px-24 py-20 md:py-28 ${className}`}>
-    <div className="max-w-6xl mx-auto">
+  <section id={id} className={`px-10 md:px-16 py-20 md:py-28 ${className}`}>
+    <div className="max-w-none">
+
       {eyebrow && (
         <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">
           {eyebrow}
