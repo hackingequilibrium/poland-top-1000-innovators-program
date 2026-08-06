@@ -43,7 +43,7 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
 
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
-  <Section id="about" className="bg-[#3661F6]">
+  <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
     <p className="text-white text-lg md:text-2xl font-light leading-relaxed max-w-4xl">
       TOP 1000 Innovators of Poland in Silicon Valley brings together Poland's leading researchers,
       innovators, entrepreneurs, and industry leaders to accelerate commercialization through direct
@@ -51,10 +51,10 @@ export const AboutSection = () => (
     </p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-12">
       {[
-        { n: "4", l: "Intensive days" },
         { n: "120", l: "Participants" },
-        { n: "4", l: "Innovation verticals" },
-        { n: "4", l: "Silicon Valley venues" },
+        { n: "4", l: "Intensive days" },
+        { n: "90+", l: "Innovation projects" },
+        { n: "15", l: "Top universities" },
       ].map((s) => (
         <Card key={s.l}>
           <div className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">{s.n}</div>
@@ -62,7 +62,7 @@ export const AboutSection = () => (
         </Card>
       ))}
     </div>
-  </Section>
+  </section>
 );
 
 /* 3. Focus Areas */
