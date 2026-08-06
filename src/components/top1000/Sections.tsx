@@ -277,7 +277,7 @@ export const ProgramSection = () => (
       {days.map((d) => (
         <Card key={d.day}>
           <div className="flex items-baseline gap-3">
-            <span className="font-display text-sm font-semibold text-[#ff9aab] uppercase tracking-widest">
+            <span className="font-display text-sm font-semibold text-[#8FC7F5] uppercase tracking-widest">
               {d.day}
             </span>
             <span className="text-white/40 text-xs font-light">· {d.venue}</span>
@@ -415,7 +415,7 @@ export const TicketsSection = () => (
           </div>
           <p
             className={`text-xs uppercase tracking-[0.2em] font-light mt-2 ${
-              t.featured ? "text-[#ff9aab]" : "text-white/40"
+              t.featured ? "text-[#8FC7F5]" : "text-white/40"
             }`}
           >
             {t.note}
