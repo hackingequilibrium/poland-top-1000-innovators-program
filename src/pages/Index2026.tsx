@@ -16,13 +16,8 @@ import {
 
 const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
 
-const sectors = [
-  "Biomed & Life Sciences",
-  "Energy & Sustainability",
-  "Space & Avionics",
-  "Dual-Use Technologies",
-  "Artificial Intelligence",
-];
+
+
 
 function useCountdown(target: number) {
   const compute = () => {
@@ -106,13 +101,10 @@ const Index2026 = () => {
 
           {/* Countdown */}
           <div className="relative z-10 mt-10">
-            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-4">
-              Event Countdown
-            </h3>
             <div className="flex gap-8">
               {countdownCells.map((c) => (
                 <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-3xl md:text-4xl font-bold text-white tabular-nums">
+                  <span className="font-display text-3xl md:text-4xl font-light text-white tabular-nums">
                     {c.value}
                   </span>
                   <span className="text-white/60 text-[10px] uppercase tracking-widest mt-1">
@@ -123,27 +115,14 @@ const Index2026 = () => {
             </div>
           </div>
 
-          {/* Focus areas */}
-          <div className="relative z-10 mt-10">
-            <div className="flex flex-wrap gap-2">
-              {sectors.map((s) => (
-                <span
-                  key={s}
-                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm bg-white/5 border border-white/10 text-white/80"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
 
           {/* CTAs */}
           <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               to="/tickets"
-              className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
+              className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#2f5bd0] bg-[#2f5bd0] transition-colors duration-300 hover:bg-[#24489f] hover:border-[#24489f]"
             >
-              <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+              <span className="text-base font-medium tracking-wide text-white">
                 Get Your Seat
               </span>
               <svg
@@ -156,12 +135,13 @@ const Index2026 = () => {
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]"
+                className="text-white"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </Link>
+
 
             <a
               href="https://polsv.org/contact/"
