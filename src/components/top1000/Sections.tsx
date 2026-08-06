@@ -4,6 +4,10 @@ import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Hand
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import honoraryPatronage from "@/assets/honorary-patronage.png";
 import businessPartners from "@/assets/business-partners.png";
+import venueStanford from "@/assets/venue-stanford.jpg";
+import venueUcsf from "@/assets/venue-ucsf.jpg";
+import venueBerkeley from "@/assets/venue-berkeley.jpg";
+import venueTripleRing from "@/assets/venue-triple-ring.png.asset.json";
 
 export const Section = ({
   id,
