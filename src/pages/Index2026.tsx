@@ -9,7 +9,6 @@ import {
   VenuesSection,
   ProgramSection,
   PreviousSummitSection,
-  PartnersSection,
   TicketsSection,
   FinalCtaSection,
 } from "@/components/top1000/Sections";
@@ -221,7 +220,6 @@ const Index2026 = () => {
       <VenuesSection />
       <ProgramSection />
       <PreviousSummitSection />
-      <PartnersSection />
       <TicketsSection />
       <FinalCtaSection />
 
