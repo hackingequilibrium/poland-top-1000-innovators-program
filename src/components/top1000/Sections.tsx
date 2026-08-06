@@ -4,6 +4,10 @@ import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Hand
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import honoraryPatronage from "@/assets/honorary-patronage.png";
 import businessPartners from "@/assets/business-partners.png";
+import venueStanford from "@/assets/venue-stanford.jpg";
+import venueUcsf from "@/assets/venue-ucsf.jpg";
+import venueBerkeley from "@/assets/venue-berkeley.jpg";
+import venueTripleRing from "@/assets/venue-triple-ring.png.asset.json";
 
 export const Section = ({
   id,
@@ -90,7 +94,7 @@ const CountUp = ({ value }: { value: string }) => {
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-0 md:pt-0 pb-10 md:pb-14">
-    <p className="text-white/70 text-lg md:text-xl lg:text-2xl font-thin leading-snug max-w-[75%]">
+    <p className="text-white/70 text-base md:text-lg lg:text-xl font-thin leading-snug max-w-[75%]">
       <span className="text-white font-semibold">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
       leaders to accelerate commercialization through direct engagement with the Silicon Valley
@@ -233,11 +237,26 @@ export const VenuesSection = () => (
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
       A four-venue Silicon Valley experience
     </h2>
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-      {["Stanford University", "UCSF", "Triple Ring Technologies", "UC Berkeley"].map((v) => (
-        <Card key={v} className="flex items-center justify-center text-center min-h-[140px]">
-          <span className="font-display text-lg md:text-xl font-semibold text-white">{v}</span>
-        </Card>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      {[
+        { name: "Stanford University", img: venueStanford },
+        { name: "UCSF", img: venueUcsf },
+        { name: "Triple Ring Technologies", img: venueTripleRing.url },
+        { name: "UC Berkeley", img: venueBerkeley },
+      ].map((v) => (
+        <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
+          <img
+            src={v.img}
+            alt={`${v.name} venue`}
+            width={1024}
+            height={768}
+            loading="lazy"
+            className="w-full h-44 md:h-48 object-cover"
+          />
+          <div className="p-5 text-center">
+            <span className="font-display text-lg md:text-xl font-semibold text-white">{v.name}</span>
+          </div>
+        </div>
       ))}
     </div>
   </section>
@@ -286,7 +305,7 @@ export const ProgramSection = () => (
           <ul className="mt-4 space-y-2">
             {d.items.map((i) => (
               <li key={i} className="text-white/60 text-sm font-light pl-4 -indent-4 leading-relaxed">
-                <span className="text-[#C70828] mr-2">•</span>
+                <span className="text-[#8FC7F5] mr-2">•</span>
                 {i}
               </li>
             ))}
