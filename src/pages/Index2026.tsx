@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MapPin, CalendarDays } from "lucide-react";
 import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
 import {
   AboutSection,
@@ -74,8 +75,8 @@ const Index2026 = () => {
           style={{ background: "radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 85%)" }}
         />
 
-        {/* Left: branding */}
-        <div className="relative z-20 w-full lg:w-1/2 flex flex-col justify-start p-10 md:p-16 overflow-hidden">
+        {/* All hero content on the left */}
+        <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-center p-10 md:p-16">
           <a href="https://www.polsv.org" className="relative z-10 flex items-center gap-4">
             <img
               src="/assets/polsv-logo-color-dark-bg.svg"
@@ -84,10 +85,13 @@ const Index2026 = () => {
             />
           </a>
 
-          <div className="relative z-10 mt-8 lg:mt-10">
-            <div className="flex items-center gap-3 mb-5">
+          <div className="relative z-10 mt-8">
+            <div className="flex items-center gap-3 mb-4">
               <span className="text-white text-sm font-thin tracking-[0.2em] uppercase">
                 Save the Date
+              </span>
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#ff9aab] font-medium">
+                Summit II
               </span>
             </div>
 
@@ -98,38 +102,20 @@ const Index2026 = () => {
               Innovators of Poland in{" "}
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
-
-            <div className="mt-5 inline-flex items-center gap-3">
-              <span className="inline-block h-px w-6 bg-[#C70828]" />
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-[#ff9aab] font-medium">
-                Second Cohort
-              </span>
-              <span className="inline-block h-px w-6 bg-[#C70828]" />
-            </div>
-
-            <p className="mt-6 font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-white">
-              November 9-12, 2026
-            </p>
-            <p className="mt-3 text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/60">
-              Stanford &nbsp;·&nbsp; UCSF &nbsp;·&nbsp; UC Berkeley &nbsp;·&nbsp;{" "}
-              <span className="whitespace-nowrap">Silicon Valley</span>
-            </p>
           </div>
-        </div>
 
-        {/* Right: countdown, tags, CTAs */}
-        <div className="relative z-20 w-full lg:w-1/2 min-h-screen bg-[#0a0a1a]/10 backdrop-blur-md p-10 md:p-16 flex flex-col justify-center">
-          <div className="mb-12">
-            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-8">
+          {/* Countdown */}
+          <div className="relative z-10 mt-10">
+            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-4">
               Event Countdown
             </h3>
-            <div className="grid grid-cols-4 gap-3 md:gap-4">
+            <div className="flex gap-8">
               {countdownCells.map((c) => (
                 <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">
+                  <span className="font-display text-3xl md:text-4xl font-bold text-white tabular-nums">
                     {c.value}
                   </span>
-                  <span className="text-white/60 text-[10px] uppercase tracking-widest mt-2">
+                  <span className="text-white/60 text-[10px] uppercase tracking-widest mt-1">
                     {c.label}
                   </span>
                 </div>
@@ -137,10 +123,8 @@ const Index2026 = () => {
             </div>
           </div>
 
-          <div className="mb-12">
-            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-6">
-              Focus Areas
-            </h3>
+          {/* Focus areas */}
+          <div className="relative z-10 mt-10">
             <div className="flex flex-wrap gap-2">
               {sectors.map((s) => (
                 <span
@@ -153,45 +137,84 @@ const Index2026 = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          {/* CTAs */}
+          <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               to="/tickets"
-              className="group flex-1 flex items-center justify-between h-14 px-7 rounded-full bg-white/10 backdrop-blur-[20px] border border-white/20 transition-all duration-300 ease-out hover:bg-white hover:border-white/10 hover:backdrop-blur-none"
+              className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
             >
-              <span className="text-base md:text-lg font-bold text-white transition-colors duration-300 ease-out group-hover:text-[#0A0A0A]">
+              <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
                 Get Your Seat
               </span>
-              <div className="relative h-10 w-10 flex items-center justify-center shrink-0">
-                <div className="absolute inset-0 rounded-full bg-[#0A0A0A] scale-0 opacity-0 transition-all duration-300 ease-out group-hover:scale-100 group-hover:opacity-100" />
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="relative text-white transition-transform duration-300 ease-out group-hover:rotate-45"
-                >
-                  <path d="M7 17 17 7" />
-                  <path d="M7 7h10v10" />
-                </svg>
-              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </Link>
 
             <a
               href="https://polsv.org/contact/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center h-14 px-7 rounded-full border border-white/20 text-base font-semibold text-white/90 transition-colors duration-300 hover:bg-white/10 hover:text-white"
+              className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
             >
-              Partner With Us
+              <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+                Partner With Us
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
             </a>
           </div>
 
-          <div className="mt-12 text-[10px] text-white/20 tracking-wide text-center lg:text-left">
+          {/* Venue / Date */}
+          <div className="relative z-10 mt-12 flex flex-col sm:flex-row gap-8 sm:gap-16">
+            <div>
+              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
+                <MapPin className="h-4 w-4" />
+                Venue:
+              </div>
+              <div className="mt-2 text-white text-base md:text-lg font-medium">
+                Stanford · UCSF · UC Berkeley
+                <br />
+                <span className="whitespace-nowrap">Silicon Valley</span>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
+                <CalendarDays className="h-4 w-4" />
+                Date:
+              </div>
+              <div className="mt-2 text-white text-base md:text-lg font-medium">
+                9-12 November 2026
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10 mt-12 text-[10px] text-white/25 tracking-wide">
             <div className="mb-2">
               Organized by the Poland in Silicon Valley Center for Science, Innovation, and
               Entrepreneurship (PolSV).
@@ -210,6 +233,7 @@ const Index2026 = () => {
             </a>
           </div>
         </div>
+
       </div>
 
       {/* ---------- 2-11 ---------- */}
