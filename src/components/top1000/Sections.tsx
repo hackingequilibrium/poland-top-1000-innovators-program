@@ -90,11 +90,11 @@ const CountUp = ({ value }: { value: string }) => {
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-0 md:pt-0 pb-10 md:pb-14">
-    <p className="text-white/70 text-lg md:text-xl lg:text-2xl font-thin leading-snug max-w-none">
-      <span className="text-white font-normal">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
+    <p className="text-white/70 text-lg md:text-xl lg:text-2xl font-normal leading-snug max-w-none">
+      <span className="text-white font-semibold">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
-      <br className="hidden xl:block" /> leaders to accelerate commercialization through direct
-      engagement with the Silicon Valley innovation ecosystem.
+      leaders to accelerate commercialization through direct engagement with the Silicon Valley
+      innovation ecosystem.
     </p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
