@@ -106,13 +106,10 @@ const Index2026 = () => {
 
           {/* Countdown */}
           <div className="relative z-10 mt-10">
-            <h3 className="text-white/60 text-xs font-thin tracking-[0.3em] uppercase mb-4">
-              Event Countdown
-            </h3>
             <div className="flex gap-8">
               {countdownCells.map((c) => (
                 <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-3xl md:text-4xl font-bold text-white tabular-nums">
+                  <span className="font-display text-3xl md:text-4xl font-light text-white tabular-nums">
                     {c.value}
                   </span>
                   <span className="text-white/60 text-[10px] uppercase tracking-widest mt-1">
@@ -123,19 +120,6 @@ const Index2026 = () => {
             </div>
           </div>
 
-          {/* Focus areas */}
-          <div className="relative z-10 mt-10">
-            <div className="flex flex-wrap gap-2">
-              {sectors.map((s) => (
-                <span
-                  key={s}
-                  className="rounded-full px-4 py-2 text-xs font-medium backdrop-blur-sm bg-white/5 border border-white/10 text-white/80"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
 
           {/* CTAs */}
           <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
