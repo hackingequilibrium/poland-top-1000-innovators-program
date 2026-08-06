@@ -134,25 +134,15 @@ const Index2026 = () => {
             </a>
           </div>
 
+          <a
+            href="#about"
+            aria-label="Scroll for more information"
+            className="relative z-10 mt-12 inline-flex items-center gap-3 text-white/50 hover:text-white transition-colors duration-300 group w-fit"
+          >
+            <span className="text-[11px] uppercase tracking-[0.2em] font-light">More below</span>
+            <ChevronDown className="h-5 w-5 animate-bounce group-hover:translate-y-1 transition-transform duration-300" />
+          </a>
 
-          <div className="relative z-10 mt-12 text-[10px] text-white/25 tracking-wide">
-            <div className="mb-2">
-              Organized by the Poland in Silicon Valley Center for Science, Innovation, and
-              Entrepreneurship (PolSV).
-            </div>
-            <Link to="/2025" className="text-white/30 hover:text-white transition-colors duration-300">
-              2025 Inaugural Summit
-            </Link>
-            <span className="mx-2 text-white/20">|</span>
-            <a
-              href="https://polsv.org/contact/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/30 hover:text-white transition-colors duration-300"
-            >
-              Contact us
-            </a>
-          </div>
         </div>
 
       </div>
