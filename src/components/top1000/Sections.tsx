@@ -245,14 +245,16 @@ export const VenuesSection = () => (
         { name: "UC Berkeley", img: venueBerkeley },
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
-          <img
-            src={v.img}
-            alt={`${v.name} venue`}
-            width={1024}
-            height={768}
-            loading="lazy"
-            className="w-full h-44 md:h-48 object-cover"
-          />
+          <div className="w-full h-44 md:h-48 overflow-hidden">
+            <img
+              src={v.img}
+              alt={`${v.name} venue`}
+              width={1024}
+              height={768}
+              loading="lazy"
+              className="block w-full h-full object-cover object-center"
+            />
+          </div>
           <div className="p-5 text-center">
             <span className="font-display text-lg md:text-xl font-semibold text-white">{v.name}</span>
           </div>
