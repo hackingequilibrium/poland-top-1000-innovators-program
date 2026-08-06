@@ -41,6 +41,49 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
   </div>
 );
 
+/* Animated number that counts up when scrolled into view */
+const CountUp = ({ value }: { value: string }) => {
+  const target = parseInt(value.replace(/\D/g, ""), 10) || 0;
+  const suffix = value.replace(/[0-9]/g, "");
+  const [display, setDisplay] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !started.current) {
+          started.current = true;
+          const duration = 1200;
+          const start = performance.now();
+          const tick = (now: number) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            setDisplay(Math.round(target * eased));
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.4 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [target]);
+
+  return (
+    <div
+      ref={ref}
+      className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums"
+    >
+      {display}
+      {suffix}
+    </div>
+  );
+};
+
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-6 md:pt-8 pb-10 md:pb-14">
@@ -57,14 +100,18 @@ export const AboutSection = () => (
         { n: "90+", l: "Innovation projects" },
         { n: "15", l: "Top universities" },
       ].map((s) => (
-        <Card key={s.l}>
-          <div className="font-display text-4xl md:text-5xl font-bold text-white tabular-nums">{s.n}</div>
+        <div
+          key={s.l}
+          className="rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 md:p-8"
+        >
+          <CountUp value={s.n} />
           <div className="text-white/60 text-xs uppercase tracking-widest mt-2 font-light">{s.l}</div>
-        </Card>
+        </div>
       ))}
     </div>
   </section>
 );
+
 
 /* 3. Focus Areas */
 const focusAreas = [
