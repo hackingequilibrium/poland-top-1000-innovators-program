@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Dna, Leaf, Rocket, ShieldCheck, Cpu } from "lucide-react";
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import honoraryPatronage from "@/assets/honorary-patronage.png";
 import businessPartners from "@/assets/business-partners.png";
@@ -119,18 +120,22 @@ export const AboutSection = () => (
 const focusAreas = [
   {
     title: "Biomed & Life Sciences",
-    body: "Therapeutics, diagnostics, medical devices, and translational research moving from lab to clinic.",
+    icon: Dna,
+    body: "Therapeutics, diagnostics, medical devices, and translational research moving from lab to market.",
   },
   {
     title: "Energy & Sustainability",
+    icon: Leaf,
     body: "Clean energy, storage, materials, and climate technologies with global deployment potential.",
   },
   {
     title: "Space & Avionics",
+    icon: Rocket,
     body: "Satellite systems, propulsion, sensing, and aerospace engineering built for commercial scale.",
   },
   {
     title: "Dual-Use Technologies",
+    icon: ShieldCheck,
     body: "Innovation serving both civilian and defense markets, from resilience to advanced security.",
   },
 ];
@@ -140,14 +145,18 @@ export const FocusAreasSection = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {focusAreas.map((f) => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
-          <h3 className="font-display text-lg md:text-xl font-semibold text-white">{f.title}</h3>
-          <p className="text-white/60 text-sm md:text-base font-light leading-relaxed mt-3">{f.body}</p>
+          <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#ff9aab]" strokeWidth={1.25} />
+          <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{f.title}</h3>
+          <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-3">{f.body}</p>
         </Card>
       ))}
     </div>
     <Card className="mt-6 border-[#C70828]/40 bg-[#C70828]/10">
-      <h3 className="font-display text-xl md:text-2xl font-semibold text-white">AI Across Every Sector</h3>
-      <p className="text-white/70 text-sm md:text-base font-light leading-relaxed mt-3">
+      <div className="flex items-center gap-3">
+        <Cpu className="h-9 w-9 md:h-10 md:w-10 text-[#ff9aab] shrink-0" strokeWidth={1.25} />
+        <h3 className="font-display text-2xl md:text-3xl font-semibold text-white">AI Across Every Sector</h3>
+      </div>
+      <p className="text-white/70 text-base md:text-lg font-light leading-relaxed mt-3">
         AI is integrated across all four focus areas rather than presented as a separate track.
       </p>
     </Card>
