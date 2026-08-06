@@ -81,15 +81,6 @@ const Index2026 = () => {
           </a>
 
           <div className="relative z-10 mt-8">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-white text-sm font-thin tracking-[0.2em] uppercase">
-                Save the Date
-              </span>
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#ff9aab] font-medium">
-                Summit II
-              </span>
-            </div>
-
             <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter">
               TOP 1000
             </h1>
@@ -97,7 +88,13 @@ const Index2026 = () => {
               Innovators of Poland in{" "}
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
+            <div className="mt-5">
+              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.4em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
+                Summit II
+              </span>
+            </div>
           </div>
+
 
           {/* Countdown */}
           <div className="relative z-10 mt-10">
