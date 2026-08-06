@@ -16,13 +16,8 @@ import {
 
 const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
 
-const sectors = [
-  "Biomed & Life Sciences",
-  "Energy & Sustainability",
-  "Space & Avionics",
-  "Dual-Use Technologies",
-  "Artificial Intelligence",
-];
+
+
 
 function useCountdown(target: number) {
   const compute = () => {
