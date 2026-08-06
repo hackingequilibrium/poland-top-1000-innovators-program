@@ -26,6 +26,9 @@ const Index2026 = () => {
           muted
           playsInline
           preload="auto"
+          ref={(el) => {
+            if (el) el.playbackRate = 0.5;
+          }}
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src={bokehVideo.url} type="video/mp4" />
