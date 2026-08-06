@@ -443,20 +443,30 @@ export const FinalCtaSection = () => (
       Be part of the next generation of Polish researchers, innovators, entrepreneurs, and industry
       leaders building lasting connections with Silicon Valley.
     </p>
-    <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+    <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
       <Link
         to="/tickets"
-        className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-[#0A0A0A] transition-colors hover:bg-white/90"
+        className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
       >
-        Get Your Seat
+        <span className="text-base font-medium tracking-wide text-white">Get a Ticket</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
       </Link>
       <a
         href="https://polsv.org/contact/"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+        className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
       >
-        Partner With Us
+        <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+          Partner With Us
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
       </a>
     </div>
   </Section>
