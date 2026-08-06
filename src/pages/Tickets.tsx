@@ -60,12 +60,17 @@ const Tickets = () => {
             Stanford University · UC Berkeley · UC San Francisco
           </p>
 
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-[#C70828] px-3.5 py-1 text-[10px] md:text-xs font-inter font-bold uppercase tracking-[0.12em] text-white shadow-[0_0_18px_rgba(199,8,40,0.5)]">
               <span className="h-1.5 w-1.5 rounded-full bg-white/90 animate-pulse" />
               Early bird ends Sep 30
             </span>
           </div>
+
+          <div className="max-w-[640px] mx-auto mb-10 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-center font-inter text-[11px] md:text-xs font-light leading-relaxed text-white/80">
+            <span className="font-semibold text-white">Important:</span> The registration fee shown on this page is the total amount charged by PolSV. During checkout, Zeffy will offer an optional donation to support its platform. If you do not wish to contribute, simply select $0 from the dropdown menu.
+          </div>
+
 
 
 
