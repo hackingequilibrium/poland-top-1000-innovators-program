@@ -84,10 +84,10 @@ const Index2026 = () => {
           <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               to="/tickets"
-              className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#2f5bd0] bg-[#2f5bd0] transition-colors duration-300 hover:bg-[#24489f] hover:border-[#24489f]"
+              className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
             >
               <span className="text-base font-medium tracking-wide text-white">
-                Get Your Seat
+                Get a Ticket
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
