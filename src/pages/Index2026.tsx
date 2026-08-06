@@ -39,6 +39,10 @@ const Index2026 = () => {
           className="absolute inset-0 z-10 pointer-events-none"
           style={{ background: "radial-gradient(circle at 50% 40%, transparent 0%, #0a0a1a 85%)" }}
         />
+        <div
+          className="absolute inset-x-0 bottom-0 h-48 z-10 pointer-events-none"
+          style={{ background: "linear-gradient(to bottom, transparent 0%, #0B1A3F 100%)" }}
+        />
 
         {/* All hero content on the left */}
         <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-center p-10 md:p-16">
