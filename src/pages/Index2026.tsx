@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, CalendarDays } from "lucide-react";
-import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
+import bokehVideo from "@/assets/hero-2026.mp4.asset.json";
 import {
   AboutSection,
   FocusAreasSection,
