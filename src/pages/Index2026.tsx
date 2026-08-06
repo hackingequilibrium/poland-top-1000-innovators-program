@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, CalendarDays } from "lucide-react";
 import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
@@ -14,40 +13,8 @@ import {
   FinalCtaSection,
 } from "@/components/top1000/Sections";
 
-const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
-
-
-
-
-function useCountdown(target: number) {
-  const compute = () => {
-    const diff = Math.max(0, target - Date.now());
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-    return { days, hours, minutes, seconds };
-  };
-  const [time, setTime] = useState(compute());
-  useEffect(() => {
-    const id = setInterval(() => setTime(compute()), 1000);
-    return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [target]);
-  return time;
-}
-
-const pad = (n: number) => n.toString().padStart(2, "0");
-
 const Index2026 = () => {
-  const { days, hours, minutes, seconds } = useCountdown(EVENT_DATE);
 
-  const countdownCells = [
-    { label: "DAYS", value: days },
-    { label: "HOURS", value: pad(hours) },
-    { label: "MIN", value: pad(minutes) },
-    { label: "SEC", value: pad(seconds) },
-  ];
 
   return (
     <div className="w-full font-sans text-white bg-[#0a0a1a]">
@@ -89,28 +56,13 @@ const Index2026 = () => {
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
             <div className="mt-5">
-              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.4em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
+              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.1em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
                 Summit II
               </span>
             </div>
           </div>
 
 
-          {/* Countdown */}
-          <div className="relative z-10 mt-10">
-            <div className="flex gap-8">
-              {countdownCells.map((c) => (
-                <div key={c.label} className="flex flex-col">
-                  <span className="font-display text-3xl md:text-4xl font-light text-white tabular-nums">
-                    {c.value}
-                  </span>
-                  <span className="text-white/60 text-[10px] uppercase tracking-widest mt-1">
-                    {c.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
 
 
           {/* CTAs */}
@@ -174,8 +126,8 @@ const Index2026 = () => {
                 <MapPin className="h-4 w-4" />
                 Venue:
               </div>
-              <div className="mt-2 text-white text-base md:text-lg font-medium">
-                Stanford · UCSF · UC Berkeley
+              <div className="mt-2 text-white text-base md:text-lg font-normal">
+                Stanford University · UC San Francisco · UC Berkeley
                 <br />
                 <span className="whitespace-nowrap">Silicon Valley</span>
               </div>
@@ -185,9 +137,10 @@ const Index2026 = () => {
                 <CalendarDays className="h-4 w-4" />
                 Date:
               </div>
-              <div className="mt-2 text-white text-base md:text-lg font-medium">
+              <div className="mt-2 text-white text-base md:text-lg font-normal">
                 9-12 November 2026
               </div>
+
             </div>
           </div>
 
