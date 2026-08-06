@@ -165,7 +165,11 @@ export const FocusAreasSection = () => (
 
 /* 4. Featured Voices */
 export const SpeakersSection = () => (
-  <Section id="speakers" eyebrow="Featured Voices" title="Speakers">
+  <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+    <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Featured Voices</p>
+    <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
+      Speakers
+    </h2>
     <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-3xl">
       Leaders across science, policy, industry, investment, and innovation shaping the future of
       technology and commercialization.
@@ -173,37 +177,49 @@ export const SpeakersSection = () => (
     <div className="mt-10 flex items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.03] py-16">
       <span className="text-white/50 text-xs uppercase tracking-[0.35em] font-light">Coming soon</span>
     </div>
-  </Section>
+    <a
+      href="https://polsv.org/contact/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+    >
+      Suggest a Speaker
+    </a>
+  </section>
 );
 
 /* 5. Why TOP1000 */
 const whyItems = [
   {
     title: "From Research to Market",
+    icon: FlaskConical,
     body: "Move beyond publications and technical validation toward commercialization.",
   },
   {
     title: "Silicon Valley Network",
+    icon: Network,
     body: "Direct access to researchers, founders, investors, mentors, and industry leaders.",
   },
   {
     title: "Personalized Commercialization Path",
+    icon: Route,
     body: "Each participant follows a customized pathway informed by an Innovation Readiness assessment.",
   },
   {
     title: "Long-Term Collaboration",
+    icon: Handshake,
     body: "Become part of an ongoing Poland–Silicon Valley innovation network.",
   },
 ];
 
 export const WhySection = () => (
   <Section id="why" eyebrow="Why TOP1000?" title="What participants take home">
-    <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-      {whyItems.map((w, i) => (
-        <Card key={w.title}>
-          <span className="font-display text-sm text-[#ff9aab] tabular-nums">0{i + 1}</span>
-          <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{w.title}</h3>
-          <p className="text-white/60 text-sm md:text-base font-light leading-relaxed mt-2">{w.body}</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      {whyItems.map((w) => (
+        <Card key={w.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
+          <w.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
+          <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{w.title}</h3>
+          <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-3">{w.body}</p>
         </Card>
       ))}
     </div>
@@ -212,7 +228,11 @@ export const WhySection = () => (
 
 /* 6. Venues */
 export const VenuesSection = () => (
-  <Section id="venues" eyebrow="Venues" title="A four-venue Silicon Valley experience">
+  <section id="venues" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+    <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Venues</p>
+    <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
+      A four-venue Silicon Valley experience
+    </h2>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {["Stanford University", "UCSF", "Triple Ring Technologies", "UC Berkeley"].map((v) => (
         <Card key={v} className="flex items-center justify-center text-center min-h-[140px]">
@@ -220,7 +240,7 @@ export const VenuesSection = () => (
         </Card>
       ))}
     </div>
-  </Section>
+  </section>
 );
 
 /* 7. Program Experience */
