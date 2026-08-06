@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, CalendarDays } from "lucide-react";
 import bokehVideo from "@/assets/bokeh-blue-hero.mp4.asset.json";
@@ -14,40 +13,8 @@ import {
   FinalCtaSection,
 } from "@/components/top1000/Sections";
 
-const EVENT_DATE = new Date("2026-11-09T00:00:00-08:00").getTime();
-
-
-
-
-function useCountdown(target: number) {
-  const compute = () => {
-    const diff = Math.max(0, target - Date.now());
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-    return { days, hours, minutes, seconds };
-  };
-  const [time, setTime] = useState(compute());
-  useEffect(() => {
-    const id = setInterval(() => setTime(compute()), 1000);
-    return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [target]);
-  return time;
-}
-
-const pad = (n: number) => n.toString().padStart(2, "0");
-
 const Index2026 = () => {
-  const { days, hours, minutes, seconds } = useCountdown(EVENT_DATE);
 
-  const countdownCells = [
-    { label: "DAYS", value: days },
-    { label: "HOURS", value: pad(hours) },
-    { label: "MIN", value: pad(minutes) },
-    { label: "SEC", value: pad(seconds) },
-  ];
 
   return (
     <div className="w-full font-sans text-white bg-[#0a0a1a]">
