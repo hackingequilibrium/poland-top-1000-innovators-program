@@ -239,10 +239,10 @@ export const VenuesSection = () => (
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {[
-        { name: "Stanford University", img: venueStanford },
+        { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UCSF", img: venueUcsf },
         { name: "Triple Ring Technologies", img: venueTripleRing.url },
-        { name: "UC Berkeley", img: venueBerkeley },
+        { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
           <div className="w-full h-44 md:h-48 overflow-hidden">
@@ -252,7 +252,9 @@ export const VenuesSection = () => (
               width={1024}
               height={768}
               loading="lazy"
-              className="block w-full h-full object-cover object-center"
+              className={`block w-full h-full object-cover ${
+                v.cropBottomEdge ? "object-top scale-[1.02]" : "object-center"
+              }`}
             />
           </div>
           <div className="p-5 text-center">
