@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Dna, Leaf, Rocket, ShieldCheck, Cpu } from "lucide-react";
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import honoraryPatronage from "@/assets/honorary-patronage.png";
 import businessPartners from "@/assets/business-partners.png";
