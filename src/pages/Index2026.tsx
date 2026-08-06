@@ -43,7 +43,7 @@ const Index2026 = () => {
             <img
               src="/assets/polsv-logo-color-dark-bg.svg"
               alt="PolSV"
-              className="h-20 md:h-24 lg:h-28 w-auto"
+              className="h-28 md:h-32 lg:h-40 w-auto"
             />
           </a>
 
@@ -51,16 +51,29 @@ const Index2026 = () => {
             <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter">
               TOP 1000
             </h1>
-            <p className="mt-4 text-lg md:text-xl lg:text-2xl font-medium text-white/85 max-w-md leading-relaxed">
+            <p className="mt-4 text-xl md:text-2xl lg:text-3xl font-medium text-white/85 max-w-lg leading-relaxed">
               Innovators of Poland in{" "}
               <span className="whitespace-nowrap">Silicon Valley</span>
             </p>
             <div className="mt-5">
-              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.1em] backdrop-blur-sm bg-white/5 border border-white/20 text-white/80">
+              <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.05em] bg-[#C70828] border border-[#C70828] text-white">
                 Summit II
               </span>
             </div>
+
+            {/* Venue / Date */}
+            <div className="mt-6 space-y-2">
+              <div className="flex items-center gap-2 text-white text-base md:text-lg font-normal">
+                <MapPin className="h-4 w-4 shrink-0 text-[#ff9aab]" />
+                <span>Stanford University · UC San Francisco · UC Berkeley</span>
+              </div>
+              <div className="flex items-center gap-2 text-white text-base md:text-lg font-normal">
+                <CalendarDays className="h-4 w-4 shrink-0 text-[#ff9aab]" />
+                <span>9-12 November 2026</span>
+              </div>
+            </div>
           </div>
+
 
 
 
@@ -119,30 +132,6 @@ const Index2026 = () => {
             </a>
           </div>
 
-          {/* Venue / Date */}
-          <div className="relative z-10 mt-12 flex flex-col sm:flex-row gap-8 sm:gap-16">
-            <div>
-              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
-                <MapPin className="h-4 w-4" />
-                Venue:
-              </div>
-              <div className="mt-2 text-white text-base md:text-lg font-normal">
-                Stanford University · UC San Francisco · UC Berkeley
-                <br />
-                <span className="whitespace-nowrap">Silicon Valley</span>
-              </div>
-            </div>
-            <div>
-              <div className="flex items-center gap-2 text-[#ff9aab] text-xs uppercase tracking-[0.2em]">
-                <CalendarDays className="h-4 w-4" />
-                Date:
-              </div>
-              <div className="mt-2 text-white text-base md:text-lg font-normal">
-                9-12 November 2026
-              </div>
-
-            </div>
-          </div>
 
           <div className="relative z-10 mt-12 text-[10px] text-white/25 tracking-wide">
             <div className="mb-2">
