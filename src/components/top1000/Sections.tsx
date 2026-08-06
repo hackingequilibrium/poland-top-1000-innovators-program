@@ -44,7 +44,7 @@ const Card = ({ children, className = "" }: { children: React.ReactNode; classNa
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-6 md:pt-8 pb-10 md:pb-14">
-    <p className="text-white/70 text-sm md:text-base font-thin leading-snug max-w-none">
+    <p className="text-white/70 text-base md:text-lg font-thin leading-snug max-w-none">
       <span className="text-white font-normal">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
       <br className="hidden md:block" /> leaders to accelerate commercialization through direct
