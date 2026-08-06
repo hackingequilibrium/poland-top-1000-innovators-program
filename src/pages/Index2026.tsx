@@ -66,11 +66,11 @@ const Index2026 = () => {
 
             {/* Venue / Date */}
             <div className="mt-6 space-y-2">
-              <div className="flex items-center gap-2 text-white text-base md:text-lg font-light">
+              <div className="flex items-center gap-2 text-white text-sm md:text-base font-extralight">
                 <MapPin className="h-4 w-4 shrink-0 text-white" />
                 <span>Stanford University · UC San Francisco · UC Berkeley · Silicon Valley</span>
               </div>
-              <div className="flex items-center gap-2 text-white text-base md:text-lg font-light">
+              <div className="flex items-center gap-2 text-white text-sm md:text-base font-extralight">
                 <CalendarDays className="h-4 w-4 shrink-0 text-white" />
                 <span>9-12 November 2026</span>
               </div>
