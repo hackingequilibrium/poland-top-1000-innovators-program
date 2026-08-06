@@ -233,11 +233,26 @@ export const VenuesSection = () => (
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
       A four-venue Silicon Valley experience
     </h2>
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-      {["Stanford University", "UCSF", "Triple Ring Technologies", "UC Berkeley"].map((v) => (
-        <Card key={v} className="flex items-center justify-center text-center min-h-[140px]">
-          <span className="font-display text-lg md:text-xl font-semibold text-white">{v}</span>
-        </Card>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      {[
+        { name: "Stanford University", img: venueStanford },
+        { name: "UCSF", img: venueUcsf },
+        { name: "Triple Ring Technologies", img: venueTripleRing.url },
+        { name: "UC Berkeley", img: venueBerkeley },
+      ].map((v) => (
+        <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
+          <img
+            src={v.img}
+            alt={`${v.name} venue`}
+            width={1024}
+            height={768}
+            loading="lazy"
+            className="w-full h-44 md:h-48 object-cover"
+          />
+          <div className="p-5 text-center">
+            <span className="font-display text-lg md:text-xl font-semibold text-white">{v.name}</span>
+          </div>
+        </div>
       ))}
     </div>
   </section>
