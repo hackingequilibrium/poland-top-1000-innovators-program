@@ -90,7 +90,7 @@ const CountUp = ({ value }: { value: string }) => {
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-0 md:pt-0 pb-10 md:pb-14">
-    <p className="text-white/70 text-lg md:text-xl lg:text-2xl font-normal leading-snug max-w-none">
+    <p className="text-white/70 text-lg md:text-xl lg:text-2xl font-thin leading-snug max-w-[75%]">
       <span className="text-white font-semibold">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
       leaders to accelerate commercialization through direct engagement with the Silicon Valley
@@ -277,7 +277,7 @@ export const ProgramSection = () => (
       {days.map((d) => (
         <Card key={d.day}>
           <div className="flex items-baseline gap-3">
-            <span className="font-display text-sm font-semibold text-[#ff9aab] uppercase tracking-widest">
+            <span className="font-display text-sm font-semibold text-[#8FC7F5] uppercase tracking-widest">
               {d.day}
             </span>
             <span className="text-white/40 text-xs font-light">· {d.venue}</span>
@@ -324,12 +324,6 @@ export const PreviousSummitSection = () => (
         </Card>
       ))}
     </div>
-    <Link
-      to="/2025"
-      className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
-    >
-      View 2025 Highlights
-    </Link>
   </Section>
 );
 
@@ -415,7 +409,7 @@ export const TicketsSection = () => (
           </div>
           <p
             className={`text-xs uppercase tracking-[0.2em] font-light mt-2 ${
-              t.featured ? "text-[#ff9aab]" : "text-white/40"
+              t.featured ? "text-[#8FC7F5]" : "text-white/40"
             }`}
           >
             {t.note}
@@ -443,20 +437,30 @@ export const FinalCtaSection = () => (
       Be part of the next generation of Polish researchers, innovators, entrepreneurs, and industry
       leaders building lasting connections with Silicon Valley.
     </p>
-    <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+    <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
       <Link
         to="/tickets"
-        className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-[#0A0A0A] transition-colors hover:bg-white/90"
+        className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
       >
-        Get Your Seat
+        <span className="text-base font-medium tracking-wide text-white">Get a Ticket</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
       </Link>
       <a
         href="https://polsv.org/contact/"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+        className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
       >
-        Partner With Us
+        <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+          Partner With Us
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
       </a>
     </div>
   </Section>
