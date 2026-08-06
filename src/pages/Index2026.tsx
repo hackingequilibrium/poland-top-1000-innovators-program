@@ -48,13 +48,13 @@ const Index2026 = () => {
           </a>
 
           <div className="relative z-10 mt-8">
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tighter">
-              TOP 1000
+            <h1 className="font-display text-white leading-[0.88] tracking-tight uppercase">
+              <span className="block text-5xl md:text-6xl lg:text-7xl font-bold">TOP 1000</span>
+              <span className="block text-5xl md:text-6xl lg:text-7xl font-bold">Innovators</span>
+              <span className="block mt-2 text-2xl md:text-3xl lg:text-4xl font-bold">
+                Of Poland in <span className="whitespace-nowrap">Silicon Valley</span>
+              </span>
             </h1>
-            <p className="mt-4 text-xl md:text-2xl lg:text-3xl font-medium text-white/85 max-w-lg leading-relaxed">
-              Innovators of Poland in{" "}
-              <span className="whitespace-nowrap">Silicon Valley</span>
-            </p>
             <div className="mt-5">
               <span className="inline-block rounded-full px-4 py-2 text-[10px] md:text-xs uppercase tracking-[0.05em] bg-[#C70828] border border-[#C70828] text-white">
                 Summit II
@@ -63,15 +63,17 @@ const Index2026 = () => {
 
             {/* Venue / Date */}
             <div className="mt-6 space-y-2">
-              <div className="flex items-center gap-2 text-white text-base md:text-lg font-normal">
-                <MapPin className="h-4 w-4 shrink-0 text-[#ff9aab]" />
-                <span>Stanford University · UC San Francisco · UC Berkeley</span>
+              <div className="flex items-center gap-2 text-white text-base md:text-lg font-light">
+                <MapPin className="h-4 w-4 shrink-0 text-white" />
+                <span>Stanford University · UC San Francisco · UC Berkeley · Silicon Valley</span>
               </div>
-              <div className="flex items-center gap-2 text-white text-base md:text-lg font-normal">
-                <CalendarDays className="h-4 w-4 shrink-0 text-[#ff9aab]" />
+              <div className="flex items-center gap-2 text-white text-base md:text-lg font-light">
+                <CalendarDays className="h-4 w-4 shrink-0 text-white" />
                 <span>9-12 November 2026</span>
               </div>
             </div>
+          </div>
+
           </div>
 
 
