@@ -47,7 +47,7 @@ export const AboutSection = () => (
     <p className="text-white/70 text-base md:text-lg font-thin leading-snug max-w-none">
       <span className="text-white font-normal">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
-      <br className="hidden md:block" /> leaders to accelerate commercialization through direct
+      <br className="hidden lg:block" /> leaders to accelerate commercialization through direct
       engagement with the Silicon Valley innovation ecosystem.
     </p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
