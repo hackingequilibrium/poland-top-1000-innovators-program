@@ -145,7 +145,7 @@ export const FocusAreasSection = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {focusAreas.map((f) => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
-          <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#ff9aab]" strokeWidth={1.25} />
+          <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{f.title}</h3>
           <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-3">{f.body}</p>
         </Card>
@@ -153,7 +153,7 @@ export const FocusAreasSection = () => (
     </div>
     <Card className="mt-6 border-[#C70828]/40 bg-[#C70828]/10">
       <div className="flex items-center gap-3">
-        <Cpu className="h-9 w-9 md:h-10 md:w-10 text-[#ff9aab] shrink-0" strokeWidth={1.25} />
+        <Cpu className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5] shrink-0" strokeWidth={1.25} />
         <h3 className="font-display text-2xl md:text-3xl font-semibold text-white">AI Across Every Sector</h3>
       </div>
       <p className="text-white/70 text-base md:text-lg font-light leading-relaxed mt-3">
