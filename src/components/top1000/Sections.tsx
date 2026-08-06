@@ -137,10 +137,10 @@ const focusAreas = [
 
 export const FocusAreasSection = () => (
   <Section id="focus" eyebrow="Focus Areas" title="Four verticals, one ecosystem">
-    <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {focusAreas.map((f) => (
-        <Card key={f.title} className="transition-colors hover:bg-white/[0.07]">
-          <h3 className="font-display text-xl md:text-2xl font-semibold text-white">{f.title}</h3>
+        <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
+          <h3 className="font-display text-lg md:text-xl font-semibold text-white">{f.title}</h3>
           <p className="text-white/60 text-sm md:text-base font-light leading-relaxed mt-3">{f.body}</p>
         </Card>
       ))}
