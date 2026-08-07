@@ -347,18 +347,22 @@ export const PreviousSummitSection = () => (
         </Card>
       ))}
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6">
-      {[
-        { src: summitStanfordGroup, alt: "Summit participants in front of Stanford Memorial Church" },
-        { src: summitStage, alt: "Opening remarks on stage at Stanford University" },
-        { src: summitPanel, alt: "Panel discussion at the 2025 inaugural summit" },
-        { src: summitCertificates, alt: "Participants receiving certificates of participation" },
-      ].map((p) => (
-        <div key={p.alt} className="rounded-none border border-white/10 overflow-hidden">
-          <img src={p.src} alt={p.alt} loading="lazy" className="block w-full h-64 md:h-72 object-cover" />
-        </div>
-      ))}
+    <div className="mt-6 -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto">
+      <div className="flex gap-4 min-w-max pb-2">
+        {[
+          { src: summitStanfordGroup, alt: "Summit participants in front of Stanford Memorial Church" },
+          { src: summitStage, alt: "Opening remarks on stage at Stanford University" },
+          { src: summitPanel, alt: "Panel discussion at the 2025 inaugural summit" },
+          { src: summitOpenAi, alt: "Interview with OpenAI technical lead Lukasz Kaiser" },
+          { src: summitCertificates, alt: "Participants receiving certificates of participation" },
+        ].map((p) => (
+          <div key={p.alt} className="rounded-none border border-white/10 overflow-hidden shrink-0">
+            <img src={p.src} alt={p.alt} loading="lazy" className="block h-40 md:h-48 w-auto object-cover" />
+          </div>
+        ))}
+      </div>
     </div>
+
 
   </Section>
 );
