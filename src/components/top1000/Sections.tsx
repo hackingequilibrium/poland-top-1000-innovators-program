@@ -315,7 +315,7 @@ export const ProgramSection = () => (
             <span className="font-display text-sm font-semibold text-[#8FC7F5] uppercase tracking-widest">
               {d.day}
             </span>
-            <span className="text-white/40 text-xs font-light">· {d.venue}</span>
+            <span className="text-white/40 text-sm md:text-base font-light">· {d.venue}</span>
           </div>
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{d.title}</h3>
           <ul className="mt-4 space-y-2">
