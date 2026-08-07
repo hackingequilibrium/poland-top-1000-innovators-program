@@ -159,10 +159,10 @@ const SuggestSpeaker = () => {
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-3">
             Suggest a Speaker
           </h1>
-          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-2">
+          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-0.5 leading-snug">
             Know a leader in science, policy, industry, or innovation
           </p>
-          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-2">
+          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-2 leading-snug">
             who should speak at Summit II? Tell us about them.
           </p>
           <p className="text-center font-inter font-light text-sm text-[#8FC7F5] mb-10">
