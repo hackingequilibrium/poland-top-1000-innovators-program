@@ -179,8 +179,57 @@ const Admin = () => {
       fetchAdminUsers();
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
+      fetchPartnerInquiries();
     }
   }, [isAdmin, user]);
+
+  const fetchPartnerInquiries = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('partner_inquiries')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching partner inquiries:', error);
+        toast.error("Failed to load partner inquiries");
+      } else {
+        setPartnerInquiries(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportPartnerInquiries = () => {
+    if (partnerInquiries.length === 0) {
+      toast.error("No partner inquiries to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Organization', 'Role', 'Email', 'Org Type', 'Area of Interest', 'Website', 'LinkedIn', 'Submitted At'].join(','),
+      ...partnerInquiries.map(p => [
+        `"${p.name}"`,
+        `"${p.organization}"`,
+        `"${p.role ?? ''}"`,
+        `"${p.email}"`,
+        `"${p.org_type}"`,
+        `"${p.area_of_interest.replace(/"/g, '""')}"`,
+        `"${p.website ?? ''}"`,
+        `"${p.linkedin ?? ''}"`,
+        `"${new Date(p.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `partners-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Partner inquiries exported successfully");
+  };
 
   const fetchSpeakerSuggestions = async () => {
     try {
