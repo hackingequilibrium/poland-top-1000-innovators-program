@@ -31,6 +31,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteMeta />
         <Routes>
           <Route path="/" element={<Index2026 />} />
           <Route path="/2025" element={<Index />} />
