@@ -201,6 +201,12 @@ export const SpeakersSection = () => (
     >
       Suggest a Speaker
     </Link>
+    <Link
+      to="/partner"
+      className="mt-4 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+    >
+      Partner With Us
+    </Link>
   </section>
 );
 
