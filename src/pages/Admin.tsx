@@ -79,6 +79,19 @@ interface SpeakerSuggestion {
   created_at: string;
 }
 
+interface PartnerInquiry {
+  id: string;
+  name: string;
+  organization: string;
+  role: string | null;
+  email: string;
+  org_type: string;
+  area_of_interest: string;
+  website: string | null;
+  linkedin: string | null;
+  created_at: string;
+}
+
 
 interface AdminUser {
   user_id: string;
