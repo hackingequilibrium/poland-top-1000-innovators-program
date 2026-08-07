@@ -17,6 +17,8 @@ const summitStanfordGroup = summitStanfordGroupAsset.url;
 const summitStage = summitStageAsset.url;
 const summitPanel = summitPanelAsset.url;
 const summitCertificates = summitCertificatesAsset.url;
+const summitOpenAi = summitOpenAiAsset.url;
+
 
 
 export const Section = ({
