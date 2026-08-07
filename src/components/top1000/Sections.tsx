@@ -12,6 +12,8 @@ import summitStanfordGroupAsset from "@/assets/summit-2025-stanford-group.jpg.as
 import summitStageAsset from "@/assets/summit-2025-stage.jpg.asset.json";
 import summitPanelAsset from "@/assets/summit-2025-panel.jpg.asset.json";
 import summitCertificatesAsset from "@/assets/summit-2025-certificates.png.asset.json";
+import summitOpenAiAsset from "@/assets/summit-2025-openai-interview.jpg.asset.json";
+
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
 const summitStage = summitStageAsset.url;
