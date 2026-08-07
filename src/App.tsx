@@ -21,6 +21,7 @@ import Partner from "./pages/Partner";
 import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
+import RouteMeta from "./components/RouteMeta";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteMeta />
         <Routes>
           <Route path="/" element={<Index2026 />} />
           <Route path="/2025" element={<Index />} />
