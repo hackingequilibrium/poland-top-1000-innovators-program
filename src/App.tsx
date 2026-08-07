@@ -17,6 +17,7 @@ import Workshops from "./pages/Workshops";
 import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
