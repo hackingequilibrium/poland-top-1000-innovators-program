@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'display': ['Poppins', 'Inter', 'sans-serif'],
-        'sans': ['Roboto', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
