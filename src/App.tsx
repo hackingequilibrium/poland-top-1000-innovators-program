@@ -48,6 +48,8 @@ const App = () => (
           <Route path="/eventify-app" element={<EventifyApp />} />
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
+
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
