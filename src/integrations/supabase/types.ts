@@ -179,6 +179,45 @@ export type Database = {
         }
         Relationships: []
       }
+      partner_inquiries: {
+        Row: {
+          area_of_interest: string
+          created_at: string
+          email: string
+          id: string
+          linkedin: string | null
+          name: string
+          org_type: string
+          organization: string
+          role: string | null
+          website: string | null
+        }
+        Insert: {
+          area_of_interest: string
+          created_at?: string
+          email: string
+          id?: string
+          linkedin?: string | null
+          name: string
+          org_type: string
+          organization: string
+          role?: string | null
+          website?: string | null
+        }
+        Update: {
+          area_of_interest?: string
+          created_at?: string
+          email?: string
+          id?: string
+          linkedin?: string | null
+          name?: string
+          org_type?: string
+          organization?: string
+          role?: string | null
+          website?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

@@ -79,6 +79,19 @@ interface SpeakerSuggestion {
   created_at: string;
 }
 
+interface PartnerInquiry {
+  id: string;
+  name: string;
+  organization: string;
+  role: string | null;
+  email: string;
+  org_type: string;
+  area_of_interest: string;
+  website: string | null;
+  linkedin: string | null;
+  created_at: string;
+}
+
 
 interface AdminUser {
   user_id: string;
@@ -100,6 +113,7 @@ const Admin = () => {
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
+  const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
 
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
@@ -165,8 +179,57 @@ const Admin = () => {
       fetchAdminUsers();
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
+      fetchPartnerInquiries();
     }
   }, [isAdmin, user]);
+
+  const fetchPartnerInquiries = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('partner_inquiries')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching partner inquiries:', error);
+        toast.error("Failed to load partner inquiries");
+      } else {
+        setPartnerInquiries(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportPartnerInquiries = () => {
+    if (partnerInquiries.length === 0) {
+      toast.error("No partner inquiries to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Organization', 'Role', 'Email', 'Org Type', 'Area of Interest', 'Website', 'LinkedIn', 'Submitted At'].join(','),
+      ...partnerInquiries.map(p => [
+        `"${p.name}"`,
+        `"${p.organization}"`,
+        `"${p.role ?? ''}"`,
+        `"${p.email}"`,
+        `"${p.org_type}"`,
+        `"${p.area_of_interest.replace(/"/g, '""')}"`,
+        `"${p.website ?? ''}"`,
+        `"${p.linkedin ?? ''}"`,
+        `"${new Date(p.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `partners-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Partner inquiries exported successfully");
+  };
 
   const fetchSpeakerSuggestions = async () => {
     try {
@@ -728,6 +791,9 @@ const Admin = () => {
             <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
             </TabsTrigger>
+            <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Partners 2026
+            </TabsTrigger>
             <TabsTrigger value="submissions" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Session Submissions
             </TabsTrigger>
@@ -1173,9 +1239,69 @@ const Admin = () => {
                     </Button>
                   </form>
                 </CardContent>
-              </Card>
-            )}
+               </Card>
+             )}
           </TabsContent>
+
+            <TabsContent value="partners" className="mt-0">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-semibold text-white">Partners 2026</h3>
+                  <Button
+                    onClick={handleExportPartnerInquiries}
+                    className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
+                  >
+                    Export CSV
+                  </Button>
+                </div>
+
+                {partnerInquiries.length === 0 ? (
+                  <p className="text-gray-400 text-center py-12">No partner inquiries yet.</p>
+                ) : (
+                  <div className="space-y-4">
+                    {partnerInquiries.map((p) => (
+                      <div key={p.id} className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                          <div>
+                            <span className="text-white font-semibold">{p.name}</span>
+                            <span className="text-gray-400 ml-2">{p.organization}</span>
+                          </div>
+                          <span className="text-gray-500 text-xs">
+                            {new Date(p.created_at).toLocaleString()}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-300">
+                          {p.role && <div><span className="text-gray-500">Role:</span> {p.role}</div>}
+                          <div><span className="text-gray-500">Email:</span> {p.email}</div>
+                          <div><span className="text-gray-500">Type:</span> {p.org_type}</div>
+                          {p.website && (
+                            <div>
+                              <span className="text-gray-500">Website:</span>{" "}
+                              <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                                {p.website}
+                              </a>
+                            </div>
+                          )}
+                          {p.linkedin && (
+                            <div>
+                              <span className="text-gray-500">LinkedIn:</span>{" "}
+                              <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                                {p.linkedin}
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                        {p.area_of_interest && (
+                          <div className="mt-2 text-sm text-gray-300">
+                            <span className="text-gray-500">Area of interest:</span> {p.area_of_interest}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </TabsContent>
           </div>
         </Tabs>
       </div>

@@ -115,9 +115,7 @@ const Index2026 = () => {
 
 
             <a
-              href="https://polsv.org/contact/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/partner"
               className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
             >
               <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">

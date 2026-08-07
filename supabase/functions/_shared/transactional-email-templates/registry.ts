@@ -10,7 +10,9 @@ export interface TemplateEntry {
 }
 
 import { template as speakerSuggestionAdmin } from './speaker-suggestion-admin.tsx'
+import { template as partnerInquiryAdmin } from './partner-inquiry-admin.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'speaker-suggestion-admin': speakerSuggestionAdmin,
+  'partner-inquiry-admin': partnerInquiryAdmin,
 }
