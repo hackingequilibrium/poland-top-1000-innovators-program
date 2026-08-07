@@ -721,7 +721,7 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="submissions" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 mb-8 bg-[#0C0F24] rounded-none">
+          <TabsList className="grid w-full grid-cols-7 mb-8 bg-[#0C0F24] rounded-none">
             <TabsTrigger value="submissions" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Session Submissions
             </TabsTrigger>
@@ -734,10 +734,14 @@ const Admin = () => {
             <TabsTrigger value="experts" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Expert Recommendations
             </TabsTrigger>
+            <TabsTrigger value="speakers-2026" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+              Speakers 2026
+            </TabsTrigger>
             <TabsTrigger value="waitlist" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               2026 Waitlist
             </TabsTrigger>
             <TabsTrigger value="admins" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+
               User Management
             </TabsTrigger>
           </TabsList>
