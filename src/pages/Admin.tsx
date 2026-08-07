@@ -1241,7 +1241,67 @@ const Admin = () => {
                 </CardContent>
               </Card>
             )}
-          </TabsContent>
+
+            <TabsContent value="partners" className="mt-0">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-semibold text-white">Partners 2026</h3>
+                  <Button
+                    onClick={handleExportPartnerInquiries}
+                    className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
+                  >
+                    Export CSV
+                  </Button>
+                </div>
+
+                {partnerInquiries.length === 0 ? (
+                  <p className="text-gray-400 text-center py-12">No partner inquiries yet.</p>
+                ) : (
+                  <div className="space-y-4">
+                    {partnerInquiries.map((p) => (
+                      <div key={p.id} className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                          <div>
+                            <span className="text-white font-semibold">{p.name}</span>
+                            <span className="text-gray-400 ml-2">{p.organization}</span>
+                          </div>
+                          <span className="text-gray-500 text-xs">
+                            {new Date(p.created_at).toLocaleString()}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-300">
+                          {p.role && <div><span className="text-gray-500">Role:</span> {p.role}</div>}
+                          <div><span className="text-gray-500">Email:</span> {p.email}</div>
+                          <div><span className="text-gray-500">Type:</span> {p.org_type}</div>
+                          {p.website && (
+                            <div>
+                              <span className="text-gray-500">Website:</span>{" "}
+                              <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                                {p.website}
+                              </a>
+                            </div>
+                          )}
+                          {p.linkedin && (
+                            <div>
+                              <span className="text-gray-500">LinkedIn:</span>{" "}
+                              <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                                {p.linkedin}
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                        {p.area_of_interest && (
+                          <div className="mt-2 text-sm text-gray-300">
+                            <span className="text-gray-500">Area of interest:</span> {p.area_of_interest}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+            </TabsContent>
           </div>
         </Tabs>
       </div>
