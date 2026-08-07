@@ -121,7 +121,7 @@ All colors MUST be HSL.
   }
 }
 
-/* Keep dark inputs dark when browsers autofill them */
+/* Keep inputs looking unchanged when browsers autofill them */
 .input-autofill-dark,
 .input-autofill-dark:hover,
 .input-autofill-dark:focus,
@@ -131,15 +131,22 @@ All colors MUST be HSL.
   box-shadow: none !important;
 }
 
+/* Preserve the input's own background (set via Tailwind classes) and keep
+   text white — the long transition prevents Chrome's autofill background
+   color from ever visibly applying. */
 .input-autofill-dark:-webkit-autofill,
 .input-autofill-dark:-webkit-autofill:hover,
 .input-autofill-dark:-webkit-autofill:focus,
 .input-autofill-dark:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px rgba(10, 10, 26, 0.6) inset !important;
   -webkit-text-fill-color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-  outline: none !important;
-  transition: background-color 5000s ease-in-out 0s !important;
+  caret-color: #ffffff !important;
+  transition: background-color 9999s ease-out 0s !important;
+}
+
+.input-autofill-dark:autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  transition: background-color 9999s ease-out 0s !important;
 }
 
 
