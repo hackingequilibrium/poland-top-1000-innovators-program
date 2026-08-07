@@ -456,7 +456,7 @@ export const TicketsSection = () => (
           >
             {t.note}
           </p>
-          <p className="text-white/60 text-sm font-light leading-relaxed mt-4">{t.body}</p>
+          <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-4">{t.body}</p>
           <Link
             to="/tickets"
             className="mt-6 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
