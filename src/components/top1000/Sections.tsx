@@ -170,9 +170,9 @@ export const FocusAreasSection = () => (
       ))}
     </div>
     <Card className="mt-6 border-[#C70828]/40 bg-[#C70828]/10">
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col md:flex-row md:items-center gap-3">
         <Cpu className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5] shrink-0" strokeWidth={1.25} />
-        <h3 className="font-display text-xl md:text-2xl font-semibold text-white">AI Across Every Sector</h3>
+        <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-0 md:mt-0">AI Across Every Sector</h3>
       </div>
       <p className="text-white/70 text-base md:text-lg font-extralight leading-relaxed mt-3">
         AI is integrated across all four focus areas rather than presented as a separate track.
