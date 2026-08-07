@@ -165,7 +165,7 @@ export const FocusAreasSection = () => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
           <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{f.title}</h3>
-          <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-3">{f.body}</p>
+          <p className="text-white/60 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{f.body}</p>
         </Card>
       ))}
     </div>
