@@ -186,7 +186,7 @@ export const SpeakersSection = () => (
   <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
     <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Featured Voices</p>
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
-      Speakers
+      Speakers & Workshop Leaders
     </h2>
     <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-3xl">
       Leaders across science, policy, industry, investment, and innovation shaping the future of
