@@ -65,6 +65,21 @@ interface WaitlistEntry {
   created_at: string;
 }
 
+interface SpeakerSuggestion {
+  id: string;
+  speaker_name: string;
+  speaker_email: string | null;
+  speaker_title: string | null;
+  speaker_organization: string | null;
+  speaker_linkedin: string | null;
+  focus_area: string;
+  why_speaker: string | null;
+  submitter_name: string;
+  submitter_email: string;
+  created_at: string;
+}
+
+
 interface AdminUser {
   user_id: string;
   email: string;
