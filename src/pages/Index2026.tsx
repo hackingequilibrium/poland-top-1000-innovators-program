@@ -20,7 +20,7 @@ const Index2026 = () => {
   return (
     <div className="font-inter-page w-full font-sans text-white bg-[#0a0a1a]">
       {/* ---------- 1. HERO ---------- */}
-      <div className="min-h-screen w-full flex flex-col lg:flex-row relative overflow-hidden bg-black">
+      <div className="min-h-[100svh] w-full flex flex-col lg:flex-row relative overflow-hidden bg-black">
         <video
           autoPlay
           loop
@@ -46,7 +46,7 @@ const Index2026 = () => {
         />
 
         {/* All hero content on the left */}
-        <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-center p-10 md:p-16">
+        <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-start lg:justify-center pt-10 pb-12 px-10 md:p-16">
           <a href="https://www.polsv.org" className="relative z-10 flex items-center gap-4">
             <img
               src="/assets/polsv-logo-color-dark-bg.svg"
