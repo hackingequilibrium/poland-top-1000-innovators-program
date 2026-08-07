@@ -355,7 +355,7 @@ export const PreviousSummitSection = () => (
         </Card>
       ))}
     </div>
-    <div className="mt-6 -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto">
+    <div className="mt-6 -mx-4 px-4 md:mx-0 md:px-0 overflow-x-auto overscroll-x-none [scrollbar-width:thin]">
       <div className="flex gap-4 min-w-max pb-2">
         {[
           { src: summitStanfordGroup, alt: "Summit participants in front of Stanford Memorial Church" },
