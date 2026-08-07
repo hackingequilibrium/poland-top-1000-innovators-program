@@ -473,7 +473,7 @@ export const TicketsSection = () => (
 export const FinalCtaSection = () => (
   <Section id="join" className="text-center">
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white">
-      Join the Second Cohort
+      Join the Summit
     </h2>
     <p className="text-white/60 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto mt-5">
       Be part of the next generation of Polish researchers, innovators, entrepreneurs, and industry
