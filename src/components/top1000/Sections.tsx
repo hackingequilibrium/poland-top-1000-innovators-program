@@ -165,7 +165,7 @@ export const FocusAreasSection = () => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
           <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{f.title}</h3>
-          <p className="text-white/60 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{f.body}</p>
+          <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{f.body}</p>
         </Card>
       ))}
     </div>
@@ -235,7 +235,7 @@ export const WhySection = () => (
         <Card key={w.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
           <w.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{w.title}</h3>
-          <p className="text-white/60 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{w.body}</p>
+          <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{w.body}</p>
         </Card>
       ))}
     </div>
@@ -320,7 +320,7 @@ export const ProgramSection = () => (
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{d.title}</h3>
           <ul className="mt-4 space-y-2">
             {d.items.map((i) => (
-              <li key={i} className="text-white/60 text-sm font-extralight pl-4 -indent-4 leading-relaxed">
+              <li key={i} className="text-white/70 text-sm font-extralight pl-4 -indent-4 leading-relaxed">
                 <span className="text-[#8FC7F5] mr-2">•</span>
                 {i}
               </li>
