@@ -320,7 +320,7 @@ export const ProgramSection = () => (
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{d.title}</h3>
           <ul className="mt-4 space-y-2">
             {d.items.map((i) => (
-              <li key={i} className="text-white/70 text-base md:text-lg font-extralight pl-4 -indent-4 leading-relaxed">
+              <li key={i} className="text-white/70 text-sm md:text-base font-extralight pl-4 -indent-4 leading-relaxed">
                 <span className="text-[#8FC7F5] mr-2">•</span>
                 {i}
               </li>
@@ -456,7 +456,7 @@ export const TicketsSection = () => (
           >
             {t.note}
           </p>
-          <p className="text-white/60 text-base md:text-lg font-light leading-relaxed mt-4">{t.body}</p>
+          <p className="text-white/60 text-sm md:text-base font-light leading-relaxed mt-4">{t.body}</p>
           <Link
             to="/tickets"
             className="mt-6 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
