@@ -195,14 +195,12 @@ export const SpeakersSection = () => (
     <div className="mt-10 flex items-center justify-center rounded-none border border-dashed border-white/15 bg-white/[0.03] py-16">
       <span className="text-white/50 text-xs uppercase tracking-[0.35em] font-light">Coming soon</span>
     </div>
-    <a
-      href="https://polsv.org/contact/"
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to="/suggest-speaker"
       className="mt-8 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
     >
       Suggest a Speaker
-    </a>
+    </Link>
   </section>
 );
 
