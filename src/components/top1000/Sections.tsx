@@ -108,7 +108,7 @@ const CountUp = ({ value }: { value: string }) => {
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
   <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-0 md:pt-0 pb-10 md:pb-14">
-    <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-snug max-w-[75%]">
+    <p className="text-white/70 text-base md:text-lg font-extralight leading-snug max-w-[75%]">
       <span className="text-white font-semibold">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
       leaders to accelerate commercialization through direct engagement with the Silicon Valley
@@ -165,7 +165,7 @@ export const FocusAreasSection = () => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
           <f.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{f.title}</h3>
-          <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{f.body}</p>
+          <p className="text-white/70 text-base md:text-lg font-extralight leading-relaxed mt-3">{f.body}</p>
         </Card>
       ))}
     </div>
@@ -174,7 +174,7 @@ export const FocusAreasSection = () => (
         <Cpu className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5] shrink-0" strokeWidth={1.25} />
         <h3 className="font-display text-2xl md:text-3xl font-semibold text-white">AI Across Every Sector</h3>
       </div>
-      <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">
+      <p className="text-white/70 text-base md:text-lg font-extralight leading-relaxed mt-3">
         AI is integrated across all four focus areas rather than presented as a separate track.
       </p>
     </Card>
@@ -235,7 +235,7 @@ export const WhySection = () => (
         <Card key={w.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
           <w.icon className="h-9 w-9 md:h-10 md:w-10 text-[#8FC7F5]" strokeWidth={1.25} />
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-5">{w.title}</h3>
-          <p className="text-white/70 text-base md:text-lg lg:text-xl font-extralight leading-relaxed mt-3">{w.body}</p>
+          <p className="text-white/70 text-base md:text-lg font-extralight leading-relaxed mt-3">{w.body}</p>
         </Card>
       ))}
     </div>
