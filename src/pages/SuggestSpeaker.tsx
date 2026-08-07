@@ -123,7 +123,29 @@ const SuggestSpeaker = () => {
         return;
       }
 
+      supabase.functions
+        .invoke("send-transactional-email", {
+          body: {
+            templateName: "speaker-suggestion-admin",
+            recipientEmail: "agata.braja@polsv.org",
+            idempotencyKey: `speaker-suggestion-${data.submitterEmail}-${data.speakerName}`,
+            templateData: {
+              speakerName: data.speakerName,
+              speakerEmail: data.speakerEmail || undefined,
+              speakerTitle: data.speakerTitle || undefined,
+              speakerOrganization: data.speakerOrganization || undefined,
+              speakerLinkedin: data.speakerLinkedin || undefined,
+              focusArea: data.focusArea,
+              whySpeaker: data.whySpeaker || undefined,
+              submitterName: data.submitterName,
+              submitterEmail: data.submitterEmail,
+            },
+          },
+        })
+        .catch((e) => console.error("Notification email failed:", e));
+
       setIsSubmitted(true);
+
     } catch (error) {
       console.error("Error submitting speaker suggestion:", error);
     } finally {
