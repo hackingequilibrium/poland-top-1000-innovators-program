@@ -73,7 +73,7 @@ const Index2026 = () => {
             <div className="mt-6 space-y-2">
               <div className="flex items-center gap-2 text-white text-base md:text-lg lg:text-xl font-extralight">
                 <MapPin className="h-5 w-5 shrink-0 text-white" />
-                <span>Stanford University · UC San Francisco · UC Berkeley · Silicon Valley</span>
+                <span>Stanford University · UC San Francisco · UC&nbsp;Berkeley · Silicon Valley</span>
               </div>
               <div className="flex items-center gap-2 text-white text-base md:text-lg lg:text-xl font-extralight">
                 <CalendarDays className="h-5 w-5 shrink-0 text-white" />
