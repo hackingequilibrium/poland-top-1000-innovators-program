@@ -182,6 +182,48 @@ export type Database = {
         }
         Relationships: []
       }
+      speaker_suggestions: {
+        Row: {
+          created_at: string
+          focus_area: string
+          id: string
+          speaker_email: string | null
+          speaker_linkedin: string | null
+          speaker_name: string
+          speaker_organization: string | null
+          speaker_title: string | null
+          submitter_email: string
+          submitter_name: string
+          why_speaker: string | null
+        }
+        Insert: {
+          created_at?: string
+          focus_area: string
+          id?: string
+          speaker_email?: string | null
+          speaker_linkedin?: string | null
+          speaker_name: string
+          speaker_organization?: string | null
+          speaker_title?: string | null
+          submitter_email: string
+          submitter_name: string
+          why_speaker?: string | null
+        }
+        Update: {
+          created_at?: string
+          focus_area?: string
+          id?: string
+          speaker_email?: string | null
+          speaker_linkedin?: string | null
+          speaker_name?: string
+          speaker_organization?: string | null
+          speaker_title?: string | null
+          submitter_email?: string
+          submitter_name?: string
+          why_speaker?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
