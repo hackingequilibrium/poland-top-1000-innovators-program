@@ -961,7 +961,62 @@ const Admin = () => {
             )}
           </TabsContent>
 
+          <TabsContent value="speakers-2026">
+            {speakerSuggestions.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportSpeakerSuggestions}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export Speakers 2026 to CSV
+                </Button>
+              </div>
+            )}
+            {speakerSuggestions.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No speaker suggestions yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {speakerSuggestions.map((s) => (
+                  <Card key={s.id} className="rounded-none">
+                    <CardHeader className="flex flex-row items-center justify-between">
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {s.speaker_name}
+                      </CardTitle>
+                      <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
+                        Speakers 2026
+                      </span>
+                    </CardHeader>
+                    <CardContent className="space-y-3 font-inter text-sm">
+                      <div className="border-b border-gray-200 pb-3">
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Speaker Information</p>
+                        {s.speaker_title && <p><strong>Title:</strong> {s.speaker_title}</p>}
+                        {s.speaker_organization && <p><strong>Organization:</strong> {s.speaker_organization}</p>}
+                        {s.speaker_email && <p><strong>Email:</strong> {s.speaker_email}</p>}
+                        {s.speaker_linkedin && (
+                          <p><strong>LinkedIn:</strong> <a href={s.speaker_linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">{s.speaker_linkedin}</a></p>
+                        )}
+                        <p><strong>Focus Area:</strong> {s.focus_area}</p>
+                        {s.why_speaker && <p className="mt-2"><strong>Why:</strong> {s.why_speaker}</p>}
+                      </div>
+                      <div>
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Submitted By</p>
+                        <p><strong>Name:</strong> {s.submitter_name}</p>
+                        <p><strong>Email:</strong> {s.submitter_email}</p>
+                        <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
           <TabsContent value="waitlist">
+
             {waitlistEntries.length > 0 && (
               <div className="mb-4 flex justify-end">
                 <Button
