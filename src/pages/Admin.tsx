@@ -93,6 +93,16 @@ interface PartnerInquiry {
 }
 
 
+interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  organization: string | null;
+  subject: string;
+  message: string;
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -114,6 +124,7 @@ const Admin = () => {
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
   const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
+  const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
 
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
@@ -180,6 +191,7 @@ const Admin = () => {
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
       fetchPartnerInquiries();
+      fetchContactMessages();
     }
   }, [isAdmin, user]);
 
@@ -229,6 +241,51 @@ const Admin = () => {
     link.click();
     document.body.removeChild(link);
     toast.success("Partner inquiries exported successfully");
+  };
+
+  const fetchContactMessages = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('contact_messages')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching contact messages:', error);
+        toast.error("Failed to load contact messages");
+      } else {
+        setContactMessages(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportContactMessages = () => {
+    if (contactMessages.length === 0) {
+      toast.error("No contact messages to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Email', 'Organization', 'Subject', 'Message', 'Submitted At'].join(','),
+      ...contactMessages.map(c => [
+        `"${c.name}"`,
+        `"${c.email}"`,
+        `"${c.organization ?? ''}"`,
+        `"${c.subject.replace(/"/g, '""')}"`,
+        `"${c.message.replace(/"/g, '""')}"`,
+        `"${new Date(c.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `contact-messages-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Contact messages exported successfully");
   };
 
   const fetchSpeakerSuggestions = async () => {
@@ -793,6 +850,9 @@ const Admin = () => {
             </TabsTrigger>
             <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Partners 2026
+            </TabsTrigger>
+            <TabsTrigger value="contact" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Contact Messages
             </TabsTrigger>
             <TabsTrigger value="submissions" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Session Submissions
