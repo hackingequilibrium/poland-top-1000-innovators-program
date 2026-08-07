@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, CalendarDays } from "lucide-react";
 import bokehVideo from "@/assets/hero-2026.mp4.asset.json";
+import privacyPolicy from "@/assets/Privacy_Policy.pdf.asset.json";
 import {
   AboutSection,
   FocusAreasSection,
@@ -176,6 +177,15 @@ const Index2026 = () => {
             className="hover:text-white transition-colors"
           >
             Contact us
+          </a>
+          <span className="mx-2">|</span>
+          <a
+            href={privacyPolicy.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            Privacy Policy
           </a>
         </div>
       </footer>
