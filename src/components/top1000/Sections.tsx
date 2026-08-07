@@ -490,10 +490,8 @@ export const FinalCtaSection = () => (
           <path d="m12 5 7 7-7 7" />
         </svg>
       </Link>
-      <a
-        href="https://polsv.org/contact/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/partner"
         className="group flex items-center justify-between gap-10 h-14 px-6 border border-white/70 bg-transparent transition-colors duration-300 hover:bg-white"
       >
         <span className="text-base font-medium tracking-wide text-white transition-colors duration-300 group-hover:text-[#0A0A0A]">
@@ -503,7 +501,7 @@ export const FinalCtaSection = () => (
           <path d="M5 12h14" />
           <path d="m12 5 7 7-7 7" />
         </svg>
-      </a>
+      </Link>
     </div>
   </Section>
 );
