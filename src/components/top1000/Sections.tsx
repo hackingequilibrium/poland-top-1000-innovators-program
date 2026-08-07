@@ -320,7 +320,7 @@ export const ProgramSection = () => (
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{d.title}</h3>
           <ul className="mt-4 space-y-2">
             {d.items.map((i) => (
-              <li key={i} className="text-white/70 text-sm font-extralight pl-4 -indent-4 leading-relaxed">
+              <li key={i} className="text-white/70 text-base md:text-lg font-extralight pl-4 -indent-4 leading-relaxed">
                 <span className="text-[#8FC7F5] mr-2">•</span>
                 {i}
               </li>
