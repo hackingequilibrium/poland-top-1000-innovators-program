@@ -18,6 +18,7 @@ import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
 import Partner from "./pages/Partner";
+import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
           <Route path="/partner" element={<Partner />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
 
 

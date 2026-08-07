@@ -93,6 +93,16 @@ interface PartnerInquiry {
 }
 
 
+interface ContactMessage {
+  id: string;
+  name: string;
+  email: string;
+  organization: string | null;
+  subject: string;
+  message: string;
+  created_at: string;
+}
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -114,6 +124,7 @@ const Admin = () => {
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
   const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
+  const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
 
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
@@ -180,6 +191,7 @@ const Admin = () => {
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
       fetchPartnerInquiries();
+      fetchContactMessages();
     }
   }, [isAdmin, user]);
 
@@ -229,6 +241,51 @@ const Admin = () => {
     link.click();
     document.body.removeChild(link);
     toast.success("Partner inquiries exported successfully");
+  };
+
+  const fetchContactMessages = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('contact_messages')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching contact messages:', error);
+        toast.error("Failed to load contact messages");
+      } else {
+        setContactMessages(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportContactMessages = () => {
+    if (contactMessages.length === 0) {
+      toast.error("No contact messages to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Email', 'Organization', 'Subject', 'Message', 'Submitted At'].join(','),
+      ...contactMessages.map(c => [
+        `"${c.name}"`,
+        `"${c.email}"`,
+        `"${c.organization ?? ''}"`,
+        `"${c.subject.replace(/"/g, '""')}"`,
+        `"${c.message.replace(/"/g, '""')}"`,
+        `"${new Date(c.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `contact-messages-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Contact messages exported successfully");
   };
 
   const fetchSpeakerSuggestions = async () => {
@@ -794,6 +851,9 @@ const Admin = () => {
             <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Partners 2026
             </TabsTrigger>
+            <TabsTrigger value="contact" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Contact Messages
+            </TabsTrigger>
             <TabsTrigger value="submissions" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Session Submissions
             </TabsTrigger>
@@ -1296,6 +1356,51 @@ const Admin = () => {
                             <span className="text-gray-500">Area of interest:</span> {p.area_of_interest}
                           </div>
                         )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="contact" className="mt-0">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-semibold text-white">Contact Messages</h3>
+                  <Button
+                    onClick={handleExportContactMessages}
+                    className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
+                  >
+                    Export CSV
+                  </Button>
+                </div>
+
+                {contactMessages.length === 0 ? (
+                  <p className="text-gray-400 text-center py-12">No contact messages yet.</p>
+                ) : (
+                  <div className="space-y-4">
+                    {contactMessages.map((c) => (
+                      <div key={c.id} className="bg-white/5 border border-white/10 rounded-lg p-4">
+                        <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                          <div>
+                            <span className="text-white font-semibold">{c.name}</span>
+                            <span className="text-gray-400 ml-2">{c.email}</span>
+                          </div>
+                          <span className="text-gray-500 text-xs">
+                            {new Date(c.created_at).toLocaleString()}
+                          </span>
+                        </div>
+                        {c.organization && (
+                          <div className="text-sm text-gray-300 mb-1">
+                            <span className="text-gray-500">Organization:</span> {c.organization}
+                          </div>
+                        )}
+                        <div className="text-sm text-gray-300 mb-2">
+                          <span className="text-gray-500">Subject:</span> {c.subject}
+                        </div>
+                        <div className="text-sm text-gray-300 mt-2 whitespace-pre-wrap">
+                          {c.message}
+                        </div>
                       </div>
                     ))}
                   </div>

@@ -6,13 +6,6 @@ import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   Form,
   FormControl,
   FormField,
@@ -23,60 +16,38 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 
-const orgTypes = [
-  "University / Research",
-  "Corporate / Industry",
-  "Government / Public",
-  "Media",
-  "Foundation / Program",
-  "Other",
-];
-
 const formSchema = z.object({
   name: z
     .string()
     .trim()
     .min(1, "Name is required")
     .max(150, "Name must be less than 150 characters"),
-  organization: z
-    .string()
-    .trim()
-    .min(1, "Organization is required")
-    .max(200, "Must be less than 200 characters"),
-  role: z
-    .string()
-    .trim()
-    .max(150, "Must be less than 150 characters")
-    .optional()
-    .or(z.literal("")),
   email: z
     .string()
     .trim()
     .email("Invalid email address")
     .max(255, "Email must be less than 255 characters"),
-  orgType: z.string().min(1, "Please select an organization type"),
-  areaOfInterest: z
+  organization: z
     .string()
     .trim()
-    .min(1, "Please describe your area of interest")
-    .max(2000, "Must be less than 2000 characters"),
-  website: z
-    .string()
-    .trim()
-    .max(500, "Must be less than 500 characters")
+    .max(200, "Must be less than 200 characters")
     .optional()
     .or(z.literal("")),
-  linkedin: z
+  subject: z
     .string()
     .trim()
-    .max(500, "Must be less than 500 characters")
-    .optional()
-    .or(z.literal("")),
+    .min(1, "Subject is required")
+    .max(200, "Subject must be less than 200 characters"),
+  message: z
+    .string()
+    .trim()
+    .min(1, "Message is required")
+    .max(3000, "Message must be less than 3000 characters"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
 
-const Partner = () => {
+const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -84,50 +55,41 @@ const Partner = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      organization: "",
-      role: "",
       email: "",
-      orgType: "",
-      areaOfInterest: "",
-      website: "",
-      linkedin: "",
+      organization: "",
+      subject: "",
+      message: "",
     },
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.from("partner_inquiries").insert({
+      const { error } = await supabase.from("contact_messages").insert({
         name: data.name,
-        organization: data.organization,
-        role: data.role || null,
         email: data.email,
-        org_type: data.orgType,
-        area_of_interest: data.areaOfInterest,
-        website: data.website || null,
-        linkedin: data.linkedin || null,
+        organization: data.organization || null,
+        subject: data.subject,
+        message: data.message,
       });
 
       if (error) {
-        console.error("Error submitting partner inquiry:", error);
+        console.error("Error submitting contact message:", error);
         return;
       }
 
       supabase.functions
         .invoke("send-transactional-email", {
           body: {
-            templateName: "partner-inquiry-admin",
+            templateName: "contact-message-admin",
             recipientEmail: "agata.braja@polsv.org",
-            idempotencyKey: `partner-inquiry-${data.email}-${Date.now()}`,
+            idempotencyKey: `contact-${data.email}-${Date.now()}`,
             templateData: {
               name: data.name,
-              organization: data.organization,
-              role: data.role || undefined,
               email: data.email,
-              orgType: data.orgType,
-              areaOfInterest: data.areaOfInterest,
-              website: data.website || undefined,
-              linkedin: data.linkedin || undefined,
+              organization: data.organization || undefined,
+              subject: data.subject,
+              message: data.message,
             },
           },
         })
@@ -135,7 +97,7 @@ const Partner = () => {
 
       setIsSubmitted(true);
     } catch (error) {
-      console.error("Error submitting partner inquiry:", error);
+      console.error("Error submitting contact message:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -167,12 +129,11 @@ const Partner = () => {
       <main className="flex-1 px-6 md:px-12 lg:px-[100px] py-12 md:py-16">
         <div className="max-w-[640px] mx-auto">
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-4">
-            Partner With Us
+            Contact Us
           </h1>
           <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-10 leading-relaxed max-w-[560px] mx-auto">
-            We welcome partners who contribute to advancing research, commercialization, and
-            transatlantic cooperation — from universities and companies to public institutions,
-            media, and ecosystem organizations.
+            Have a question about Summit II or the Top 1000 Innovators program?
+            Send us a message and we'll get back to you.
           </p>
 
           {isSubmitted ? (
@@ -181,8 +142,7 @@ const Partner = () => {
                 Thank you!
               </h2>
               <p className="font-inter font-light text-sm text-white/70 leading-relaxed">
-                Your partnership inquiry has been received. We'll be in touch soon to explore how we
-                can collaborate.
+                Your message has been received. We'll be in touch soon.
               </p>
               <Link
                 to="/"
@@ -221,17 +181,18 @@ const Partner = () => {
                   />
                   <FormField
                     control={form.control}
-                    name="organization"
+                    name="email"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="font-inter text-white/80 text-sm">
-                          Organization *
+                          Email *
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
+                            type="email"
                             className={inputClasses}
-                            placeholder="Stanford University"
+                            placeholder="you@example.com"
                             autoComplete="off"
                           />
                         </FormControl>
@@ -243,17 +204,17 @@ const Partner = () => {
 
                 <FormField
                   control={form.control}
-                  name="role"
+                  name="organization"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="font-inter text-white/80 text-sm">
-                        Role / Title
+                        Organization (optional)
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           className={inputClasses}
-                          placeholder="Director of Innovation"
+                          placeholder="Stanford University"
                           autoComplete="off"
                         />
                       </FormControl>
@@ -264,18 +225,17 @@ const Partner = () => {
 
                 <FormField
                   control={form.control}
-                  name="email"
+                  name="subject"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="font-inter text-white/80 text-sm">
-                        Email *
+                        Subject *
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
-                          type="email"
                           className={inputClasses}
-                          placeholder="you@example.com"
+                          placeholder="Question about Summit II"
                           autoComplete="off"
                         />
                       </FormControl>
@@ -286,104 +246,30 @@ const Partner = () => {
 
                 <FormField
                   control={form.control}
-                  name="orgType"
+                  name="message"
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="font-inter text-white/80 text-sm">
-                        Type of organization *
-                      </FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="input-autofill-dark h-12 rounded-none border-white/20 bg-white/5 text-white focus:ring-0 focus:border-[#8FC7F5]">
-                            <SelectValue placeholder="Select…" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className="rounded-none border-white/20 bg-[#0B1A3F] text-white">
-                          {orgTypes.map((t) => (
-                            <SelectItem
-                              key={t}
-                              value={t}
-                              className="rounded-none focus:bg-white/10 focus:text-white"
-                            >
-                              {t}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="areaOfInterest"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="font-inter text-white/80 text-sm">
-                        Area of interest *
+                        Message *
                       </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
-                          className="input-autofill-dark rounded-none border-white/20 bg-white/5 text-white placeholder:text-white/40 focus-visible:ring-0 focus-visible:border-[#8FC7F5] min-h-[120px]"
-                          placeholder="What kind of collaboration are you interested in?"
+                          className="input-autofill-dark rounded-none border-white/20 bg-white/5 text-white placeholder:text-white/40 focus-visible:ring-0 focus-visible:border-[#8FC7F5] min-h-[160px]"
+                          placeholder="How can we help you?"
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
                     </FormItem>
                   )}
                 />
-
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="website"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="font-inter text-white/80 text-sm">
-                          Website (optional)
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            {...field}
-                            className={inputClasses}
-                            placeholder="https://example.com"
-                            autoComplete="off"
-                          />
-                        </FormControl>
-                        <FormMessage className="text-red-300" />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="linkedin"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="font-inter text-white/80 text-sm">
-                          LinkedIn (optional)
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            {...field}
-                            className={inputClasses}
-                            placeholder="linkedin.com/in/janedoe"
-                            autoComplete="off"
-                          />
-                        </FormControl>
-                        <FormMessage className="text-red-300" />
-                      </FormItem>
-                    )}
-                  />
-                </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full h-14 font-inter font-semibold text-base text-white bg-[#3661F6] border border-[#3661F6] rounded-none transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Submitting…" : "Submit Inquiry"}
+                  {isSubmitting ? "Sending…" : "Send Message"}
                 </button>
               </form>
             </Form>
@@ -396,12 +282,17 @@ const Partner = () => {
           Back to home
         </Link>
         <span className="mx-2">|</span>
-        <Link to="/contact" className="hover:text-white transition-colors">
-          Contact us
-        </Link>
+        <a
+          href="https://www.polsv.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors"
+        >
+          www.polsv.org
+        </a>
       </footer>
     </div>
   );
 };
 
-export default Partner;
+export default Contact;

@@ -1,0 +1,1 @@
+GRANT INSERT ON public.contact_messages TO anon, authenticated;
