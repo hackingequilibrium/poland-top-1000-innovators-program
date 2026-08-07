@@ -1176,6 +1176,7 @@ const Admin = () => {
               </Card>
             )}
           </TabsContent>
+          </div>
         </Tabs>
       </div>
     </div>
