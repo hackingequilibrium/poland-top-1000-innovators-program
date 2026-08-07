@@ -160,8 +160,10 @@ const SuggestSpeaker = () => {
             Suggest a Speaker
           </h1>
           <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-2">
-            Know a leader in science, policy, industry, or innovation who should speak at Summit II?
-            Tell us about them.
+            Know a leader in science, policy, industry, or innovation
+          </p>
+          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-2">
+            who should speak at Summit II? Tell us about them.
           </p>
           <p className="text-center font-inter font-light text-sm text-[#8FC7F5] mb-10">
             It's perfectly okay to nominate yourself.
