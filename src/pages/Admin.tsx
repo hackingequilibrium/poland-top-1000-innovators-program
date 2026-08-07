@@ -99,6 +99,8 @@ const Admin = () => {
   const [guestRsvpSubmissions, setGuestRsvpSubmissions] = useState<GuestRSVPSubmission[]>([]);
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
+  const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
+
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
   const [creatingAdmin, setCreatingAdmin] = useState(false);
