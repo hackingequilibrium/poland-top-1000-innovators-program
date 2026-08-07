@@ -1239,8 +1239,9 @@ const Admin = () => {
                     </Button>
                   </form>
                 </CardContent>
-              </Card>
-            )}
+               </Card>
+             )}
+          </TabsContent>
 
             <TabsContent value="partners" className="mt-0">
               <div className="p-6">
