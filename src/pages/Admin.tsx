@@ -1300,7 +1300,6 @@ const Admin = () => {
                   </div>
                 )}
               </div>
-            )}
             </TabsContent>
           </div>
         </Tabs>
