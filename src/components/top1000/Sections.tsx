@@ -476,7 +476,7 @@ export const FinalCtaSection = () => (
       Join the Summit
     </h2>
     <p className="text-white/60 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto mt-5">
-      Be part of the next generation of Polish researchers, innovators, entrepreneurs, and industry
+      Be part of the next generation of Poland's researchers, innovators, entrepreneurs, and industry
       leaders building lasting connections with Silicon Valley.
     </p>
     <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
