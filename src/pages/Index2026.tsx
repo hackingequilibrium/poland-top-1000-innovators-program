@@ -20,7 +20,7 @@ const Index2026 = () => {
   return (
     <div className="font-inter-page w-full font-sans text-white bg-[#0a0a1a]">
       {/* ---------- 1. HERO ---------- */}
-      <div className="min-h-[100svh] w-full flex flex-col lg:flex-row relative overflow-hidden bg-black">
+      <div className="lg:min-h-[100svh] w-full flex flex-col lg:flex-row relative overflow-hidden bg-black">
         <video
           autoPlay
           loop
