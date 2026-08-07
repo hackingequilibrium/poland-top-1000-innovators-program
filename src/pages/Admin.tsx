@@ -65,6 +65,21 @@ interface WaitlistEntry {
   created_at: string;
 }
 
+interface SpeakerSuggestion {
+  id: string;
+  speaker_name: string;
+  speaker_email: string | null;
+  speaker_title: string | null;
+  speaker_organization: string | null;
+  speaker_linkedin: string | null;
+  focus_area: string;
+  why_speaker: string | null;
+  submitter_name: string;
+  submitter_email: string;
+  created_at: string;
+}
+
+
 interface AdminUser {
   user_id: string;
   email: string;
@@ -84,6 +99,8 @@ const Admin = () => {
   const [guestRsvpSubmissions, setGuestRsvpSubmissions] = useState<GuestRSVPSubmission[]>([]);
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
+  const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
+
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
   const [creatingAdmin, setCreatingAdmin] = useState(false);
@@ -147,10 +164,61 @@ const Admin = () => {
       fetchGuestRSVPSubmissions();
       fetchAdminUsers();
       fetchWaitlistEntries();
+      fetchSpeakerSuggestions();
     }
   }, [isAdmin, user]);
 
+  const fetchSpeakerSuggestions = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('speaker_suggestions')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching speaker suggestions:', error);
+        toast.error("Failed to load speaker suggestions");
+      } else {
+        setSpeakerSuggestions(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportSpeakerSuggestions = () => {
+    if (speakerSuggestions.length === 0) {
+      toast.error("No speaker suggestions to export");
+      return;
+    }
+    const csv = [
+      ['Speaker Name', 'Title', 'Organization', 'Email', 'LinkedIn', 'Focus Area', 'Why', 'Submitted By', 'Submitter Email', 'Submitted At'].join(','),
+      ...speakerSuggestions.map(s => [
+        `"${s.speaker_name}"`,
+        `"${s.speaker_title ?? ''}"`,
+        `"${s.speaker_organization ?? ''}"`,
+        `"${s.speaker_email ?? ''}"`,
+        `"${s.speaker_linkedin ?? ''}"`,
+        `"${s.focus_area}"`,
+        `"${(s.why_speaker ?? '').replace(/"/g, '""')}"`,
+        `"${s.submitter_name}"`,
+        `"${s.submitter_email}"`,
+        `"${new Date(s.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `speakers-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Speaker suggestions exported successfully");
+  };
+
   const fetchWaitlistEntries = async () => {
+
     try {
       const { data, error } = await supabase
         .from('waitlist_2026')
@@ -653,7 +721,7 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="submissions" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 mb-8 bg-[#0C0F24] rounded-none">
+          <TabsList className="grid w-full grid-cols-7 mb-8 bg-[#0C0F24] rounded-none">
             <TabsTrigger value="submissions" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Session Submissions
             </TabsTrigger>
@@ -666,10 +734,14 @@ const Admin = () => {
             <TabsTrigger value="experts" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               Expert Recommendations
             </TabsTrigger>
+            <TabsTrigger value="speakers-2026" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+              Speakers 2026
+            </TabsTrigger>
             <TabsTrigger value="waitlist" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
               2026 Waitlist
             </TabsTrigger>
             <TabsTrigger value="admins" className="rounded-none data-[state=active]:bg-[#C70828] data-[state=active]:text-white">
+
               User Management
             </TabsTrigger>
           </TabsList>
@@ -889,7 +961,62 @@ const Admin = () => {
             )}
           </TabsContent>
 
+          <TabsContent value="speakers-2026">
+            {speakerSuggestions.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportSpeakerSuggestions}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export Speakers 2026 to CSV
+                </Button>
+              </div>
+            )}
+            {speakerSuggestions.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No speaker suggestions yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {speakerSuggestions.map((s) => (
+                  <Card key={s.id} className="rounded-none">
+                    <CardHeader className="flex flex-row items-center justify-between">
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {s.speaker_name}
+                      </CardTitle>
+                      <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
+                        Speakers 2026
+                      </span>
+                    </CardHeader>
+                    <CardContent className="space-y-3 font-inter text-sm">
+                      <div className="border-b border-gray-200 pb-3">
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Speaker Information</p>
+                        {s.speaker_title && <p><strong>Title:</strong> {s.speaker_title}</p>}
+                        {s.speaker_organization && <p><strong>Organization:</strong> {s.speaker_organization}</p>}
+                        {s.speaker_email && <p><strong>Email:</strong> {s.speaker_email}</p>}
+                        {s.speaker_linkedin && (
+                          <p><strong>LinkedIn:</strong> <a href={s.speaker_linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">{s.speaker_linkedin}</a></p>
+                        )}
+                        <p><strong>Focus Area:</strong> {s.focus_area}</p>
+                        {s.why_speaker && <p className="mt-2"><strong>Why:</strong> {s.why_speaker}</p>}
+                      </div>
+                      <div>
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Submitted By</p>
+                        <p><strong>Name:</strong> {s.submitter_name}</p>
+                        <p><strong>Email:</strong> {s.submitter_email}</p>
+                        <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
           <TabsContent value="waitlist">
+
             {waitlistEntries.length > 0 && (
               <div className="mb-4 flex justify-end">
                 <Button
