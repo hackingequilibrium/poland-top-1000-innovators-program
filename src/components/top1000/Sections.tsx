@@ -116,10 +116,10 @@ export const AboutSection = () => (
     </p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
-        { n: "120", l: "Participants" },
+        { n: "90", l: "University participants" },
+        { n: "30", l: "Business participants" },
         { n: "4", l: "Intensive days" },
         { n: "90+", l: "Innovation projects" },
-        { n: "15", l: "Top universities" },
       ].map((s) => (
         <div
           key={s.l}
