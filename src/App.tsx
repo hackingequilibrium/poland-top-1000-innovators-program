@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 import RouteMeta from "./components/RouteMeta";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <RouteMeta />
         <Routes>
           <Route path="/" element={<Index2026 />} />
