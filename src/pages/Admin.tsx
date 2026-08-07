@@ -164,10 +164,61 @@ const Admin = () => {
       fetchGuestRSVPSubmissions();
       fetchAdminUsers();
       fetchWaitlistEntries();
+      fetchSpeakerSuggestions();
     }
   }, [isAdmin, user]);
 
+  const fetchSpeakerSuggestions = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('speaker_suggestions')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching speaker suggestions:', error);
+        toast.error("Failed to load speaker suggestions");
+      } else {
+        setSpeakerSuggestions(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportSpeakerSuggestions = () => {
+    if (speakerSuggestions.length === 0) {
+      toast.error("No speaker suggestions to export");
+      return;
+    }
+    const csv = [
+      ['Speaker Name', 'Title', 'Organization', 'Email', 'LinkedIn', 'Focus Area', 'Why', 'Submitted By', 'Submitter Email', 'Submitted At'].join(','),
+      ...speakerSuggestions.map(s => [
+        `"${s.speaker_name}"`,
+        `"${s.speaker_title ?? ''}"`,
+        `"${s.speaker_organization ?? ''}"`,
+        `"${s.speaker_email ?? ''}"`,
+        `"${s.speaker_linkedin ?? ''}"`,
+        `"${s.focus_area}"`,
+        `"${(s.why_speaker ?? '').replace(/"/g, '""')}"`,
+        `"${s.submitter_name}"`,
+        `"${s.submitter_email}"`,
+        `"${new Date(s.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `speakers-2026-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Speaker suggestions exported successfully");
+  };
+
   const fetchWaitlistEntries = async () => {
+
     try {
       const { data, error } = await supabase
         .from('waitlist_2026')
