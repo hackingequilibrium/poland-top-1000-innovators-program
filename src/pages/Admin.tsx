@@ -722,25 +722,25 @@ const Admin = () => {
 
         <Tabs defaultValue="speakers-2026" className="w-full flex gap-6">
           <TabsList className="flex flex-col h-fit w-64 shrink-0 bg-[#0C0F24] rounded-none p-2 gap-1">
-            <TabsTrigger value="speakers-2026" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="speakers-2026" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Speakers 2026
             </TabsTrigger>
-            <TabsTrigger value="waitlist" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
             </TabsTrigger>
-            <TabsTrigger value="submissions" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="submissions" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Session Submissions
             </TabsTrigger>
-            <TabsTrigger value="rsvp" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="rsvp" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               RSVP Submissions
             </TabsTrigger>
-            <TabsTrigger value="guest-rsvp" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="guest-rsvp" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Guest RSVPs
             </TabsTrigger>
-            <TabsTrigger value="experts" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="experts" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Expert Recommendations
             </TabsTrigger>
-            <TabsTrigger value="admins" className="rounded-none justify-start data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="admins" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               User Management
             </TabsTrigger>
           </TabsList>
