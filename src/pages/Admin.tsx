@@ -745,6 +745,7 @@ const Admin = () => {
             </TabsTrigger>
           </TabsList>
 
+          <div className="flex-1 min-w-0">
           <TabsContent value="submissions">
             {submissions.length > 0 && (
               <div className="mb-4 flex justify-end">
