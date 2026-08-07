@@ -162,9 +162,14 @@ const Index2026 = () => {
         Organized by the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship
         (PolSV).
         <div className="mt-2">
-          <Link to="/2025" className="hover:text-white transition-colors">
-            2025 Inaugural Summit
-          </Link>
+          <a
+            href="https://www.polsv.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            www.polsv.org
+          </a>
           <span className="mx-2">|</span>
           <a
             href="https://polsv.org/contact/"
