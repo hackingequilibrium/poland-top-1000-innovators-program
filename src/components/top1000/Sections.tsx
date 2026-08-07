@@ -159,7 +159,7 @@ const focusAreas = [
 ];
 
 export const FocusAreasSection = () => (
-  <Section id="focus" eyebrow="Focus Areas" title="Four verticals, one ecosystem">
+  <Section id="focus" eyebrow="Focus Areas" title="Four Verticals, One Ecosystem">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {focusAreas.map((f) => (
         <Card key={f.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
@@ -229,7 +229,7 @@ const whyItems = [
 ];
 
 export const WhySection = () => (
-  <Section id="why" eyebrow="Why TOP1000?" title="What participants take home">
+  <Section id="why" eyebrow="Why TOP1000?" title="What Participants Take Home">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {whyItems.map((w) => (
         <Card key={w.title} className="rounded-none transition-colors hover:bg-white/[0.07]">
@@ -247,7 +247,7 @@ export const VenuesSection = () => (
   <section id="venues" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
     <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Venues</p>
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
-      A four-venue Silicon Valley experience
+      A Four-Venue Silicon Valley Experience
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {[
@@ -307,7 +307,7 @@ const days = [
 ];
 
 export const ProgramSection = () => (
-  <Section id="program" eyebrow="Program Experience" title="Four intensive days">
+  <Section id="program" eyebrow="Program Experience" title="Four Intensive Days">
     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
       {days.map((d) => (
         <Card key={d.day}>
@@ -334,7 +334,7 @@ export const ProgramSection = () => (
 
 /* 8. Previous Summit */
 export const PreviousSummitSection = () => (
-  <Section id="2025" eyebrow="Previous Summit" title="Built on a successful inaugural cohort" className="bg-[#0B1A3F]">
+  <Section id="2025" eyebrow="Previous Summit" title="Built on a Successful Inaugural Cohort" className="bg-[#0B1A3F]">
     <p className="text-white/50 text-xs uppercase tracking-[0.3em] font-light">December 2025</p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
@@ -436,7 +436,7 @@ const tiers = [
 ];
 
 export const TicketsSection = () => (
-  <Section id="tickets" eyebrow="Tickets" title="Secure your seat">
+  <Section id="tickets" eyebrow="Tickets" title="Secure Your Seat">
     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
       {tiers.map((t) => (
         <Card
