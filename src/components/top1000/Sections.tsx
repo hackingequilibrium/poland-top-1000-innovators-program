@@ -252,7 +252,7 @@ export const VenuesSection = () => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {[
         { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
-        { name: "UCSF", img: venueUcsf },
+        { name: "UC San Francisco", img: venueUcsf },
         { name: "Triple Ring Technologies", img: venueTripleRing.url },
         { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
       ].map((v) => (
@@ -288,7 +288,7 @@ const days = [
   },
   {
     day: "Day 2",
-    venue: "UCSF",
+    venue: "UC San Francisco",
     title: "Vertical Workshops",
     items: ["Four sector workshops", "Mentoring", "AI across all tracks", "Partner networking"],
   },
