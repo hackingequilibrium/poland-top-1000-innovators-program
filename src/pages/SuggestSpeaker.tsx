@@ -447,14 +447,9 @@ const SuggestSpeaker = () => {
           Back to home
         </Link>
         <span className="mx-2">|</span>
-        <a
-          href="https://polsv.org/contact/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white transition-colors"
-        >
+        <Link to="/contact" className="hover:text-white transition-colors">
           Contact us
-        </a>
+        </Link>
       </footer>
     </div>
   );

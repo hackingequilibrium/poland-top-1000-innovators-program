@@ -18,6 +18,7 @@ import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
 import Partner from "./pages/Partner";
+import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
