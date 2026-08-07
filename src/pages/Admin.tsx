@@ -113,6 +113,7 @@ const Admin = () => {
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
+  const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
 
   const [newAdminEmail, setNewAdminEmail] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
