@@ -296,7 +296,7 @@ const days = [
     day: "Day 3",
     venue: "Triple Ring Technologies",
     title: "Capital & Partnership Tracks",
-    items: ["Investor preparation", "Industry meetings", "Partnership discussions", "Founder reception"],
+    items: ["Investor preparation", "Industry meetings", "Partnership discussions", "Polish Independence Day Reception"],
   },
   {
     day: "Day 4",
