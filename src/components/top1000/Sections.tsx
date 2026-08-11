@@ -288,7 +288,7 @@ const days = [
   },
   {
     day: "Day 2",
-    venue: "UC San Francisco",
+    venue: "UC Berkeley",
     title: "Vertical Workshops",
     items: ["Four sector workshops", "Mentoring", "AI across all tracks", "Partner networking"],
   },
@@ -300,7 +300,7 @@ const days = [
   },
   {
     day: "Day 4",
-    venue: "UC Berkeley",
+    venue: "UC San Francisco",
     title: "Showcase & Next Steps",
     items: ["Project showcase", "Networking", "Action plans", "Closing reception"],
   },
