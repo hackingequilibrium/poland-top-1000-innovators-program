@@ -413,7 +413,7 @@ const tiers = [
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
   },
   {
-    name: "Business Early Bird",
+    name: "Business Early Bird + Executive Retreat",
     price: "$5,499",
     note: "Available until September 30",
     featured: true,
@@ -427,7 +427,7 @@ const tiers = [
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
   },
   {
-    name: "Business",
+    name: "Business + Executive Retreat",
     price: "$6,499",
     note: "Standard rate",
     featured: false,
