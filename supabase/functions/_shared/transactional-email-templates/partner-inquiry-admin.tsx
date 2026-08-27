@@ -41,6 +41,8 @@ const Email = ({
   email,
   orgType,
   areaOfInterest,
+  collaborationType,
+  details,
   website,
   linkedin,
 }: Props) => (
@@ -62,6 +64,8 @@ const Email = ({
           <Row label="Email" value={email} />
           <Row label="Type of organization" value={orgType} />
           <Row label="Area of interest" value={areaOfInterest} />
+          <Row label="Collaboration type" value={collaborationType} />
+          <Row label="Details" value={details} />
           <Row label="Website" value={website} />
           <Row label="LinkedIn" value={linkedin} />
         </Section>
