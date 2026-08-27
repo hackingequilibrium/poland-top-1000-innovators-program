@@ -87,6 +87,8 @@ interface PartnerInquiry {
   email: string;
   org_type: string;
   area_of_interest: string;
+  collaboration_type: string | null;
+  details: string | null;
   website: string | null;
   linkedin: string | null;
   created_at: string;
