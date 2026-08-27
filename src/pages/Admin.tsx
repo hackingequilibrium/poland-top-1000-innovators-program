@@ -220,7 +220,7 @@ const Admin = () => {
       return;
     }
     const csv = [
-      ['Name', 'Organization', 'Role', 'Email', 'Org Type', 'Area of Interest', 'Website', 'LinkedIn', 'Submitted At'].join(','),
+      ['Name', 'Organization', 'Role', 'Email', 'Org Type', 'Area of Interest', 'Collaboration Type', 'Details', 'Website', 'LinkedIn', 'Submitted At'].join(','),
       ...partnerInquiries.map(p => [
         `"${p.name}"`,
         `"${p.organization}"`,
@@ -228,6 +228,8 @@ const Admin = () => {
         `"${p.email}"`,
         `"${p.org_type}"`,
         `"${p.area_of_interest.replace(/"/g, '""')}"`,
+        `"${(p.collaboration_type ?? '').replace(/"/g, '""')}"`,
+        `"${(p.details ?? '').replace(/"/g, '""')}"`,
         `"${p.website ?? ''}"`,
         `"${p.linkedin ?? ''}"`,
         `"${new Date(p.created_at).toLocaleString()}"`
