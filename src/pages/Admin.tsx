@@ -1360,6 +1360,16 @@ const Admin = () => {
                             <span className="text-gray-500">Area of interest:</span> {p.area_of_interest}
                           </div>
                         )}
+                        {p.collaboration_type && (
+                          <div className="mt-1 text-sm text-gray-300">
+                            <span className="text-gray-500">Collaboration type:</span> {p.collaboration_type}
+                          </div>
+                        )}
+                        {p.details && (
+                          <div className="mt-1 text-sm text-gray-300">
+                            <span className="text-gray-500">Details:</span> {p.details}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
