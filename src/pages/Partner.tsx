@@ -207,7 +207,7 @@ const Partner = () => {
       <main className="flex-1 px-6 md:px-12 lg:px-[100px] py-12 md:py-16">
         <div className="max-w-[720px] mx-auto">
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-4">
-            Partner With TOP 1000
+            Partner With Us
           </h1>
           <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-6 leading-relaxed max-w-[600px] mx-auto">
             Connect your organization with Poland’s leading innovators and the Silicon Valley ecosystem.
@@ -279,14 +279,6 @@ const Partner = () => {
             </a>
           </div>
 
-          <div className="mb-10">
-            <h2 className="text-center font-inter font-semibold text-2xl md:text-3xl uppercase tracking-tight mb-3">
-              Interested in Partnering?
-            </h2>
-            <p className="text-center font-inter font-light text-sm md:text-base text-white/70 leading-relaxed max-w-[560px] mx-auto">
-              Tell us a little about your organization and how you would like to engage with TOP 1000. Our team will follow up to explore the most relevant opportunities.
-            </p>
-          </div>
 
           {isSubmitted ? (
             <div className="text-center border border-white/20 bg-white/5 rounded-none p-10">
