@@ -20,6 +20,8 @@ interface Props {
   email?: string
   orgType?: string
   areaOfInterest?: string
+  collaborationType?: string
+  details?: string
   website?: string
   linkedin?: string
 }
@@ -39,6 +41,8 @@ const Email = ({
   email,
   orgType,
   areaOfInterest,
+  collaborationType,
+  details,
   website,
   linkedin,
 }: Props) => (
@@ -60,6 +64,8 @@ const Email = ({
           <Row label="Email" value={email} />
           <Row label="Type of organization" value={orgType} />
           <Row label="Area of interest" value={areaOfInterest} />
+          <Row label="Collaboration type" value={collaborationType} />
+          <Row label="Details" value={details} />
           <Row label="Website" value={website} />
           <Row label="LinkedIn" value={linkedin} />
         </Section>
@@ -84,7 +90,9 @@ export const template = {
     role: 'Director of Innovation',
     email: 'anna@example.com',
     orgType: 'University / Research',
-    areaOfInterest: 'Joint research programs and student exchange',
+    areaOfInterest: 'Energy & Sustainability',
+    collaborationType: 'Strategic Partnership',
+    details: 'Interested in co-hosting a workshop on clean energy commercialization.',
     website: 'https://example.com',
     linkedin: 'https://linkedin.com/in/example',
   },

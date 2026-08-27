@@ -22,13 +22,35 @@ import {
 } from "@/components/ui/form";
 import { supabase } from "@/integrations/supabase/client";
 import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
+import programOverviewPdf from "@/assets/TOP_1000_Innovators_of_Poland_in_Silicon_Valley_2026.pdf.asset.json";
+import sponsorshipPdf from "@/assets/TOP1000_Sponsorship_Packages_2026.pdf.asset.json";
 
 const orgTypes = [
-  "University / Research",
   "Corporate / Industry",
-  "Government / Public",
+  "Investor / Venture Capital",
+  "University / Research",
+  "Government / Public Institution",
+  "Foundation / Philanthropy",
+  "Innovation Ecosystem Organization",
   "Media",
-  "Foundation / Program",
+  "Other",
+];
+
+const areaOfInterestOptions = [
+  "Biomed & Life Sciences",
+  "Energy & Sustainability",
+  "Space & Avionics",
+  "Dual-Use Technologies",
+  "AI / Cross-Sector",
+  "General / Multiple Areas",
+];
+
+const collaborationTypeOptions = [
+  "Sponsorship",
+  "Strategic Partnership",
+  "Program Collaboration",
+  "Speaking / Thought Leadership",
+  "Hosting / Event Collaboration",
   "Other",
 ];
 
@@ -55,11 +77,14 @@ const formSchema = z.object({
     .email("Invalid email address")
     .max(255, "Email must be less than 255 characters"),
   orgType: z.string().min(1, "Please select an organization type"),
-  areaOfInterest: z
+  areaOfInterest: z.string().min(1, "Please select an area of interest"),
+  collaborationType: z.string().min(1, "Please select a collaboration type"),
+  details: z
     .string()
     .trim()
-    .min(1, "Please describe your area of interest")
-    .max(2000, "Must be less than 2000 characters"),
+    .max(2000, "Must be less than 2000 characters")
+    .optional()
+    .or(z.literal("")),
   website: z
     .string()
     .trim()
@@ -89,6 +114,8 @@ const Partner = () => {
       email: "",
       orgType: "",
       areaOfInterest: "",
+      collaborationType: "",
+      details: "",
       website: "",
       linkedin: "",
     },
@@ -104,6 +131,8 @@ const Partner = () => {
         email: data.email,
         org_type: data.orgType,
         area_of_interest: data.areaOfInterest,
+        collaboration_type: data.collaborationType,
+        details: data.details || null,
         website: data.website || null,
         linkedin: data.linkedin || null,
       });
@@ -126,6 +155,8 @@ const Partner = () => {
               email: data.email,
               orgType: data.orgType,
               areaOfInterest: data.areaOfInterest,
+              collaborationType: data.collaborationType,
+              details: data.details || undefined,
               website: data.website || undefined,
               linkedin: data.linkedin || undefined,
             },
@@ -143,6 +174,15 @@ const Partner = () => {
 
   const inputClasses =
     "input-autofill-dark h-12 rounded-none border-white/20 bg-white/5 text-white placeholder:text-white/40 focus-visible:ring-0 focus-visible:border-[#8FC7F5]";
+
+  const selectTriggerClasses =
+    "input-autofill-dark h-12 rounded-none border-white/20 bg-white/5 text-white focus:ring-0 focus:border-[#8FC7F5]";
+
+  const selectContentClasses =
+    "rounded-none border-white/20 bg-[#0B1A3F] text-white";
+
+  const selectItemClasses =
+    "rounded-none focus:bg-white/10 focus:text-white";
 
   return (
     <div className="min-h-screen flex flex-col bg-[#002266] text-white font-sans">
@@ -165,15 +205,88 @@ const Partner = () => {
       </header>
 
       <main className="flex-1 px-6 md:px-12 lg:px-[100px] py-12 md:py-16">
-        <div className="max-w-[640px] mx-auto">
+        <div className="max-w-[720px] mx-auto">
           <h1 className="text-center font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight mb-4">
-            Partner With Us
+            Partner With TOP 1000
           </h1>
-          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-10 leading-relaxed max-w-[560px] mx-auto">
-            We welcome partners who contribute to advancing research, commercialization, and
-            transatlantic cooperation — from universities and companies to public institutions,
-            media, and ecosystem organizations.
+          <p className="text-center font-inter font-light text-sm md:text-base text-white/80 mb-6 leading-relaxed max-w-[600px] mx-auto">
+            Connect your organization with Poland’s leading innovators and the Silicon Valley ecosystem.
           </p>
+
+          <div className="space-y-4 font-inter font-light text-sm md:text-base text-white/80 leading-relaxed mb-12">
+            <p>
+              TOP 1000 Innovators of Poland in Silicon Valley brings together Poland’s leading researchers,
+              innovators, entrepreneurs, and business leaders with founders, investors, scientists, and
+              technology executives shaping the global innovation economy.
+            </p>
+            <p>
+              We invite companies, universities, foundations, public institutions, investors, and ecosystem
+              organizations to partner with us in strengthening connections between Poland and Silicon Valley.
+            </p>
+            <p>
+              Partnership opportunities are designed around visibility, access, strategic engagement, and
+              meaningful participation in the program, with sponsorship opportunities ranging from Supporting
+              Partner to Platinum Strategic Partner.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 mb-12">
+            <a
+              href={programOverviewPdf.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 h-14 font-inter font-semibold text-sm md:text-base text-[#0B1A3F] bg-white border border-white rounded-none transition-colors duration-300 hover:bg-white/90"
+            >
+              Download Program Overview
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+            </a>
+            <a
+              href={sponsorshipPdf.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 h-14 font-inter font-semibold text-sm md:text-base text-white bg-transparent border border-white rounded-none transition-colors duration-300 hover:bg-white/10"
+            >
+              View Sponsorship Opportunities
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+
+          <div className="mb-10">
+            <h2 className="text-center font-inter font-semibold text-2xl md:text-3xl uppercase tracking-tight mb-3">
+              Interested in Partnering?
+            </h2>
+            <p className="text-center font-inter font-light text-sm md:text-base text-white/70 leading-relaxed max-w-[560px] mx-auto">
+              Tell us a little about your organization and how you would like to engage with TOP 1000. Our team will follow up to explore the most relevant opportunities.
+            </p>
+          </div>
 
           {isSubmitted ? (
             <div className="text-center border border-white/20 bg-white/5 rounded-none p-10">
@@ -294,16 +407,16 @@ const Partner = () => {
                       </FormLabel>
                       <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
-                          <SelectTrigger className="input-autofill-dark h-12 rounded-none border-white/20 bg-white/5 text-white focus:ring-0 focus:border-[#8FC7F5]">
+                          <SelectTrigger className={selectTriggerClasses}>
                             <SelectValue placeholder="Select…" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent className="rounded-none border-white/20 bg-[#0B1A3F] text-white">
+                        <SelectContent className={selectContentClasses}>
                           {orgTypes.map((t) => (
                             <SelectItem
                               key={t}
                               value={t}
-                              className="rounded-none focus:bg-white/10 focus:text-white"
+                              className={selectItemClasses}
                             >
                               {t}
                             </SelectItem>
@@ -323,11 +436,73 @@ const Partner = () => {
                       <FormLabel className="font-inter text-white/80 text-sm">
                         Area of interest *
                       </FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className={selectTriggerClasses}>
+                            <SelectValue placeholder="Select…" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className={selectContentClasses}>
+                          {areaOfInterestOptions.map((t) => (
+                            <SelectItem
+                              key={t}
+                              value={t}
+                              className={selectItemClasses}
+                            >
+                              {t}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage className="text-red-300" />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="collaborationType"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-inter text-white/80 text-sm">
+                        What kind of collaboration are you interested in? *
+                      </FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value}>
+                        <FormControl>
+                          <SelectTrigger className={selectTriggerClasses}>
+                            <SelectValue placeholder="Select…" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent className={selectContentClasses}>
+                          {collaborationTypeOptions.map((t) => (
+                            <SelectItem
+                              key={t}
+                              value={t}
+                              className={selectItemClasses}
+                            >
+                              {t}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage className="text-red-300" />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="details"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-inter text-white/80 text-sm">
+                        Tell us more about your interest
+                      </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
                           className="input-autofill-dark rounded-none border-white/20 bg-white/5 text-white placeholder:text-white/40 focus-visible:ring-0 focus-visible:border-[#8FC7F5] min-h-[120px]"
-                          placeholder="What kind of collaboration are you interested in?"
+                          placeholder="Share any details about your goals, timing, or questions."
                         />
                       </FormControl>
                       <FormMessage className="text-red-300" />
