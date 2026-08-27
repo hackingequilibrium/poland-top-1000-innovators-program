@@ -20,6 +20,8 @@ interface Props {
   email?: string
   orgType?: string
   areaOfInterest?: string
+  collaborationType?: string
+  details?: string
   website?: string
   linkedin?: string
 }
