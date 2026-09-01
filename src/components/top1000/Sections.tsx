@@ -16,6 +16,7 @@ import summitOpenAiAsset from "@/assets/summit-2025-openai-interview.jpg.asset.j
 import aggieKrajewskaAsset from "@/assets/aggie-krajewska.jpg.asset.json";
 import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
+import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -26,6 +27,7 @@ const summitOpenAi = summitOpenAiAsset.url;
 const aggieKrajewska = aggieKrajewskaAsset.url;
 const lukaszKaiser = lukaszKaiserAsset.url;
 const maciejKawecki = maciejKaweckiAsset.url;
+const michaelLepech = michaelLepechAsset.url;
 
 
 
@@ -194,6 +196,7 @@ const speakers = [
     name: "Aggie Krajewska",
     role: "Founder & CEO, SF Startup Labs | Ex-Google",
     image: aggieKrajewska,
+    imageClass: "object-top",
     bio: [
       "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
       "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
@@ -204,9 +207,32 @@ const speakers = [
     name: "Łukasz Kaiser",
     role: "Member of Technical Staff, OpenAI | Co-creator of TensorFlow",
     image: lukaszKaiser,
+    imageClass: "object-center scale-150",
     bio: [
       "Łukasz Kaiser is a leading AI researcher whose work spans machine learning, neural networks, and natural language processing. As part of the Google Brain team, he co-created TensorFlow and contributed to major advances in neural networks for language, including machine translation and summarization.",
       "Before moving into machine learning, he was a tenured researcher in Paris working on logic, automata theory, program synthesis, and game theory. Today, he is a Member of Technical Staff at OpenAI, working at the frontier of artificial intelligence.",
+    ],
+  },
+  {
+    id: "maciej-kawecki",
+    name: "Maciej Kawecki",
+    role: "Technology Journalist & Science Communicator | President, Lem Institute",
+    image: maciejKawecki,
+    imageClass: "object-top",
+    bio: [
+      "Maciej Kawecki is one of Poland's leading technology journalists and science communicators, known for making breakthrough science and emerging technologies accessible to a broad audience. He is the creator and host of “This Is IT,” where he explores the technologies shaping our present and future through conversations with some of the world's most prominent scientists and innovators, including Nobel laureates Geoffrey Hinton, David Baker, Roger Penrose, and Klaus von Klitzing.",
+      "He is also President of the Lem Institute and has held leadership roles in academia and Poland's Ministry of Digital Affairs. His work sits at the intersection of technology, science, media, and public engagement, with a strong focus on the human impact of technological progress.",
+    ],
+  },
+  {
+    id: "michael-lepech",
+    name: "Michael Lepech",
+    role: "Professor, Stanford University | Acting Director, Stanford Technology Ventures Program",
+    image: michaelLepech,
+    imageClass: "object-top",
+    bio: [
+      "Michael Lepech is the C. L. Peck, Class of 1906 Professor of Civil and Environmental Engineering at Stanford University and a Senior Fellow at the Stanford Woods Institute for the Environment. His research focuses on sustainable infrastructure, smart cities, advanced materials, and digital technologies for designing more resilient and environmentally sustainable built environments.",
+      "Beyond his research, Michael works extensively at the intersection of engineering, entrepreneurship, and technology commercialization. He serves as Acting Director of the Stanford Technology Ventures Program and leads several Stanford initiatives focused on sustainable development, project leadership, entrepreneurship, product management, and bringing emerging technologies from ideas to market.",
     ],
   },
 ];
@@ -248,7 +274,7 @@ export const SpeakersSection = () => {
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className={`w-full h-full object-cover ${speaker.imageClass} transition-transform duration-500 hover:scale-105`}
               />
             </div>
             <div className="p-4 md:p-5">
