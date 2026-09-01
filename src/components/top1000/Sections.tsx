@@ -283,7 +283,7 @@ export const SpeakersSection = () => {
             onClick={() => setActiveId(speaker.id)}
             className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50 h-full flex flex-col"
           >
-            <div className="aspect-[2/3] w-full overflow-hidden shrink-0">
+            <div className="aspect-[10/13] w-full overflow-hidden shrink-0">
               <img
                 src={speaker.image}
                 alt={speaker.name}
