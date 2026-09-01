@@ -18,6 +18,7 @@ import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
+import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -30,6 +31,7 @@ const lukaszKaiser = lukaszKaiserAsset.url;
 const maciejKawecki = maciejKaweckiAsset.url;
 const michaelLepech = michaelLepechAsset.url;
 const markChandler = markChandlerAsset.url;
+const piotrMoncarz = piotrMoncarzAsset.url;
 
 
 
@@ -224,6 +226,17 @@ const speakers = [
     bio: [
       "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
       "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
+    ],
+  },
+  {
+    id: "piotr-moncarz",
+    name: "Piotr D. Moncarz",
+    role: "President & CEO, PolSV | Stanford University | Member, U.S. National Academy of Engineering",
+    image: piotrMoncarz,
+    imageClass: "object-center",
+    bio: [
+      "Piotr D. Moncarz is a Silicon Valley engineer, entrepreneur, and academic who has spent more than five decades at the intersection of science, technology, and industry. He is an Adjunct Professor at Stanford University, a member of the U.S. National Academy of Engineering, and President & CEO of the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship (PolSV).",
+      "For more than 30 years, Piotr has worked to strengthen connections between Poland and Silicon Valley, creating opportunities for Polish scientists, entrepreneurs, and technology leaders to engage with the region’s academic, business, and investment ecosystem. He is also a co-founder and Chairman of the U.S.-Polish Trade Council and has held senior leadership roles in engineering and technology ventures, including Exponent and XGS Energy.",
     ],
   },
   {
