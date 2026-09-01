@@ -275,7 +275,7 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
         {speakers.map((speaker) => (
           <button
             key={speaker.id}
@@ -283,11 +283,11 @@ export const SpeakersSection = () => {
             onClick={() => setActiveId(speaker.id)}
             className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50"
           >
-            <div className="aspect-[3/2] w-full overflow-hidden">
+            <div className="aspect-[2/4] w-full overflow-hidden">
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className={`w-full h-full object-cover ${speaker.imageClass} transition-transform duration-500 hover:scale-105`}
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div className="p-4 md:p-5">
