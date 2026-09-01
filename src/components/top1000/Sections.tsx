@@ -19,6 +19,7 @@ import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
+import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -32,6 +33,7 @@ const maciejKawecki = maciejKaweckiAsset.url;
 const michaelLepech = michaelLepechAsset.url;
 const markChandler = markChandlerAsset.url;
 const piotrMoncarz = piotrMoncarzAsset.url;
+const nuriCapanoglu = nuriCapanogluAsset.url;
 
 
 
@@ -261,6 +263,17 @@ const speakers = [
       "He is also President of the Lem Institute and has held leadership roles in academia and Poland's Ministry of Digital Affairs. His work sits at the intersection of technology, science, media, and public engagement, with a strong focus on the human impact of technological progress.",
     ],
   },
+  {
+    id: "nuri-capanoglu",
+    name: "Nuri Capanoglu",
+    role: "Product Manager, Muon Space | Stanford National Security Innovation Scholar",
+    image: nuriCapanoglu,
+    imageClass: "object-top",
+    bio: [
+      "Nuri Capanoglu is a product leader working at the intersection of space technology, energy, and national security. He is a Product Manager at Muon Space, where he works on satellite systems and missions designed to better understand and protect the planet. He previously served as a Space Strategy Fellow at Stanford’s Hoover Institution and as a National Security Innovation Scholar at the Stanford Gordian Knot Center.",
+      "At the request of the White House National Security Council, Nuri and his Stanford team developed and presented policy recommendations on nuclear energy solutions to meet growing U.S. energy demand, including from AI data centers. He holds an MS in Management Science and Engineering from Stanford and dual bachelor’s degrees in Civil Engineering and Business Administration from UC Berkeley.",
+    ],
+  },
 ];
 
 export const SpeakersSection = () => {
@@ -288,7 +301,7 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6">
         {speakers.map((speaker) => (
           <button
             key={speaker.id}
