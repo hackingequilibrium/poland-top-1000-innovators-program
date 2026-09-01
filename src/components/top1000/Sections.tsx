@@ -281,18 +281,20 @@ export const SpeakersSection = () => {
             key={speaker.id}
             type="button"
             onClick={() => setActiveId(speaker.id)}
-            className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50"
+            className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50 h-full flex flex-col"
           >
-            <div className="aspect-[1/2] w-full overflow-hidden">
+            <div className="aspect-[2/3] w-full overflow-hidden shrink-0">
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${speaker.imageClass || "object-center"}`}
               />
             </div>
-            <div className="p-4 md:p-5">
+            <div className="p-4 md:p-5 flex flex-col items-start">
               <h3 className="font-display text-lg md:text-xl font-semibold text-white leading-tight">
-                {speaker.name}
+                {speaker.name.split(" ").slice(0, -1).join(" ")}
+                <br />
+                {speaker.name.split(" ").slice(-1)}
               </h3>
               <p className="text-[#8FC7F5] text-xs md:text-sm font-light mt-1 leading-snug">
                 {speaker.role}
