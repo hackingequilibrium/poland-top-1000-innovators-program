@@ -20,6 +20,7 @@ import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
+import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -34,6 +35,7 @@ const michaelLepech = michaelLepechAsset.url;
 const markChandler = markChandlerAsset.url;
 const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
+const renateFruchter = renateFruchterAsset.url;
 
 
 
@@ -274,6 +276,17 @@ const speakers = [
       "At the request of the White House National Security Council, Nuri and his Stanford team developed and presented policy recommendations on nuclear energy solutions to meet growing U.S. energy demand, including from AI data centers. He holds an MS in Management Science and Engineering from Stanford and dual bachelor’s degrees in Civil Engineering and Business Administration from UC Berkeley.",
     ],
   },
+  {
+    id: "renate-fruchter",
+    name: "Renate Fruchter",
+    role: "Founding Director, Project Based Learning Lab | Stanford University",
+    image: renateFruchter,
+    imageClass: "object-center",
+    bio: [
+      "Renate Fruchter is the founding director of Stanford University’s Project Based Learning Laboratory (PBL Lab) and a lecturer in Civil and Environmental Engineering. Her work explores how technology can enable collaboration, learning, and innovation across disciplines and geographically distributed teams, with a particular focus on the relationship between technology, people, place, and process.",
+      "For more than three decades, she has pioneered new approaches to global teamwork and project-based learning at Stanford. Her research spans collaboration technologies, virtual and interactive workspaces, knowledge sharing, and team dynamics, with recent work exploring the use of AI, virtual reality, big data, and parametric modeling to enhance creativity, engagement, and sustainable building performance.",
+    ],
+  },
 ];
 
 export const SpeakersSection = () => {
@@ -301,7 +314,7 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4 md:gap-6">
         {speakers.map((speaker) => (
           <button
             key={speaker.id}
