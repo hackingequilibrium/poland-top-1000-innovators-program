@@ -14,6 +14,7 @@ import summitPanelAsset from "@/assets/summit-2025-panel.jpg.asset.json";
 import summitCertificatesAsset from "@/assets/summit-2025-certificates.png.asset.json";
 import summitOpenAiAsset from "@/assets/summit-2025-openai-interview.jpg.asset.json";
 import aggieKrajewskaAsset from "@/assets/aggie-krajewska.jpg.asset.json";
+import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -22,6 +23,7 @@ const summitPanel = summitPanelAsset.url;
 const summitCertificates = summitCertificatesAsset.url;
 const summitOpenAi = summitOpenAiAsset.url;
 const aggieKrajewska = aggieKrajewskaAsset.url;
+const lukaszKaiser = lukaszKaiserAsset.url;
 
 
 
