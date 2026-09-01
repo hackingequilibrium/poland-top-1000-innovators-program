@@ -314,7 +314,7 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-4 md:gap-6">
         {speakers.map((speaker) => (
           <button
             key={speaker.id}
