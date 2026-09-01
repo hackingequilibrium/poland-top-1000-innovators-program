@@ -20,6 +20,7 @@ import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
+import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
