@@ -19,6 +19,7 @@ import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
+import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
