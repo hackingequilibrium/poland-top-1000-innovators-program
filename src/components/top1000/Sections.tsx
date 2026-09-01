@@ -21,6 +21,7 @@ import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
+import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -36,6 +37,7 @@ const markChandler = markChandlerAsset.url;
 const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
+const skipRoss = skipRossAsset.url;
 
 
 
@@ -287,7 +289,19 @@ const speakers = [
       "For more than three decades, she has pioneered new approaches to global teamwork and project-based learning at Stanford. Her research spans collaboration technologies, virtual and interactive workspaces, knowledge sharing, and team dynamics, with recent work exploring the use of AI, virtual reality, big data, and parametric modeling to enhance creativity, engagement, and sustainable building performance.",
     ],
   },
+  {
+    id: "skip-ross",
+    name: "Skip Ross",
+    role: "Founder, Exponent | Engineering & Failure Analysis Pioneer",
+    image: skipRoss,
+    imageClass: "object-center",
+    bio: [
+      "Skip Ross is the founder of Exponent, originally established as Failure Analysis Associates, and a pioneer in engineering failure analysis and accident investigation. An aeronautical engineer by training, he has led investigations and research spanning aviation, heavy equipment, structural and mechanical systems, fracture mechanics, vibration, impact, and product design.",
+      "Before founding the firm, Skip worked in the aerospace industry and served as an engineering program manager at Stanford Research Institute. He later served as a Consulting Professor in Stanford University’s School of Engineering, where he taught graduate-level failure analysis, and as a member of the School of Engineering Advisory Board. He holds a Ph.D. and M.Sc. in Aeronautical Engineering from Stanford University and has published more than 50 technical papers.",
+    ],
+  },
 ];
+
 
 export const SpeakersSection = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
