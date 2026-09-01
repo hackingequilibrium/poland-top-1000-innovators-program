@@ -22,6 +22,7 @@ import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
+import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -38,6 +39,8 @@ const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
+const paulBryzek = paulBryzekAsset.url;
+
 
 
 
@@ -298,6 +301,17 @@ const speakers = [
     bio: [
       "Skip Ross is the founder of Exponent, originally established as Failure Analysis Associates, and a pioneer in engineering failure analysis and accident investigation. An aeronautical engineer by training, he has led investigations and research spanning aviation, heavy equipment, structural and mechanical systems, fracture mechanics, vibration, impact, and product design.",
       "Before founding the firm, Skip worked in the aerospace industry and served as an engineering program manager at Stanford Research Institute. He later served as a Consulting Professor in Stanford University’s School of Engineering, where he taught graduate-level failure analysis, and as a member of the School of Engineering Advisory Board. He holds a Ph.D. and M.Sc. in Aeronautical Engineering from Stanford University and has published more than 50 technical papers.",
+    ],
+  },
+  {
+    id: "paul-bryzek",
+    name: "Paul Bryzek",
+    role: "Founder & CEO, CarbonSustain",
+    image: paulBryzek,
+    imageClass: "object-center",
+    bio: [
+      "Paul Bryzek is a technology leader, software engineer, and entrepreneur with more than 18 years of experience building enterprise technology across fintech, distributed systems, digital assets, and Web3. He is a Senior Software Engineer at Ripple, where he works on financial crimes engineering and real-time compliance infrastructure for global payment systems.",
+      "Paul is also the Founder and CEO of CarbonSustain, a climate technology company developing AI- and blockchain-powered solutions for carbon accounting, emissions reporting, and sustainability compliance. His work bridges technology, entrepreneurship, and climate innovation, with a focus on making environmental data more transparent, actionable, and verifiable. He holds an MBA from the UC Berkeley Haas School of Business and has been active in Berkeley’s entrepreneurship and innovation ecosystem.",
     ],
   },
 ];
