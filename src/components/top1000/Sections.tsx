@@ -194,17 +194,6 @@ export const FocusAreasSection = () => (
 /* 4. Featured Voices */
 const speakers = [
   {
-    id: "aggie-krajewska",
-    name: "Aggie Krajewska",
-    role: "Founder & CEO, SF Startup Labs | Ex-Google",
-    image: aggieKrajewska,
-    imageClass: "object-top",
-    bio: [
-      "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
-      "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
-    ],
-  },
-  {
     id: "lukasz-kaiser",
     name: "Łukasz Kaiser",
     role: "Member of Technical Staff, OpenAI | Co-creator of TensorFlow",
@@ -216,14 +205,14 @@ const speakers = [
     ],
   },
   {
-    id: "maciej-kawecki",
-    name: "Maciej Kawecki",
-    role: "Technology Journalist & Science Communicator | President, Lem Institute",
-    image: maciejKawecki,
+    id: "aggie-krajewska",
+    name: "Aggie Krajewska",
+    role: "Founder & CEO, SF Startup Labs | Ex-Google",
+    image: aggieKrajewska,
     imageClass: "object-top",
     bio: [
-      "Maciej Kawecki is one of Poland's leading technology journalists and science communicators, known for making breakthrough science and emerging technologies accessible to a broad audience. He is the creator and host of “This Is IT,” where he explores the technologies shaping our present and future through conversations with some of the world's most prominent scientists and innovators, including Nobel laureates Geoffrey Hinton, David Baker, Roger Penrose, and Klaus von Klitzing.",
-      "He is also President of the Lem Institute and has held leadership roles in academia and Poland's Ministry of Digital Affairs. His work sits at the intersection of technology, science, media, and public engagement, with a strong focus on the human impact of technological progress.",
+      "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
+      "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
     ],
   },
   {
@@ -246,6 +235,17 @@ const speakers = [
     bio: [
       "Mark Chandler is Director of the San Francisco Mayor’s Office of Global Engagement, where he leads the city’s international trade, investment, and economic diplomacy efforts. With more than 33 years in San Francisco city government and service under eight mayors, he oversees initiatives spanning technology and innovation exchange, international aviation, smart cities, trade and investment promotion, and diplomatic relations.",
       "Mark has participated in more than 30 international missions across Asia, Europe, North America, and the Middle East. He holds a BA in Economics from UC Davis and an MBA in International Marketing from UC Berkeley’s Haas School of Business.",
+    ],
+  },
+  {
+    id: "maciej-kawecki",
+    name: "Maciej Kawecki",
+    role: "Technology Journalist & Science Communicator | President, Lem Institute",
+    image: maciejKawecki,
+    imageClass: "object-top",
+    bio: [
+      "Maciej Kawecki is one of Poland's leading technology journalists and science communicators, known for making breakthrough science and emerging technologies accessible to a broad audience. He is the creator and host of “This Is IT,” where he explores the technologies shaping our present and future through conversations with some of the world's most prominent scientists and innovators, including Nobel laureates Geoffrey Hinton, David Baker, Roger Penrose, and Klaus von Klitzing.",
+      "He is also President of the Lem Institute and has held leadership roles in academia and Poland's Ministry of Digital Affairs. His work sits at the intersection of technology, science, media, and public engagement, with a strong focus on the human impact of technological progress.",
     ],
   },
 ];
