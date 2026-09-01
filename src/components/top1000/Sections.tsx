@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake } from "lucide-react";
+import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
 import patronLogosCombined from "@/assets/patron-logos-combined.png";
 import honoraryPatronage from "@/assets/honorary-patronage.png";
 import businessPartners from "@/assets/business-partners.png";
@@ -13,6 +13,7 @@ import summitStageAsset from "@/assets/summit-2025-stage.jpg.asset.json";
 import summitPanelAsset from "@/assets/summit-2025-panel.jpg.asset.json";
 import summitCertificatesAsset from "@/assets/summit-2025-certificates.png.asset.json";
 import summitOpenAiAsset from "@/assets/summit-2025-openai-interview.jpg.asset.json";
+import aggieKrajewskaAsset from "@/assets/aggie-krajewska.jpg.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -20,6 +21,7 @@ const summitStage = summitStageAsset.url;
 const summitPanel = summitPanelAsset.url;
 const summitCertificates = summitCertificatesAsset.url;
 const summitOpenAi = summitOpenAiAsset.url;
+const aggieKrajewska = aggieKrajewskaAsset.url;
 
 
 
