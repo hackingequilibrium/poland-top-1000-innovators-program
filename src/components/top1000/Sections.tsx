@@ -17,6 +17,7 @@ import aggieKrajewskaAsset from "@/assets/aggie-krajewska.jpg.asset.json";
 import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
+import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -28,6 +29,7 @@ const aggieKrajewska = aggieKrajewskaAsset.url;
 const lukaszKaiser = lukaszKaiserAsset.url;
 const maciejKawecki = maciejKaweckiAsset.url;
 const michaelLepech = michaelLepechAsset.url;
+const markChandler = markChandlerAsset.url;
 
 
 
@@ -235,6 +237,17 @@ const speakers = [
       "Beyond his research, Michael works extensively at the intersection of engineering, entrepreneurship, and technology commercialization. He serves as Acting Director of the Stanford Technology Ventures Program and leads several Stanford initiatives focused on sustainable development, project leadership, entrepreneurship, product management, and bringing emerging technologies from ideas to market.",
     ],
   },
+  {
+    id: "mark-chandler",
+    name: "Mark Chandler",
+    role: "Director, San Francisco Mayor’s Office of Global Engagement",
+    image: markChandler,
+    imageClass: "object-top",
+    bio: [
+      "Mark Chandler is Director of the San Francisco Mayor’s Office of Global Engagement, where he leads the city’s international trade, investment, and economic diplomacy efforts. With more than 33 years in San Francisco city government and service under eight mayors, he oversees initiatives spanning technology and innovation exchange, international aviation, smart cities, trade and investment promotion, and diplomatic relations.",
+      "Mark has participated in more than 30 international missions across Asia, Europe, North America, and the Middle East. He holds a BA in Economics from UC Davis and an MBA in International Marketing from UC Berkeley’s Haas School of Business.",
+    ],
+  },
 ];
 
 export const SpeakersSection = () => {
@@ -262,7 +275,7 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
         {speakers.map((speaker) => (
           <button
             key={speaker.id}
