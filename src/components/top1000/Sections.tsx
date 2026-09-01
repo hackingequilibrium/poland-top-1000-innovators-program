@@ -198,7 +198,7 @@ const speakers = [
     name: "Łukasz Kaiser",
     role: "Member of Technical Staff, OpenAI | Co-creator of TensorFlow",
     image: lukaszKaiser,
-    imageClass: "object-center scale-125",
+    imageClass: "object-center scale-110",
     bio: [
       "Łukasz Kaiser is a leading AI researcher whose work spans machine learning, neural networks, and natural language processing. As part of the Google Brain team, he co-created TensorFlow and contributed to major advances in neural networks for language, including machine translation and summarization.",
       "Before moving into machine learning, he was a tenured researcher in Paris working on logic, automata theory, program synthesis, and game theory. Today, he is a Member of Technical Staff at OpenAI, working at the frontier of artificial intelligence.",
