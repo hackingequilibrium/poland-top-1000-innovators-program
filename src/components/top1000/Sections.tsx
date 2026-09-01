@@ -186,17 +186,41 @@ export const FocusAreasSection = () => (
 );
 
 /* 4. Featured Voices */
+const speakers = [
+  {
+    id: "aggie-krajewska",
+    name: "Aggie Krajewska",
+    role: "Founder & CEO, SF Startup Labs | Ex-Google",
+    image: aggieKrajewska,
+    bio: [
+      "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
+      "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
+    ],
+  },
+  {
+    id: "lukasz-kaiser",
+    name: "Łukasz Kaiser",
+    role: "Member of Technical Staff, OpenAI | Co-creator of TensorFlow",
+    image: lukaszKaiser,
+    bio: [
+      "Łukasz Kaiser is a leading AI researcher whose work spans machine learning, neural networks, and natural language processing. As part of the Google Brain team, he co-created TensorFlow and contributed to major advances in neural networks for language, including machine translation and summarization.",
+      "Before moving into machine learning, he was a tenured researcher in Paris working on logic, automata theory, program synthesis, and game theory. Today, he is a Member of Technical Staff at OpenAI, working at the frontier of artificial intelligence.",
+    ],
+  },
+];
+
 export const SpeakersSection = () => {
-  const [open, setOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const activeSpeaker = speakers.find((s) => s.id === activeId) || null;
 
   useEffect(() => {
-    if (!open) return;
+    if (!activeId) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") setActiveId(null);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [activeId]);
 
   return (
     <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
@@ -210,45 +234,48 @@ export const SpeakersSection = () => {
         Leaders shaping the future of science, technology, and innovation.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50"
-        >
-          <div className="aspect-[4/3] w-full overflow-hidden">
-            <img
-              src={aggieKrajewska}
-              alt="Aggie Krajewska"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-            />
-          </div>
-          <div className="p-6">
-            <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
-              Aggie Krajewska
-            </h3>
-            <p className="text-[#8FC7F5] text-sm font-light mt-1">
-              Founder & CEO, SF Startup Labs | Ex-Google
-            </p>
-            <span className="inline-flex items-center gap-2 mt-4 text-white/70 text-sm font-light hover:text-white transition-colors">
-              Read bio
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </span>
-          </div>
-        </button>
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {speakers.map((speaker) => (
+          <button
+            key={speaker.id}
+            type="button"
+            onClick={() => setActiveId(speaker.id)}
+            className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50"
+          >
+            <div className="aspect-[3/2] w-full overflow-hidden">
+              <img
+                src={speaker.image}
+                alt={speaker.name}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="p-4 md:p-5">
+              <h3 className="font-display text-lg md:text-xl font-semibold text-white leading-tight">
+                {speaker.name}
+              </h3>
+              <p className="text-[#8FC7F5] text-xs md:text-sm font-light mt-1 leading-snug">
+                {speaker.role}
+              </p>
+              <span className="inline-flex items-center gap-2 mt-3 text-white/70 text-xs md:text-sm font-light hover:text-white transition-colors">
+                Read bio
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </button>
+        ))}
       </div>
 
       <Link
@@ -258,10 +285,10 @@ export const SpeakersSection = () => {
         Suggest a Speaker
       </Link>
 
-      {open && (
+      {activeSpeaker && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-          onClick={() => setOpen(false)}
+          onClick={() => setActiveId(null)}
           aria-modal="true"
           role="dialog"
         >
@@ -271,7 +298,7 @@ export const SpeakersSection = () => {
           >
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={() => setActiveId(null)}
               className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
               aria-label="Close"
             >
@@ -280,34 +307,22 @@ export const SpeakersSection = () => {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="w-full md:w-1/3 shrink-0">
                 <img
-                  src={aggieKrajewska}
-                  alt="Aggie Krajewska"
+                  src={activeSpeaker.image}
+                  alt={activeSpeaker.name}
                   className="w-full aspect-[4/5] object-cover rounded-none"
                 />
               </div>
               <div>
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-white">
-                  Aggie Krajewska
+                  {activeSpeaker.name}
                 </h3>
                 <p className="text-[#8FC7F5] text-sm font-light mt-1">
-                  Founder & CEO, SF Startup Labs | Ex-Google
+                  {activeSpeaker.role}
                 </p>
                 <div className="mt-5 space-y-4 text-white/80 text-base font-extralight leading-relaxed">
-                  <p>
-                    Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of
-                    experience helping entrepreneurs scale into Silicon Valley. Through roles at
-                    Google for Startups, Toronto Business Development Centre, and as CEO of
-                    ReaktorX, she has supported more than 300 founders across Europe and North
-                    America with market positioning, customer acquisition, fundraising, and access
-                    to the Bay Area ecosystem.
-                  </p>
-                  <p>
-                    Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs,
-                    accelerators, and ecosystem partners to help international startups build real
-                    momentum in Silicon Valley. She is also a founder herself: her startup,
-                    DeepSky, reached the Y Combinator finals, selected from a pool of 19,000
-                    companies.
-                  </p>
+                  {activeSpeaker.bio.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
                 </div>
               </div>
             </div>
