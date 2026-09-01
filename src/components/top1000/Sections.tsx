@@ -35,6 +35,7 @@ const michaelLepech = michaelLepechAsset.url;
 const markChandler = markChandlerAsset.url;
 const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
+const renateFruchter = renateFruchterAsset.url;
 
 
 
