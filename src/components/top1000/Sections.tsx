@@ -205,17 +205,6 @@ const speakers = [
     ],
   },
   {
-    id: "aggie-krajewska",
-    name: "Aggie Krajewska",
-    role: "Founder & CEO, SF Startup Labs | Ex-Google",
-    image: aggieKrajewska,
-    imageClass: "object-top",
-    bio: [
-      "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
-      "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
-    ],
-  },
-  {
     id: "michael-lepech",
     name: "Michael Lepech",
     role: "Professor, Stanford University | Acting Director, Stanford Technology Ventures Program",
@@ -224,6 +213,17 @@ const speakers = [
     bio: [
       "Michael Lepech is the C. L. Peck, Class of 1906 Professor of Civil and Environmental Engineering at Stanford University and a Senior Fellow at the Stanford Woods Institute for the Environment. His research focuses on sustainable infrastructure, smart cities, advanced materials, and digital technologies for designing more resilient and environmentally sustainable built environments.",
       "Beyond his research, Michael works extensively at the intersection of engineering, entrepreneurship, and technology commercialization. He serves as Acting Director of the Stanford Technology Ventures Program and leads several Stanford initiatives focused on sustainable development, project leadership, entrepreneurship, product management, and bringing emerging technologies from ideas to market.",
+    ],
+  },
+  {
+    id: "aggie-krajewska",
+    name: "Aggie Krajewska",
+    role: "Founder & CEO, SF Startup Labs | Ex-Google",
+    image: aggieKrajewska,
+    imageClass: "object-top",
+    bio: [
+      "Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of experience helping entrepreneurs scale into Silicon Valley. Through roles at Google for Startups, Toronto Business Development Centre, and as CEO of ReaktorX, she has supported more than 300 founders across Europe and North America with market positioning, customer acquisition, fundraising, and access to the Bay Area ecosystem.",
+      "Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs, accelerators, and ecosystem partners to help international startups build real momentum in Silicon Valley. She is also a founder herself: her startup, DeepSky, reached the Y Combinator finals, selected from a pool of 19,000 companies.",
     ],
   },
   {
