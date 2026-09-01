@@ -229,6 +229,17 @@ const speakers = [
     ],
   },
   {
+    id: "piotr-moncarz",
+    name: "Piotr D. Moncarz",
+    role: "President & CEO, PolSV | Stanford University | Member, U.S. National Academy of Engineering",
+    image: piotrMoncarz,
+    imageClass: "object-center",
+    bio: [
+      "Piotr D. Moncarz is a Silicon Valley engineer, entrepreneur, and academic who has spent more than five decades at the intersection of science, technology, and industry. He is an Adjunct Professor at Stanford University, a member of the U.S. National Academy of Engineering, and President & CEO of the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship (PolSV).",
+      "For more than 30 years, Piotr has worked to strengthen connections between Poland and Silicon Valley, creating opportunities for Polish scientists, entrepreneurs, and technology leaders to engage with the region’s academic, business, and investment ecosystem. He is also a co-founder and Chairman of the U.S.-Polish Trade Council and has held senior leadership roles in engineering and technology ventures, including Exponent and XGS Energy.",
+    ],
+  },
+  {
     id: "mark-chandler",
     name: "Mark Chandler",
     role: "Director, San Francisco Mayor’s Office of Global Engagement",
