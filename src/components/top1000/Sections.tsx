@@ -184,27 +184,137 @@ export const FocusAreasSection = () => (
 );
 
 /* 4. Featured Voices */
-export const SpeakersSection = () => (
-  <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
-    <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Featured Voices</p>
-    <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
-      Speakers & Workshop Leaders
-    </h2>
-    <p className="text-white/70 text-base md:text-lg font-light leading-relaxed max-w-3xl">
-      Leaders across science, policy, industry, investment, and innovation shaping the future of
-      technology and commercialization.
-    </p>
-    <div className="mt-10 flex items-center justify-center rounded-none border border-dashed border-white/15 bg-white/[0.03] py-16">
-      <span className="text-white/50 text-xs uppercase tracking-[0.35em] font-light">Coming soon</span>
-    </div>
-    <Link
-      to="/suggest-speaker"
-      className="mt-8 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
-    >
-      Suggest a Speaker
-    </Link>
-  </section>
-);
+export const SpeakersSection = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  return (
+    <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+      <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">
+        Featured Voices
+      </p>
+      <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-4">
+        Speakers
+      </h2>
+      <p className="text-white/70 text-base md:text-lg font-extralight leading-relaxed max-w-3xl">
+        Leaders shaping the future of science, technology, and innovation.
+      </p>
+
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="text-left rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm overflow-hidden transition-colors hover:bg-white/[0.07] focus:outline-none focus:ring-2 focus:ring-[#8FC7F5]/50"
+        >
+          <div className="aspect-[4/3] w-full overflow-hidden">
+            <img
+              src={aggieKrajewska}
+              alt="Aggie Krajewska"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+              Aggie Krajewska
+            </h3>
+            <p className="text-[#8FC7F5] text-sm font-light mt-1">
+              Founder & CEO, SF Startup Labs | Ex-Google
+            </p>
+            <span className="inline-flex items-center gap-2 mt-4 text-white/70 text-sm font-light hover:text-white transition-colors">
+              Read bio
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
+          </div>
+        </button>
+      </div>
+
+      <Link
+        to="/suggest-speaker"
+        className="mt-8 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+      >
+        Suggest a Speaker
+      </Link>
+
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+          aria-modal="true"
+          role="dialog"
+        >
+          <div
+            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-none border border-white/10 bg-[#0B1A3F] p-8 md:p-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <X className="h-6 w-6" strokeWidth={1.5} />
+            </button>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="w-full md:w-1/3 shrink-0">
+                <img
+                  src={aggieKrajewska}
+                  alt="Aggie Krajewska"
+                  className="w-full aspect-[4/5] object-cover rounded-none"
+                />
+              </div>
+              <div>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold text-white">
+                  Aggie Krajewska
+                </h3>
+                <p className="text-[#8FC7F5] text-sm font-light mt-1">
+                  Founder & CEO, SF Startup Labs | Ex-Google
+                </p>
+                <div className="mt-5 space-y-4 text-white/80 text-base font-extralight leading-relaxed">
+                  <p>
+                    Aggie Krajewska is a startup ecosystem leader and founder with 10+ years of
+                    experience helping entrepreneurs scale into Silicon Valley. Through roles at
+                    Google for Startups, Toronto Business Development Centre, and as CEO of
+                    ReaktorX, she has supported more than 300 founders across Europe and North
+                    America with market positioning, customer acquisition, fundraising, and access
+                    to the Bay Area ecosystem.
+                  </p>
+                  <p>
+                    Today, as Founder and CEO of SF Startup Labs, Aggie works with founders, VCs,
+                    accelerators, and ecosystem partners to help international startups build real
+                    momentum in Silicon Valley. She is also a founder herself: her startup,
+                    DeepSky, reached the Y Combinator finals, selected from a pool of 19,000
+                    companies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
 
 /* 5. Why TOP1000 */
 const whyItems = [
