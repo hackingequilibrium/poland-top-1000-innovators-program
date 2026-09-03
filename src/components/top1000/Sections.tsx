@@ -23,6 +23,8 @@ import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
+import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
+
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -40,6 +42,8 @@ const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
 const paulBryzek = paulBryzekAsset.url;
+const estherWojcicki = estherWojcickiAsset.url;
+
 
 
 
