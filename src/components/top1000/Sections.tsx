@@ -48,6 +48,8 @@ const paulBryzek = paulBryzekAsset.url;
 const estherWojcicki = estherWojcickiAsset.url;
 const jeremySewell = jeremySewellAsset.url;
 const annaTimofiejczuk = annaTimofiejczukAsset.url;
+const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
+
 
 
 
