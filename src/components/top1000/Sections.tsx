@@ -27,6 +27,7 @@ import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
 import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
 import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
+import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
 
 
 
@@ -49,8 +50,7 @@ const estherWojcicki = estherWojcickiAsset.url;
 const jeremySewell = jeremySewellAsset.url;
 const annaTimofiejczuk = annaTimofiejczukAsset.url;
 const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
-
-
+const agataBraja = agataBrajaAsset.url;
 
 
 
@@ -368,6 +368,17 @@ const speakers = [
     bio: [
       "Michał Habdank-Kołaczkowski is a Silicon Valley go-to-market, brand, and strategic communications expert who helps technology companies move from early positioning through growth and market expansion. He built brand, marketing, and communications functions at companies including Waze and BeeHero and has advised startups on positioning, messaging, fundraising narratives, and go-to-market strategy. His particular strength is translating complex technologies into clear, differentiated market propositions, including for companies navigating U.S. market entry and commercialization.",
       "Through Rallycall, Michał has also contributed to some of San Francisco’s most distinctive technology, civic, and cultural initiatives. He helped architect the San Francisco Mayor’s Office Startup-in-Residence Program, produced multiple TEDx events, helped reopen The Grand Theater as the home of Gray Area, hosted the city’s first Urban Prototyping Festival, and supported the reactivation of Pier 17 as the home of Swissnex. His work sits at the intersection of technology, entrepreneurship, communications, and ecosystem building.",
+    ],
+  },
+  {
+    id: "agata-braja",
+    name: "Agata Braja",
+    role: "Adjunct Lecturer, Stanford University | Program Director, PolSV",
+    image: agataBraja,
+    imageClass: "object-center",
+    bio: [
+      "Agata Braja is a product design and innovation leader with more than 15 years of international experience spanning technology, digital products, entrepreneurship, and human-centered design. At Stanford, she serves as an Adjunct Lecturer at the d.school and collaborates with Stanford Graduate School of Business on redesigning the Data & Decisions curriculum for the age of AI, exploring how emerging tools can enhance data science education while strengthening analytical thinking, human judgment, and decision-making.",
+      "As Program Director at PolSV, Agata develops programs connecting Polish researchers, entrepreneurs, and technology leaders with the Silicon Valley ecosystem. She also designs and develops digital products for education and student engagement, with tools used at Stanford and the University of Michigan, and is a guest lecturer at the University of Mannheim. A graduate of the Stanford GSB MSx program, she has worked with and mentored more than 250 startups and innovators and brings a design-driven approach to education, technology commercialization, and entrepreneurship.",
     ],
   },
 ];
