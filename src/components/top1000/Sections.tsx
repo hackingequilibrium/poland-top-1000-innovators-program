@@ -233,8 +233,8 @@ const speakers = [
   {
     id: "michael-lepech",
     name: "Michael Lepech",
-
     role: "Professor, Stanford University | Acting Director, Stanford Technology Ventures Program",
+
     image: michaelLepech,
     imageClass: "object-top",
     bio: [
