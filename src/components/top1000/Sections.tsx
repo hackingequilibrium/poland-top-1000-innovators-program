@@ -24,6 +24,7 @@ import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
+import zuzannaStamirowskaAsset from "@/assets/zuzanna-stamirowska.png.asset.json";
 import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
 import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
@@ -47,6 +48,7 @@ const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
 const paulBryzek = paulBryzekAsset.url;
 const estherWojcicki = estherWojcickiAsset.url;
+const zuzannaStamirowska = zuzannaStamirowskaAsset.url;
 const jeremySewell = jeremySewellAsset.url;
 const annaTimofiejczuk = annaTimofiejczukAsset.url;
 const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
@@ -235,6 +237,17 @@ const speakers = [
     bio: [
       "Esther Wojcicki is an internationally recognized educator, journalist, and pioneer in student-centered learning. She founded the journalism program at Palo Alto High School, which grew into one of the largest scholastic journalism programs in the United States, and was named California Teacher of the Year. Her approach to education emphasizes trust, independence, critical thinking, collaboration, and empowering students to take ownership of their learning.",
       "Esther is the founder of the Moonshots in Education movement and author of How to Raise Successful People and Moonshots in Education. Her work explores how education must evolve alongside technology and how schools can prepare young people to think independently, navigate information, solve problems, and thrive in a rapidly changing world. She has also held leadership and advisory roles across education, media, and technology organizations, including Creative Commons.",
+    ],
+  },
+  {
+    id: "zuzanna-stamirowska",
+    name: "Zuzanna Stamirowska",
+    role: "Co-Founder & CEO, Pathway | AI Researcher & Entrepreneur",
+    image: zuzannaStamirowska,
+    imageClass: "object-center",
+    bio: [
+      "Zuzanna Stamirowska is the co-founder and CEO of Pathway, an AI company developing a new generation of post-transformer models designed to continuously learn, reason, and adapt. Under her leadership, Pathway is developing its Dragon Hatchling (BDH) architecture, an alternative to traditional transformer-based AI focused on intrinsic memory and continuous learning. The company has raised $30 million in seed funding and reached a $500 million valuation.",
+      "An École Polytechnique graduate with a PhD in Complex Systems, Zuzanna previously developed state-of-the-art models for forecasting the evolution of complex networks, with her research published in the Proceedings of the National Academy of Sciences. Her academic work spans complex systems and game theory on graphs, and she has also studied at Sciences Po and the Stockholm School of Economics. She was featured by Le Point among “100 geniuses” whose innovations could change the world.",
     ],
   },
   {
