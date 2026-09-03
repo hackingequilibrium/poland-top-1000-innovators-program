@@ -26,6 +26,7 @@ import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
 import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
 import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
+import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 
 
 
