@@ -24,6 +24,7 @@ import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
+import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
 
 
 
@@ -43,6 +44,7 @@ const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
 const paulBryzek = paulBryzekAsset.url;
 const estherWojcicki = estherWojcickiAsset.url;
+const jeremySewell = jeremySewellAsset.url;
 
 
 
@@ -328,6 +330,17 @@ const speakers = [
     bio: [
       "Paul Bryzek is a technology leader, software engineer, and entrepreneur with more than 18 years of experience building enterprise technology across fintech, distributed systems, digital assets, and Web3. He is a Senior Software Engineer at Ripple, where he works on financial crimes engineering and real-time compliance infrastructure for global payment systems.",
       "Paul is also the Founder and CEO of CarbonSustain, a climate technology company developing AI- and blockchain-powered solutions for carbon accounting, emissions reporting, and sustainability compliance. His work bridges technology, entrepreneurship, and climate innovation, with a focus on making environmental data more transparent, actionable, and verifiable. He holds an MBA from the UC Berkeley Haas School of Business and has been active in Berkeley’s entrepreneurship and innovation ecosystem.",
+    ],
+  },
+  {
+    id: "jeremy-sewell",
+    name: "Jeremy Sewell",
+    role: "CTO, Sagely Health | Health Technology & AI Leader",
+    image: jeremySewell,
+    imageClass: "object-center",
+    bio: [
+      "Jeremy Sewell is a technology leader and entrepreneur working at the intersection of healthcare, software, and artificial intelligence. As CTO of Sagely Health, he helps build technology designed to give cancer patients clearer access to treatment information, emerging therapies, and clinical trials. His work focuses on combining human expertise with AI to help patients navigate an increasingly complex and rapidly evolving oncology landscape.",
+      "Based in Palo Alto, Jeremy brings experience spanning technology strategy, product development, digital health, and communications. He recently moderated a panel at UCSF during the U.S.-Poland Science & Technology Symposium on how medicine, technology, and data can improve outcomes for patients with acute myeloid leukemia, reflecting his broader interest in using technology and cross-disciplinary collaboration to advance cancer care.",
     ],
   },
 ];
