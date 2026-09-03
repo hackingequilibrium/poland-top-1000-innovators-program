@@ -25,6 +25,7 @@ import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
 import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
+import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 
 
 
@@ -45,6 +46,7 @@ const skipRoss = skipRossAsset.url;
 const paulBryzek = paulBryzekAsset.url;
 const estherWojcicki = estherWojcickiAsset.url;
 const jeremySewell = jeremySewellAsset.url;
+const annaTimofiejczuk = annaTimofiejczukAsset.url;
 
 
 
@@ -341,6 +343,17 @@ const speakers = [
     bio: [
       "Jeremy Sewell is a technology leader and entrepreneur working at the intersection of healthcare, software, and artificial intelligence. As CTO of Sagely Health, he helps build technology designed to give cancer patients clearer access to treatment information, emerging therapies, and clinical trials. His work focuses on combining human expertise with AI to help patients navigate an increasingly complex and rapidly evolving oncology landscape.",
       "Based in Palo Alto, Jeremy brings experience spanning technology strategy, product development, digital health, and communications. He recently moderated a panel at UCSF during the U.S.-Poland Science & Technology Symposium on how medicine, technology, and data can improve outcomes for patients with acute myeloid leukemia, reflecting his broader interest in using technology and cross-disciplinary collaboration to advance cancer care.",
+    ],
+  },
+  {
+    id: "anna-timofiejczuk",
+    name: "Anna Timofiejczuk",
+    role: "Professor, Silesian University of Technology | Academic Programs Coordinator, PolSV",
+    image: annaTimofiejczuk,
+    imageClass: "object-center",
+    bio: [
+      "Anna Timofiejczuk is a professor at the Silesian University of Technology whose work spans mechanical engineering, technical diagnostics, artificial intelligence, and Industry 4.0. She previously served for eight years as Dean of the university’s Faculty of Mechanical Engineering and as Deputy Director of its Industry 4.0 Center, combining academic leadership with a strong focus on the transformation of engineering education and industry.",
+      "She currently serves as Academic Programs Coordinator at PolSV, helping build connections between Polish academia and the Silicon Valley innovation ecosystem. Her international experience includes research and academic programs in the United States, Germany, France, and other European institutions, as well as collaborations spanning advanced manufacturing, AI, engineering, and technology transfer.",
     ],
   },
 ];
