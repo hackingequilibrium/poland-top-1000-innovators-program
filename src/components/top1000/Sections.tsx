@@ -152,7 +152,7 @@ export const AboutSection = () => (
       {[
         { n: "90", l: "University participants" },
         { n: "30", l: "Business participants" },
-        { n: "4", l: "Intensive days", sub: "Detailed agenda coming soon\nSession times, speakers, workshops, and additional program details will be announced as the Summit approaches." },
+        { n: "4", l: "Intensive days" },
         { n: "90+", l: "Innovation projects" },
       ].map((s) => (
         <div
@@ -161,11 +161,6 @@ export const AboutSection = () => (
         >
           <CountUp value={s.n} />
           <div className="text-white/60 text-xs uppercase tracking-widest mt-2 font-light">{s.l}</div>
-          {s.sub && (
-            <p className="text-white/70 text-sm font-extralight leading-snug mt-3 whitespace-pre-line">
-              {s.sub}
-            </p>
-          )}
         </div>
       ))}
     </div>
@@ -633,6 +628,10 @@ const days = [
 
 export const ProgramSection = () => (
   <Section id="program" eyebrow="Program Experience" title="Four Intensive Days">
+    <p className="text-white/70 text-base md:text-lg font-extralight leading-snug -mt-6 mb-10 md:-mt-8 md:mb-14">
+      Detailed agenda coming soon.<br />
+      Session times, speakers, workshops, and additional program details will be announced as the Summit approaches.
+    </p>
     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
       {days.map((d) => (
         <Card key={d.day}>
