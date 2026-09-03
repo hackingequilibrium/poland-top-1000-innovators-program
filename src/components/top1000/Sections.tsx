@@ -359,7 +359,19 @@ const speakers = [
       "She currently serves as Academic Programs Coordinator at PolSV, helping build connections between Polish academia and the Silicon Valley innovation ecosystem. Her international experience includes research and academic programs in the United States, Germany, France, and other European institutions, as well as collaborations spanning advanced manufacturing, AI, engineering, and technology transfer.",
     ],
   },
+  {
+    id: "michal-habdank-kolaczkowski",
+    name: "Michał Habdank-Kołaczkowski",
+    role: "Go-to-Market, Brand & Strategic Communications Expert | Silicon Valley",
+    image: michalHabdankKolaczkowski,
+    imageClass: "object-center",
+    bio: [
+      "Michał Habdank-Kołaczkowski is a Silicon Valley go-to-market, brand, and strategic communications expert who helps technology companies move from early positioning through growth and market expansion. He built brand, marketing, and communications functions at companies including Waze and BeeHero and has advised startups on positioning, messaging, fundraising narratives, and go-to-market strategy. His particular strength is translating complex technologies into clear, differentiated market propositions, including for companies navigating U.S. market entry and commercialization.",
+      "Through Rallycall, Michał has also contributed to some of San Francisco’s most distinctive technology, civic, and cultural initiatives. He helped architect the San Francisco Mayor’s Office Startup-in-Residence Program, produced multiple TEDx events, helped reopen The Grand Theater as the home of Gray Area, hosted the city’s first Urban Prototyping Festival, and supported the reactivation of Pier 17 as the home of Swissnex. His work sits at the intersection of technology, entrepreneurship, communications, and ecosystem building.",
+    ],
+  },
 ];
+
 
 
 export const SpeakersSection = () => {
