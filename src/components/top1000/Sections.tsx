@@ -23,6 +23,8 @@ import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
+import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
+
 
 
 const summitStanfordGroup = summitStanfordGroupAsset.url;
@@ -40,6 +42,8 @@ const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
 const paulBryzek = paulBryzekAsset.url;
+const estherWojcicki = estherWojcickiAsset.url;
+
 
 
 
@@ -216,9 +220,21 @@ const speakers = [
     ],
   },
   {
+    id: "esther-wojcicki",
+    name: "Esther Wojcicki",
+    role: "Educator, Author & Pioneer in Student-Centered Learning",
+    image: estherWojcicki,
+    imageClass: "object-center",
+    bio: [
+      "Esther Wojcicki is an internationally recognized educator, journalist, and pioneer in student-centered learning. She founded the journalism program at Palo Alto High School, which grew into one of the largest scholastic journalism programs in the United States, and was named California Teacher of the Year. Her approach to education emphasizes trust, independence, critical thinking, collaboration, and empowering students to take ownership of their learning.",
+      "Esther is the founder of the Moonshots in Education movement and author of How to Raise Successful People and Moonshots in Education. Her work explores how education must evolve alongside technology and how schools can prepare young people to think independently, navigate information, solve problems, and thrive in a rapidly changing world. She has also held leadership and advisory roles across education, media, and technology organizations, including Creative Commons.",
+    ],
+  },
+  {
     id: "michael-lepech",
     name: "Michael Lepech",
     role: "Professor, Stanford University | Acting Director, Stanford Technology Ventures Program",
+
     image: michaelLepech,
     imageClass: "object-top",
     bio: [
