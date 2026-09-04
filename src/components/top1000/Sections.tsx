@@ -181,7 +181,7 @@ const focusAreas = [
     body: "Clean energy, storage, materials, and climate technologies with global deployment potential.",
   },
   {
-    title: "Space & Avionics",
+    title: "Space & Aviation",
     icon: Rocket,
     body: "Satellite systems, propulsion, sensing, and aerospace engineering built for commercial scale.",
   },

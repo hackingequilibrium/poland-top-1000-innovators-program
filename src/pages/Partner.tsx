@@ -39,7 +39,7 @@ const orgTypes = [
 const areaOfInterestOptions = [
   "Biomed & Life Sciences",
   "Energy & Sustainability",
-  "Space & Avionics",
+  "Space & Aviation",
   "Dual-Use Technologies",
   "AI / Cross-Sector",
   "General / Multiple Areas",

@@ -26,7 +26,7 @@ import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 const focusAreas = [
   "Biomed & Life Sciences",
   "Energy & Sustainability",
-  "Space & Avionics",
+  "Space & Aviation",
   "Dual-Use Technologies",
   "AI Across Every Sector",
   "Other",
