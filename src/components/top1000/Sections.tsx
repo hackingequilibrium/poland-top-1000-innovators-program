@@ -148,22 +148,6 @@ export const AboutSection = () => (
       leaders to accelerate commercialization through direct engagement with the Silicon Valley
       innovation ecosystem.
     </p>
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
-      {[
-        { n: "90", l: "University participants" },
-        { n: "30", l: "Business participants" },
-        { n: "4", l: "Intensive days" },
-        { n: "90+", l: "Innovation projects" },
-      ].map((s) => (
-        <div
-          key={s.l}
-          className="rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 md:p-8"
-        >
-          <CountUp value={s.n} />
-          <div className="text-white/60 text-xs uppercase tracking-widest mt-2 font-light">{s.l}</div>
-        </div>
-      ))}
-    </div>
   </section>
 );
 
