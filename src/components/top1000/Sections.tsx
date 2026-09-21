@@ -31,6 +31,10 @@ import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski
 import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
 import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
 import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
+import michalWyrebkowskiAsset from "@/assets/michal-wyrebkowski.png.asset.json";
+
+
+
 
 
 
@@ -59,6 +63,10 @@ const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
 const soodyTronson = soodyTronsonAsset.url;
 const hamidFarzaneh = hamidFarzanehAsset.url;
+const michalWyrebkowski = michalWyrebkowskiAsset.url;
+
+
+
 
 
 
@@ -405,7 +413,22 @@ const speakers = [
       "As Executive Vice President of PolSV, he works with entrepreneurs and technology companies to develop market strategies, build strategic partnerships, and connect innovation with commercial opportunities in the Silicon Valley ecosystem.",
     ],
   },
+  {
+    id: "michal-wyrebkowski",
+    name: "Michał Wyrębkowski",
+    role: "Co-Founder, This Is The World | Bison Fellowship | Poland’s UN Youth Delegate",
+    image: michalWyrebkowski,
+    imageClass: "object-center",
+    bio: [
+      "Michał Wyrębkowski is co-founder of This Is The World and leads Bison Fellowship, an initiative connecting exceptional Polish technical talent with ambitious real-world challenges and the Silicon Valley technology ecosystem. Through Bison Fellowship, he works with young engineers and researchers on AI and technology projects developed in collaboration with major Polish companies, with a focus on turning technical talent into high-impact innovation.",
+      "He currently serves as Poland’s UN Youth Delegate and previously spent more than four years as European Research Director at Yale School of Management, where his work covered technology, energy, economic policy, and global business. He is a graduate of the Wharton School, where he studied economics with concentrations in Finance and Business Analytics.",
+    ],
+  },
 ];
+
+
+
+
 
 
 
