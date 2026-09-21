@@ -30,6 +30,8 @@ import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
 import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
+import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
+
 
 
 
