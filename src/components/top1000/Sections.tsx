@@ -29,6 +29,8 @@ import jeremySewellAsset from "@/assets/jeremy-sewell.png.asset.json";
 import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
+import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
+
 
 
 
@@ -53,7 +55,7 @@ const jeremySewell = jeremySewellAsset.url;
 const annaTimofiejczuk = annaTimofiejczukAsset.url;
 const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
-
+const soodyTronson = soodyTronsonAsset.url;
 
 
 
@@ -376,6 +378,17 @@ const speakers = [
     bio: [
       "Agata Braja is a product design and innovation leader with more than 15 years of international experience spanning technology, digital products, entrepreneurship, and human-centered design. At Stanford, she serves as an Adjunct Lecturer at the d.school and collaborates with Stanford Graduate School of Business on redesigning the Data & Decisions curriculum for the age of AI, exploring how emerging tools can enhance data science education while strengthening analytical thinking, human judgment, and decision-making.",
       "As Program Director at PolSV, Agata develops programs connecting Polish researchers, entrepreneurs, and technology leaders with the Silicon Valley ecosystem. She also designs and develops digital products for education and student engagement, with tools used at Stanford and the University of Michigan, and is a guest lecturer at the University of Mannheim. A graduate of the Stanford GSB MSx program, she has worked with and mentored more than 250 startups and innovators and brings a design-driven approach to education, technology commercialization, and entrepreneurship.",
+    ],
+  },
+  {
+    id: "soody-tronson",
+    name: "Soody Tronson",
+    role: "Founder & Managing Attorney, STLG Law Firm | IP & Technology Law",
+    image: soodyTronson,
+    imageClass: "object-center",
+    bio: [
+      "Soody Tronson has over 25 years of experience at the intersection of law, technology, and business, advising startups, established companies, universities, investors, and government entities on intellectual property, technology transactions, corporate governance, and regulatory matters. With both legal and technical expertise, she helps organizations protect and leverage intellectual property while translating innovation into commercial opportunities.",
+      "A scientist and engineer by training, Soody holds an M.S. and J.D. and is licensed to practice in California, the District of Columbia, and before the U.S. Patent and Trademark Office. Her experience spans medical devices, pharmaceuticals, semiconductors, energy, manufacturing, technology, and software, alongside mentoring and teaching entrepreneurs on IP, licensing, and market entry.",
     ],
   },
 ];
