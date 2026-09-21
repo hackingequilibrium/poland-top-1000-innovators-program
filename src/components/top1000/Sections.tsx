@@ -58,6 +58,7 @@ const annaTimofiejczuk = annaTimofiejczukAsset.url;
 const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
 const soodyTronson = soodyTronsonAsset.url;
+const hamidFarzaneh = hamidFarzanehAsset.url;
 
 
 
