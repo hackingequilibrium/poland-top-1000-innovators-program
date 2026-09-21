@@ -30,6 +30,8 @@ import annaTimofiejczukAsset from "@/assets/anna-timofiejczuk.png.asset.json";
 import michalHabdankKolaczkowskiAsset from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
 import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
+import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
+
 
 
 
@@ -56,6 +58,7 @@ const annaTimofiejczuk = annaTimofiejczukAsset.url;
 const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
 const soodyTronson = soodyTronsonAsset.url;
+const hamidFarzaneh = hamidFarzanehAsset.url;
 
 
 
@@ -389,6 +392,17 @@ const speakers = [
     bio: [
       "Soody Tronson has over 25 years of experience at the intersection of law, technology, and business, advising startups, established companies, universities, investors, and government entities on intellectual property, technology transactions, corporate governance, and regulatory matters. With both legal and technical expertise, she helps organizations protect and leverage intellectual property while translating innovation into commercial opportunities.",
       "A scientist and engineer by training, Soody holds an M.S. and J.D. and is licensed to practice in California, the District of Columbia, and before the U.S. Patent and Trademark Office. Her experience spans medical devices, pharmaceuticals, semiconductors, energy, manufacturing, technology, and software, alongside mentoring and teaching entrepreneurs on IP, licensing, and market entry.",
+    ],
+  },
+  {
+    id: "hamid-farzaneh",
+    name: "Hamid Farzaneh",
+    role: "Serial Entrepreneur | Market Entry & Growth | EVP, PolSV",
+    image: hamidFarzaneh,
+    imageClass: "object-center",
+    bio: [
+      "Hamid Farzaneh is a serial entrepreneur who has built and scaled companies across Silicon Valley, Europe, and Asia. His experience spans the automotive, semiconductor, deep tech, and energy management sectors, with a focus on market entry, commercialization, and growth.",
+      "As Executive Vice President of PolSV, he works with entrepreneurs and technology companies to develop market strategies, build strategic partnerships, and connect innovation with commercial opportunities in the Silicon Valley ecosystem.",
     ],
   },
 ];
