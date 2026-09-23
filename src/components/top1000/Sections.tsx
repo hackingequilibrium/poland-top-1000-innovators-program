@@ -32,6 +32,7 @@ import agataBrajaAsset from "@/assets/agata-braja.png.asset.json";
 import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
 import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
 import michalWyrebkowskiAsset from "@/assets/michal-wyrebkowski.png.asset.json";
+import barryKatzAsset from "@/assets/barry-katz.png.asset.json";
 
 
 
@@ -63,6 +64,7 @@ const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
 const soodyTronson = soodyTronsonAsset.url;
 const hamidFarzaneh = hamidFarzanehAsset.url;
+const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 
 
@@ -245,6 +247,18 @@ const speakers = [
     bio: [
       "Zuzanna Stamirowska is the co-founder and CEO of Pathway, an AI company developing a new generation of post-transformer models designed to continuously learn, reason, and adapt. Under her leadership, Pathway is developing its Dragon Hatchling (BDH) architecture, an alternative to traditional transformer-based AI focused on intrinsic memory and continuous learning. The company has raised $30 million in seed funding and reached a $500 million valuation.",
       "An École Polytechnique graduate with a PhD in Complex Systems, Zuzanna previously developed state-of-the-art models for forecasting the evolution of complex networks, with her research published in the Proceedings of the National Academy of Sciences. Her academic work spans complex systems and game theory on graphs, and she has also studied at Sciences Po and the Stockholm School of Economics. She was featured by Le Point among “100 geniuses” whose innovations could change the world.",
+    ],
+  },
+  {
+    id: "barry-katz",
+    name: "Barry Katz",
+    role: "Design Historian, Author & IDEO Fellow | Former Stanford Professor",
+    image: barryKatz,
+    imageClass: "object-center",
+    bio: [
+      "Barry Katz is a leading scholar and practitioner of design and innovation whose career spans more than four decades in the Silicon Valley ecosystem. He spent 40 years in Stanford University's Design Group and more than 20 years as a Fellow at IDEO, working at the intersection of design, technology, and business innovation.",
+      "He is the author of eight books, including Make It New: The History of Silicon Valley Design, and co-author with Tim Brown of Change by Design. His work explores the evolution of design thinking and the role of design as a strategy for innovation. Katz has advised companies, governments, and academic institutions around the world.",
+      "He is also Emeritus Professor of Industrial and Interaction Design at California College of the Arts and has taught and lectured internationally on design, innovation, and the history of Silicon Valley.",
     ],
   },
   {
