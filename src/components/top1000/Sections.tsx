@@ -64,6 +64,7 @@ const michalHabdankKolaczkowski = michalHabdankKolaczkowskiAsset.url;
 const agataBraja = agataBrajaAsset.url;
 const soodyTronson = soodyTronsonAsset.url;
 const hamidFarzaneh = hamidFarzanehAsset.url;
+const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 
 
