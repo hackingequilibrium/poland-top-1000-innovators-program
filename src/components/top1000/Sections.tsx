@@ -36,6 +36,7 @@ import barryKatzAsset from "@/assets/barry-katz.png.asset.json";
 import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
 import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
+import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
 
 
 
@@ -72,6 +73,7 @@ const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
+const leahWalker = leahWalkerAsset.url;
 
 
 
@@ -475,6 +477,17 @@ const speakers = [
     bio: [
       "Christina Harvey is an Assistant Professor at UC Davis, where she leads the Biologically-Informed Research and Design (BIRD) Lab and co-directs the Center for Animal Locomotion and Innovation. Her research combines engineering, biology, and veterinary medicine to understand how animals fly and translate those insights into new approaches to aircraft design and avian rehabilitation.",
       "Her work focuses on biological flight and how animals adapt their shape and movement in the air, with applications to more maneuverable and adaptable aerial vehicles. She is a recipient of the NSF CAREER Award, a Packard Fellow, and an Amelia Earhart Fellow.",
+    ],
+  },
+  {
+    id: "leah-walker",
+    name: "Leah Walker",
+    role: "Director of Research and Strategic Initiatives | Berkeley Air and Space Center",
+    image: leahWalker,
+    imageClass: "object-center",
+    bio: [
+      "Leah Walker is Director of Research and Strategic Initiatives at the Berkeley Air and Space Center, where she also serves as Air and Space Track Chair. Her work focuses on the intersection of emerging technology, national security, and defense innovation.",
+      "Her background spans national security policy, nuclear policy, complex systems failure, defense innovation, and industrial policy. Before joining the Berkeley Air and Space Center, she spent three and a half years as Executive Director of the Berkeley Risk and Security Lab, leading work on emerging technologies and their implications for national security.",
     ],
   },
 ];
