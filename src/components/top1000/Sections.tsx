@@ -34,6 +34,7 @@ import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
 import michalWyrebkowskiAsset from "@/assets/michal-wyrebkowski.png.asset.json";
 import barryKatzAsset from "@/assets/barry-katz.png.asset.json";
 import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
+import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 
 
 
@@ -68,6 +69,7 @@ const hamidFarzaneh = hamidFarzanehAsset.url;
 const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
+const darrenCooke = darrenCookeAsset.url;
 
 
 
@@ -449,6 +451,17 @@ const speakers = [
     bio: [
       "Camille Crittenden is Executive Director of CITRIS and the Banatao Institute and Director of the CITRIS Tech Policy Initiative. She also serves on the University of California AI Council, helping develop policies and training for responsible AI implementation across the UC system.",
       "For more than two decades, she has worked at the intersection of technology, higher education, public policy, and social impact. Her work focuses on responsible AI, digital equity, emerging technology policy, and expanding opportunities for women and underrepresented groups in technical fields. She has led programs and partnerships spanning sustainable infrastructure, health, robotics and AI, civic technology, and the future of work.",
+    ],
+  },
+  {
+    id: "darren-cooke",
+    name: "Darren Cooke",
+    role: "Chief Innovation & Entrepreneurship Officer | University of California, Berkeley",
+    image: darrenCooke,
+    imageClass: "object-center",
+    bio: [
+      "Darren Cooke is Chief Innovation & Entrepreneurship Officer at UC Berkeley, Executive Director of the Life Sciences Entrepreneurship Center, and Chair of the University of California President’s Entrepreneurship Network Council. He also teaches entrepreneurship at Berkeley Haas and previously chaired the Bio Track at Berkeley SkyDeck.",
+      "His career spans entrepreneurship, life sciences, technology commercialization, engineering, and intellectual property. He has taught entrepreneurship through the NIH and NSF I-Corps programs, worked as a life sciences attorney at Bio-Rad Laboratories and Covington & Burling, and began his career as a mechanical engineer developing cochlear implants at UCSF.",
     ],
   },
 ];
