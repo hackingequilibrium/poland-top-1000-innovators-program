@@ -35,6 +35,7 @@ import michalWyrebkowskiAsset from "@/assets/michal-wyrebkowski.png.asset.json";
 import barryKatzAsset from "@/assets/barry-katz.png.asset.json";
 import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
 import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
+import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 
 
 
@@ -70,6 +71,7 @@ const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
 const darrenCooke = darrenCookeAsset.url;
+const christinaHarvey = christinaHarveyAsset.url;
 
 
 
@@ -462,6 +464,17 @@ const speakers = [
     bio: [
       "Darren Cooke is Chief Innovation & Entrepreneurship Officer at UC Berkeley, Executive Director of the Life Sciences Entrepreneurship Center, and Chair of the University of California President’s Entrepreneurship Network Council. He also teaches entrepreneurship at Berkeley Haas and previously chaired the Bio Track at Berkeley SkyDeck.",
       "His career spans entrepreneurship, life sciences, technology commercialization, engineering, and intellectual property. He has taught entrepreneurship through the NIH and NSF I-Corps programs, worked as a life sciences attorney at Bio-Rad Laboratories and Covington & Burling, and began his career as a mechanical engineer developing cochlear implants at UCSF.",
+    ],
+  },
+  {
+    id: "christina-harvey",
+    name: "Christina Harvey",
+    role: "Assistant Professor of Mechanical and Aerospace Engineering | University of California, Davis",
+    image: christinaHarvey,
+    imageClass: "object-center",
+    bio: [
+      "Christina Harvey is an Assistant Professor at UC Davis, where she leads the Biologically-Informed Research and Design (BIRD) Lab and co-directs the Center for Animal Locomotion and Innovation. Her research combines engineering, biology, and veterinary medicine to understand how animals fly and translate those insights into new approaches to aircraft design and avian rehabilitation.",
+      "Her work focuses on biological flight and how animals adapt their shape and movement in the air, with applications to more maneuverable and adaptable aerial vehicles. She is a recipient of the NSF CAREER Award, a Packard Fellow, and an Amelia Earhart Fellow.",
     ],
   },
 ];
