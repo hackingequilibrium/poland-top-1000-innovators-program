@@ -33,6 +33,7 @@ import soodyTronsonAsset from "@/assets/soody-tronson.png.asset.json";
 import hamidFarzanehAsset from "@/assets/hamid-farzaneh.png.asset.json";
 import michalWyrebkowskiAsset from "@/assets/michal-wyrebkowski.png.asset.json";
 import barryKatzAsset from "@/assets/barry-katz.png.asset.json";
+import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
 
 
 
@@ -66,6 +67,7 @@ const soodyTronson = soodyTronsonAsset.url;
 const hamidFarzaneh = hamidFarzanehAsset.url;
 const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
+const camilleCrittenden = camilleCrittendenAsset.url;
 
 
 
@@ -436,6 +438,17 @@ const speakers = [
     bio: [
       "Michał Wyrębkowski is co-founder of This Is The World and leads Bison Fellowship, an initiative connecting exceptional Polish technical talent with ambitious real-world challenges and the Silicon Valley technology ecosystem. Through Bison Fellowship, he works with young engineers and researchers on AI and technology projects developed in collaboration with major Polish companies, with a focus on turning technical talent into high-impact innovation.",
       "He currently serves as Poland’s UN Youth Delegate and previously spent more than four years as European Research Director at Yale School of Management, where his work covered technology, energy, economic policy, and global business. He is a graduate of the Wharton School, where he studied economics with concentrations in Finance and Business Analytics.",
+    ],
+  },
+  {
+    id: "camille-crittenden",
+    name: "Camille Crittenden",
+    role: "Executive Director, CITRIS and the Banatao Institute | University of California, Berkeley",
+    image: camilleCrittenden,
+    imageClass: "object-center",
+    bio: [
+      "Camille Crittenden is Executive Director of CITRIS and the Banatao Institute and Director of the CITRIS Tech Policy Initiative. She also serves on the University of California AI Council, helping develop policies and training for responsible AI implementation across the UC system.",
+      "For more than two decades, she has worked at the intersection of technology, higher education, public policy, and social impact. Her work focuses on responsible AI, digital equity, emerging technology policy, and expanding opportunities for women and underrepresented groups in technical fields. She has led programs and partnerships spanning sustainable infrastructure, health, robotics and AI, civic technology, and the future of work.",
     ],
   },
 ];
