@@ -46,6 +46,7 @@ import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
+import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
@@ -91,6 +92,7 @@ const dianneTaube = dianneTaubeAsset.url;
 const paulMarca = paulMarcaAsset.url;
 const mariaKaszynska = mariaKaszynskaAsset.url;
 const dariuszRosati = dariuszRosatiAsset.url;
+const shanaPenn = shanaPennAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -594,6 +596,17 @@ const speakers = [
     bio: [
       "Dr. Adam Januszko holds a Ph.D. in Chemistry and is a retired Major of the Polish Army, with extensive experience in scientific research, dual-use technology development, and the management of research institutions and technology companies.",
       "He has authored or co-authored more than 70 scientific publications and holds 23 patents. His expertise combines advanced scientific research, military experience, and technology management, with a focus on developing innovative solutions for civilian and defense applications.",
+    ],
+  },
+  {
+    id: "shana-penn",
+    name: "Shana Penn",
+    role: "Executive Director, Taube Philanthropies | Author & Polish-American Relations Advocate",
+    image: shanaPenn,
+    imageClass: "object-[center_40%]",
+    bio: [
+      "Shana Penn is the Executive Director of Taube Philanthropies, where she leads philanthropic initiatives supporting education, cultural heritage, civic engagement, and international collaboration.",
+      "An author and scholar specializing in Polish history and contemporary affairs, she has played a significant role in strengthening cultural and educational ties between Poland and the United States. She also serves as Special Advisor to the Honorary Consul of the Republic of Poland in the San Francisco Bay Area. In recognition of her contributions to Polish-American relations, she was awarded the Commander's Cross of the Order of Merit of the Republic of Poland.",
     ],
   },
 ];
