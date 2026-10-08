@@ -306,7 +306,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:20 AM–12:20 PM",
-        "title": "Innovation Pitching Sessions",
+        "title": "Startup Pitches",
         "details": []
       },
       {
@@ -336,7 +336,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "3:30–5:00 PM",
-        "title": "Innovation Pitching Sessions",
+        "title": "Startup Pitches",
         "details": []
       },
       {
