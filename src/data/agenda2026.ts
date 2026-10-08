@@ -46,7 +46,7 @@ export const agendaPhotos: Record<string, string> = {
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
 export const agendaPhotoClasses: Record<string, string> = {
-  "Mark Chandler": "object-[center_76%]",
+  "Mark Chandler": "object-[center_25%]",
   "Wojciech Balczun": "object-[42%_center]",
 };
 
