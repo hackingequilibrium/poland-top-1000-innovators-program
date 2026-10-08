@@ -56,9 +56,7 @@ const Agenda = () => (
             <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to Summit
           </Link>
           <p className="text-xs font-light uppercase tracking-[0.2em] text-summit-accent">TOP 1000 Innovators of Poland in Silicon Valley</p>
-          <h1 className="mt-4 font-display text-4xl font-semibold md:text-5xl">Full Agenda</h1>
-          <p className="mt-5 text-lg font-light">Summit II · November 9–12, 2026</p>
-          <p className="mt-3 text-sm font-light text-summit-muted">Initial agenda · Subject to updates</p>
+          <h1 className="mt-4 font-display text-4xl font-semibold md:text-5xl">Agenda</h1>
           <nav aria-label="Agenda days" className="mt-9 flex flex-wrap gap-2">
             {agendaDays.map((day) => (
               <Button asChild key={day.id} variant="summit" className="h-11 rounded-none px-5">
