@@ -60,7 +60,7 @@ const Agenda = () => (
           <nav aria-label="Agenda days" className="mt-9 flex flex-wrap gap-2">
             {agendaDays.map((day) => (
               <Button asChild key={day.id} variant="summit" className="h-11 rounded-none px-5">
-                <a href={`#${day.id}`}>{day.day} <span className="font-light text-summit-muted">· Nov {day.date.split(" ").slice(-1)[0]}</span></a>
+                <a href={`#${day.id}`}>{day.day} <span className="font-light text-summit-muted">· {day.date.split(" ")[1].slice(0, 3)} {day.date.split(" ")[2]} {day.date.split(" ")[3]}</span></a>
               </Button>
             ))}
           </nav>
