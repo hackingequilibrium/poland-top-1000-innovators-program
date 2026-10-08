@@ -17,6 +17,7 @@ import Workshops from "./pages/Workshops";
 import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
 import Hotels from "./pages/Hotels";
+import Agenda from "./pages/Agenda";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
 import Partner from "./pages/Partner";
 import Contact from "./pages/Contact";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/2025" element={<Index />} />
           <Route path="/2025/lead-session" element={<LeadSession />} />
           <Route path="/2025/program" element={<Program />} />
+          <Route path="/2025/agenda" element={<Program />} />
           <Route path="/2025/workshops" element={<Workshops />} />
           <Route path="/2025/eventify-app" element={<EventifyApp />} />
           {/* Legacy 2025 paths kept live for existing links */}
@@ -55,6 +57,7 @@ const App = () => (
           <Route path="/eventify-app" element={<EventifyApp />} />
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/hotels" element={<Hotels />} />
+          <Route path="/agenda" element={<Agenda />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/contact" element={<Contact />} />
