@@ -870,7 +870,7 @@ const organizers: Partner[] = [
 const sponsorsAndPartners: Partner[] = [
   {
     name: "South Bay Solutions",
-    href: "https://sbstechnology.pl/",
+    href: "https://southbaysolutions.com/",
     img: sbsSolutionsLogo,
     imgClass: "h-16 md:h-20 w-auto object-contain",
   },
