@@ -888,9 +888,6 @@ export const ProgramSection = () => (
         </Card>
       ))}
     </div>
-    <Button asChild variant="summit" size="lg" className="mt-8 h-12 rounded-none px-7 text-sm">
-      <Link to="/agenda">View full agenda <ArrowRight aria-hidden="true" /></Link>
-    </Button>
   </Section>
 );
 

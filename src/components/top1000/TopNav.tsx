@@ -26,9 +26,6 @@ const TopNav = () => {
         <a href="#speakers" className={linkClass}>
           Speakers
         </a>
-        <Link to="/program" className={linkClass}>
-          Program
-        </Link>
         <Link to="/hotels" className={linkClass}>
           Travel &amp; Stay
         </Link>
