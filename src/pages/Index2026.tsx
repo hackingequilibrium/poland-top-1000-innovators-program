@@ -12,6 +12,7 @@ import {
   PreviousSummitSection,
   TicketsSection,
   TravelSection,
+  PartnersSection,
   FinalCtaSection,
 } from "@/components/top1000/Sections";
 import TopNav from "@/components/top1000/TopNav";
@@ -164,6 +165,7 @@ const Index2026 = () => {
       <TravelSection />
 
       <FinalCtaSection />
+      <PartnersSection />
 
       <footer className="px-6 md:px-12 lg:px-24 pb-12 text-[11px] text-white/30 tracking-wide text-center">
         Organized by the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship
