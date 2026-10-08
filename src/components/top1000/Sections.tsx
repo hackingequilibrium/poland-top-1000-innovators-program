@@ -41,6 +41,7 @@ import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
 import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
 import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
+import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -83,6 +84,7 @@ const leahWalker = leahWalkerAsset.url;
 const dominikSchmidt = dominikSchmidtAsset.url;
 const dianneTaube = dianneTaubeAsset.url;
 const paulMarca = paulMarcaAsset.url;
+const mariaKaszynska = mariaKaszynskaAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -553,6 +555,17 @@ const speakers = [
     bio: [
       "Paul Marca is an education strategist, advisor, and former Associate Vice Provost at Stanford University, where he led initiatives expanding the university's global reach through executive education and international partnerships. With over 30 years of experience in education, innovation, and organizational leadership, he has developed programs connecting academic expertise with industry needs across Europe, Asia, and the Middle East.",
       "He currently advises organizations on education strategy, leadership development, and innovation through Parallax Global Advisors and serves as Co-Director of the Luminarian Fellowship. He has also been a longtime contributor to Poland's TOP 500 Innovators program, helping connect Polish researchers and entrepreneurs with the Stanford innovation ecosystem.",
+    ],
+  },
+  {
+    id: "maria-kaszynska",
+    name: "Maria Kaszyńska",
+    role: "Chair, Polish Academy of Sciences Civil & Water Engineering Committee | President, Polish Association of Civil Engineers and Technicians",
+    image: mariaKaszynska,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Maria Kaszyńska is a civil engineering scholar and leader in construction materials research. She chairs the Committee on Civil and Water Engineering of the Polish Academy of Sciences and serves as President of the Polish Association of Civil Engineers and Technicians (PZITB), the first woman to hold the position in the organization's 90-year history.",
+      "A former Dean of the Faculty of Civil Engineering and Architecture at the West Pomeranian University of Technology, she has authored over 150 scientific publications focused on concrete technology. She is a Fellow of the American Concrete Institute (ACI) and has served on its International Advisory Board. Her contributions to engineering, research, and international collaboration have earned numerous honors, including the Knight's Cross of the Order of Polonia Restituta.",
     ],
   },
 ];
