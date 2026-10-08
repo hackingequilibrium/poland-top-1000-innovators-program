@@ -18,7 +18,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
     <li className="grid gap-2 border-b border-summit-foreground/10 py-3 md:grid-cols-[180px_1fr] md:gap-8 md:py-4">
       <p className="text-sm font-light leading-relaxed text-summit-accent md:pt-0.5">{session.time}</p>
       <div className="min-w-0">
-        <h3 className={isBreakRow(session.title) ? "text-sm font-light leading-snug md:text-base" : "text-base font-medium leading-snug md:text-lg"}>{session.title}</h3>
+        <h3 className={isBreakRow(session.title) ? "text-sm font-light leading-snug text-summit-foreground/85 md:text-base" : "text-base font-medium leading-snug md:text-lg"}>{session.title}</h3>
         {people.length > 0 && (
           <div className="mt-2.5 flex flex-wrap items-start gap-x-4 gap-y-3">
             {people.map((person) => (
