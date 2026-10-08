@@ -1,34 +1,43 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const linkClass =
-  "font-inter font-light text-sm md:text-base text-white/70 hover:text-white transition-colors";
+  "font-inter font-light text-xs md:text-sm text-white/70 hover:text-white transition-colors whitespace-nowrap";
 
-const TopNav = () => (
-  <nav className="absolute inset-x-0 top-0 z-30 px-10 md:px-16 pt-6 md:pt-8">
-    <div className="flex flex-wrap items-center gap-x-7 md:gap-x-10 gap-y-3 md:justify-end">
-      <Link
-        to="/"
-        className="hidden md:inline-block font-inter font-bold text-sm md:text-base uppercase tracking-[0.12em] text-white hover:text-white/70 transition-colors"
+const TopNav = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <nav className="fixed inset-x-0 top-0 z-40 flex justify-center px-4 pt-3 md:pt-5 pointer-events-none">
+      <div
+        className={`pointer-events-auto flex items-center gap-x-4 md:gap-x-7 rounded-full border px-4 py-1.5 md:px-6 md:py-2 transition-all duration-300 ${
+          scrolled
+            ? "border-white/20 bg-[#0B1A3F]/70 backdrop-blur-xl"
+            : "border-white/10 bg-transparent"
+        }`}
       >
-        TOP 1000
-      </Link>
-      <Link to="/program" className={linkClass}>
-        Program
-      </Link>
-      <a href="#speakers" className={linkClass}>
-        Speakers
-      </a>
-      <Link to="/hotels" className={linkClass}>
-        Travel &amp; Stay
-      </Link>
-      <Link
-        to="/tickets"
-        className="font-inter text-xs md:text-sm uppercase tracking-[0.12em] font-medium px-4 md:px-5 py-2 border border-white/40 text-white hover:bg-white hover:text-[#0A0A0A] transition-colors"
-      >
-        Get a Ticket
-      </Link>
-    </div>
-  </nav>
-);
+        <Link to="/program" className={linkClass}>
+          Program
+        </Link>
+        <a href="#speakers" className={linkClass}>
+          Speakers
+        </a>
+        <Link to="/hotels" className={linkClass}>
+          Travel &amp; Stay
+        </a>
+        <Link to="/tickets" className={linkClass}>
+          Get a Ticket
+        </Link>
+      </div>
+    </nav>
+  );
+};
 
 export default TopNav;
