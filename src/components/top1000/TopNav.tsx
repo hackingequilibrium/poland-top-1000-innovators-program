@@ -23,12 +23,12 @@ const TopNav = () => {
             : "border-white/10 bg-transparent"
         }`}
       >
-        <Link to="/program" className={linkClass}>
-          Program
-        </Link>
         <a href="#speakers" className={linkClass}>
           Speakers
         </a>
+        <Link to="/program" className={linkClass}>
+          Program
+        </Link>
         <Link to="/hotels" className={linkClass}>
           Travel &amp; Stay
         </Link>
