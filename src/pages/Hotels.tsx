@@ -195,29 +195,17 @@ const Hotels = () => {
             </h2>
             <ul className="mt-6 space-y-4">
               {[
-                {
-                  icon: <Users className="h-5 w-5 shrink-0 text-[#9DB8FF]" />,
-                  text: "Stay alongside fellow participants, speakers, and organizers",
-                },
-                {
-                  icon: <Tag className="h-5 w-5 shrink-0 text-[#9DB8FF]" />,
-                  text: "Access exclusive Summit group rates",
-                },
-                {
-                  icon: <MapPin className="h-5 w-5 shrink-0 text-[#9DB8FF]" />,
-                  text: "Convenient location near SFO",
-                },
-                {
-                  icon: <Network className="h-5 w-5 shrink-0 text-[#9DB8FF]" />,
-                  text: "Make the most of informal networking opportunities",
-                },
-              ].map((item) => (
+                "Stay alongside fellow participants, speakers, and organizers",
+                "Access exclusive Summit group rates",
+                "Convenient location near SFO",
+                "Make the most of informal networking opportunities",
+              ].map((text) => (
                 <li
-                  key={item.text}
+                  key={text}
                   className="flex items-start gap-3 font-inter font-extralight text-sm md:text-base text-white/80"
                 >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#9DB8FF]" />
-                  <span>{item.text}</span>
+                  <span>{text}</span>
                 </li>
               ))}
             </ul>
