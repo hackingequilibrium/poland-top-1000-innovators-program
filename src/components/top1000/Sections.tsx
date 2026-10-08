@@ -844,7 +844,7 @@ const partners = [
 ];
 
 export const PartnersSection = () => (
-  <section id="partners" className="bg-black px-10 md:px-16 py-14 md:py-20">
+  <section id="partners" className="px-10 md:px-16 py-14 md:py-20">
     <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-6 md:mb-8">
       Partners
     </h2>
@@ -855,7 +855,7 @@ export const PartnersSection = () => (
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-center gap-3 border border-white/10 bg-black px-6 py-5 transition-colors duration-300 hover:border-white/25"
+          className="group flex flex-col items-center justify-center gap-3 border border-white/10 px-6 py-5 transition-colors duration-300 hover:border-white/25"
         >
           <span className="flex h-16 md:h-20 w-full items-center justify-center">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
