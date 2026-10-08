@@ -40,6 +40,7 @@ import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
 import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
 import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
+import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -81,6 +82,7 @@ const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
 const dominikSchmidt = dominikSchmidtAsset.url;
 const dianneTaube = dianneTaubeAsset.url;
+const paulMarca = paulMarcaAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -540,6 +542,17 @@ const speakers = [
     bio: [
       "Dianne Taube is the Honorary Consul of the Republic of Poland for the San Francisco Bay Area and Chair and CEO of Taube Philanthropies. Appointed Honorary Consul in August 2026, she works to strengthen diplomatic, economic, cultural, and educational ties between Poland and the United States.",
       "She also serves as CEO of Taube Investments, overseeing its real estate and investment portfolio. Through Taube Philanthropies, she supports initiatives in education, medical innovation, cultural heritage, and civic engagement, continuing her family's longstanding commitment to Polish-American collaboration.",
+    ],
+  },
+  {
+    id: "paul-marca",
+    name: "Paul Marca",
+    role: "Former Associate Vice Provost, Stanford University | Education & Innovation Strategist",
+    image: paulMarca,
+    imageClass: "object-[22%_center]",
+    bio: [
+      "Paul Marca is an education strategist, advisor, and former Associate Vice Provost at Stanford University, where he led initiatives expanding the university's global reach through executive education and international partnerships. With over 30 years of experience in education, innovation, and organizational leadership, he has developed programs connecting academic expertise with industry needs across Europe, Asia, and the Middle East.",
+      "He currently advises organizations on education strategy, leadership development, and innovation through Parallax Global Advisors and serves as Co-Director of the Luminarian Fellowship. He has also been a longtime contributor to Poland's TOP 500 Innovators program, helping connect Polish researchers and entrepreneurs with the Stanford innovation ecosystem.",
     ],
   },
 ];
