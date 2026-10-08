@@ -43,6 +43,7 @@ import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
+import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
@@ -580,6 +581,17 @@ const speakers = [
     bio: [
       "Prof. Dariusz Rosati is a Polish economist, academic, and former Minister of Foreign Affairs of Poland (1995–1997). He served two terms in the European Parliament (2004–2009 and 2014–2019) and was a member of the Polish Parliament.",
       "A professor of economics at SGH Warsaw School of Economics, he has held senior positions in international economic institutions, including advisory roles with the United Nations Economic Commission for Europe and the European Commission. He also served on the Monetary Policy Council of the National Bank of Poland. His expertise spans international economics, European integration, economic policy, and international relations.",
+    ],
+  },
+  {
+    id: "adam-januszko",
+    name: "Adam Januszko",
+    role: "Chairman of the Board | Dual-Use Technologies & Defense Innovation Expert",
+    image: adamJanuszkoAsset.url,
+    imageClass: "object-[47%_center]",
+    bio: [
+      "Dr. Adam Januszko holds a Ph.D. in Chemistry and is a retired Major of the Polish Army, with extensive experience in scientific research, dual-use technology development, and the management of research institutions and technology companies.",
+      "He has authored or co-authored more than 70 scientific publications and holds 23 patents. His expertise combines advanced scientific research, military experience, and technology management, with a focus on developing innovative solutions for civilian and defense applications.",
     ],
   },
 ];
