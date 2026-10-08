@@ -22,7 +22,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
               <figure key={person} className="w-24">
                 <img
                   src={photoFor(person)}
-                  alt={person.replace(/\s*\((proposed|tentative)\)$/, "")}
+                  alt={cleanName(person)}
                   width={64}
                   height={64}
                   loading="lazy"

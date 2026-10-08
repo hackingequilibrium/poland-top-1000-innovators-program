@@ -1,4 +1,4 @@
 - [x] Move the homepage agenda button below the four days and match the speaker suggestion style.
 - [x] Populate the 2026 agenda from the supplied schedule with available speaker photos.
 - [x] Verify the page and preserve the 2025 archive.
-- [x] Lighten agenda session titles, condense vertical padding, and fix Mark Chandler's photo crop.
+- [x] Lighten agenda session titles, condense vertical padding, and fix Mark Chandler's photo crop.- [x] Strip "(proposed)"/"(tentative)" from agenda captions and remove placeholder session details (lab tracks, "Topic TBC", "Facilitators TBC", pitching note).
