@@ -946,10 +946,25 @@ const sponsorsAndPartners: Partner[] = [
   },
 ];
 
+const honoraryPatronage: Partner[] = [
+  {
+    name: "Związek Banków Polskich",
+    href: "https://www.zbp.pl/",
+    img: zbp,
+    imgClass: "h-20 md:h-24 w-auto object-contain",
+  },
+];
+
 const partnerGroups = [
   {
     label: "Organizers",
     partners: organizers,
+    cols: "grid-cols-1 sm:grid-cols-2",
+    maxW: "max-w-[660px]",
+  },
+  {
+    label: "Honorary Patronage",
+    partners: honoraryPatronage,
     cols: "grid-cols-1 sm:grid-cols-2",
     maxW: "max-w-[660px]",
   },
