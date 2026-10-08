@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import TopNav from "@/components/top1000/TopNav";
 import { Button } from "@/components/ui/button";
-import { agendaDays, agendaPhotos, type AgendaSession } from "@/data/agenda2026";
 
 const photoFor = (name: string) => agendaPhotos[name.replace(/\s*\((proposed|tentative)\)$/, "")];
 
