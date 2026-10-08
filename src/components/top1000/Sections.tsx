@@ -39,6 +39,7 @@ import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
 import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
+import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -79,6 +80,7 @@ const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
 const dominikSchmidt = dominikSchmidtAsset.url;
+const dianneTaube = dianneTaubeAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -527,6 +529,17 @@ const speakers = [
     bio: [
       "Dr. Dominik J. Schmidt is CEO of Translarity and a technology executive, entrepreneur, and investor with decades of experience in semiconductors and advanced engineering. He previously served as Chief Technology Officer of Intel's Foundry business and co-founded two semiconductor startups acquired by Intel and Agilent.",
       "Affiliated with QVT Financial, he has led technology investments in Silicon Valley. He holds more than 90 patents, has authored over 70 technical papers, and earned a Ph.D. in Electrical Engineering from Stanford University.",
+    ],
+  },
+  {
+    id: "dianne-taube",
+    name: "Dianne Taube",
+    role: "Honorary Consul of Poland, San Francisco Bay Area | Chair & CEO, Taube Philanthropies",
+    image: dianneTaube,
+    imageClass: "object-center",
+    bio: [
+      "Dianne Taube is the Honorary Consul of the Republic of Poland for the San Francisco Bay Area and Chair and CEO of Taube Philanthropies. Appointed Honorary Consul in August 2026, she works to strengthen diplomatic, economic, cultural, and educational ties between Poland and the United States.",
+      "She also serves as CEO of Taube Investments, overseeing its real estate and investment portfolio. Through Taube Philanthropies, she supports initiatives in education, medical innovation, cultural heritage, and civic engagement, continuing her family's longstanding commitment to Polish-American collaboration.",
     ],
   },
 ];
