@@ -155,3 +155,17 @@ All colors MUST be HSL.
 .font-inter-page * {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif !important;
 }
+
+/* Navy bands that melt into the page background instead of ending on a hard line */
+.navy-band {
+  background-color: #0B1A3F;
+  background-image:
+    linear-gradient(to bottom, #0a0a1a 0%, rgba(10, 10, 26, 0) 7rem),
+    linear-gradient(to top, #0a0a1a 0%, rgba(10, 10, 26, 0) 7rem);
+}
+
+/* Same band, but its top edge continues an adjoining navy area (e.g. under the hero) */
+.navy-band-flush {
+  background-color: #0B1A3F;
+  background-image: linear-gradient(to top, #0a0a1a 0%, rgba(10, 10, 26, 0) 7rem);
+}
