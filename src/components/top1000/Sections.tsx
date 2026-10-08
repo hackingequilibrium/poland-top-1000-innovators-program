@@ -45,6 +45,7 @@ import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
+import zbpAsset from "@/assets/zbp.png.asset.json";
 
 
 
@@ -900,6 +901,7 @@ export const PreviousSummitSection = () => (
 const taubePhilanthropies = taubePhilanthropiesAsset.url;
 const renaissanceDevelopments = renaissanceDevelopmentsAsset.url;
 const sfStartupLabs = sfStartupLabsAsset.url;
+const zbp = zbpAsset.url;
 
 type Partner = {
   name: string;
@@ -944,10 +946,25 @@ const sponsorsAndPartners: Partner[] = [
   },
 ];
 
+const honoraryPatronage: Partner[] = [
+  {
+    name: "Związek Banków Polskich",
+    href: "https://www.zbp.pl/",
+    img: zbp,
+    imgClass: "h-20 md:h-24 w-auto object-contain",
+  },
+];
+
 const partnerGroups = [
   {
     label: "Organizers",
     partners: organizers,
+    cols: "grid-cols-1 sm:grid-cols-2",
+    maxW: "max-w-[660px]",
+  },
+  {
+    label: "Honorary Patronage",
+    partners: honoraryPatronage,
     cols: "grid-cols-1 sm:grid-cols-2",
     maxW: "max-w-[660px]",
   },
