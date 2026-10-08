@@ -12,12 +12,12 @@ const Session = ({ session }: { session: AgendaSession }) => {
   const notes = session.details.filter((detail) => !photoFor(detail));
 
   return (
-    <li className="grid gap-2 border-b border-summit-foreground/10 py-4 md:grid-cols-[180px_1fr] md:gap-8 md:py-5">
+    <li className="grid gap-2 border-b border-summit-foreground/10 py-3 md:grid-cols-[180px_1fr] md:gap-8 md:py-4">
       <p className="text-sm font-light leading-relaxed text-summit-accent md:pt-0.5">{session.time}</p>
       <div className="min-w-0">
         <h3 className="text-base font-medium leading-snug md:text-lg">{session.title}</h3>
         {people.length > 0 && (
-          <div className="mt-3 flex flex-wrap items-start gap-x-4 gap-y-3">
+          <div className="mt-2.5 flex flex-wrap items-start gap-x-4 gap-y-3">
             {people.map((person) => (
               <figure key={person} className="w-24">
                 <img
@@ -28,7 +28,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   loading="lazy"
                   className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[person.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
                 />
-                <figcaption className="mt-1.5 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
+                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
               </figure>
             ))}
           </div>
@@ -47,7 +47,7 @@ const Agenda = () => (
   <div className="flex min-h-screen flex-col bg-summit text-summit-foreground">
     <TopNav />
     <main className="flex-1">
-      <header className="navy-band-flush px-6 pb-14 pt-24 md:px-16 md:pb-16 md:pt-32">
+      <header className="navy-band-flush px-6 pb-12 pt-20 md:px-16 md:pb-14 md:pt-28">
         <div className="mx-auto max-w-5xl">
           <Link to="/" className="mb-8 inline-flex items-center gap-2 text-xs font-light text-summit-muted transition-colors hover:text-summit-foreground">
             <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to Summit
@@ -68,7 +68,7 @@ const Agenda = () => (
 
       <div className="mx-auto max-w-5xl px-6 pb-16 md:px-10 lg:px-0">
         {agendaDays.map((day) => (
-          <section key={day.id} id={day.id} className="scroll-mt-24 pb-10 pt-6 md:pb-14">
+          <section key={day.id} id={day.id} className="scroll-mt-24 pb-8 pt-5 md:pb-10">
             <div className="border-b border-summit-foreground/25 pb-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-summit-accent">{day.day} · {day.date}</p>
               <h2 className="mt-2 font-display text-2xl font-semibold md:text-3xl">{day.theme}</h2>
