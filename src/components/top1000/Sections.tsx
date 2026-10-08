@@ -844,7 +844,7 @@ const partners = [
 ];
 
 export const PartnersSection = () => (
-  <section id="partners" className="bg-black px-10 md:px-16 py-14 md:py-18">
+  <section id="partners" className="bg-black px-10 md:px-16 py-14 md:py-20">
     <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-6 md:mb-8">
       Partners
     </h2>
