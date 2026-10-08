@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
 import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
 import sbsTechnologyAsset from "@/assets/sbs-technology.png.asset.json";
+import renaissanceDevelopmentsAsset from "@/assets/renaissance-developments.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
@@ -841,6 +842,7 @@ export const PreviousSummitSection = () => (
 /* 9. Partners */
 const taubePhilanthropies = taubePhilanthropiesAsset.url;
 const sbsTechnology = sbsTechnologyAsset.url;
+const renaissanceDevelopments = renaissanceDevelopmentsAsset.url;
 
 type Partner = {
   name: string;
@@ -870,6 +872,12 @@ const sponsorsAndPartners: Partner[] = [
     href: "https://sbstechnology.pl/",
     img: sbsTechnology,
     imgClass: "h-14 md:h-16 w-auto object-contain",
+  },
+  {
+    name: "Renaissance Developments Group S.A.",
+    href: "https://www.rdgeurope.com/",
+    img: renaissanceDevelopments,
+    imgClass: "h-20 md:h-24 w-auto object-contain",
   },
 ];
 
