@@ -28,7 +28,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   loading="lazy"
                   className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[person.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
                 />
-                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
+                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{person.replace(/\s*\((proposed|tentative)\)$/, "")}</figcaption>
               </figure>
             ))}
           </div>
