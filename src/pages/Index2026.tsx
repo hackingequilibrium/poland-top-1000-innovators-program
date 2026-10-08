@@ -167,7 +167,7 @@ const Index2026 = () => {
       <FinalCtaSection />
       <PartnersSection />
 
-      <footer className="px-6 md:px-12 lg:px-24 pb-12 text-[11px] text-white/30 tracking-wide text-center">
+      <footer className="navy-band-footer px-6 md:px-12 lg:px-24 pt-24 pb-12 text-[11px] text-white/45 tracking-wide text-center">
         Organized by the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship
         (PolSV).
         <div className="mt-2">
