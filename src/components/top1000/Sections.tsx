@@ -47,6 +47,7 @@ import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
+import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
@@ -93,6 +94,7 @@ const paulMarca = paulMarcaAsset.url;
 const mariaKaszynska = mariaKaszynskaAsset.url;
 const dariuszRosati = dariuszRosatiAsset.url;
 const shanaPenn = shanaPennAsset.url;
+const julieMaigretShapiro = julieMaigretShapiroAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -607,6 +609,17 @@ const speakers = [
     bio: [
       "Shana Penn is the Executive Director of Taube Philanthropies, where she leads philanthropic initiatives supporting education, cultural heritage, civic engagement, and international collaboration.",
       "An author and scholar specializing in Polish history and contemporary affairs, she has played a significant role in strengthening cultural and educational ties between Poland and the United States. She also serves as Special Advisor to the Honorary Consul of the Republic of Poland in the San Francisco Bay Area. In recognition of her contributions to Polish-American relations, she was awarded the Commander's Cross of the Order of Merit of the Republic of Poland.",
+    ],
+  },
+  {
+    id: "julie-maigret-shapiro",
+    name: "Julie Maigret Shapiro",
+    role: "Director of Corporate Relations, CITRIS and the Banatao Institute | UC Berkeley",
+    image: julieMaigretShapiro,
+    imageClass: "object-center",
+    bio: [
+      "Julie Maigret Shapiro is the Director of Corporate Relations at CITRIS and the Banatao Institute at UC Berkeley, where she builds partnerships between industry and the institute's four-campus research ecosystem spanning UC Berkeley, UC Davis, UC Merced, and UC Santa Cruz.",
+      "She brings over 15 years of experience in business development and executive education, including roles at Berkeley Executive Education at the Haas School of Business, where she developed customized learning programs for global organizations. She has also advised strategic initiatives at King Abdullah University of Science and Technology (KAUST). A UC Berkeley alumna, she is a certified executive coach through the Berkeley Executive Coaching Institute.",
     ],
   },
 ];

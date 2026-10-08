@@ -15,6 +15,7 @@ import photo13 from "@/assets/barry-katz.png.asset.json";
 import photo14 from "@/assets/zuzanna-stamirowska.png.asset.json";
 import photo15 from "@/assets/esther-wojcicki.png.asset.json";
 import photo16 from "@/assets/shana-penn.png.asset.json";
+import photo17 from "@/assets/julie-maigret-shapiro.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -34,6 +35,7 @@ export const agendaPhotos: Record<string, string> = {
   "Zuzanna Stamirowska": photo14.url,
   "Esther Wojcicki": photo15.url,
   "Shana Penn": photo16.url,
+  "Julie Maigret Shapiro": photo17.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -168,7 +170,7 @@ export const agendaDays: AgendaDay[] = [
         "details": [
           "Piotr D. Moncarz",
           "Shana Penn",
-          "Julie Shapiro"
+          "Julie Maigret Shapiro"
         ]
       },
       {
