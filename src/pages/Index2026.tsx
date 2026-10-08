@@ -48,7 +48,10 @@ const Index2026 = () => {
           style={{ background: "linear-gradient(to bottom, transparent 0%, #0B1A3F 100%)" }}
         />
 
+        <TopNav />
+
         {/* All hero content on the left */}
+
         <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-start lg:justify-center pt-24 md:pt-16 pb-12 px-10 md:p-16">
           <a href="https://www.polsv.org" className="relative z-10 flex items-center gap-4">
             <img
