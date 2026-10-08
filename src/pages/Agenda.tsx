@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import TopNav from "@/components/top1000/TopNav";
 import { Button } from "@/components/ui/button";
-import { agendaDays, agendaPhotos, type AgendaSession } from "@/data/agenda2026";
+
+import { agendaDays, agendaPhotos, agendaPhotoClasses, type AgendaSession } from "@/data/agenda2026";
 
 const photoFor = (name: string) => agendaPhotos[name.replace(/\s*\((proposed|tentative)\)$/, "")];
 
@@ -25,7 +26,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   width={64}
                   height={64}
                   loading="lazy"
-                  className="h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top"
+                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[name.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
                 />
                 <figcaption className="mt-2 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
               </figure>

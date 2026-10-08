@@ -34,6 +34,12 @@ export const agendaPhotos: Record<string, string> = {
   "Esther Wojcicki": photo15.url,
 };
 
+// Per-speaker crop positions so small circular photos match the homepage cards.
+export const agendaPhotoClasses: Record<string, string> = {
+  "Mark Chandler": "object-[center_70%]",
+  "Wojciech Balczun": "object-[42%_center]",
+};
+
 export type AgendaSession = { time: string; title: string; details: string[] };
 export type AgendaDay = { id: string; day: string; date: string; venue: string; theme: string; sessions: AgendaSession[] };
 
