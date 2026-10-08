@@ -169,3 +169,9 @@ All colors MUST be HSL.
   background-color: #0B1A3F;
   background-image: linear-gradient(to top, #0a0a1a 0%, rgba(10, 10, 26, 0) 7rem);
 }
+
+/* Footer band: lighter navy, easing in from the page's near-black above */
+.navy-band-footer {
+  background-color: #16305F;
+  background-image: linear-gradient(to bottom, #0a0a1a 0%, rgba(10, 10, 26, 0) 6rem);
+}
