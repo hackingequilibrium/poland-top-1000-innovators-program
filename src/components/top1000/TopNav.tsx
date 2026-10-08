@@ -15,7 +15,7 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-40 flex justify-center px-4 pt-3 md:pt-5 pointer-events-none">
+    <nav className="fixed inset-x-0 top-0 z-40 flex justify-end px-4 md:px-10 pt-3 md:pt-5 pointer-events-none">
       <div
         className={`pointer-events-auto flex items-center gap-x-4 md:gap-x-7 rounded-full border px-4 py-1.5 md:px-6 md:py-2 transition-all duration-300 ${
           scrolled
