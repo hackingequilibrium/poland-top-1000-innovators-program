@@ -833,7 +833,7 @@ const partners = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-11 md:h-13 w-auto object-contain",
+    imgClass: "h-10 md:h-12 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
