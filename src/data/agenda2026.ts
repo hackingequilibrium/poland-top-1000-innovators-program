@@ -197,15 +197,8 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "9:10–9:20 AM",
-        "title": "Welcome from CITRIS and the Banatao Institute",
-        "details": [
-          "Camille Crittenden"
-        ]
-      },
-      {
-        "time": "9:20–9:50 AM",
-        "title": "Opening Keynote",
+        "time": "9:10–9:50 AM",
+        "title": "Welcome from CITRIS and the Banatao Institute & Opening Keynote",
         "details": [
           "Camille Crittenden"
         ]
