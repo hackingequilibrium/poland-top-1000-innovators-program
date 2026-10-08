@@ -11,23 +11,23 @@ import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
 import hotelPhoto from "@/assets/marriott-waterfront.png.asset.json";
 
 const groupRate = () => (
-  <div className="border border-white/15 bg-[#0a1230]/60 p-5 md:p-6">
-    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/60">
+  <div className="border border-white/12 bg-[#0a1230]/60 p-4 md:p-5">
+    <p className="font-inter text-[10px] uppercase tracking-[0.18em] text-white/55">
       Special group rate
     </p>
-    <p className="mt-2 font-inter font-bold text-2xl md:text-3xl">$199–$219</p>
-    <p className="font-inter font-extralight text-xs text-white/75">USD per night</p>
+    <p className="mt-1.5 font-inter font-medium text-base md:text-lg">$199–$219</p>
+    <p className="font-inter font-extralight text-[11px] text-white/60">USD per night</p>
   </div>
 );
 
 const rateItem = (label: string, value: string, note?: string) => (
-  <div className="border border-white/15 bg-[#0a1230]/60 p-5 md:p-6">
-    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/60">
+  <div className="border border-white/12 bg-[#0a1230]/60 p-4 md:p-5">
+    <p className="font-inter text-[10px] uppercase tracking-[0.18em] text-white/55">
       {label}
     </p>
-    <p className="mt-2 font-inter font-bold text-2xl md:text-3xl">{value}</p>
+    <p className="mt-1.5 font-inter font-medium text-base md:text-lg">{value}</p>
     {note ? (
-      <p className="font-inter font-extralight text-xs text-white/75">{note}</p>
+      <p className="font-inter font-extralight text-[11px] text-white/60">{note}</p>
     ) : null}
   </div>
 );
@@ -61,7 +61,6 @@ const Hotels = () => {
                 alt="San Francisco Airport Marriott Waterfront"
                 className="w-full h-56 md:h-80 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b45] via-transparent to-transparent" />
             </div>
 
             {/* Header */}
@@ -69,7 +68,7 @@ const Hotels = () => {
               <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/60">
                 Top 1000 Innovators of Poland in Silicon Valley
               </p>
-              <h1 className="mt-3 font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight">
+              <h1 className="mt-3 font-inter font-light text-2xl md:text-3xl tracking-tight text-white/90">
                 Accommodation &amp; Travel
               </h1>
               <p className="mt-4 max-w-[640px] font-inter font-extralight text-sm md:text-base leading-relaxed text-white/70">
@@ -81,10 +80,12 @@ const Hotels = () => {
               <hr className="my-8 border-white/10" />
 
               {/* Hotel identity */}
-              <span className="inline-block rounded-full border border-[#3661F6]/40 bg-[#3661F6]/15 px-3 py-1 font-inter text-[11px] uppercase tracking-[0.15em] text-[#9DB8FF]">
-                Official Summit Hotel
-              </span>
-              <h2 className="mt-4 inline-block font-inter font-bold text-2xl md:text-3xl tracking-tight underline decoration-white/25 decoration-dotted underline-offset-8">
+              <p>
+                <span className="inline-block rounded-full border border-[#3661F6]/40 bg-[#3661F6]/15 px-3 py-1 font-inter text-[10px] uppercase tracking-[0.15em] text-[#9DB8FF]">
+                  Official Summit Hotel
+                </span>
+              </p>
+              <h2 className="mt-3 block font-inter font-light text-xl md:text-2xl tracking-tight text-white/90 underline decoration-white/20 decoration-dotted underline-offset-8">
                 San Francisco Airport Marriott Waterfront
               </h2>
               <p className="mt-3 flex items-center gap-2 font-inter font-extralight text-sm md:text-base text-white/60">
@@ -103,8 +104,8 @@ const Hotels = () => {
               {/* Reserve band */}
               <div className="mt-8 rounded-xl border border-white/15 bg-[#0a1230]/60 p-6 md:p-8">
                 <div className="flex items-center gap-3">
-                  <CalendarDays className="h-5 w-5 shrink-0 text-[#9DB8FF]" />
-                  <h3 className="font-inter font-semibold text-lg md:text-xl uppercase tracking-tight">
+                  <CalendarDays className="h-4 w-4 shrink-0 text-[#9DB8FF]" />
+                  <h3 className="font-inter font-light text-base md:text-lg tracking-tight text-white/90">
                     Reserve Your Room
                   </h3>
                 </div>
@@ -132,14 +133,14 @@ const Hotels = () => {
 
           {/* ============ Transportation ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-extrabold text-2xl md:text-3xl uppercase tracking-tight">
+            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
               Transportation
             </h2>
 
             <div className="mt-6 flex items-start gap-4">
               <Plane className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-semibold text-base md:text-lg uppercase tracking-tight">
+                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
                   Airport → Hotel
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -155,7 +156,7 @@ const Hotels = () => {
             <div className="flex items-start gap-4">
               <Bus className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-semibold text-base md:text-lg uppercase tracking-tight">
+                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
                   Hotel → Summit Venues
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -184,7 +185,7 @@ const Hotels = () => {
 
           {/* ============ Why stay ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-extrabold text-2xl md:text-3xl uppercase tracking-tight">
+            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
               Why Stay at the Recommended Hotel?
             </h2>
             <ul className="mt-6 space-y-4">
