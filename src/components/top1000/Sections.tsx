@@ -46,6 +46,7 @@ import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
+import artChmielewskiAsset from "@/assets/art-chmielewski.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
@@ -618,6 +619,18 @@ const speakers = [
     bio: [
       "Julie Maigret Shapiro is the Director of Corporate Relations at CITRIS and the Banatao Institute at UC Berkeley, where she builds partnerships between industry and the institute's four-campus research ecosystem spanning UC Berkeley, UC Davis, UC Merced, and UC Santa Cruz.",
       "She brings over 15 years of experience in business development and executive education, including roles at Berkeley Executive Education at the Haas School of Business, where she developed customized learning programs for global organizations. She has also advised strategic initiatives at King Abdullah University of Science and Technology (KAUST). A UC Berkeley alumna, she is a certified executive coach through the Berkeley Executive Coaching Institute.",
+    ],
+  },
+  {
+    id: "art-chmielewski",
+    name: "Art B. Chmielewski",
+    role: "Project Manager, NASA Jet Propulsion Laboratory (JPL) | Space Exploration & Advanced Technologies",
+    image: artChmielewskiAsset.url,
+    imageClass: "object-top",
+    bio: [
+      "Art B. Chmielewski is a Polish-born aerospace engineer and project manager at NASA's Jet Propulsion Laboratory (JPL), with extensive experience developing and managing space missions and advanced aerospace technologies.",
+      "His career includes contributions to the Galileo and Ulysses missions, as well as leadership of pioneering projects involving inflatable space structures and next-generation telescope concepts. He helped initiate NASA's Gossamer Program, exploring innovative technologies for large space-based observatories.",
+      "Born in Warsaw and educated at the University of Michigan, Chmielewski has dedicated his career to advancing space exploration, engineering innovation, and international scientific collaboration.",
     ],
   },
 ];
