@@ -18,6 +18,7 @@ import photo16 from "@/assets/shana-penn.png.asset.json";
 import photo17 from "@/assets/julie-maigret-shapiro.png.asset.json";
 import photo18 from "@/assets/camille-crittenden.png.asset.json";
 import photo19 from "@/assets/art-chmielewski.png.asset.json";
+import photo20 from "@/assets/hamid-farzaneh.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -40,6 +41,7 @@ export const agendaPhotos: Record<string, string> = {
   "Julie Maigret Shapiro": photo17.url,
   "Camille Crittenden": photo18.url,
   "Artur Chmielewski": photo19.url,
+  "Hamid Farzaneh": photo20.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -119,8 +121,8 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:10 AM–12:25 PM",
-        "title": "Workshop: Innovation Readiness & Technology Readiness Levels (TRL)",
-        "details": []
+        "title": "Workshop: Innovation Readiness & Technology Readiness Levels",
+        "details": ["Hamid Farzaneh"]
       },
       {
         "time": "12:25–1:30 PM",
