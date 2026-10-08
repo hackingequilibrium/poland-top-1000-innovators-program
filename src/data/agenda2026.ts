@@ -282,13 +282,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "9:30–10:45 AM",
         "title": "Vertical Commercialization Labs",
-        "details": [
-          "Biomed & Life Sciences",
-          "Energy & Sustainability",
-          "Space & Aviation",
-          "Dual-Use Technologies",
-          "Facilitators TBC"
-        ]
+        "details": []
       },
       {
         "time": "10:45–11:00 AM",
@@ -305,9 +299,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "11:20 AM–12:20 PM",
         "title": "Innovation Pitching: Session 1",
-        "details": [
-          "Participant presentations and expert feedback"
-        ]
+        "details": []
       },
       {
         "time": "12:20–1:20 PM",
@@ -327,9 +319,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "2:20–2:50 PM",
         "title": "Interactive Session",
-        "details": [
-          "Topic TBC"
-        ]
+        "details": []
       },
       {
         "time": "2:50–3:25 PM",
@@ -441,9 +431,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "3:00–4:00 PM",
         "title": "Interactive Session",
-        "details": [
-          "Format and topic TBC"
-        ]
+        "details": []
       },
       {
         "time": "4:00–4:30 PM",
