@@ -575,7 +575,7 @@ const speakers = [
     name: "Dariusz Rosati",
     role: "Former Minister of Foreign Affairs of Poland | Economist & Former Member of the European Parliament",
     image: dariuszRosati,
-    imageClass: "object-center",
+    imageClass: "object-top",
     bio: [
       "Prof. Dariusz Rosati is a Polish economist, academic, and former Minister of Foreign Affairs of Poland (1995–1997). He served two terms in the European Parliament (2004–2009 and 2014–2019) and was a member of the Polish Parliament.",
       "A professor of economics at SGH Warsaw School of Economics, he has held senior positions in international economic institutions, including advisory roles with the United Nations Economic Commission for Europe and the European Commission. He also served on the Monetary Policy Council of the National Bank of Poland. His expertise spans international economics, European integration, economic policy, and international relations.",
