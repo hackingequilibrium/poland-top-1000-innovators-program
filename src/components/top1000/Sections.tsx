@@ -918,8 +918,42 @@ export const TicketsSection = () => (
   </Section>
 );
 
+/* 10b. Travel & Stay */
+export const TravelSection = () => (
+  <section id="travel" className="px-10 md:px-16 pb-20 md:pb-28">
+    <div className="max-w-[860px] mx-auto border border-white/10 bg-white/[0.04] backdrop-blur-sm px-6 py-8 md:px-10 md:py-9 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <p className="text-white/45 text-[11px] font-light tracking-[0.3em] uppercase mb-3">
+          Travel &amp; Stay
+        </p>
+        <h3 className="font-display text-xl md:text-2xl font-semibold text-white">
+          Traveling to Silicon Valley?
+        </h3>
+        <p className="mt-2 text-white/60 text-sm md:text-base font-extralight leading-relaxed max-w-xl">
+          Stay at the San Francisco Airport Marriott Waterfront with exclusive TOP 1000 group
+          rates starting at $199/night.
+        </p>
+        <p className="mt-2 text-white/45 text-xs md:text-sm font-light">
+          Book by October 22, 2026
+        </p>
+      </div>
+      <Link
+        to="/hotels"
+        className="group shrink-0 inline-flex items-center justify-between gap-6 border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
+      >
+        Explore Accommodation &amp; Travel
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </Link>
+    </div>
+  </section>
+);
+
 /* 11. Final CTA */
 export const FinalCtaSection = () => (
+
   <Section id="join" className="text-center">
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white">
       Join the Summit
