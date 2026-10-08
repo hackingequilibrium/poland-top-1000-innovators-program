@@ -11,8 +11,11 @@ import {
   ProgramSection,
   PreviousSummitSection,
   TicketsSection,
+  TravelSection,
   FinalCtaSection,
 } from "@/components/top1000/Sections";
+import TopNav from "@/components/top1000/TopNav";
+
 
 const Index2026 = () => {
 
@@ -45,8 +48,11 @@ const Index2026 = () => {
           style={{ background: "linear-gradient(to bottom, transparent 0%, #0B1A3F 100%)" }}
         />
 
+        <TopNav />
+
         {/* All hero content on the left */}
-        <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-start lg:justify-center pt-10 pb-12 px-10 md:p-16">
+
+        <div className="relative z-20 w-full lg:w-3/5 flex flex-col justify-start lg:justify-center pt-24 md:pt-16 pb-12 px-10 md:p-16">
           <a href="https://www.polsv.org" className="relative z-10 flex items-center gap-4">
             <img
               src="/assets/polsv-logo-color-dark-bg.svg"
@@ -155,6 +161,8 @@ const Index2026 = () => {
       <ProgramSection />
       <PreviousSummitSection />
       <TicketsSection />
+      <TravelSection />
+
       <FinalCtaSection />
 
       <footer className="px-6 md:px-12 lg:px-24 pb-12 text-[11px] text-white/30 tracking-wide text-center">
