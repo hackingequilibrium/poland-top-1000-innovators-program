@@ -929,7 +929,7 @@ export const TicketsSection = () => (
 
 /* 10b. Travel & Stay */
 export const TravelSection = () => (
-  <section id="travel" className="px-10 md:px-16 pb-20 md:pb-28">
+  <section id="travel" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
     <div className="max-w-[860px] mx-auto border border-white/10 bg-white/[0.04] backdrop-blur-sm px-6 py-8 md:px-10 md:py-9 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
       <div>
         <p className="text-white/45 text-[11px] font-light tracking-[0.3em] uppercase mb-3">
