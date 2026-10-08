@@ -12,12 +12,12 @@ const Session = ({ session }: { session: AgendaSession }) => {
   const notes = session.details.filter((detail) => !photoFor(detail));
 
   return (
-    <li className="grid gap-3 border-b border-summit-foreground/10 py-6 md:grid-cols-[180px_1fr] md:gap-8 md:py-7">
+    <li className="grid gap-2 border-b border-summit-foreground/10 py-4 md:grid-cols-[180px_1fr] md:gap-8 md:py-5">
       <p className="text-sm font-light leading-relaxed text-summit-accent md:pt-0.5">{session.time}</p>
       <div className="min-w-0">
-        <h3 className="text-base font-semibold leading-relaxed md:text-lg">{session.title}</h3>
+        <h3 className="text-base font-medium leading-snug md:text-lg">{session.title}</h3>
         {people.length > 0 && (
-          <div className="mt-4 flex flex-wrap items-start gap-x-5 gap-y-4">
+          <div className="mt-3 flex flex-wrap items-start gap-x-4 gap-y-3">
             {people.map((person) => (
               <figure key={person} className="w-24">
                 <img
@@ -26,15 +26,15 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   width={64}
                   height={64}
                   loading="lazy"
-                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[name.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
+                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[person.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
                 />
-                <figcaption className="mt-2 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
+                <figcaption className="mt-1.5 text-xs font-light leading-relaxed text-summit-muted">{person}</figcaption>
               </figure>
             ))}
           </div>
         )}
         {notes.length > 0 && (
-          <div className="mt-3 space-y-1 text-sm font-light leading-relaxed text-summit-muted">
+          <div className="mt-2.5 space-y-1 text-sm font-light leading-relaxed text-summit-muted">
             {notes.map((note) => <p key={note}>{note}</p>)}
           </div>
         )}
@@ -47,9 +47,9 @@ const Agenda = () => (
   <div className="flex min-h-screen flex-col bg-summit text-summit-foreground">
     <TopNav />
     <main className="flex-1">
-      <header className="navy-band-flush px-6 pb-20 pt-28 md:px-16 md:pb-24 md:pt-36">
+      <header className="navy-band-flush px-6 pb-14 pt-24 md:px-16 md:pb-16 md:pt-32">
         <div className="mx-auto max-w-5xl">
-          <Link to="/" className="mb-10 inline-flex items-center gap-2 text-xs font-light text-summit-muted transition-colors hover:text-summit-foreground">
+          <Link to="/" className="mb-8 inline-flex items-center gap-2 text-xs font-light text-summit-muted transition-colors hover:text-summit-foreground">
             <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to Summit
           </Link>
           <p className="text-xs font-light uppercase tracking-[0.2em] text-summit-accent">TOP 1000 Innovators of Poland in Silicon Valley</p>
@@ -66,13 +66,13 @@ const Agenda = () => (
         </div>
       </header>
 
-      <div className="mx-auto max-w-5xl px-6 pb-20 md:px-10 lg:px-0">
+      <div className="mx-auto max-w-5xl px-6 pb-16 md:px-10 lg:px-0">
         {agendaDays.map((day) => (
-          <section key={day.id} id={day.id} className="scroll-mt-24 pb-16 pt-8 md:pb-20">
-            <div className="border-b border-summit-foreground/25 pb-7">
+          <section key={day.id} id={day.id} className="scroll-mt-24 pb-10 pt-6 md:pb-14">
+            <div className="border-b border-summit-foreground/25 pb-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-summit-accent">{day.day} · {day.date}</p>
-              <h2 className="mt-3 font-display text-2xl font-semibold md:text-3xl">{day.theme}</h2>
-              <p className="mt-3 flex items-start gap-2 text-sm font-light leading-relaxed text-summit-muted">
+              <h2 className="mt-2 font-display text-2xl font-semibold md:text-3xl">{day.theme}</h2>
+              <p className="mt-2 flex items-start gap-2 text-sm font-light leading-relaxed text-summit-muted">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /> {day.venue}
               </p>
             </div>
