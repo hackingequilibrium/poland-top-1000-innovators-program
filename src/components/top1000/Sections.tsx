@@ -35,6 +35,7 @@ import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
 import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
+import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -74,6 +75,7 @@ const camilleCrittenden = camilleCrittendenAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
+const dominikSchmidt = dominikSchmidtAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -512,6 +514,16 @@ const speakers = [
     bio: [
       "Leah Walker is Director of Research and Strategic Initiatives at the Berkeley Air and Space Center, where she also serves as Air and Space Track Chair. Her work focuses on the intersection of emerging technology, national security, and defense innovation.",
       "Her background spans national security policy, nuclear policy, complex systems failure, defense innovation, and industrial policy. Before joining the Berkeley Air and Space Center, she spent three and a half years as Executive Director of the Berkeley Risk and Security Lab, leading work on emerging technologies and their implications for national security.",
+    ],
+  },
+  {
+    name: "Dominik J. Schmidt",
+    role: "CEO, Translarity | Former CTO, Intel Foundry | Semiconductor Entrepreneur",
+    image: dominikSchmidt,
+    imageClass: "object-center",
+    bio: [
+      "Dr. Dominik J. Schmidt is CEO of Translarity and a technology executive, entrepreneur, and investor with decades of experience in semiconductors and advanced engineering. He previously served as Chief Technology Officer of Intel's Foundry business and co-founded two semiconductor startups acquired by Intel and Agilent.",
+      "Affiliated with QVT Financial, he has led technology investments in Silicon Valley. He holds more than 90 patents, has authored over 70 technical papers, and earned a Ph.D. in Electrical Engineering from Stanford University.",
     ],
   },
 ];
