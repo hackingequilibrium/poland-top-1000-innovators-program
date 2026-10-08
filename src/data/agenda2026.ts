@@ -41,6 +41,7 @@ export const agendaPhotos: Record<string, string> = {
   "Julie Maigret Shapiro": photo17.url,
   "Camille Crittenden": photo18.url,
   "Artur Chmielewski": photo19.url,
+  "Hamid Farzaneh": photo20.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
