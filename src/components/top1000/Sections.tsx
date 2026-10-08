@@ -37,6 +37,7 @@ import camilleCrittendenAsset from "@/assets/camille-crittenden.png.asset.json";
 import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
+import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 
 
 
@@ -74,6 +75,7 @@ const camilleCrittenden = camilleCrittendenAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
+const alojzyNowak = alojzyNowakAsset.url;
 
 
 
@@ -255,6 +257,17 @@ const speakers = [
     bio: [
       "Zuzanna Stamirowska is the co-founder and CEO of Pathway, an AI company developing a new generation of post-transformer models designed to continuously learn, reason, and adapt. Under her leadership, Pathway is developing its Dragon Hatchling (BDH) architecture, an alternative to traditional transformer-based AI focused on intrinsic memory and continuous learning. The company has raised $30 million in seed funding and reached a $500 million valuation.",
       "An École Polytechnique graduate with a PhD in Complex Systems, Zuzanna previously developed state-of-the-art models for forecasting the evolution of complex networks, with her research published in the Proceedings of the National Academy of Sciences. Her academic work spans complex systems and game theory on graphs, and she has also studied at Sciences Po and the Stockholm School of Economics. She was featured by Le Point among “100 geniuses” whose innovations could change the world.",
+    ],
+  },
+  {
+    id: "alojzy-nowak",
+    name: "Alojzy Z. Nowak",
+    role: "Rector, University of Warsaw | Economist & Academic Leader",
+    image: alojzyNowak,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Alojzy Z. Nowak is the Rector of the University of Warsaw and an economist with extensive experience in academic leadership, international economics, and university governance.",
+      "He previously served as Vice-Rector for Research and Cooperation and Dean of the Faculty of Management. Throughout his career, he has lectured at universities across Europe, the United States, and Asia, promoting international academic collaboration and research.",
     ],
   },
   {
