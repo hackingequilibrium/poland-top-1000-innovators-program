@@ -46,7 +46,6 @@ export const agendaPhotos: Record<string, string> = {
 export const agendaPhotoClasses: Record<string, string> = {
   "Mark Chandler": "object-[center_76%]",
   "Wojciech Balczun": "object-[42%_center]",
-  "Artur Chmielewski": "object-top",
 };
 
 export type AgendaSession = { time: string; title: string; details: string[] };
