@@ -51,15 +51,15 @@ const Hotels = () => {
       </header>
 
       <main className="flex-1 px-4 md:px-12 lg:px-[100px] pb-16">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[720px] mx-auto">
           {/* ============ Hotel card ============ */}
           <section className="overflow-hidden rounded-2xl border border-white/15 bg-[#0d1b45] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)]">
-            {/* Photo */}
-            <div className="relative">
+            {/* Photo — shown at its native 480×320 size so it stays sharp */}
+            <div className="px-6 pt-6 md:px-10 md:pt-8">
               <img
                 src={hotelPhoto.url}
                 alt="San Francisco Airport Marriott Waterfront"
-                className="w-full h-56 md:h-80 object-cover"
+                className="mx-auto block aspect-[3/2] w-full max-w-[480px] rounded-xl object-cover"
               />
             </div>
 
