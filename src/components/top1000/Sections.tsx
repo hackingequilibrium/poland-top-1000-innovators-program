@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
 import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
 import sbsSolutionsLogo from "@/assets/sbs-solutions.png";
@@ -888,9 +886,6 @@ export const ProgramSection = () => (
         </Card>
       ))}
     </div>
-    <Button asChild variant="summit" size="lg" className="mt-8 h-12 rounded-none px-7 text-sm">
-      <Link to="/agenda">View full agenda <ArrowRight aria-hidden="true" /></Link>
-    </Button>
   </Section>
 );
 
