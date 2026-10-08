@@ -963,7 +963,7 @@ const honoraryPatronage: Partner[] = [
     name: "Związek Banków Polskich",
     href: "https://www.zbp.pl/",
     img: zbp,
-    imgClass: "h-20 md:h-24 w-auto object-contain",
+    imgClass: "h-16 md:h-20 w-auto object-contain",
   },
 ];
 
