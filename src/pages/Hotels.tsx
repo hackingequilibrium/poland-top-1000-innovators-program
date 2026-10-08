@@ -82,7 +82,9 @@ const Hotels = () => {
                 group rate. Reservations are managed directly by Marriott.
               </p>
               <a
-                href="#"
+                href="https://app.marriott.com/resview2?id=1791480188686&key=GRP&app=resvlink"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
               >
                 <span className="text-base font-medium tracking-wide text-white">
