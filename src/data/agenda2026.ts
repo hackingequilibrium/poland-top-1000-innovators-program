@@ -16,6 +16,7 @@ import photo14 from "@/assets/zuzanna-stamirowska.png.asset.json";
 import photo15 from "@/assets/esther-wojcicki.png.asset.json";
 import photo16 from "@/assets/shana-penn.png.asset.json";
 import photo17 from "@/assets/julie-maigret-shapiro.png.asset.json";
+import photo18 from "@/assets/camille-crittenden.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -36,6 +37,7 @@ export const agendaPhotos: Record<string, string> = {
   "Esther Wojcicki": photo15.url,
   "Shana Penn": photo16.url,
   "Julie Maigret Shapiro": photo17.url,
+  "Camille Crittenden": photo18.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -193,12 +195,16 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "9:10–9:20 AM",
         "title": "Welcome from CITRIS and the Banatao Institute",
-        "details": []
+        "details": [
+          "Camille Crittenden"
+        ]
       },
       {
         "time": "9:20–9:50 AM",
         "title": "Opening Keynote",
-        "details": []
+        "details": [
+          "Camille Crittenden"
+        ]
       },
       {
         "time": "9:50–10:15 AM",
