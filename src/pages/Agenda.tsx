@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import TopNav from "@/components/top1000/TopNav";
 import { Button } from "@/components/ui/button";
 
-import { agendaDays, agendaPhotos, agendaPhotoClasses, type AgendaSession } from "@/data/agenda2026";
+import { agendaDays, agendaPhotos, agendaPhotoClasses, isHiddenSession, type AgendaSession } from "@/data/agenda2026";
 
 const cleanName = (name: string) => name.replace(/\s*\((proposed|tentative)\)$/, ""), photoFor = (name: string) => agendaPhotos[cleanName(name)];
 
@@ -23,10 +23,10 @@ const Session = ({ session }: { session: AgendaSession }) => {
                 <img
                   src={photoFor(person)}
                   alt={cleanName(person)}
-                  width={64}
-                  height={64}
+                  width={80}
+                  height={80}
                   loading="lazy"
-                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[cleanName(person)] ?? ""}`}
+                  className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[cleanName(person)] ?? ""}`}
                 />
                 <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
               </figure>
@@ -76,7 +76,7 @@ const Agenda = () => (
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" /> {day.venue}
               </p>
             </div>
-            <ol>{day.sessions.map((session) => <Session key={`${day.id}-${session.time}`} session={session} />)}</ol>
+            <ol>{day.sessions.filter((session) => !isHiddenSession(day.id, session)).map((session) => <Session key={`${day.id}-${session.time}`} session={session} />)}</ol>
           </section>
         ))}
         <Button asChild variant="summit" size="lg" className="rounded-none">
