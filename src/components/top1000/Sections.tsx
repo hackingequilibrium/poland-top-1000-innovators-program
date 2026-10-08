@@ -42,6 +42,7 @@ import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
 import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
+import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -85,6 +86,7 @@ const dominikSchmidt = dominikSchmidtAsset.url;
 const dianneTaube = dianneTaubeAsset.url;
 const paulMarca = paulMarcaAsset.url;
 const mariaKaszynska = mariaKaszynskaAsset.url;
+const dariuszRosati = dariuszRosatiAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
@@ -566,6 +568,17 @@ const speakers = [
     bio: [
       "Prof. Maria Kaszyńska is a civil engineering scholar and leader in construction materials research. She chairs the Committee on Civil and Water Engineering of the Polish Academy of Sciences and serves as President of the Polish Association of Civil Engineers and Technicians (PZITB), the first woman to hold the position in the organization's 90-year history.",
       "A former Dean of the Faculty of Civil Engineering and Architecture at the West Pomeranian University of Technology, she has authored over 150 scientific publications focused on concrete technology. She is a Fellow of the American Concrete Institute (ACI) and has served on its International Advisory Board. Her contributions to engineering, research, and international collaboration have earned numerous honors, including the Knight's Cross of the Order of Polonia Restituta.",
+    ],
+  },
+  {
+    id: "dariusz-rosati",
+    name: "Dariusz Rosati",
+    role: "Former Minister of Foreign Affairs of Poland | Economist & Former Member of the European Parliament",
+    image: dariuszRosati,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Dariusz Rosati is a Polish economist, academic, and former Minister of Foreign Affairs of Poland (1995–1997). He served two terms in the European Parliament (2004–2009 and 2014–2019) and was a member of the Polish Parliament.",
+      "A professor of economics at SGH Warsaw School of Economics, he has held senior positions in international economic institutions, including advisory roles with the United Nations Economic Commission for Europe and the European Commission. He also served on the Monetary Policy Council of the National Bank of Poland. His expertise spans international economics, European integration, economic policy, and international relations.",
     ],
   },
 ];
