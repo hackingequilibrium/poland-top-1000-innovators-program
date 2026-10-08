@@ -12,22 +12,22 @@ import hotelPhoto from "@/assets/marriott-waterfront.png.asset.json";
 
 const groupRate = () => (
   <div className="border border-white/15 bg-[#0a1230]/60 p-5 md:p-6">
-    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/45">
+    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/60">
       Special group rate
     </p>
     <p className="mt-2 font-inter font-bold text-2xl md:text-3xl">$199–$219</p>
-    <p className="font-inter font-extralight text-xs text-white/55">USD per night</p>
+    <p className="font-inter font-extralight text-xs text-white/75">USD per night</p>
   </div>
 );
 
 const rateItem = (label: string, value: string, note?: string) => (
   <div className="border border-white/15 bg-[#0a1230]/60 p-5 md:p-6">
-    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/45">
+    <p className="font-inter text-[11px] uppercase tracking-[0.18em] text-white/60">
       {label}
     </p>
     <p className="mt-2 font-inter font-bold text-2xl md:text-3xl">{value}</p>
     {note ? (
-      <p className="font-inter font-extralight text-xs text-white/55">{note}</p>
+      <p className="font-inter font-extralight text-xs text-white/75">{note}</p>
     ) : null}
   </div>
 );
@@ -62,14 +62,11 @@ const Hotels = () => {
                 className="w-full h-56 md:h-80 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d1b45] via-transparent to-transparent" />
-              <span className="absolute bottom-4 left-4 rounded-full bg-[#0a1230]/80 border border-white/20 px-3 py-1 font-inter text-[11px] uppercase tracking-[0.15em] text-white/80">
-                Official Summit Hotel
-              </span>
             </div>
 
             {/* Header */}
             <div className="px-6 md:px-10 pt-8 pb-8">
-              <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/45">
+              <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/60">
                 Top 1000 Innovators of Poland in Silicon Valley
               </p>
               <h1 className="mt-3 font-inter font-extrabold text-3xl md:text-5xl uppercase tracking-tight">
@@ -126,7 +123,7 @@ const Hotels = () => {
                   </span>
                   <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
-                <p className="mt-3 text-center font-inter font-extralight text-xs text-white/45">
+                <p className="mt-3 text-center font-inter font-extralight text-xs text-white/60">
                   Reservations are managed directly by Marriott.
                 </p>
               </div>
