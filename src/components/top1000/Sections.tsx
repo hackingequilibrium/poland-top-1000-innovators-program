@@ -858,13 +858,13 @@ const organizers: Partner[] = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-32 md:h-40 w-auto object-contain",
+    imgClass: "h-28 md:h-32 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-24 md:h-32 w-auto object-contain",
+    imgClass: "h-20 md:h-24 w-auto object-contain",
   },
 ];
 
@@ -873,7 +873,7 @@ const sponsorsAndPartners: Partner[] = [
     name: "SBS Technology Poland",
     href: "https://sbstechnology.pl/",
     img: sbsTechnology,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
   {
     name: "Renaissance Developments Group S.A.",
@@ -885,7 +885,7 @@ const sponsorsAndPartners: Partner[] = [
     name: "SF Startup Labs",
     href: "https://sfstartuplabs.com/",
     img: sfStartupLabs,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
 ];
 
@@ -894,11 +894,13 @@ const partnerGroups = [
     label: "Organizers",
     partners: organizers,
     cols: "grid-cols-1 sm:grid-cols-2",
+    maxW: "max-w-[660px]",
   },
   {
     label: "Sponsors & Partners",
     partners: sponsorsAndPartners,
     cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+    maxW: "max-w-[996px]",
   },
 ];
 
@@ -913,7 +915,7 @@ export const PartnersSection = () => (
           <h3 className="text-[11px] md:text-xs uppercase tracking-[0.28em] font-light text-white/45 mb-3">
             {group.label}
           </h3>
-          <div className={`grid gap-3 ${group.cols}`}>
+          <div className={`grid gap-3 ${group.cols} ${group.maxW}`}>
             {group.partners.map((p) => (
               <a
                 key={p.name}
@@ -922,7 +924,7 @@ export const PartnersSection = () => (
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-3 py-3 transition-colors duration-300 hover:border-white/25"
               >
-                <span className="flex min-h-[130px] w-full items-center justify-center md:min-h-[168px]">
+                <span className="flex h-28 w-full items-center justify-center md:h-32">
                   <img
                     src={p.img}
                     alt={p.name}
