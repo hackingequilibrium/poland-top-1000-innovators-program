@@ -58,7 +58,7 @@ const Agenda = () => (
           <nav aria-label="Agenda days" className="mt-9 flex flex-wrap gap-2">
             {agendaDays.map((day) => (
               <Button asChild key={day.id} variant="summit" className="h-11 rounded-none px-5">
-                <a href={`#${day.id}`}>{day.day} <span className="font-light text-summit-muted">· Nov {day.date.split(" ").at(-1)}</span></a>
+                <a href={`#${day.id}`}>{day.day} <span className="font-light text-summit-muted">· Nov {day.date.split(" ").slice(-1)[0]}</span></a>
               </Button>
             ))}
           </nav>
