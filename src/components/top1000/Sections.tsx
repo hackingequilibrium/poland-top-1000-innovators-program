@@ -4,6 +4,7 @@ import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Hand
 import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
 import sbsTechnologyAsset from "@/assets/sbs-technology.png.asset.json";
 import renaissanceDevelopmentsAsset from "@/assets/renaissance-developments.png.asset.json";
+import sfStartupLabsAsset from "@/assets/sf-startup-labs.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
@@ -843,6 +844,7 @@ export const PreviousSummitSection = () => (
 const taubePhilanthropies = taubePhilanthropiesAsset.url;
 const sbsTechnology = sbsTechnologyAsset.url;
 const renaissanceDevelopments = renaissanceDevelopmentsAsset.url;
+const sfStartupLabs = sfStartupLabsAsset.url;
 
 type Partner = {
   name: string;
@@ -878,6 +880,12 @@ const sponsorsAndPartners: Partner[] = [
     href: "https://www.rdgeurope.com/",
     img: renaissanceDevelopments,
     imgClass: "h-20 md:h-24 w-auto object-contain",
+  },
+  {
+    name: "SF Startup Labs",
+    href: "https://sfstartuplabs.com/",
+    img: sfStartupLabs,
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
 ];
 
