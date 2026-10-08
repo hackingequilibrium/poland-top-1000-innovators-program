@@ -858,13 +858,13 @@ const organizers: Partner[] = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-28 md:h-32 w-auto object-contain",
+    imgClass: "h-32 md:h-40 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-20 md:h-24 w-auto object-contain",
+    imgClass: "h-24 md:h-32 w-auto object-contain",
   },
 ];
 
@@ -873,7 +873,7 @@ const sponsorsAndPartners: Partner[] = [
     name: "SBS Technology Poland",
     href: "https://sbstechnology.pl/",
     img: sbsTechnology,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-16 md:h-20 w-auto object-contain",
   },
   {
     name: "Renaissance Developments Group S.A.",
@@ -885,13 +885,21 @@ const sponsorsAndPartners: Partner[] = [
     name: "SF Startup Labs",
     href: "https://sfstartuplabs.com/",
     img: sfStartupLabs,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-16 md:h-20 w-auto object-contain",
   },
 ];
 
 const partnerGroups = [
-  { label: "Organizers", partners: organizers },
-  { label: "Sponsors & Partners", partners: sponsorsAndPartners },
+  {
+    label: "Organizers",
+    partners: organizers,
+    cols: "grid-cols-1 sm:grid-cols-2",
+  },
+  {
+    label: "Sponsors & Partners",
+    partners: sponsorsAndPartners,
+    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  },
 ];
 
 export const PartnersSection = () => (
@@ -905,7 +913,7 @@ export const PartnersSection = () => (
           <h3 className="text-[11px] md:text-xs uppercase tracking-[0.28em] font-light text-white/45 mb-3">
             {group.label}
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[660px]">
+          <div className={`grid gap-3 ${group.cols}`}>
             {group.partners.map((p) => (
               <a
                 key={p.name}
@@ -914,8 +922,13 @@ export const PartnersSection = () => (
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-3 py-3 transition-colors duration-300 hover:border-white/25"
               >
-                <span className="flex h-28 w-full items-center justify-center md:h-32">
-                  <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
+                <span className="flex min-h-[130px] w-full items-center justify-center md:min-h-[168px]">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    loading="lazy"
+                    className={`${p.imgClass} max-w-full`}
+                  />
                 </span>
                 <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
                   {p.name}
