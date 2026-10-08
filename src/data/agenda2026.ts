@@ -111,7 +111,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "10:15–10:40 AM",
         "title": "Entrepreneurial Journey",
         "details": [
-          "Lloyd B. Minor"
+          "Speaker TBC"
         ]
       },
       {
