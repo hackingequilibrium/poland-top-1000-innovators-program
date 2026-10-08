@@ -8,7 +8,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
-import hotelPhoto from "@/assets/marriott-waterfront.png.asset.json";
+import hotelPhoto from "@/assets/marriott-waterfront-hd.png.asset.json";
 
 const groupRate = () => (
   <div className="border border-white/12 bg-[#0a1230]/60 p-4 md:p-5">
@@ -54,21 +54,19 @@ const Hotels = () => {
         <div className="max-w-[720px] mx-auto">
           {/* ============ Hotel card ============ */}
           <section className="overflow-hidden rounded-2xl border border-white/15 bg-[#0d1b45] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.9)]">
-            {/* Photo — shown at its native 480×320 size so it stays sharp */}
-            <div className="px-6 pt-6 md:px-10 md:pt-8">
-              <img
-                src={hotelPhoto.url}
-                alt="San Francisco Airport Marriott Waterfront"
-                className="mx-auto block aspect-[3/2] w-full max-w-[480px] rounded-xl object-cover"
-              />
-            </div>
+            {/* Photo */}
+            <img
+              src={hotelPhoto.url}
+              alt="San Francisco Airport Marriott Waterfront"
+              className="h-60 w-full object-cover md:h-80"
+            />
 
             {/* Header */}
             <div className="px-6 md:px-10 pt-8 pb-8">
               <p className="font-inter text-[11px] uppercase tracking-[0.2em] text-white/60">
                 Top 1000 Innovators of Poland in Silicon Valley
               </p>
-              <h1 className="mt-3 font-inter font-light text-2xl md:text-3xl tracking-tight text-white/90">
+              <h1 className="mt-3 font-inter font-extrabold text-2xl md:text-3xl uppercase tracking-tight">
                 Accommodation &amp; Travel
               </h1>
               <p className="mt-4 max-w-[640px] font-inter font-extralight text-sm md:text-base leading-relaxed text-white/70">
@@ -85,7 +83,7 @@ const Hotels = () => {
                   Official Summit Hotel
                 </span>
               </p>
-              <h2 className="mt-3 block font-inter font-light text-xl md:text-2xl tracking-tight text-white/90 underline decoration-white/20 decoration-dotted underline-offset-8">
+              <h2 className="mt-3 block font-inter font-bold text-xl md:text-2xl tracking-tight underline decoration-white/20 decoration-dotted underline-offset-8">
                 San Francisco Airport Marriott Waterfront
               </h2>
               <p className="mt-3 flex items-center gap-2 font-inter font-extralight text-sm md:text-base text-white/60">
@@ -105,7 +103,7 @@ const Hotels = () => {
               <div className="mt-8 rounded-xl border border-white/15 bg-[#0a1230]/60 p-6 md:p-8">
                 <div className="flex items-center gap-3">
                   <CalendarDays className="h-4 w-4 shrink-0 text-[#9DB8FF]" />
-                  <h3 className="font-inter font-light text-base md:text-lg tracking-tight text-white/90">
+                  <h3 className="font-inter font-semibold text-base md:text-lg uppercase tracking-tight">
                     Reserve Your Room
                   </h3>
                 </div>
@@ -133,14 +131,14 @@ const Hotels = () => {
 
           {/* ============ Transportation ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
+            <h2 className="font-inter font-extrabold text-xl md:text-2xl uppercase tracking-tight">
               Transportation
             </h2>
 
             <div className="mt-6 flex items-start gap-4">
               <Plane className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
+                <h3 className="font-inter font-semibold text-sm md:text-base uppercase tracking-tight">
                   Airport → Hotel
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -156,7 +154,7 @@ const Hotels = () => {
             <div className="flex items-start gap-4">
               <Bus className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
+                <h3 className="font-inter font-semibold text-sm md:text-base uppercase tracking-tight">
                   Hotel → Summit Venues
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -185,7 +183,7 @@ const Hotels = () => {
 
           {/* ============ Why stay ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
+            <h2 className="font-inter font-extrabold text-xl md:text-2xl uppercase tracking-tight">
               Why Stay at the Recommended Hotel?
             </h2>
             <ul className="mt-6 space-y-4">
