@@ -52,6 +52,11 @@ const ROUTE_META: Record<string, Meta> = {
     title: "Tickets — TOP 1000 Innovators Summit II",
     description: "Purchase your ticket for Summit II, 9–12 November 2026 in Silicon Valley.",
   },
+  "/hotels": {
+    title: "Accommodation & Travel — TOP 1000 Innovators",
+    description:
+      "Official Summit hotel, group rates, and transportation details for Summit II, 9–12 November 2026.",
+  },
   "/suggest-speaker": {
     title: "Suggest a Speaker — TOP 1000 Innovators",
     description: "Nominate a speaker or workshop leader for Summit II.",

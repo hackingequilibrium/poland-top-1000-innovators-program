@@ -67,9 +67,17 @@ const Tickets = () => {
             </span>
           </div>
 
-          <div className="max-w-[640px] mx-auto mb-10 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-center font-inter text-[11px] md:text-xs font-light leading-relaxed text-white/80">
+          <div className="max-w-[640px] mx-auto mb-6 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-center font-inter text-[11px] md:text-xs font-light leading-relaxed text-white/80">
             <span className="font-semibold text-white">Important:</span> The registration fee shown on this page is the total amount charged by PolSV. During checkout, Zeffy will offer an optional donation to support its platform. If you do not wish to contribute, simply select $0 from the dropdown menu.
           </div>
+
+          <p className="max-w-[640px] mx-auto mb-10 text-center font-inter text-[11px] md:text-xs font-light leading-relaxed text-white/80">
+            Traveling to Silicon Valley?{" "}
+            <Link to="/hotels" className="underline underline-offset-2 hover:text-white transition-colors">
+              Book your hotel at the special TOP 1000 group rate
+            </Link>
+            . Reservations close October 22.
+          </p>
 
 
 
