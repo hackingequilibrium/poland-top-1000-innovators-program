@@ -29,7 +29,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   width={80}
                   height={80}
                   loading="lazy"
-                  className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[cleanName(person)] ?? ""}`}
+                  className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover ${agendaPhotoClasses[cleanName(person)] ?? "object-top"}`}
                 />
                 <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
               </figure>
