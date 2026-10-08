@@ -833,31 +833,31 @@ const partners = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-32 md:h-36 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-24 md:h-28 w-auto object-contain",
+    imgClass: "h-10 md:h-12 w-auto object-contain",
   },
 ];
 
 export const PartnersSection = () => (
-  <Section id="partners" title="Partners">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+  <Section id="partners" title="Partners" className="bg-black">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[760px]">
       {partners.map((p) => (
         <a
           key={p.name}
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-between gap-5 md:gap-6 border border-white/10 bg-[#12224F] px-6 py-8 md:px-10 md:py-10 transition-colors duration-300 hover:border-white/25 hover:bg-[#162a60]"
+          className="group flex flex-col items-center justify-between gap-3 md:gap-4 border border-white/10 bg-black px-5 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:border-white/25"
         >
-          <span className="flex h-32 md:h-36 w-full items-center justify-center">
+          <span className="flex h-16 md:h-20 w-full items-center justify-center">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
           </span>
-          <span className="text-center text-xs md:text-sm font-light leading-relaxed text-white/75 transition-colors group-hover:text-white">
+          <span className="text-center text-[11px] md:text-xs font-light leading-relaxed text-white/70 transition-colors group-hover:text-white">
             {p.name}
           </span>
         </a>
