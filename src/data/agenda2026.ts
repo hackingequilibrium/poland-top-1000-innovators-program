@@ -74,7 +74,7 @@ export const agendaDays: AgendaDay[] = [
   {
     "id": "day-1",
     "day": "Day 1",
-    "date": "Monday, November 9",
+    "date": "Monday, November 9, 2026",
     "venue": "Stanford University",
     "theme": "Innovation, AI & Entrepreneurship",
     "sessions": [
@@ -178,7 +178,7 @@ export const agendaDays: AgendaDay[] = [
   {
     "id": "day-2",
     "day": "Day 2",
-    "date": "Tuesday, November 10",
+    "date": "Tuesday, November 10, 2026",
     "venue": "University of California, Berkeley",
     "theme": "Space, Aviation, Energy & Advanced Technologies",
     "sessions": [
@@ -271,7 +271,7 @@ export const agendaDays: AgendaDay[] = [
   {
     "id": "day-3",
     "day": "Day 3",
-    "date": "Wednesday, November 11",
+    "date": "Wednesday, November 11, 2026",
     "venue": "San Francisco Airport Marriott Waterfront",
     "theme": "Commercialization, Capital & Strategic Partnerships",
     "sessions": [
@@ -349,7 +349,7 @@ export const agendaDays: AgendaDay[] = [
   {
     "id": "day-4",
     "day": "Day 4",
-    "date": "Thursday, November 12",
+    "date": "Thursday, November 12, 2026",
     "venue": "University of California, San Francisco (UCSF)",
     "theme": "Biomed, Life Sciences & Translational Innovation",
     "sessions": [
