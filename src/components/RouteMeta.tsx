@@ -55,7 +55,7 @@ const ROUTE_META: Record<string, Meta> = {
   "/agenda": {
     title: "Full Agenda — TOP 1000 Innovators Summit II",
     description:
-      "The full Summit II agenda: session times, speakers and workshops for 9–12 November 2026. Coming soon.",
+      "Explore the initial Summit II agenda: four days of sessions, speakers and workshops in Silicon Valley, 9–12 November 2026.",
   },
   "/2025/agenda": {
     title: "2025 Summit Agenda — TOP 1000 Innovators",

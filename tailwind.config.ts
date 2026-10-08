@@ -19,6 +19,13 @@ export default {
         'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
+        summit: {
+          DEFAULT: "hsl(var(--summit-background))",
+          surface: "hsl(var(--summit-surface))",
+          foreground: "hsl(var(--summit-foreground))",
+          muted: "hsl(var(--summit-muted))",
+          accent: "hsl(var(--summit-accent))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
