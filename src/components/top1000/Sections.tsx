@@ -38,6 +38,7 @@ import darrenCookeAsset from "@/assets/darren-cooke.png.asset.json";
 import christinaHarveyAsset from "@/assets/christina-harvey.png.asset.json";
 import leahWalkerAsset from "@/assets/leah-walker.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
+import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
 
 
@@ -76,6 +77,7 @@ const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
+const wojciechBalczun = wojciechBalczunAsset.url;
 
 
 
@@ -292,6 +294,17 @@ const speakers = [
     bio: [
       "Michael Lepech is the C. L. Peck, Class of 1906 Professor of Civil and Environmental Engineering at Stanford University and a Senior Fellow at the Stanford Woods Institute for the Environment. His research focuses on sustainable infrastructure, smart cities, advanced materials, and digital technologies for designing more resilient and environmentally sustainable built environments.",
       "Beyond his research, Michael works extensively at the intersection of engineering, entrepreneurship, and technology commercialization. He serves as Acting Director of the Stanford Technology Ventures Program and leads several Stanford initiatives focused on sustainable development, project leadership, entrepreneurship, product management, and bringing emerging technologies from ideas to market.",
+    ],
+  },
+  {
+    id: "wojciech-balczun",
+    name: "Wojciech Balczun",
+    role: "Minister of State Assets, Republic of Poland | Business Executive & Rock Musician",
+    image: wojciechBalczun,
+    imageClass: "object-[42%_center]",
+    bio: [
+      "Wojciech Balczun is Poland’s Minister of State Assets, appointed in July 2025. An experienced executive and business leader, he previously served as President of the Industrial Development Agency (ARP), CEO of PKP Cargo, and CEO of Ukrainian Railways (Ukrzaliznytsia). His career spans corporate restructuring, infrastructure, international management, and public-sector leadership.",
+      "Beyond his executive career, he is also a rock guitarist and founder of the band Chemia, with which he has released several studio albums.",
     ],
   },
   {
