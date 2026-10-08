@@ -349,7 +349,7 @@ const speakers = [
     name: "Mark Chandler",
     role: "Director, San Francisco Mayor’s Office of Global Engagement",
     image: markChandler,
-    imageClass: "object-top",
+    imageClass: "object-[center_70%]",
     bio: [
       "Mark Chandler is Director of the San Francisco Mayor’s Office of Global Engagement, where he leads the city’s international trade, investment, and economic diplomacy efforts. With more than 33 years in San Francisco city government and service under eight mayors, he oversees initiatives spanning technology and innovation exchange, international aviation, smart cities, trade and investment promotion, and diplomatic relations.",
       "Mark has participated in more than 30 international missions across Asia, Europe, North America, and the Middle East. He holds a BA in Economics from UC Davis and an MBA in International Marketing from UC Berkeley’s Haas School of Business.",
