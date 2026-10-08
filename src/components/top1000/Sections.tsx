@@ -855,9 +855,9 @@ export const PartnersSection = () => (
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-center gap-3 border border-white/10 px-6 py-5 transition-colors duration-300 hover:border-white/25"
+          className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-5 py-3.5 transition-colors duration-300 hover:border-white/25 md:gap-3 md:px-6 md:py-5"
         >
-          <span className="flex h-16 md:h-20 w-full items-center justify-center">
+          <span className="flex h-12 w-full items-center justify-center md:h-20">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
           </span>
           <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
