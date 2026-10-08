@@ -168,7 +168,7 @@ const CountUp = ({ value }: { value: string }) => {
 
 /* 2. What is TOP1000 */
 export const AboutSection = () => (
-  <section id="about" className="bg-[#0B1A3F] px-10 md:px-16 pt-0 md:pt-0 pb-10 md:pb-14">
+  <section id="about" className="navy-band-flush px-10 md:px-16 pt-0 md:pt-0 pb-24 md:pb-28">
     <p className="text-white/70 text-base md:text-lg font-extralight leading-snug md:max-w-[75%]">
       <span className="text-white font-semibold">Top 1000 Innovators of Poland in Silicon Valley</span>{" "}
       brings together Poland's leading researchers, innovators, entrepreneurs, and industry
@@ -538,7 +538,7 @@ export const SpeakersSection = () => {
   }, [activeId]);
 
   return (
-    <section id="speakers" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+    <section id="speakers" className="navy-band px-10 md:px-16 py-20 md:py-28">
       <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">
         Featured Voices
       </p>
@@ -690,7 +690,7 @@ export const WhySection = () => (
 
 /* 6. Venues */
 export const VenuesSection = () => (
-  <section id="venues" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+  <section id="venues" className="navy-band px-10 md:px-16 py-20 md:py-28">
     <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Venues</p>
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
       A Four-Venue Silicon Valley Experience
@@ -792,7 +792,7 @@ export const ProgramSection = () => (
 
 /* 8. Previous Summit */
 export const PreviousSummitSection = () => (
-  <Section id="2025" eyebrow="Previous Summit" title="Built on a Successful Inaugural Cohort" className="bg-[#0B1A3F]">
+  <Section id="2025" eyebrow="Previous Summit" title="Built on a Successful Inaugural Cohort" className="navy-band">
     <p className="text-white/50 text-xs uppercase tracking-[0.3em] font-light">December 2025</p>
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-8">
       {[
@@ -929,7 +929,7 @@ export const TicketsSection = () => (
 
 /* 10b. Travel & Stay */
 export const TravelSection = () => (
-  <section id="travel" className="bg-[#0B1A3F] px-10 md:px-16 py-20 md:py-28">
+  <section id="travel" className="navy-band px-10 md:px-16 py-20 md:py-28">
     <div className="max-w-[860px] mx-auto border border-white/10 bg-white/[0.04] backdrop-blur-sm px-6 py-8 md:px-10 md:py-9 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
       <div>
         <p className="text-white/45 text-[11px] font-light tracking-[0.3em] uppercase mb-3">
