@@ -775,6 +775,15 @@ export const ProgramSection = () => (
               </li>
             ))}
           </ul>
+          {(d.day === "Day 3" || d.day === "Day 4") && (
+            <Link
+              to="/agenda"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2 text-xs md:text-sm font-light text-white/80 hover:text-white hover:border-white/50 transition-colors"
+            >
+              View full agenda
+              <span aria-hidden="true">→</span>
+            </Link>
+          )}
         </Card>
       ))}
     </div>
