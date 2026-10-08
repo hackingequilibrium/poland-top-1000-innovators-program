@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
-import patronLogosCombined from "@/assets/patron-logos-combined.png";
-import honoraryPatronage from "@/assets/honorary-patronage.png";
-import businessPartners from "@/assets/business-partners.png";
+import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
@@ -828,34 +826,41 @@ export const PreviousSummitSection = () => (
 );
 
 /* 9. Partners */
-const partnerGroups = [
-  { label: "Organizers", img: patronLogosCombined },
-  { label: "Honorary Patronage", img: honoraryPatronage },
-  { label: "Academic Partners", img: null },
-  { label: "Strategic Partners", img: null },
-  { label: "Corporate Partners", img: businessPartners },
-  { label: "Supporting Organizations", img: null },
-  { label: "Media Partners", img: null },
+const taubePhilanthropies = taubePhilanthropiesAsset.url;
+
+const partners = [
+  {
+    name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
+    href: "https://www.polsv.org",
+    img: "/assets/polsv-logo-color-dark-bg.svg",
+    imgClass: "h-20 md:h-24 w-auto object-contain",
+  },
+  {
+    name: "Taube Philanthropies",
+    href: "https://taubephilanthropies.org/",
+    img: taubePhilanthropies,
+    imgClass: "h-14 md:h-16 w-auto object-contain",
+  },
 ];
 
 export const PartnersSection = () => (
-  <Section id="partners" eyebrow="Partners" title="Built with our partners">
-    <div className="space-y-10">
-      {partnerGroups.map((g) => (
-        <div key={g.label}>
-          <h3 className="text-white/50 text-[11px] uppercase tracking-[0.3em] font-light mb-4">{g.label}</h3>
-          {g.img ? (
-            <div className="rounded-none border border-white/10 bg-white/[0.06] p-6 md:p-8">
-              <img src={g.img} alt={g.label} className="w-full h-auto object-contain" loading="lazy" />
-            </div>
-          ) : (
-            <div className="rounded-none border border-dashed border-white/15 bg-white/[0.03] py-10 text-center">
-              <span className="text-white/40 text-xs uppercase tracking-[0.3em] font-light">
-                Announced soon
-              </span>
-            </div>
-          )}
-        </div>
+  <Section id="partners" title="Partners">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {partners.map((p) => (
+        <a
+          key={p.name}
+          href={p.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col items-center justify-between gap-8 border border-white/10 bg-[#12224F] px-6 py-10 md:px-8 md:py-12 transition-colors duration-300 hover:border-white/25 hover:bg-[#162a60]"
+        >
+          <span className="flex h-24 md:h-28 w-full items-center justify-center">
+            <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
+          </span>
+          <span className="text-center text-xs md:text-sm font-light leading-relaxed text-white/55 transition-colors group-hover:text-white/85">
+            {p.name}
+          </span>
+        </a>
       ))}
     </div>
   </Section>
