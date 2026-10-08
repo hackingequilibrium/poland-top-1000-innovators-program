@@ -42,6 +42,7 @@ import dominikSchmidtAsset from "@/assets/dominik-schmidt.png.asset.json";
 import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
+import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 
@@ -85,6 +86,7 @@ const dominikSchmidt = dominikSchmidtAsset.url;
 const dianneTaube = dianneTaubeAsset.url;
 const paulMarca = paulMarcaAsset.url;
 const mariaKaszynska = mariaKaszynskaAsset.url;
+const dariuszRosati = dariuszRosatiAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
 
