@@ -549,7 +549,7 @@ const speakers = [
     name: "Paul Marca",
     role: "Former Associate Vice Provost, Stanford University | Education & Innovation Strategist",
     image: paulMarca,
-    imageClass: "object-[40%_center]",
+    imageClass: "object-[22%_center]",
     bio: [
       "Paul Marca is an education strategist, advisor, and former Associate Vice Provost at Stanford University, where he led initiatives expanding the university's global reach through executive education and international partnerships. With over 30 years of experience in education, innovation, and organizational leadership, he has developed programs connecting academic expertise with industry needs across Europe, Asia, and the Middle East.",
       "He currently advises organizations on education strategy, leadership development, and innovation through Parallax Global Advisors and serves as Co-Director of the Luminarian Fellowship. He has also been a longtime contributor to Poland's TOP 500 Innovators program, helping connect Polish researchers and entrepreneurs with the Stanford innovation ecosystem.",
