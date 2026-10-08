@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import { agendaDays, agendaPhotos, agendaPhotoClasses, type AgendaSession } from "@/data/agenda2026";
 
-const photoFor = (name: string) => agendaPhotos[name.replace(/\s*\((proposed|tentative)\)$/, "")];
+const cleanName = (name: string) => name.replace(/\s*\((proposed|tentative)\)$/, ""), photoFor = (name: string) => agendaPhotos[cleanName(name)];
 
 const Session = ({ session }: { session: AgendaSession }) => {
   const people = session.details.filter((detail) => photoFor(detail));
@@ -26,16 +26,16 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   width={64}
                   height={64}
                   loading="lazy"
-                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[person.replace(/\s*\((proposed|tentative)\)$/, "")] ?? ""}`}
+                  className={`h-16 w-16 rounded-full border border-summit-foreground/20 object-cover object-top ${agendaPhotoClasses[cleanName(person)] ?? ""}`}
                 />
-                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{person.replace(/\s*\((proposed|tentative)\)$/, "")}</figcaption>
+                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
               </figure>
             ))}
           </div>
         )}
         {notes.length > 0 && (
           <div className="mt-2.5 space-y-1 text-sm font-light leading-relaxed text-summit-muted">
-            {notes.map((note) => <p key={note}>{note}</p>)}
+            {notes.map((note) => <p key={note}>{cleanName(note)}</p>)}
           </div>
         )}
       </div>
