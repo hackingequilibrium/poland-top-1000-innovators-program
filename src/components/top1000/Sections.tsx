@@ -833,28 +833,31 @@ const partners = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-10 md:h-12 w-auto object-contain",
+    imgClass: "h-16 md:h-20 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-8 md:h-10 w-auto object-contain",
+    imgClass: "h-11 md:h-14 w-auto object-contain",
   },
 ];
 
 export const PartnersSection = () => (
-  <Section id="partners" title="Partners" className="bg-black">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[720px]">
+  <section id="partners" className="bg-black px-10 md:px-16 py-14 md:py-18">
+    <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-6 md:mb-8">
+      Partners
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[860px]">
       {partners.map((p) => (
         <a
           key={p.name}
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-center gap-2.5 border border-white/10 bg-black px-5 py-4 transition-colors duration-300 hover:border-white/25"
+          className="group flex flex-col items-center justify-center gap-3 border border-white/10 bg-black px-6 py-5 transition-colors duration-300 hover:border-white/25"
         >
-          <span className="flex h-12 md:h-14 w-full items-center justify-center">
+          <span className="flex h-16 md:h-20 w-full items-center justify-center">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
           </span>
           <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
@@ -863,7 +866,7 @@ export const PartnersSection = () => (
         </a>
       ))}
     </div>
-  </Section>
+  </section>
 );
 
 /* 10. Tickets */
