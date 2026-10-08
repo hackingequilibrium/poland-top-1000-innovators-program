@@ -2,3 +2,4 @@
 - [x] Populate the 2026 agenda from the supplied schedule with available speaker photos.
 - [x] Verify the page and preserve the 2025 archive.
 - [x] Lighten agenda session titles, condense vertical padding, and fix Mark Chandler's photo crop.- [x] Strip "(proposed)"/"(tentative)" from agenda captions and remove placeholder session details (lab tracks, "Topic TBC", "Facilitators TBC", pitching note).
+- [x] Add Julie Maigret Shapiro to the speakers grid and her photo under Day 2 opening remarks in the agenda.
