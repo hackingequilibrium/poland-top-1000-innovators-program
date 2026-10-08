@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
 import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
+import sbsTechnologyAsset from "@/assets/sbs-technology.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
@@ -839,8 +840,16 @@ export const PreviousSummitSection = () => (
 
 /* 9. Partners */
 const taubePhilanthropies = taubePhilanthropiesAsset.url;
+const sbsTechnology = sbsTechnologyAsset.url;
 
-const partners = [
+type Partner = {
+  name: string;
+  href: string;
+  img: string;
+  imgClass: string;
+};
+
+const organizers: Partner[] = [
   {
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
@@ -855,27 +864,50 @@ const partners = [
   },
 ];
 
+const sponsorsAndPartners: Partner[] = [
+  {
+    name: "SBS Technology Poland",
+    href: "https://sbstechnology.pl/",
+    img: sbsTechnology,
+    imgClass: "h-14 md:h-16 w-auto object-contain",
+  },
+];
+
+const partnerGroups = [
+  { label: "Organizers", partners: organizers },
+  { label: "Sponsors & Partners", partners: sponsorsAndPartners },
+];
+
 export const PartnersSection = () => (
   <section id="partners" className="px-10 md:px-16 py-14 md:py-20">
     <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-6 md:mb-8">
       Partners
     </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[660px]">
-      {partners.map((p) => (
-        <a
-          key={p.name}
-          href={p.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-3 py-3 transition-colors duration-300 hover:border-white/25"
-        >
-          <span className="flex h-28 w-full items-center justify-center md:h-32">
-            <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
-          </span>
-          <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
-            {p.name}
-          </span>
-        </a>
+    <div className="space-y-10 md:space-y-12">
+      {partnerGroups.map((group) => (
+        <div key={group.label}>
+          <h3 className="text-[11px] md:text-xs uppercase tracking-[0.28em] font-light text-white/45 mb-3">
+            {group.label}
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[660px]">
+            {group.partners.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-3 py-3 transition-colors duration-300 hover:border-white/25"
+              >
+                <span className="flex h-28 w-full items-center justify-center md:h-32">
+                  <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
+                </span>
+                <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
+                  {p.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   </section>
