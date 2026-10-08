@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { Dna, Leaf, Rocket, ShieldCheck, Cpu, FlaskConical, Network, Route, Handshake, X } from "lucide-react";
 import taubePhilanthropiesAsset from "@/assets/taube-philanthropies.png.asset.json";
 import sbsSolutionsLogo from "@/assets/sbs-solutions.png";
@@ -837,7 +839,7 @@ const days = [
 export const ProgramSection = () => (
   <Section id="program" eyebrow="Program Experience" title="Four Intensive Days">
     <p className="text-white/70 text-sm md:text-base font-extralight leading-snug -mt-6 mb-10 md:-mt-8 md:mb-14">
-      Detailed agenda coming soon. Session times, speakers, workshops, and additional program details will be announced as the Summit approaches.
+      Explore the initial agenda. Additional speakers, workshops, and program details will be announced as the Summit approaches.
     </p>
     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
       {days.map((d) => (
@@ -857,18 +859,12 @@ export const ProgramSection = () => (
               </li>
             ))}
           </ul>
-          {(d.day === "Day 3" || d.day === "Day 4") && (
-            <Link
-              to="/agenda"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2 text-xs md:text-sm font-light text-white/80 hover:text-white hover:border-white/50 transition-colors"
-            >
-              View full agenda
-              <span aria-hidden="true">→</span>
-            </Link>
-          )}
         </Card>
       ))}
     </div>
+    <Button asChild variant="summit" size="lg" className="mt-8 h-12 rounded-none px-7 text-sm">
+      <Link to="/agenda">View full agenda <ArrowRight aria-hidden="true" /></Link>
+    </Button>
   </Section>
 );
 

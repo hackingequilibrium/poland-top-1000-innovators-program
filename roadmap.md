@@ -1,0 +1,3 @@
+- [x] Move the homepage agenda button below the four days and match the speaker suggestion style.
+- [x] Populate the 2026 agenda from the supplied schedule with available speaker photos.
+- [x] Verify the page and preserve the 2025 archive.
