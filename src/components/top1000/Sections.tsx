@@ -46,6 +46,7 @@ import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
+import artChmielewskiAsset from "@/assets/art-chmielewski.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
