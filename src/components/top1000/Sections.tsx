@@ -833,37 +833,40 @@ const partners = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-32 md:h-36 w-auto object-contain",
+    imgClass: "h-16 md:h-20 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-24 md:h-28 w-auto object-contain",
+    imgClass: "h-11 md:h-14 w-auto object-contain",
   },
 ];
 
 export const PartnersSection = () => (
-  <Section id="partners" title="Partners">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+  <section id="partners" className="px-10 md:px-16 py-14 md:py-20">
+    <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-6 md:mb-8">
+      Partners
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[860px]">
       {partners.map((p) => (
         <a
           key={p.name}
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-between gap-5 md:gap-6 border border-white/10 bg-[#12224F] px-6 py-8 md:px-10 md:py-10 transition-colors duration-300 hover:border-white/25 hover:bg-[#162a60]"
+          className="group flex flex-col items-center justify-center gap-2 border border-white/10 px-5 py-3.5 transition-colors duration-300 hover:border-white/25 md:gap-3 md:px-6 md:py-5"
         >
-          <span className="flex h-32 md:h-36 w-full items-center justify-center">
+          <span className="flex h-12 w-full items-center justify-center md:h-20">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
           </span>
-          <span className="text-center text-xs md:text-sm font-light leading-relaxed text-white/75 transition-colors group-hover:text-white">
+          <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
             {p.name}
           </span>
         </a>
       ))}
     </div>
-  </Section>
+  </section>
 );
 
 /* 10. Tickets */
