@@ -833,31 +833,31 @@ const partners = [
     name: "Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship",
     href: "https://www.polsv.org",
     img: "/assets/polsv-logo-color-dark-bg.svg",
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-11 md:h-13 w-auto object-contain",
   },
   {
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-10 md:h-12 w-auto object-contain",
+    imgClass: "h-8 md:h-10 w-auto object-contain",
   },
 ];
 
 export const PartnersSection = () => (
   <Section id="partners" title="Partners" className="bg-black">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[760px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 max-w-[720px]">
       {partners.map((p) => (
         <a
           key={p.name}
           href={p.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center justify-between gap-3 md:gap-4 border border-white/10 bg-black px-5 py-5 md:px-7 md:py-6 transition-colors duration-300 hover:border-white/25"
+          className="group flex flex-col items-center justify-center gap-2.5 border border-white/10 bg-black px-5 py-4 transition-colors duration-300 hover:border-white/25"
         >
-          <span className="flex h-16 md:h-20 w-full items-center justify-center">
+          <span className="flex h-12 md:h-14 w-full items-center justify-center">
             <img src={p.img} alt={p.name} loading="lazy" className={p.imgClass} />
           </span>
-          <span className="text-center text-[11px] md:text-xs font-light leading-relaxed text-white/70 transition-colors group-hover:text-white">
+          <span className="text-center text-[11px] md:text-xs font-light leading-snug text-white/80 transition-colors group-hover:text-white">
             {p.name}
           </span>
         </a>
