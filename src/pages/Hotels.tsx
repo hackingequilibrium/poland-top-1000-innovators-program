@@ -103,7 +103,7 @@ const Hotels = () => {
               <div className="mt-8 rounded-xl border border-white/15 bg-[#0a1230]/60 p-6 md:p-8">
                 <div className="flex items-center gap-3">
                   <CalendarDays className="h-4 w-4 shrink-0 text-[#9DB8FF]" />
-                  <h3 className="font-inter font-light text-base md:text-lg tracking-tight text-white/90">
+                  <h3 className="font-inter font-semibold text-base md:text-lg uppercase tracking-tight">
                     Reserve Your Room
                   </h3>
                 </div>
@@ -131,14 +131,14 @@ const Hotels = () => {
 
           {/* ============ Transportation ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
+            <h2 className="font-inter font-extrabold text-xl md:text-2xl uppercase tracking-tight">
               Transportation
             </h2>
 
             <div className="mt-6 flex items-start gap-4">
               <Plane className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
+                <h3 className="font-inter font-semibold text-sm md:text-base uppercase tracking-tight">
                   Airport → Hotel
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -154,7 +154,7 @@ const Hotels = () => {
             <div className="flex items-start gap-4">
               <Bus className="mt-1 h-5 w-5 shrink-0 text-[#9DB8FF]" />
               <div>
-                <h3 className="font-inter font-normal text-sm md:text-base tracking-tight text-white/85">
+                <h3 className="font-inter font-semibold text-sm md:text-base uppercase tracking-tight">
                   Hotel → Summit Venues
                 </h3>
                 <p className="mt-2 font-inter font-extralight text-sm leading-relaxed text-white/70">
@@ -183,7 +183,7 @@ const Hotels = () => {
 
           {/* ============ Why stay ============ */}
           <section className="mt-14 px-2 md:px-6">
-            <h2 className="font-inter font-light text-xl md:text-2xl tracking-tight text-white/90">
+            <h2 className="font-inter font-extrabold text-xl md:text-2xl uppercase tracking-tight">
               Why Stay at the Recommended Hotel?
             </h2>
             <ul className="mt-6 space-y-4">
