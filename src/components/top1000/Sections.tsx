@@ -576,9 +576,13 @@ const speakers = [
 
 
 
+// Speakers kept in the list below but not shown on the page. Remove an id here to publish the card again.
+const hiddenSpeakerIds = ["maria-kaszynska"];
+const visibleSpeakers = speakers.filter((s) => !hiddenSpeakerIds.includes(s.id));
+
 export const SpeakersSection = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const activeSpeaker = speakers.find((s) => s.id === activeId) || null;
+  const activeSpeaker = visibleSpeakers.find((s) => s.id === activeId) || null;
 
   useEffect(() => {
     if (!activeId) return;
@@ -602,7 +606,7 @@ export const SpeakersSection = () => {
       </p>
 
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6">
-        {speakers.map((speaker) => (
+        {visibleSpeakers.map((speaker) => (
           <button
             key={speaker.id}
             type="button"
