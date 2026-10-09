@@ -26,6 +26,7 @@ import photo24 from "@/assets/michal-wyrebkowski.png.asset.json";
 import photo25 from "@/assets/waldemar-priebe.png.asset.json";
 import photo26 from "@/assets/anna-timofiejczuk.png.asset.json";
 import photo27 from "@/assets/leah-walker.png.asset.json";
+import photo28 from "@/assets/christina-harvey.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -56,6 +57,7 @@ export const agendaPhotos: Record<string, string> = {
   "Waldemar Priebe": photo25.url,
   "Anna Timofiejczuk": photo26.url,
   "Leah Walker": photo27.url,
+  "Christina Harvey": photo28.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -63,6 +65,7 @@ export const agendaPhotoClasses: Record<string, string> = {
   "Mark Chandler": "object-[center_25%]",
   "Wojciech Balczun": "object-[42%_center]",
   "Leah Walker": "object-center",
+  "Christina Harvey": "object-center",
 };
 
 export type AgendaSession = { time: string; title: string; details: string[] };
@@ -226,8 +229,10 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:15–10:40 AM",
-        "title": "Plenary Session",
-        "details": []
+        "title": "Nature's Blueprint: Designing the Next Generation of Aircraft",
+        "details": [
+          "Christina Harvey"
+        ]
       },
       {
         "time": "10:40–11:00 AM",
