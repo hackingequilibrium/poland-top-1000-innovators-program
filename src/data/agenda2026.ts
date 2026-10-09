@@ -20,6 +20,7 @@ import photo18 from "@/assets/camille-crittenden.png.asset.json";
 import photo19 from "@/assets/art-chmielewski.png.asset.json";
 import photo20 from "@/assets/hamid-farzaneh.png.asset.json";
 import photo21 from "@/assets/tadeusz-uhl.png.asset.json";
+import photo22 from "@/assets/nuri-capanoglu.jpg.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -44,6 +45,7 @@ export const agendaPhotos: Record<string, string> = {
   "Artur Chmielewski": photo19.url,
   "Hamid Farzaneh": photo20.url,
   "Tadeusz Uhl": photo21.url,
+  "Nuri Capanoglu": photo22.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -112,7 +114,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "10:15–10:40 AM",
         "title": "Panel: The Aerospace Startup Conveyor Belt",
-        "details": ["Tadeusz Uhl"]
+        "details": ["Tadeusz Uhl", "Nuri Capanoglu"]
       },
       {
         "time": "10:40–11:10 AM",
