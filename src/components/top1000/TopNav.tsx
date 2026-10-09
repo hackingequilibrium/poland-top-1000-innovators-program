@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const linkClass =
   "font-inter font-light text-xs md:text-sm text-white/70 hover:text-white transition-colors whitespace-nowrap";
 
 const TopNav = () => {
+  const { pathname } = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -23,9 +24,9 @@ const TopNav = () => {
             : "border-white/10 bg-transparent"
         }`}
       >
-        <a href="#speakers" className={linkClass}>
+        <Link to={pathname === "/" ? "#speakers" : "/#speakers"} className={linkClass}>
           Speakers
-        </a>
+        </Link>
         <Link to="/hotels" className={linkClass}>
           Travel &amp; Stay
         </Link>
