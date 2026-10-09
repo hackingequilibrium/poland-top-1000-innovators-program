@@ -281,8 +281,10 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:15–2:45 PM",
-        "title": "Plenary Session",
-        "details": []
+        "title": "Energy for AI",
+        "details": [
+          "Piotr D. Moncarz"
+        ]
       },
       {
         "time": "2:45–3:00 PM",
