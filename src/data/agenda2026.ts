@@ -71,6 +71,7 @@ export const agendaPhotoClasses: Record<string, string> = {
   "Leah Walker": "object-center",
   "Christina Harvey": "object-center",
   "Dariusz Rosati": "object-top",
+  "Michael Lepech": "object-top",
 };
 
 export type AgendaSession = { time: string; title: string; details: string[] };
