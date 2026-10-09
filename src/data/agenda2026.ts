@@ -179,7 +179,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "3:05–3:30 PM",
-        "title": "Rethinking Climate and Sustainability",
+        "title": "Rethinking Sustainability",
         "details": [
           "Michael Lepech"
         ]
