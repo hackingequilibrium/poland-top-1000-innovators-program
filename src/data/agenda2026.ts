@@ -61,12 +61,12 @@ export type AgendaDay = { id: string; day: string; date: string; venue: string; 
 // Remove an entry here to publish the row again.
 export const hiddenSessions: Record<string, string[]> = {
   "day-4": [
-    "1:10–1:40 PM | UCSF Plenary Session",
-    "1:40–2:10 PM | UCSF Plenary Session",
-    "2:10–2:40 PM | UCSF Plenary Session",
+    "1:10–1:40 PM | Plenary Session",
+    "1:40–2:10 PM | Plenary Session",
+    "2:10–2:40 PM | Plenary Session",
     "2:40–3:00 PM | Coffee Break",
     "3:00–4:00 PM | Interactive Session",
-    "4:00–4:30 PM | UCSF Plenary Session",
+    "4:00–4:30 PM | Plenary Session",
     "4:30–4:45 PM | Summit Closing Remarks",
   ],
 };
@@ -396,7 +396,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:40 AM–12:10 PM",
-        "title": "UCSF Plenary Session",
+        "title": "Plenary Session",
         "details": []
       },
       {
@@ -406,17 +406,17 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "1:10–1:40 PM",
-        "title": "UCSF Plenary Session",
+        "title": "Plenary Session",
         "details": []
       },
       {
         "time": "1:40–2:10 PM",
-        "title": "UCSF Plenary Session",
+        "title": "Plenary Session",
         "details": []
       },
       {
         "time": "2:10–2:40 PM",
-        "title": "UCSF Plenary Session",
+        "title": "Plenary Session",
         "details": []
       },
       {
@@ -431,7 +431,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "4:00–4:30 PM",
-        "title": "UCSF Plenary Session",
+        "title": "Plenary Session",
         "details": []
       },
       {
