@@ -381,7 +381,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:50–10:10 AM",
-        "title": "Plenary Session",
+        "title": "Wellbeing: From Art to Technology",
         "details": []
       },
       {
