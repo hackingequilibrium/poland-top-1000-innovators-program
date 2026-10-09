@@ -213,9 +213,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "9:50–10:15 AM",
         "title": "Plenary Session",
-        "details": [
-          "Alojzy Z. Nowak (proposed)"
-        ]
+        "details": []
       },
       {
         "time": "10:15–10:40 AM",
@@ -289,8 +287,9 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:00–9:30 AM",
-        "title": "Plenary Session",
+        "title": "Welcome & Opening Keynote",
         "details": [
+          "Alojzy Z. Nowak (proposed)",
           "Barry Katz"
         ]
       },
