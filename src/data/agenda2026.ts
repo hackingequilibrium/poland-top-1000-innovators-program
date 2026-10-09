@@ -349,8 +349,7 @@ export const agendaDays: AgendaDay[] = [
         "details": [
           "Piotr D. Moncarz",
           "Hamid Farzaneh",
-          "Anna Timofiejczuk",
-          "Agata Braja"
+          "Anna Timofiejczuk"
         ]
       },
       {
