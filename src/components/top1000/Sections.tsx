@@ -634,6 +634,17 @@ const speakers = [
       "Born in Warsaw and educated at the University of Michigan, Chmielewski has dedicated his career to advancing space exploration, engineering innovation, and international scientific collaboration.",
     ],
   },
+  {
+    id: "tadeusz-uhl",
+    name: "Tadeusz Uhl",
+    role: "Professor, AGH University of Science and Technology | Researcher & Serial Entrepreneur",
+    image: tadeuszUhlAsset.url,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Tadeusz Uhl is a professor at AGH University of Science and Technology in Kraków, specializing in mechatronics, robotics, structural dynamics, and advanced engineering technologies. He has authored over 1,000 scientific publications and reports and led numerous national and international research projects.",
+      "A prolific entrepreneur, he has co-founded 28 startups with his students, including EC Engineering, a global leader in rail vehicle design and engineering. His ventures span rail transportation, electric mobility, aviation, and industrial automation, collectively employing more than 500 people. His career bridges academic research, technology commercialization, and industrial innovation.",
+    ],
+  },
 ];
 
 
