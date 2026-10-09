@@ -219,8 +219,8 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:10 AM",
-        "title": "Welcome & Opening Remarks",
+        "time": "9:00–9:20 AM",
+        "title": "Ecosystem Exchange",
         "details": [
           "Piotr D. Moncarz",
           "Shana Penn",
@@ -228,7 +228,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "9:10–9:50 AM",
+        "time": "9:20–9:50 AM",
         "title": "Welcome from CITRIS and the Banatao Institute & Opening Keynote",
         "details": [
           "Camille Crittenden"
