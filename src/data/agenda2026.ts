@@ -407,7 +407,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:40 AM–12:10 PM",
-        "title": "Plenary Session",
+        "title": "Virtual Cells: Science or Technology?",
         "details": []
       },
       {
