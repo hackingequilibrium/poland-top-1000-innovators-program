@@ -6,3 +6,4 @@
 - [x] Hide the seven late Day 4 rows, rename Day 4 lunch to "Closing Remarks & Networking Lunch", and enlarge agenda photos.
 - [x] Add Art B. Chmielewski to the speakers grid and his photo under the Day 2 plenary session in the agenda.
 - [x] Rename "Registration & Networking" to "Registration and Networking" on all four days.
+- [x] Rename Day 2 opening remarks to "Ecosystem Exchange" (9:00–9:20 AM) and start the CITRIS keynote at 9:20.
