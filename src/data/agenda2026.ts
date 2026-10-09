@@ -23,6 +23,7 @@ import photo21 from "@/assets/tadeusz-uhl.png.asset.json";
 import photo22 from "@/assets/nuri-capanoglu.jpg.asset.json";
 import photo23 from "@/assets/maciej-kawecki.jpg.asset.json";
 import photo24 from "@/assets/michal-wyrebkowski.png.asset.json";
+import photo25 from "@/assets/waldemar-priebe.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -50,6 +51,7 @@ export const agendaPhotos: Record<string, string> = {
   "Nuri Capanoglu": photo22.url,
   "Maciej Kawecki": photo23.url,
   "Michał Wyrębkowski": photo24.url,
+  "Waldemar Priebe": photo25.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -287,9 +289,8 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:00–9:30 AM",
-        "title": "Welcome & Opening Keynote",
+        "title": "Plenary Session",
         "details": [
-          "Alojzy Z. Nowak (proposed)",
           "Barry Katz"
         ]
       },
@@ -367,12 +368,16 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "9:00–9:30 AM",
         "title": "Welcome & Opening Keynote",
-        "details": []
+        "details": [
+          "Alojzy Z. Nowak (proposed)"
+        ]
       },
       {
         "time": "9:30–9:50 AM",
-        "title": "Plenary Session",
-        "details": []
+        "title": "Medicine Discovery in the Age of AI",
+        "details": [
+          "Waldemar Priebe"
+        ]
       },
       {
         "time": "9:50–10:10 AM",
