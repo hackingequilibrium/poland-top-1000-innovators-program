@@ -44,6 +44,7 @@ import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import tadeuszUhlAsset from "@/assets/tadeusz-uhl.png.asset.json";
+import pawelMorkiszAsset from "@/assets/pawel-morkisz.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
@@ -643,6 +644,17 @@ const speakers = [
     bio: [
       "Prof. Tadeusz Uhl is a professor at AGH University of Science and Technology in Kraków, specializing in mechatronics, robotics, structural dynamics, and advanced engineering technologies. He has authored over 1,000 scientific publications and reports and led numerous national and international research projects.",
       "A prolific entrepreneur, he has co-founded 28 startups with his students, including EC Engineering, a global leader in rail vehicle design and engineering. His ventures span rail transportation, electric mobility, aviation, and industrial automation, collectively employing more than 500 people. His career bridges academic research, technology commercialization, and industrial innovation.",
+    ],
+  },
+  {
+    id: "pawel-morkisz",
+    name: "Paweł Morkisz",
+    role: "Deep Learning Algorithms Lead, NVIDIA | AI & Applied Mathematics Expert",
+    image: pawelMorkiszAsset.url,
+    imageClass: "object-center",
+    bio: [
+      "Paweł Morkisz is a Deep Learning Algorithms Lead at NVIDIA and a mathematician specializing in artificial intelligence, deep learning, and computational mathematics. His work focuses on applying advances in AI and mathematical modeling to real-world challenges.",
+      "With experience spanning academia, startups, and global technology companies, he combines scientific expertise with industry leadership to bridge the gap between research and practical applications. He is also an alumnus of Stanford Graduate School of Business.",
     ],
   },
 ];
