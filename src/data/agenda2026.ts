@@ -24,6 +24,7 @@ import photo22 from "@/assets/nuri-capanoglu.jpg.asset.json";
 import photo23 from "@/assets/maciej-kawecki.jpg.asset.json";
 import photo24 from "@/assets/michal-wyrebkowski.png.asset.json";
 import photo25 from "@/assets/waldemar-priebe.png.asset.json";
+import photo26 from "@/assets/anna-timofiejczuk.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -52,6 +53,7 @@ export const agendaPhotos: Record<string, string> = {
   "Maciej Kawecki": photo23.url,
   "Michał Wyrębkowski": photo24.url,
   "Waldemar Priebe": photo25.url,
+  "Anna Timofiejczuk": photo26.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -328,8 +330,13 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:00–2:20 PM",
-        "title": "PolSV Panel",
-        "details": []
+        "title": "Poland in Silicon Valley",
+        "details": [
+          "Piotr D. Moncarz",
+          "Hamid Farzaneh",
+          "Anna Timofiejczuk",
+          "Agata Braja"
+        ]
       },
       {
         "time": "2:20–2:50 PM",
