@@ -395,7 +395,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:10–11:40 AM",
-        "title": "Education & Innovation",
+        "title": "Education for the Future",
         "details": [
           "Esther Wojcicki",
           "Michał Wyrębkowski"
