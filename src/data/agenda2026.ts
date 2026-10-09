@@ -360,7 +360,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "2:00–2:20 PM",
         "title": "Poland in Silicon Valley",
         "details": [
-          "Piotr D. Moncarz",
+          "Agata Braja",
           "Hamid Farzaneh",
           "Anna Timofiejczuk"
         ]
