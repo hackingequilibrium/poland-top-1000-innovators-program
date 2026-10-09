@@ -382,7 +382,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:10–10:40 AM",
-        "title": "AI Innovation & Entrepreneurship",
+        "title": "Crossing the AI Frontier",
         "details": [
           "Zuzanna Stamirowska",
           "Maciej Kawecki"
