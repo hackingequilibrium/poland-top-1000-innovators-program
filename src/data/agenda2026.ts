@@ -21,6 +21,8 @@ import photo19 from "@/assets/art-chmielewski.png.asset.json";
 import photo20 from "@/assets/hamid-farzaneh.png.asset.json";
 import photo21 from "@/assets/tadeusz-uhl.png.asset.json";
 import photo22 from "@/assets/nuri-capanoglu.jpg.asset.json";
+import photo23 from "@/assets/maciej-kawecki.jpg.asset.json";
+import photo24 from "@/assets/michal-wyrebkowski.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -46,6 +48,8 @@ export const agendaPhotos: Record<string, string> = {
   "Hamid Farzaneh": photo20.url,
   "Tadeusz Uhl": photo21.url,
   "Nuri Capanoglu": photo22.url,
+  "Maciej Kawecki": photo23.url,
+  "Michał Wyrębkowski": photo24.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -108,7 +112,8 @@ export const agendaDays: AgendaDay[] = [
         "time": "9:50–10:15 AM",
         "title": "Entrepreneurial Journey",
         "details": [
-          "Łukasz Kaiser"
+          "Łukasz Kaiser",
+          "Agata Braja"
         ]
       },
       {
@@ -379,7 +384,8 @@ export const agendaDays: AgendaDay[] = [
         "time": "10:10–10:40 AM",
         "title": "AI Innovation & Entrepreneurship",
         "details": [
-          "Zuzanna Stamirowska"
+          "Zuzanna Stamirowska",
+          "Maciej Kawecki"
         ]
       },
       {
@@ -391,7 +397,8 @@ export const agendaDays: AgendaDay[] = [
         "time": "11:10–11:40 AM",
         "title": "Education & Innovation",
         "details": [
-          "Esther Wojcicki"
+          "Esther Wojcicki",
+          "Michał Wyrębkowski"
         ]
       },
       {
