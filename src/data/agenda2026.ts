@@ -104,7 +104,7 @@ export const agendaDays: AgendaDay[] = [
     "sessions": [
       {
         "time": "8:00–9:00 AM",
-        "title": "Registration & Networking",
+        "title": "Registration and Networking",
         "details": []
       },
       {
@@ -215,7 +215,7 @@ export const agendaDays: AgendaDay[] = [
     "sessions": [
       {
         "time": "8:00–9:00 AM",
-        "title": "Registration & Networking",
+        "title": "Registration and Networking",
         "details": []
       },
       {
@@ -314,7 +314,7 @@ export const agendaDays: AgendaDay[] = [
     "sessions": [
       {
         "time": "8:00–9:00 AM",
-        "title": "Registration & Networking",
+        "title": "Registration and Networking",
         "details": []
       },
       {
@@ -396,7 +396,7 @@ export const agendaDays: AgendaDay[] = [
     "sessions": [
       {
         "time": "8:00–9:00 AM",
-        "title": "Registration & Networking",
+        "title": "Registration and Networking",
         "details": []
       },
       {

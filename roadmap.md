@@ -5,3 +5,4 @@
 - [x] Add Julie Maigret Shapiro to the speakers grid and her photo under Day 2 opening remarks in the agenda.
 - [x] Hide the seven late Day 4 rows, rename Day 4 lunch to "Closing Remarks & Networking Lunch", and enlarge agenda photos.
 - [x] Add Art B. Chmielewski to the speakers grid and his photo under the Day 2 plenary session in the agenda.
+- [x] Rename "Registration & Networking" to "Registration and Networking" on all four days.
