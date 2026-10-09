@@ -22,7 +22,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
         {people.length > 0 && (
           <div className="mt-2.5 flex flex-wrap items-start gap-x-4 gap-y-3">
             {people.map((person) => (
-              <figure key={person} className="w-24">
+              <figure key={person} className="flex w-24 flex-col items-center">
                 <img
                   src={photoFor(person)}
                   alt={cleanName(person)}
@@ -31,7 +31,7 @@ const Session = ({ session }: { session: AgendaSession }) => {
                   loading="lazy"
                   className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover ${agendaPhotoClasses[cleanName(person)] ?? "object-top"}`}
                 />
-                <figcaption className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
+                <figcaption className="mt-1 text-center text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
               </figure>
             ))}
           </div>

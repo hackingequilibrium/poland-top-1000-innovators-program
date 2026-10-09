@@ -109,10 +109,8 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:15–10:40 AM",
-        "title": "Entrepreneurial Journey",
-        "details": [
-          "Speaker TBC"
-        ]
+        "title": "Panel: Aerospace Startups Conveyor Belt",
+        "details": []
       },
       {
         "time": "10:40–11:10 AM",
