@@ -105,13 +105,19 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:40 AM",
+        "time": "9:00–9:20 AM",
         "title": "Summit Opening Ceremony",
         "details": [
           "Piotr D. Moncarz",
-          "Wojciech Balczun",
           "Dianne Taube",
           "Paul Marca"
+        ]
+      },
+      {
+        "time": "9:20–9:40 AM",
+        "title": "From G20 to Peak Innovation?",
+        "details": [
+          "Wojciech Balczun"
         ]
       },
       {
