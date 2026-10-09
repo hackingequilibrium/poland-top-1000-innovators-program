@@ -186,7 +186,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "3:30–3:55 PM",
-        "title": "Plenary Session",
+        "title": "Why Human Skills Matter More Than Ever",
         "details": []
       },
       {
