@@ -325,7 +325,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "1:20–2:00 PM",
-        "title": "Angel Investor Panel",
+        "title": "Finding Tomorrow's Breakthroughs",
         "details": []
       },
       {
