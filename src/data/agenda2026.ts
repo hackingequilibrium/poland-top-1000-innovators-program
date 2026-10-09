@@ -115,7 +115,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:20–9:40 AM",
-        "title": "From G20 to Peak Innovation?",
+        "title": "Poland: From G20 to Peak Innovation?",
         "details": [
           "Wojciech Balczun"
         ]
