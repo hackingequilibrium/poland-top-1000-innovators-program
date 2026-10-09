@@ -281,7 +281,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:15–2:45 PM",
-        "title": "Energy for AI",
+        "title": "Powering AI",
         "details": [
           "Piotr D. Moncarz"
         ]
