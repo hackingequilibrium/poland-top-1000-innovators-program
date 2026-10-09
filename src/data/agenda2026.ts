@@ -367,7 +367,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:00–9:30 AM",
-        "title": "Welcome & Opening Keynote",
+        "title": "AI Instead of Humboldt",
         "details": [
           "Alojzy Z. Nowak (proposed)"
         ]
