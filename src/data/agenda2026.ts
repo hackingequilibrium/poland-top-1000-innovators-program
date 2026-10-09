@@ -28,6 +28,7 @@ import photo26 from "@/assets/anna-timofiejczuk.png.asset.json";
 import photo27 from "@/assets/leah-walker.png.asset.json";
 import photo28 from "@/assets/christina-harvey.png.asset.json";
 import photo29 from "@/assets/dariusz-rosati.png.asset.json";
+import photo30 from "@/assets/michael-lepech.jpg.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -60,6 +61,7 @@ export const agendaPhotos: Record<string, string> = {
   "Leah Walker": photo27.url,
   "Christina Harvey": photo28.url,
   "Dariusz Rosati": photo29.url,
+  "Michael Lepech": photo30.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -176,8 +178,10 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "3:05–3:30 PM",
-        "title": "Plenary Session",
-        "details": []
+        "title": "Rethinking Climate and Sustainability",
+        "details": [
+          "Michael Lepech"
+        ]
       },
       {
         "time": "3:30–3:55 PM",
