@@ -180,7 +180,7 @@ export const agendaDays: AgendaDay[] = [
     "day": "Day 2",
     "date": "Tuesday, November 10, 2026",
     "venue": "University of California, Berkeley",
-    "theme": "Space, Aviation, Energy & Advanced Technologies",
+    "theme": "Space, Aviation & Energy",
     "sessions": [
       {
         "time": "8:00–9:00 AM",
