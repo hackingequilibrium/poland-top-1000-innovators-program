@@ -43,6 +43,7 @@ import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
+import tadeuszUhlAsset from "@/assets/tadeusz-uhl.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
