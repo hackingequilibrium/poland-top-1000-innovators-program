@@ -43,6 +43,7 @@ import dianneTaubeAsset from "@/assets/dianne-taube.png.asset.json";
 import paulMarcaAsset from "@/assets/paul-marca.png.asset.json";
 import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
+import tadeuszUhlAsset from "@/assets/tadeusz-uhl.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
@@ -631,6 +632,17 @@ const speakers = [
       "Art B. Chmielewski is a Polish-born aerospace engineer and project manager at NASA's Jet Propulsion Laboratory (JPL), with extensive experience developing and managing space missions and advanced aerospace technologies.",
       "His career includes contributions to the Galileo and Ulysses missions, as well as leadership of pioneering projects involving inflatable space structures and next-generation telescope concepts. He helped initiate NASA's Gossamer Program, exploring innovative technologies for large space-based observatories.",
       "Born in Warsaw and educated at the University of Michigan, Chmielewski has dedicated his career to advancing space exploration, engineering innovation, and international scientific collaboration.",
+    ],
+  },
+  {
+    id: "tadeusz-uhl",
+    name: "Tadeusz Uhl",
+    role: "Professor, AGH University of Science and Technology | Researcher & Serial Entrepreneur",
+    image: tadeuszUhlAsset.url,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Tadeusz Uhl is a professor at AGH University of Science and Technology in Kraków, specializing in mechatronics, robotics, structural dynamics, and advanced engineering technologies. He has authored over 1,000 scientific publications and reports and led numerous national and international research projects.",
+      "A prolific entrepreneur, he has co-founded 28 startups with his students, including EC Engineering, a global leader in rail vehicle design and engineering. His ventures span rail transportation, electric mobility, aviation, and industrial automation, collectively employing more than 500 people. His career bridges academic research, technology commercialization, and industrial innovation.",
     ],
   },
 ];
