@@ -367,7 +367,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:20–2:50 PM",
-        "title": "Interactive Session",
+        "title": "Creative Thinking for Breakthroughs",
         "details": []
       },
       {
