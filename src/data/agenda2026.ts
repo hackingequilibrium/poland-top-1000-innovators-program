@@ -109,10 +109,8 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:15–10:40 AM",
-        "title": "Entrepreneurial Journey",
-        "details": [
-          "Speaker TBC"
-        ]
+        "title": "Panel: Aerospace Startups Conveyor Belt",
+        "details": []
       },
       {
         "time": "10:40–11:10 AM",
@@ -151,12 +149,12 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "3:05–3:30 PM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "3:30–3:55 PM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "3:55–4:10 PM",
@@ -213,7 +211,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "10:15–10:40 AM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "10:40–11:00 AM",
@@ -237,17 +235,17 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "1:15–1:45 PM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "1:45–2:15 PM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "2:15–2:45 PM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "2:45–3:00 PM",
@@ -366,12 +364,12 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "9:30–9:50 AM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "9:50–10:10 AM",
         "title": "Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "10:10–10:40 AM",
@@ -395,7 +393,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "11:40 AM–12:10 PM",
         "title": "UCSF Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "12:10–1:10 PM",
@@ -405,17 +403,17 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "1:10–1:40 PM",
         "title": "UCSF Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "1:40–2:10 PM",
         "title": "UCSF Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "2:10–2:40 PM",
         "title": "UCSF Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "2:40–3:00 PM",
@@ -430,7 +428,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "4:00–4:30 PM",
         "title": "UCSF Plenary Session",
-        "details": ["Speaker TBC"]
+        "details": []
       },
       {
         "time": "4:30–4:45 PM",
