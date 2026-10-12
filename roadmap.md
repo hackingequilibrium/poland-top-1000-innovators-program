@@ -9,3 +9,4 @@
 - [x] Rename Day 2 opening remarks to "Ecosystem Exchange" (9:00–9:20 AM) and start the CITRIS keynote at 9:20.
 - [x] Make the pill Speakers link reach the homepage speakers section from subpages.
 - [x] Swap Wojciech Balczun and Michael Lepech in the home page speakers grid.
+- [x] Move Summit II dates to 14-17 December 2026 across agenda, home, tickets, travel and page metadata.

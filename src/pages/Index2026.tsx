@@ -84,7 +84,7 @@ const Index2026 = () => {
               </div>
               <div className="flex items-center gap-2 text-white text-base md:text-lg lg:text-xl font-extralight">
                 <CalendarDays className="h-5 w-5 shrink-0 text-white" />
-                <span>9-12 November 2026</span>
+                <span>14-17 December 2026</span>
               </div>
             </div>
           </div>
