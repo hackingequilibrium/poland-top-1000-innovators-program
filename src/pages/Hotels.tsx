@@ -95,8 +95,8 @@ const Hotels = () => {
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {groupRate()}
                 {rateItem("Booking deadline", "October 22, 2026", "Subject to availability")}
-                {rateItem("Group rate dates", "November 8–14, 2026")}
-                {rateItem("Summit dates", "November 9–12, 2026")}
+                {rateItem("Group rate dates", "December 13–19, 2026")}
+                {rateItem("Summit dates", "December 14–17, 2026")}
               </div>
 
               {/* Reserve band */}
@@ -162,10 +162,10 @@ const Hotels = () => {
                 </p>
                 <ul className="mt-2 space-y-1.5 font-inter font-extralight text-sm text-white/70">
                   {[
-                    "November 9: Stanford University",
-                    "November 10: UC Berkeley",
-                    "November 11: Silicon Valley",
-                    "November 12: UC San Francisco",
+                    "December 14: Stanford University",
+                    "December 15: UC Berkeley",
+                    "December 16: Silicon Valley",
+                    "December 17: UC San Francisco",
                   ].map((line) => (
                     <li key={line} className="flex gap-2">
                       <span className="shrink-0">·</span>

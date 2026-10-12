@@ -7,7 +7,7 @@ const SITE = "TOP 1000 Innovators of Poland in Silicon Valley";
 
 const ROUTE_META: Record<string, Meta> = {
   "/": {
-    title: `${SITE} — Summit II, 9–12 November 2026`,
+    title: `${SITE} — Summit II, 14–17 December 2026`,
     description:
       "Summit II brings Poland's leading researchers, innovators and entrepreneurs to Stanford, UC Berkeley, UC San Francisco and Silicon Valley.",
   },
@@ -50,12 +50,12 @@ const ROUTE_META: Record<string, Meta> = {
   },
   "/tickets": {
     title: "Tickets — TOP 1000 Innovators Summit II",
-    description: "Purchase your ticket for Summit II, 9–12 November 2026 in Silicon Valley.",
+    description: "Purchase your ticket for Summit II, 14–17 December 2026 in Silicon Valley.",
   },
   "/agenda": {
     title: "Agenda — TOP 1000 Innovators Summit II",
     description:
-      "Explore the initial Summit II agenda: four days of sessions, speakers and workshops in Silicon Valley, 9–12 November 2026.",
+      "Explore the initial Summit II agenda: four days of sessions, speakers and workshops in Silicon Valley, 14–17 December 2026.",
   },
   "/2025/agenda": {
     title: "2025 Summit Agenda — TOP 1000 Innovators",
@@ -64,7 +64,7 @@ const ROUTE_META: Record<string, Meta> = {
   "/hotels": {
     title: "Accommodation & Travel — TOP 1000 Innovators",
     description:
-      "Official Summit hotel, group rates, and transportation details for Summit II, 9–12 November 2026.",
+      "Official Summit hotel, group rates, and transportation details for Summit II, 14–17 December 2026.",
   },
   "/suggest-speaker": {
     title: "Suggest a Speaker — TOP 1000 Innovators",
