@@ -1099,14 +1099,14 @@ const tiers = [
   {
     name: "Business Early Bird + Executive Retreat",
     price: "$5,499",
-    note: "Available until October 15",
+    note: "Available until November 15",
     featured: true,
     body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
   },
   {
     name: "University Early Bird",
     price: "$3,799",
-    note: "Available until October 15",
+    note: "Available until November 15",
     featured: true,
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
   },
@@ -1176,7 +1176,7 @@ export const TravelSection = () => (
           rates starting at $199/night.
         </p>
         <p className="mt-2 text-white/45 text-xs md:text-sm font-light">
-          Book by October 22, 2026
+          Book by November 30, 2026
         </p>
       </div>
       <Link

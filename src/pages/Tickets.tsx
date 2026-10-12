@@ -63,7 +63,7 @@ const Tickets = () => {
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-[#C70828] px-3.5 py-1 text-[10px] md:text-xs font-inter font-bold uppercase tracking-[0.12em] text-white shadow-[0_0_18px_rgba(199,8,40,0.5)]">
               <span className="h-1.5 w-1.5 rounded-full bg-white/90 animate-pulse" />
-              Early bird ends Oct 15
+              Early bird ends Nov 15
             </span>
           </div>
 
@@ -76,7 +76,7 @@ const Tickets = () => {
             <Link to="/hotels" className="underline underline-offset-2 hover:text-white transition-colors">
               Book your hotel at the special TOP 1000 group rate
             </Link>
-            . Reservations close October 22.
+            . Reservations close November 30.
           </p>
 
 

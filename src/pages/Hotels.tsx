@@ -94,7 +94,7 @@ const Hotels = () => {
               {/* Rate + dates grid */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {groupRate()}
-                {rateItem("Booking deadline", "October 22, 2026", "Subject to availability")}
+                {rateItem("Booking deadline", "November 30, 2026", "Subject to availability")}
                 {rateItem("Group rate dates", "December 13–19, 2026")}
                 {rateItem("Summit dates", "December 14–17, 2026")}
               </div>
@@ -204,7 +204,7 @@ const Hotels = () => {
             </ul>
             <p className="mt-8 flex items-center gap-2 font-inter font-extralight text-sm text-white/50">
               <CalendarDays className="h-4 w-4 shrink-0" />
-              Reservations close October 22, 2026 — subject to availability.
+              Reservations close November 30, 2026 — subject to availability.
             </p>
           </section>
         </div>
