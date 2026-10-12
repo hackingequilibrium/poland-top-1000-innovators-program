@@ -10,3 +10,4 @@
 - [x] Make the pill Speakers link reach the homepage speakers section from subpages.
 - [x] Swap Wojciech Balczun and Michael Lepech in the home page speakers grid.
 - [x] Move Summit II dates to 14-17 December 2026 across agenda, home, tickets, travel and page metadata.
+- [x] Hotel booking deadline to November 30 and early bird to November 15.
