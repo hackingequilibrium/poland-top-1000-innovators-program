@@ -70,7 +70,7 @@ const Tickets = () => {
             <Link to="/hotels" className="underline underline-offset-2 hover:text-white transition-colors">
               Book your hotel at the special TOP 1000 group rate
             </Link>
-            . Reservations close November 30.
+            . Reservations close November 20.
           </p>
 
 

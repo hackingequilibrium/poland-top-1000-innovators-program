@@ -1157,10 +1157,10 @@ export const TravelSection = () => (
         </h3>
         <p className="mt-2 text-white/60 text-sm md:text-base font-extralight leading-relaxed max-w-xl">
           Stay at the San Francisco Airport Marriott Waterfront with exclusive TOP 1000 group
-          rates starting at $199/night.
+          rates at $209/night.
         </p>
         <p className="mt-2 text-white/45 text-xs md:text-sm font-light">
-          Book by November 30, 2026
+          Book by November 20, 2026
         </p>
       </div>
       <Link

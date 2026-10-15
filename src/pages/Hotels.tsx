@@ -15,7 +15,7 @@ const groupRate = () => (
     <p className="font-inter text-[10px] uppercase tracking-[0.18em] text-white/55">
       Special group rate
     </p>
-    <p className="mt-1.5 font-inter font-medium text-base md:text-lg">$199–$219</p>
+    <p className="mt-1.5 font-inter font-medium text-base md:text-lg">$209</p>
     <p className="font-inter font-extralight text-[11px] text-white/60">USD per night</p>
   </div>
 );
@@ -94,8 +94,8 @@ const Hotels = () => {
               {/* Rate + dates grid */}
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {groupRate()}
-                {rateItem("Booking deadline", "November 30, 2026", "Subject to availability")}
-                {rateItem("Group rate dates", "December 13–19, 2026")}
+                {rateItem("Booking deadline", "November 20, 2026", "Subject to availability")}
+                {rateItem("Group rate dates", "December 13–18, 2026")}
                 {rateItem("Summit dates", "December 14–17, 2026")}
               </div>
 
@@ -112,7 +112,7 @@ const Hotels = () => {
                   group rate.
                 </p>
                 <a
-                  href="https://app.marriott.com/resview2?id=1791480188686&key=GRP&app=resvlink"
+                  href="https://app.marriott.com/resview2?id=1792079283117&key=GRP&app=resvlink"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group mt-5 flex h-14 w-full items-center justify-center gap-2 rounded-full bg-white text-[#0B1A3F] transition-colors duration-300 hover:bg-white/85"
@@ -204,7 +204,7 @@ const Hotels = () => {
             </ul>
             <p className="mt-8 flex items-center gap-2 font-inter font-extralight text-sm text-white/50">
               <CalendarDays className="h-4 w-4 shrink-0" />
-              Reservations close November 30, 2026 — subject to availability.
+              Reservations close November 20, 2026 — subject to availability.
             </p>
           </section>
         </div>
