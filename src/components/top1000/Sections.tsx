@@ -1097,20 +1097,6 @@ export const PartnersSection = () => (
 /* 10. Tickets */
 const tiers = [
   {
-    name: "Business Early Bird + Executive Retreat",
-    price: "$5,499",
-    note: "Available until November 15",
-    featured: true,
-    body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
-  },
-  {
-    name: "University Early Bird",
-    price: "$3,799",
-    note: "Available until November 15",
-    featured: true,
-    body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
-  },
-  {
     name: "Business + Executive Retreat",
     price: "$6,499",
     note: "Standard rate",
