@@ -856,7 +856,6 @@ export const VenuesSection = () => (
         { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC San Francisco", img: venueUcsf },
         { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
-
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
           <div className="w-full h-44 md:h-48 overflow-hidden">
