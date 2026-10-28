@@ -16,6 +16,7 @@ import Program from "./pages/Program";
 import Workshops from "./pages/Workshops";
 import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
+import BusinessTicketRegistration from "./pages/BusinessTicketRegistration";
 import Hotels from "./pages/Hotels";
 import Agenda from "./pages/Agenda";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
@@ -56,6 +57,7 @@ const App = () => (
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/eventify-app" element={<EventifyApp />} />
           <Route path="/tickets" element={<Tickets />} />
+          <Route path="/business-ticket-registration" element={<BusinessTicketRegistration />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
