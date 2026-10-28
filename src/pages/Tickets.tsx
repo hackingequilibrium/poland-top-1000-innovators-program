@@ -126,8 +126,8 @@ const Tickets = () => {
 
           {/* Zeffy stays mounted so its script can initialise; hidden unless University → card */}
           <div className={type === "university" && method === "card" ? "" : "hidden"}>
-            <div className="max-w-[640px] mx-auto mb-6 rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-center font-inter text-[11px] md:text-xs font-light leading-relaxed text-white/80">
-              <span className="font-semibold text-white">Important:</span> The registration fee shown on this page is the total amount charged by PolSV. During checkout, Zeffy will offer an optional donation to support its platform. If you do not wish to contribute, simply select $0 from the dropdown menu.
+            <div className="max-w-[640px] mx-auto mb-6 rounded-lg border-2 border-[#F5C542] bg-[#F5C542]/15 px-5 py-4 text-center font-inter text-sm md:text-base font-normal leading-relaxed text-white">
+              <span className="font-bold text-[#F5C542]">Important:</span> The registration fee shown on this page is the total amount charged by PolSV. During checkout, Zeffy will offer an optional donation to support its platform. If you do not wish to contribute, simply select $0 from the dropdown menu.
             </div>
             <style>{`
               .zeffy-wrap > div {
