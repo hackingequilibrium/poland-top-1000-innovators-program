@@ -18,6 +18,7 @@ import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import marcinKulasekAsset from "@/assets/marcin-kulasek.png.asset.json";
+import bobKleinAsset from "@/assets/bob-klein.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -677,6 +678,17 @@ const speakers = [
     bio: [
       "Prof. Waldemar Priebe is a Professor of Medicinal Chemistry at the University of Texas MD Anderson Cancer Center, specializing in the discovery and development of innovative cancer therapeutics. His research combines chemistry and biology to develop drugs targeting DNA, cellular signaling, and metabolic pathways involved in cancer progression.",
       "He has developed thousands of novel compounds, several of which have advanced into clinical trials. A prolific scientist and inventor, he has authored more than 200 peer-reviewed publications and holds over 40 patents. His work bridges fundamental scientific discovery, drug development, and the commercialization of new cancer treatments.",
+    ],
+  },
+  {
+    id: "bob-klein",
+    name: "Bob Klein",
+    role: "Founder, California Institute for Regenerative Medicine (CIRM) | Stem Cell Research Advocate",
+    image: bobKleinAsset.url,
+    imageClass: "object-center",
+    bio: [
+      "Robert N. “Bob” Klein II is a pioneering advocate for stem cell research and regenerative medicine. He led California’s Proposition 71 initiative, which established the California Institute for Regenerative Medicine (CIRM), and served as the inaugural Chair of its governing board. He later spearheaded Proposition 14 in 2020 to secure additional funding for stem cell research.",
+      "A graduate of Stanford University and Stanford Law School, Klein has played a pivotal role in advancing biomedical research and supporting the development of innovative therapies. His contributions have earned him recognition as one of TIME magazine’s 100 Most Influential People and Scientific American’s 50 leading figures shaping the future of science.",
     ],
   },
 ];
