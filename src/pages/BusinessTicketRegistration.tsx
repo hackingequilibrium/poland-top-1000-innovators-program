@@ -111,9 +111,9 @@ const BusinessTicketRegistration = () => (
         </p>
         <ul className="font-inter font-light text-sm md:text-base text-white/80 leading-relaxed mb-6 space-y-1">
           {participantDetails.map((item) => (
-            <li key={item} className="pl-6 -indent-6">
-              <span className="inline-block w-6">•</span>
-              {item}
+            <li key={item} className="flex gap-2">
+              <span className="shrink-0">•</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
