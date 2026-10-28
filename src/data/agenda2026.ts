@@ -35,6 +35,7 @@ import photo33 from "@/assets/adam-januszko.png.asset.json";
 import photo34 from "@/assets/dominik-schmidt.png.asset.json";
 import photo35 from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import photo36 from "@/assets/pawel-morkisz.png.asset.json";
+import photo37 from "@/assets/marcin-kulasek.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -74,6 +75,7 @@ export const agendaPhotos: Record<string, string> = {
   "Dominik J. Schmidt": photo34.url,
   "Michał Habdank-Kołaczkowski": photo35.url,
   "Paweł Morkisz": photo36.url,
+  "Marcin Kulasek": photo37.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -84,6 +86,7 @@ export const agendaPhotoClasses: Record<string, string> = {
   "Christina Harvey": "object-center",
   "Dariusz Rosati": "object-top",
   "Michael Lepech": "object-top",
+  "Marcin Kulasek": "object-top",
 };
 
 export type AgendaSession = { time: string; title: string; details: string[] };
