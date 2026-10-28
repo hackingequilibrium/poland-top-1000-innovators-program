@@ -1099,7 +1099,7 @@ const tiers = [
     price: "$6,499",
     note: "Standard rate",
     featured: false,
-    href: "/business-ticket-registration",
+    href: "/tickets?type=business",
     body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
   },
   {
