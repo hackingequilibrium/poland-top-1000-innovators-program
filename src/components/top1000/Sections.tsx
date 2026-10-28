@@ -17,6 +17,7 @@ import aggieKrajewskaAsset from "@/assets/aggie-krajewska.jpg.asset.json";
 import lukaszKaiserAsset from "@/assets/lukasz-kaiser.jpg.asset.json";
 import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
+import marcinKulasekAsset from "@/assets/marcin-kulasek.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -313,6 +314,16 @@ const speakers = [
     bio: [
       "Wojciech Balczun is Poland’s Minister of State Assets, appointed in July 2025. An experienced executive and business leader, he previously served as President of the Industrial Development Agency (ARP), CEO of PKP Cargo, and CEO of Ukrainian Railways (Ukrzaliznytsia). His career spans corporate restructuring, infrastructure, international management, and public-sector leadership.",
       "Beyond his executive career, he is also a rock guitarist and founder of the band Chemia, with which he has released several studio albums.",
+    ],
+  },
+  {
+    id: "marcin-kulasek",
+    name: "Marcin Kulasek",
+    role: "Minister of Science and Higher Education, Republic of Poland",
+    image: marcinKulasekAsset.url,
+    imageClass: "object-top",
+    bio: [
+      "Marcin Kulasek has served as Poland’s Minister of Science and Higher Education since January 2025. A Member of the Polish Parliament (Sejm) since 2019, representing the Olsztyn constituency, he is responsible for overseeing Poland’s science and higher education policies, including research, academic development, and international cooperation. He has also served as Secretary General of the New Left party since 2021.",
     ],
   },
   {
