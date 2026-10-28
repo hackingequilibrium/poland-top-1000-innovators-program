@@ -1095,10 +1095,11 @@ export const PartnersSection = () => (
 /* 10. Tickets */
 const tiers = [
   {
-    name: "Business + Executive Retreat",
+    name: "Business",
     price: "$6,499",
     note: "Standard rate",
     featured: false,
+    href: "/business-ticket-registration",
     body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
   },
   {
@@ -1106,6 +1107,7 @@ const tiers = [
     price: "$4,499",
     note: "Standard rate",
     featured: false,
+    href: "/tickets",
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
   },
 ];
@@ -1133,7 +1135,7 @@ export const TicketsSection = () => (
           </p>
           <p className="text-white/60 text-sm md:text-base font-light leading-relaxed mt-4">{t.body}</p>
           <Link
-            to="/tickets"
+            to={t.href}
             className="mt-6 inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-white hover:text-[#0A0A0A]"
           >
             Get Your Seat
