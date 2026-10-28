@@ -1095,20 +1095,20 @@ export const PartnersSection = () => (
 /* 10. Tickets */
 const tiers = [
   {
-    name: "Business",
-    price: "$6,499",
-    note: "Standard rate",
-    featured: false,
-    href: "/tickets?type=business",
-    body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
-  },
-  {
     name: "University",
     price: "$4,499",
     note: "Standard rate",
     featured: false,
     href: "/tickets",
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
+  },
+  {
+    name: "Business",
+    price: "$6,499",
+    note: "Standard rate",
+    featured: false,
+    href: "/tickets?type=business",
+    body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
   },
 ];
 
