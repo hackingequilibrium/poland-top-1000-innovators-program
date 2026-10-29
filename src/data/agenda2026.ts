@@ -232,9 +232,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "4:20–4:40 PM",
         "title": "Team Meeting #1: Shared Challenges & Opportunities",
-        "details": [
-          "PolSV team"
-        ]
+        "details": []
       },
       {
         "time": "4:40–5:00 PM",
@@ -360,9 +358,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "5:10–5:30 PM",
         "title": "Team Meeting #2: Shared Challenges & Opportunities",
-        "details": [
-          "PolSV team"
-        ]
+        "details": []
       },
       {
         "time": "5:30–5:55 PM",
@@ -479,9 +475,7 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "4:10–4:30 PM",
         "title": "Team Meeting #3: Shared Challenges & Opportunities",
-        "details": [
-          "PolSV team"
-        ]
+        "details": []
       },
       {
         "time": "4:30–4:55 PM",
