@@ -22,6 +22,7 @@ import bobKleinAsset from "@/assets/bob-klein.png.asset.json";
 import alexandreBayenAsset from "@/assets/alexandre-bayen.png.asset.json";
 import martinKawalskiAsset from "@/assets/martin-kawalski.png.asset.json";
 import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
+import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -94,6 +95,7 @@ const camilleCrittenden = camilleCrittendenAsset.url;
 const alexandreBayen = alexandreBayenAsset.url;
 const martinKawalski = martinKawalskiAsset.url;
 const michalNedoszytko = michalNedoszytkoAsset.url;
+const joannaJaworekKorjakowska = joannaJaworekKorjakowskaAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -728,6 +730,17 @@ const speakers = [
     bio: [
       "Dr. Michał Nedoszytko is an interventional cardiologist, clinician scientist, and health technology entrepreneur specializing in the intersection of medicine, artificial intelligence, and software development. He earned his medical degree from the Medical University of Gdańsk and a PhD in cardiovascular genetics. He practiced medicine in Poland and Belgium, where he served as Head of Cardiology at CHR Mons-Hainaut/HELORA.",
       "Combining extensive clinical experience with a passion for technology, Dr. Nedoszytko has developed healthcare software and founded ventures including Previsit.ai. In February 2026, he placed third in Anthropic’s global Claude Code hackathon, competing against more than 13,000 submissions. Now based in San Francisco, he develops clinical AI solutions at Abridge, advancing the integration of artificial intelligence into healthcare delivery.",
+    ],
+  },
+  {
+    id: "joanna-jaworek-korjakowska",
+    name: "Joanna Jaworek-Korjakowska",
+    role: "Director, Centre of Excellence in AI, AGH University of Krakow | CEO, DataSphereLab",
+    image: joannaJaworekKorjakowska,
+    imageClass: "object-center",
+    bio: [
+      "Prof. Joanna Jaworek-Korjakowska is a leading Polish artificial intelligence researcher, entrepreneur, and expert in AI governance. She serves as Director of the Centre of Excellence in Artificial Intelligence at AGH University of Krakow, CEO of DataSphereLab, and Chair of the Scientific Council of NASK, Poland’s National Research Institute. With over 15 years of experience, her research focuses on machine learning, computer vision, explainable AI, and medical applications, particularly AI-assisted melanoma detection.",
+      "She leads the ARTIQ AI Centre initiative, supported by Poland’s national research funding agencies, and actively advances responsible AI adoption and regulatory compliance. A former visiting researcher at Stanford University and alumna of the TOP 500 Innovators program, she bridges academic research, entrepreneurship, and international collaboration. In 2026, she received the title of Professor from the President of Poland and was recognized by Forbes Women Polska as one of Poland’s 25 leading women in AI.",
     ],
   },
 ];
