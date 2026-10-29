@@ -960,25 +960,25 @@ export const VenuesSection = () => (
 const days = [
   {
     day: "Day 1",
-    venue: "Stanford University",
+    venue: "UC San Francisco",
     title: "Kickoff & Innovation Readiness",
     items: ["Opening keynote", "Innovation Readiness diagnostic", "Personalized pathway", "Networking mixer"],
   },
   {
     day: "Day 2",
-    venue: "UC Berkeley",
+    venue: "Stanford University",
     title: "Vertical Workshops",
     items: ["Four sector workshops", "Mentoring", "AI across all tracks", "Partner networking"],
   },
   {
     day: "Day 3",
-    venue: "Silicon Valley",
+    venue: "UC Berkeley",
     title: "Capital & Partnership Tracks",
     items: ["Investor preparation", "Industry meetings", "Partnership discussions", "Polish Independence Day Reception"],
   },
   {
     day: "Day 4",
-    venue: "UC San Francisco",
+    venue: "Computer History Museum, Mountain View",
     title: "Showcase & Next Steps",
     items: ["Project showcase", "Networking", "Action plans", "Closing reception"],
   },
