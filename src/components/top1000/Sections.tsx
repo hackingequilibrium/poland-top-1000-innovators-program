@@ -925,13 +925,14 @@ export const VenuesSection = () => (
   <section id="venues" className="navy-band px-10 md:px-16 py-20 md:py-28">
     <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Venues</p>
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
-      A Three-Venue Silicon Valley Experience
+      A Four-Venue Silicon Valley Experience
     </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {[
-        { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC San Francisco", img: venueUcsf },
+        { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
+        { name: "Computer History Museum, Mountain View", img: venueChmAsset.url },
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
           <div className="w-full h-44 md:h-48 overflow-hidden">
