@@ -142,7 +142,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "9:40–10:00 AM",
         "title": "Poland as a Rising Hub for the Next Era of Higher Education",
         "details": [
-          "Marcin Kulasek"
+          "Ministry of Science and Higher Education of Poland, TBA"
         ]
       },
       {
@@ -267,7 +267,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "9:15–9:35 AM",
         "title": "Poland: From G20 to Peak Innovation?",
         "details": [
-          "Wojciech Balczun"
+          "Ministry of State Assets of Poland, TBA"
         ]
       },
       {
