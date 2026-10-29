@@ -20,6 +20,7 @@ import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import marcinKulasekAsset from "@/assets/marcin-kulasek.png.asset.json";
 import bobKleinAsset from "@/assets/bob-klein.png.asset.json";
 import alexandreBayenAsset from "@/assets/alexandre-bayen.png.asset.json";
+import martinKawalskiAsset from "@/assets/martin-kawalski.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -90,6 +91,7 @@ const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
 const alexandreBayen = alexandreBayenAsset.url;
+const martinKawalski = martinKawalskiAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -702,6 +704,17 @@ const speakers = [
     bio: [
       "Robert N. “Bob” Klein II is a pioneering advocate for stem cell research and regenerative medicine. He led California’s Proposition 71 initiative, which established the California Institute for Regenerative Medicine (CIRM), and served as the inaugural Chair of its governing board. He later spearheaded Proposition 14 in 2020 to secure additional funding for stem cell research.",
       "A graduate of Stanford University and Stanford Law School, Klein has played a pivotal role in advancing biomedical research and supporting the development of innovative therapies. His contributions have earned him recognition as one of TIME magazine’s 100 Most Influential People and Scientific American’s 50 leading figures shaping the future of science.",
+    ],
+  },
+  {
+    id: "martin-kawalski",
+    name: "Martin Kawalski",
+    role: "Visiting Scholar, Stanford University | Sleep Medicine Researcher | Digital Health Innovator",
+    image: martinKawalski,
+    imageClass: "object-center",
+    bio: [
+      "Dr. Martin Kawalski is a Visiting Scholar in Stanford University’s Division of Sleep Surgery, where his research explores the relationship between sleep disruption, aging, and longevity. His work focuses on using consumer wearables to measure the effects of sleep on aging processes and leveraging artificial intelligence to improve patient education and engagement in digital health.",
+      "Combining medical research with entrepreneurial experience, Dr. Kawalski has founded and led innovations in sports and lifestyle technology, including co-founding SKEO, an alpine sports safety wearable developed in collaboration with Olympic skier Bode Miller. His interdisciplinary approach bridges medicine, AI, wearable technology, and entrepreneurship to advance personalized health and wellbeing.",
     ],
   },
 ];
