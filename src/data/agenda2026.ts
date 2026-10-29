@@ -36,6 +36,7 @@ import photo34 from "@/assets/dominik-schmidt.png.asset.json";
 import photo35 from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import photo36 from "@/assets/pawel-morkisz.png.asset.json";
 import photo37 from "@/assets/marcin-kulasek.png.asset.json";
+import photo38 from "@/assets/bob-klein.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -76,6 +77,7 @@ export const agendaPhotos: Record<string, string> = {
   "Michał Habdank-Kołaczkowski": photo35.url,
   "Paweł Morkisz": photo36.url,
   "Marcin Kulasek": photo37.url,
+  "Bob Klein": photo38.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
