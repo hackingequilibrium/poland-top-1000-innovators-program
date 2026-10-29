@@ -8,7 +8,7 @@ import sfStartupLabsAsset from "@/assets/sf-startup-labs.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
-import venueChmAsset from "@/assets/venue-computer-history-museum.jpg.asset.json";
+import venueChm from "@/assets/venue-computer-history-museum.jpg";
 import summitStanfordGroupAsset from "@/assets/summit-2025-stanford-group.jpg.asset.json";
 import summitStageAsset from "@/assets/summit-2025-stage.jpg.asset.json";
 import summitPanelAsset from "@/assets/summit-2025-panel.jpg.asset.json";
@@ -932,7 +932,7 @@ export const VenuesSection = () => (
         { name: "UC San Francisco", img: venueUcsf },
         { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
-        { name: "Computer History Museum, Mountain View", img: venueChmAsset.url },
+        { name: "Computer History Museum, Mountain View", img: venueChm },
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
           <div className="w-full h-44 md:h-48 overflow-hidden">
