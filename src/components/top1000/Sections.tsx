@@ -19,6 +19,7 @@ import maciejKaweckiAsset from "@/assets/maciej-kawecki.jpg.asset.json";
 import michaelLepechAsset from "@/assets/michael-lepech.jpg.asset.json";
 import marcinKulasekAsset from "@/assets/marcin-kulasek.png.asset.json";
 import bobKleinAsset from "@/assets/bob-klein.png.asset.json";
+import alexandreBayenAsset from "@/assets/alexandre-bayen.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -88,6 +89,7 @@ const hamidFarzaneh = hamidFarzanehAsset.url;
 const barryKatz = barryKatzAsset.url;
 const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
+const alexandreBayen = alexandreBayenAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -513,6 +515,17 @@ const speakers = [
     bio: [
       "Camille Crittenden is Executive Director of CITRIS and the Banatao Institute and Director of the CITRIS Tech Policy Initiative. She also serves on the University of California AI Council, helping develop policies and training for responsible AI implementation across the UC system.",
       "For more than two decades, she has worked at the intersection of technology, higher education, public policy, and social impact. Her work focuses on responsible AI, digital equity, emerging technology policy, and expanding opportunities for women and underrepresented groups in technical fields. She has led programs and partnerships spanning sustainable infrastructure, health, robotics and AI, civic technology, and the future of work.",
+    ],
+  },
+  {
+    id: "alexandre-bayen",
+    name: "Alexandre M. Bayen",
+    role: "Director, CITRIS and the Banatao Institute | Associate Provost, Berkeley Space Center | Professor, UC Berkeley",
+    image: alexandreBayen,
+    imageClass: "object-center",
+    bio: [
+      "Alexandre M. Bayen is Director of CITRIS and the Banatao Institute, Associate Provost for the Berkeley Space Center, and Professor of Electrical Engineering and Computer Sciences and Civil and Environmental Engineering at the University of California, Berkeley. His research focuses on artificial intelligence, control systems, and optimization, with applications in transportation, aerospace, and intelligent infrastructure.",
+      "A graduate of École Polytechnique and Stanford University, where he earned his PhD in Aeronautics and Astronautics, Bayen has authored over 300 peer-reviewed publications and co-founded SafelyYou, an AI-powered fall detection company. He previously directed UC Berkeley’s Institute of Transportation Studies and has collaborated with organizations including NASA, Google, and Uber. An IEEE Fellow and recipient of the Presidential Early Career Award for Scientists and Engineers, he advances interdisciplinary research and partnerships connecting academia, industry, and emerging technologies.",
     ],
   },
   {
