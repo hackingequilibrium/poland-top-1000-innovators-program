@@ -8,6 +8,7 @@ import sfStartupLabsAsset from "@/assets/sf-startup-labs.png.asset.json";
 import venueStanford from "@/assets/venue-stanford.jpg";
 import venueUcsf from "@/assets/venue-ucsf.jpg";
 import venueBerkeley from "@/assets/venue-berkeley.jpg";
+import venueChm from "@/assets/venue-computer-history-museum.jpg";
 import summitStanfordGroupAsset from "@/assets/summit-2025-stanford-group.jpg.asset.json";
 import summitStageAsset from "@/assets/summit-2025-stage.jpg.asset.json";
 import summitPanelAsset from "@/assets/summit-2025-panel.jpg.asset.json";
@@ -924,13 +925,14 @@ export const VenuesSection = () => (
   <section id="venues" className="navy-band px-10 md:px-16 py-20 md:py-28">
     <p className="text-white/50 text-[11px] font-light tracking-[0.3em] uppercase mb-4">Venues</p>
     <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-white mb-10 md:mb-14">
-      A Three-Venue Silicon Valley Experience
+      A Four-Venue Silicon Valley Experience
     </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       {[
-        { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC San Francisco", img: venueUcsf },
+        { name: "Stanford University", img: venueStanford, cropBottomEdge: true },
         { name: "UC Berkeley", img: venueBerkeley, cropBottomEdge: true },
+        { name: "Computer History Museum, Mountain View", img: venueChm },
       ].map((v) => (
         <div key={v.name} className="border border-white/10 bg-white/[0.04] overflow-hidden">
           <div className="w-full h-44 md:h-48 overflow-hidden">
@@ -958,25 +960,25 @@ export const VenuesSection = () => (
 const days = [
   {
     day: "Day 1",
-    venue: "Stanford University",
+    venue: "UC San Francisco",
     title: "Kickoff & Innovation Readiness",
     items: ["Opening keynote", "Innovation Readiness diagnostic", "Personalized pathway", "Networking mixer"],
   },
   {
     day: "Day 2",
-    venue: "UC Berkeley",
+    venue: "Stanford University",
     title: "Vertical Workshops",
     items: ["Four sector workshops", "Mentoring", "AI across all tracks", "Partner networking"],
   },
   {
     day: "Day 3",
-    venue: "Silicon Valley",
+    venue: "UC Berkeley",
     title: "Capital & Partnership Tracks",
     items: ["Investor preparation", "Industry meetings", "Partnership discussions", "Polish Independence Day Reception"],
   },
   {
     day: "Day 4",
-    venue: "UC San Francisco",
+    venue: "Computer History Museum, Mountain View",
     title: "Showcase & Next Steps",
     items: ["Project showcase", "Networking", "Action plans", "Closing reception"],
   },

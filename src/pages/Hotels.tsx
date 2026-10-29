@@ -162,10 +162,10 @@ const Hotels = () => {
                 </p>
                 <ul className="mt-2 space-y-1.5 font-inter font-extralight text-sm text-white/70">
                   {[
-                    "December 14: Stanford University",
-                    "December 15: UC Berkeley",
-                    "December 16: Silicon Valley",
-                    "December 17: UC San Francisco",
+                    "December 14: UC San Francisco",
+                    "December 15: Stanford University",
+                    "December 16: UC Berkeley",
+                    "December 17: Computer History Museum, Mountain View",
                   ].map((line) => (
                     <li key={line} className="flex gap-2">
                       <span className="shrink-0">·</span>

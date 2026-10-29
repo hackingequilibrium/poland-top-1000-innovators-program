@@ -67,7 +67,7 @@ const Tickets = () => {
           <p className="text-center font-inter font-light text-sm md:text-base text-white mb-8">
             Summit II · 14–17 December 2026
             <br />
-            Stanford University · UC Berkeley · UC San Francisco
+            UC San Francisco · Stanford University · UC Berkeley · Computer History Museum
           </p>
 
           <div role="tablist" aria-label="Ticket type" className="flex justify-center gap-2 mb-8">
