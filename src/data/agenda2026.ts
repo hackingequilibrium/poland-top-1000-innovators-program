@@ -37,6 +37,7 @@ import photo35 from "@/assets/michal-habdank-kolaczkowski.png.asset.json";
 import photo36 from "@/assets/pawel-morkisz.png.asset.json";
 import photo37 from "@/assets/marcin-kulasek.png.asset.json";
 import photo38 from "@/assets/bob-klein.png.asset.json";
+import photo39 from "@/assets/alexandre-bayen.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -78,6 +79,7 @@ export const agendaPhotos: Record<string, string> = {
   "Paweł Morkisz": photo36.url,
   "Marcin Kulasek": photo37.url,
   "Bob Klein": photo38.url,
+  "Alexandre M. Bayen": photo39.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -395,7 +397,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "9:30–9:50 AM",
         "title": "Opening Keynote",
         "details": [
-          "Alex Bayen"
+          "Alexandre M. Bayen"
         ]
       },
       {
@@ -430,7 +432,7 @@ export const agendaDays: AgendaDay[] = [
         "details": [
           "Tadeusz Uhl",
           "Artur Chmielewski",
-          "Alex Bayen"
+          "Alexandre M. Bayen"
         ]
       },
       {
