@@ -21,6 +21,7 @@ import marcinKulasekAsset from "@/assets/marcin-kulasek.png.asset.json";
 import bobKleinAsset from "@/assets/bob-klein.png.asset.json";
 import alexandreBayenAsset from "@/assets/alexandre-bayen.png.asset.json";
 import martinKawalskiAsset from "@/assets/martin-kawalski.png.asset.json";
+import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -92,6 +93,7 @@ const michalWyrebkowski = michalWyrebkowskiAsset.url;
 const camilleCrittenden = camilleCrittendenAsset.url;
 const alexandreBayen = alexandreBayenAsset.url;
 const martinKawalski = martinKawalskiAsset.url;
+const michalNedoszytko = michalNedoszytkoAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -715,6 +717,17 @@ const speakers = [
     bio: [
       "Dr. Martin Kawalski is a Visiting Scholar in Stanford University’s Division of Sleep Surgery, where his research explores the relationship between sleep disruption, aging, and longevity. His work focuses on using consumer wearables to measure the effects of sleep on aging processes and leveraging artificial intelligence to improve patient education and engagement in digital health.",
       "Combining medical research with entrepreneurial experience, Dr. Kawalski has founded and led innovations in sports and lifestyle technology, including co-founding SKEO, an alpine sports safety wearable developed in collaboration with Olympic skier Bode Miller. His interdisciplinary approach bridges medicine, AI, wearable technology, and entrepreneurship to advance personalized health and wellbeing.",
+    ],
+  },
+  {
+    id: "michal-nedoszytko",
+    name: "Michał Nedoszytko",
+    role: "Interventional Cardiologist | Clinical AI, Abridge | Founder, Previsit.ai",
+    image: michalNedoszytko,
+    imageClass: "object-center",
+    bio: [
+      "Dr. Michał Nedoszytko is an interventional cardiologist, clinician scientist, and health technology entrepreneur specializing in the intersection of medicine, artificial intelligence, and software development. He earned his medical degree from the Medical University of Gdańsk and a PhD in cardiovascular genetics. He practiced medicine in Poland and Belgium, where he served as Head of Cardiology at CHR Mons-Hainaut/HELORA.",
+      "Combining extensive clinical experience with a passion for technology, Dr. Nedoszytko has developed healthcare software and founded ventures including Previsit.ai. In February 2026, he placed third in Anthropic’s global Claude Code hackathon, competing against more than 13,000 submissions. Now based in San Francisco, he develops clinical AI solutions at Abridge, advancing the integration of artificial intelligence into healthcare delivery.",
     ],
   },
 ];
