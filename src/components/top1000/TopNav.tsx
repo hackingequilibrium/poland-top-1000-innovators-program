@@ -27,6 +27,10 @@ const TopNav = () => {
         <Link to={pathname === "/" ? "#speakers" : "/#speakers"} className={linkClass}>
           Speakers
         </Link>
+        <Link to="/agenda" className={linkClass}>
+          Agenda
+        </Link>
+
         <Link to="/hotels" className={linkClass}>
           Travel &amp; Stay
         </Link>
