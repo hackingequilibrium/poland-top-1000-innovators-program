@@ -10,13 +10,12 @@ A new page at `/tickets-2` (the current Tickets page stays as is). Not linked fr
    - **Business — USD 6,499 per participant.** Eligible: everyone else (company founders, executives, investors, corporate participants). Please confirm or give me exact wording.
    - Clicking a box selects that ticket type in the form below.
 3. **Registration form**
-   - Ticket type: University / Business (required)
-   - Full name, Job title, Company or institutional affiliation (required)
-   - Email, Phone (email required, phone required)
-   - Country (required)
-   - Number of tickets (1–10, default 1); the total amount shows live (e.g. 2 × 4,499 = USD 8,998)
-   - Billing address (required) and Tax ID / VAT number (optional)
-   - Optional notes field (e.g. names of additional participants)
+   - **Ticket type:** University / Business (required)
+   - **Number of tickets** (1–10, default 1); total shows live (e.g. 2 × 4,499 = USD 8,998)
+   - **Contact person:** email and phone (required), country (required)
+   - **Ticket holders** — one block per ticket ("Ticket 1", "Ticket 2"…), appearing automatically as the number changes. Each asks: full name, position / role, organization (all required)
+   - **Billing details** (separate, since the invoice may go to a different organization than the attendee's): organization name (required), billing address (required), tax ID / VAT number (optional)
+   - Optional notes field
 4. **After submitting** — a thank-you message on screen: "Thank you — our team will send your invoice with payment details within 2 business days."
 
 ## Where requests go
