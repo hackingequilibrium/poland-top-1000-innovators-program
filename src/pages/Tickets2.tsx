@@ -52,7 +52,7 @@ const schema = z.object({
 });
 
 const inputCls =
-  "bg-white/5 border-white/20 text-white placeholder:text-white/40 rounded-none focus-visible:ring-[#8FC7F5]";
+  "input-autofill-dark bg-white/5 border-white/20 text-white placeholder:text-white/40 rounded-none focus-visible:ring-[#8FC7F5]";
 const labelCls = "block font-inter text-sm text-white/80 mb-1.5";
 
 const Field = ({
