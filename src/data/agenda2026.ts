@@ -126,7 +126,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:00–9:35 AM",
-        "title": "Summit Opening Ceremony, including a welcome from the City of San Francisco and introduction of the Masterclass Leadership group",
+        "title": "Summit Opening",
         "details": [
           "Piotr D. Moncarz",
           "Dianne Taube",
