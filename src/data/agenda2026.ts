@@ -117,7 +117,7 @@ export const agendaDays: AgendaDay[] = [
     "day": "Day 1",
     "date": "Monday, December 14, 2026",
     "venue": "University of California, San Francisco (UCSF)",
-    "theme": "Official Opening, Biomed & Life Sciences, Education",
+    "theme": "Biomed & Life Sciences, Education",
     "sessions": [
       {
         "time": "8:00–9:00 AM",
