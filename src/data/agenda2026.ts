@@ -510,7 +510,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:05 AM–12:05 PM",
-        "title": "Joint Pain-Point Meeting of Polish TTOs with Berkeley, Stanford and a Third Local TTO",
+        "title": "Parallel: Technology Transfer Officers Meeting",
         "details": [
           "Soody Tronson",
           "Anna Timofiejczuk"
