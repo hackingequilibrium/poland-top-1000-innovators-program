@@ -123,50 +123,37 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:25 AM",
-        "title": "Summit Opening Ceremony",
+        "time": "9:00–9:35 AM",
+        "title": "Summit Opening Ceremony, including a welcome from the City of San Francisco and introduction of the Masterclass Leadership group",
         "details": [
           "Piotr D. Moncarz",
           "Dianne Taube",
-          "Paul Marca"
-        ]
-      },
-      {
-        "time": "9:25–9:40 AM",
-        "title": "The Silicon Valley Ecosystem and the City of San Francisco",
-        "details": [
+          "Paul Marca",
           "Mark Chandler"
         ]
       },
       {
-        "time": "9:40–10:00 AM",
-        "title": "Poland as a Rising Hub for the Next Era of Higher Education",
-        "details": [
-          "Ministry of Science and Higher Education of Poland, TBA"
-        ]
-      },
-      {
-        "time": "10:00–10:30 AM",
+        "time": "9:35–10:05 AM",
         "title": "AI Instead of Humboldt: The University of the Future",
         "details": [
           "Alojzy Z. Nowak"
         ]
       },
       {
-        "time": "10:30–11:00 AM",
-        "title": "Networking Activity & Coffee Break",
+        "time": "10:05–10:25 AM",
+        "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "11:00–11:25 AM",
-        "title": "California’s Stem Cell Strategy: Turning Science into Impact",
+        "time": "10:25–10:50 AM",
+        "title": "California's Stem Cell Strategy: Turning Science into Impact",
         "details": [
           "Bob Klein"
         ]
       },
       {
-        "time": "11:25–11:50 AM",
-        "title": "Fireside Chat: AI in Clinical Practice and Health Technology",
+        "time": "10:50–11:15 AM",
+        "title": "Fireside: AI in Clinical Practice and Health Technology",
         "details": [
           "Jeremy Sewell",
           "Martin Kawalski",
@@ -174,40 +161,15 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:50 AM–12:15 PM",
-        "title": "Fireside Chat: Medicine Discovery in the Age of AI",
+        "time": "11:15–11:35 AM",
+        "title": "Fireside: Medicine Discovery in the Age of AI",
         "details": [
           "Waldemar Priebe"
         ]
       },
       {
-        "time": "12:15–1:15 PM",
-        "title": "Networking Lunch",
-        "details": []
-      },
-      {
-        "time": "1:15–2:30 PM",
-        "title": "Workshop: Innovation & Technology Readiness",
-        "details": [
-          "Hamid Farzaneh",
-          "Agata Braja"
-        ]
-      },
-      {
-        "time": "2:30–2:50 PM",
-        "title": "Sleep and Longevity",
-        "details": [
-          "Martin Kawalski"
-        ]
-      },
-      {
-        "time": "2:50–3:10 PM",
-        "title": "Networking Activity & Coffee Break",
-        "details": []
-      },
-      {
-        "time": "3:10–3:30 PM",
-        "title": "PolSV: 2027 Programs Outline",
+        "time": "11:35 AM–12:10 PM",
+        "title": "PolSV: Mission, Funding Model and the 2027 Quarterly Program",
         "details": [
           "Piotr D. Moncarz",
           "Hamid Farzaneh",
@@ -215,28 +177,45 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "3:30–4:00 PM",
-        "title": "Education for the Future",
+        "time": "12:10–1:10 PM",
+        "title": "Networking Lunch",
+        "details": []
+      },
+      {
+        "time": "1:10–2:25 PM",
+        "title": "Workshop 1A: Innovation and Technology Readiness",
         "details": [
-          "Esther Wojcicki",
-          "Michał Wyrębkowski"
+          "Hamid Farzaneh",
+          "Agata Braja"
         ]
       },
       {
-        "time": "4:00–4:20 PM",
-        "title": "Project Based Learning",
+        "time": "2:25–2:40 PM",
+        "title": "Coffee Break",
+        "details": []
+      },
+      {
+        "time": "2:40–3:55 PM",
+        "title": "Workshop 1B: From Technology to Commercial Opportunity",
+        "details": []
+      },
+      {
+        "time": "3:55–4:30 PM",
+        "title": "Panel: Education for the Future",
         "details": [
+          "Esther Wojcicki",
+          "Michał Wyrębkowski",
           "Renate Fruchter"
         ]
       },
       {
-        "time": "4:20–4:40 PM",
-        "title": "Team Meeting #1: Shared Challenges & Opportunities",
+        "time": "4:30–4:50 PM",
+        "title": "Team Meeting 1",
         "details": []
       },
       {
-        "time": "4:40–5:00 PM",
-        "title": "Open Mic & Daily Feedback Poll",
+        "time": "4:50–5:00 PM",
+        "title": "Open Mic",
         "details": []
       }
     ]
@@ -245,8 +224,8 @@ export const agendaDays: AgendaDay[] = [
     "id": "day-2",
     "day": "Day 2",
     "date": "Tuesday, December 15, 2026",
-    "venue": "Stanford University",
-    "theme": "Dual-Use Technologies & Energy",
+    "venue": "Stanford Faculty Club and Tresidder Memorial Union",
+    "theme": "Dual-Use Technologies, Energy & Sustainability",
     "sessions": [
       {
         "time": "8:00–9:00 AM",
@@ -254,58 +233,49 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:15 AM",
-        "title": "Welcome to Stanford",
+        "time": "9:00–9:20 AM",
+        "title": "Welcome to Stanford and Rethinking Sustainability",
         "details": [
-          "Michael Lepech",
-          "Piotr D. Moncarz"
+          "Michael Lepech"
         ]
       },
       {
-        "time": "9:15–9:35 AM",
-        "title": "Poland: From G20 to Peak Innovation?",
+        "time": "9:25–9:45 AM",
+        "title": "Poland as a Rising Hub for the Next Era of Higher Education",
         "details": [
-          "Ministry of State Assets of Poland, TBA"
+          "Ministry of Science and Higher Education of Poland, TBA"
         ]
       },
       {
-        "time": "9:35–10:05 AM",
-        "title": "Entrepreneurial Journey",
+        "time": "9:45–10:05 AM",
+        "title": "Understanding the AI Frontier",
         "details": [
           "Łukasz Kaiser",
           "Agata Braja"
         ]
       },
       {
-        "time": "10:05–10:30 AM",
-        "title": "Rethinking Sustainability",
-        "details": [
-          "Michael Lepech"
-        ]
-      },
-      {
-        "time": "10:30–10:55 AM",
+        "time": "10:05–10:25 AM",
         "title": "Powering AI: The Energy Question",
         "details": [
-          "Piotr D. Moncarz"
+          "Piotr D. Moncarz",
+          "Skip Ross"
         ]
       },
       {
-        "time": "10:55–11:20 AM",
-        "title": "Networking Activity & Coffee Break",
+        "time": "10:25–10:45 AM",
+        "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "11:20–11:45 AM",
-        "title": "From University to Startup",
+        "time": "10:45–11:05 AM",
+        "title": "Cybersecurity: Who is in Charge?",
         "details": [
-          "Paul Bryzek",
-          "Nuri Capanoglu",
-          "Michał Adamkiewicz"
+          "Joanna Jaworek-Korjakowska"
         ]
       },
       {
-        "time": "11:45 AM–12:35 PM",
+        "time": "11:05–11:55 AM",
         "title": "Panel: Dual-Use Technologies, From University Lab to Defense and Civilian Markets",
         "details": [
           "Adam Januszko",
@@ -313,56 +283,54 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "12:35–1:35 PM",
-        "title": "Networking Lunch",
-        "details": []
-      },
-      {
-        "time": "1:35–2:05 PM",
-        "title": "Cybersecurity: Who is in Charge?",
-        "details": [
-          "Joanna Jaworek-Korjakowska"
-        ]
-      },
-      {
-        "time": "2:05–2:35 PM",
+        "time": "11:55 AM–12:20 PM",
         "title": "Diplomacy in a World Without Borders",
         "details": [
           "Dariusz Rosati"
         ]
       },
       {
-        "time": "2:35–2:55 PM",
-        "title": "Entrepreneurial Journey: Engineering and Failure Analysis",
-        "details": [
-          "Skip Ross"
-        ]
-      },
-      {
-        "time": "2:55–3:40 PM",
-        "title": "Workshop: From Technology to Commercial Opportunity",
+        "time": "12:20–1:15 PM",
+        "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "3:40–3:55 PM",
-        "title": "Networking Activity & Coffee Break",
-        "details": []
-      },
-      {
-        "time": "3:55–5:10 PM",
-        "title": "Workshop: Intellectual Property 101",
+        "time": "1:15–2:30 PM",
+        "title": "Workshop 2 Briefing: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "5:10–5:30 PM",
-        "title": "Team Meeting #2: Shared Challenges & Opportunities",
+        "time": "2:30–3:45 PM",
+        "title": "Workshop 2A: IP Essentials Applied to the Disclosures",
+        "details": [
+          "Soody Tronson"
+        ]
+      },
+      {
+        "time": "3:45–4:00 PM",
+        "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "5:30–5:55 PM",
-        "title": "Open Mic & Daily Feedback Poll",
+        "time": "4:00–4:20 PM",
+        "title": "Team Meeting 2",
+        "details": []
+      },
+      {
+        "time": "4:20–4:35 PM",
+        "title": "Open Mic",
+        "details": []
+      },
+      {
+        "time": "4:35–6:15 PM",
+        "title": "Reception",
+        "details": []
+      },
+      {
+        "time": "6:15–8:15 PM",
+        "title": "Gala Dinner",
         "details": []
       }
     ]
@@ -371,7 +339,7 @@ export const agendaDays: AgendaDay[] = [
     "id": "day-3",
     "day": "Day 3",
     "date": "Wednesday, December 16, 2026",
-    "venue": "University of California, Berkeley",
+    "venue": "University of California, Berkeley (CITRIS and the Banatao Institute)",
     "theme": "Space & Aviation",
     "sessions": [
       {
@@ -418,18 +386,11 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:40–11:00 AM",
-        "title": "Networking Activity & Coffee Break",
+        "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "11:00–11:25 AM",
-        "title": "Humanoids in Space",
-        "details": [
-          "Artur Chmielewski"
-        ]
-      },
-      {
-        "time": "11:25–11:55 AM",
+        "time": "11:00–11:30 AM",
         "title": "Panel: The Aerospace Startup Conveyor Belt",
         "details": [
           "Tadeusz Uhl",
@@ -438,48 +399,53 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:55 AM–12:20 PM",
+        "time": "11:30–11:55 AM",
         "title": "The Future of Deep Learning",
         "details": [
           "Paweł Morkisz"
         ]
       },
       {
-        "time": "12:20–1:20 PM",
+        "time": "11:55 AM–12:55 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:20–2:35 PM",
-        "title": "Workshop: Pitching Your Innovation",
+        "time": "12:55–1:25 PM",
+        "title": "Workshop 3 Briefing: Pitching Your Innovation",
         "details": [
-          "Darren Cooke",
+          "Darren Cooke"
+        ]
+      },
+      {
+        "time": "1:25–2:30 PM",
+        "title": "Workshop 3A: Pitch and Poster Rehearsal, Round 1",
+        "details": [
           "Agata Braja"
         ]
       },
       {
-        "time": "2:35–3:20 PM",
-        "title": "Workshop: Commercialization",
+        "time": "2:30–2:45 PM",
+        "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "3:20–3:40 PM",
-        "title": "Networking Activity & Coffee Break",
+        "time": "2:45–4:00 PM",
+        "title": "Workshop 3B: Answering Investor Questions Practice",
+        "details": [
+          "Soody Tronson",
+          "Hamid Farzaneh",
+          "Anna Timofiejczuk"
+        ]
+      },
+      {
+        "time": "4:00–4:20 PM",
+        "title": "Team Meeting 3",
         "details": []
       },
       {
-        "time": "3:40–4:10 PM",
-        "title": "Creative Thinking for Breakthroughs",
-        "details": []
-      },
-      {
-        "time": "4:10–4:30 PM",
-        "title": "Team Meeting #3: Shared Challenges & Opportunities",
-        "details": []
-      },
-      {
-        "time": "4:30–4:55 PM",
-        "title": "Open Mic & Daily Feedback Poll",
+        "time": "4:20–4:30 PM",
+        "title": "Open Mic",
         "details": []
       }
     ]
@@ -497,23 +463,23 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:30 AM",
-        "title": "Architecting Productivity",
+        "time": "9:00–9:20 AM",
+        "title": "Architecting Productivity, and Why Human Skills Matter More Than Ever",
         "details": [
           "Barry Katz"
         ]
       },
       {
-        "time": "9:30–10:00 AM",
-        "title": "Crossing the AI Frontier",
+        "time": "9:20–9:45 AM",
+        "title": "Fireside: Crossing the AI Frontier",
         "details": [
           "Zuzanna Stamirowska",
           "Maciej Kawecki"
         ]
       },
       {
-        "time": "10:00–10:30 AM",
-        "title": "Go-to-Market and Positioning for Deep Tech",
+        "time": "9:45–10:10 AM",
+        "title": "Panel: Go-to-Market and Positioning for Deep Tech",
         "details": [
           "Michał Habdank-Kołaczkowski",
           "Hamid Farzaneh",
@@ -521,39 +487,12 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:30–10:45 AM",
+        "time": "10:10–10:30 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "10:45 AM–12:00 PM",
-        "title": "Startup Pitches, Session 1",
-        "details": []
-      },
-      {
-        "time": "12:00–1:00 PM",
-        "title": "Networking Lunch",
-        "details": []
-      },
-      {
-        "time": "1:00–1:25 PM",
-        "title": "Demystifying Angel Funding",
-        "details": []
-      },
-      {
-        "time": "1:25–1:50 PM",
-        "title": "Why Human Skills Matter More Than Ever",
-        "details": [
-          "Barry Katz"
-        ]
-      },
-      {
-        "time": "1:50–2:15 PM",
-        "title": "Demystifying VC Funding",
-        "details": []
-      },
-      {
-        "time": "2:15–2:40 PM",
+        "time": "10:30–10:50 AM",
         "title": "PolSV: What Comes After the Summit",
         "details": [
           "Agata Braja",
@@ -562,16 +501,56 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "2:40–4:00 PM",
+        "time": "10:50–11:50 AM",
+        "title": "Poster Session",
+        "details": []
+      },
+      {
+        "time": "11:05 AM–12:05 PM",
+        "title": "In Parallel: Joint Pain-Point Meeting of Polish TTOs with Berkeley, Stanford and a Third Local TTO",
+        "details": [
+          "Soody Tronson",
+          "Anna Timofiejczuk"
+        ]
+      },
+      {
+        "time": "11:50 AM–12:50 PM",
+        "title": "Networking Lunch",
+        "details": []
+      },
+      {
+        "time": "12:50–1:20 PM",
+        "title": "Panel: Demystifying Angel and VC Funding",
+        "details": [
+          "Hamid Farzaneh"
+        ]
+      },
+      {
+        "time": "1:20–2:25 PM",
+        "title": "Startup Pitches, Session 1",
+        "details": []
+      },
+      {
+        "time": "2:25–2:40 PM",
+        "title": "Break at the Poster Boards",
+        "details": []
+      },
+      {
+        "time": "2:40–3:45 PM",
         "title": "Startup Pitches, Session 2",
         "details": []
       },
       {
-        "time": "4:00–6:00 PM",
-        "title": "Closing Remarks & Reception",
+        "time": "3:45–3:55 PM",
+        "title": "Investor Meeting Requests & Closing Remarks",
         "details": [
           "Piotr D. Moncarz"
         ]
+      },
+      {
+        "time": "3:55–5:35 PM",
+        "title": "Closing Reception",
+        "details": []
       }
     ]
   }

@@ -754,7 +754,7 @@ const speakers = [
 
 
 // Speakers kept in the list below but not shown on the page. Remove an id here to publish the card again.
-const hiddenSpeakerIds = ["maria-kaszynska"];
+const hiddenSpeakerIds = ["maria-kaszynska", "wojciech-balczun"];
 const visibleSpeakers = speakers.filter((s) => !hiddenSpeakerIds.includes(s.id));
 
 export const SpeakersSection = () => {
