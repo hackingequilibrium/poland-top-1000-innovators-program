@@ -421,7 +421,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "1:25–2:30 PM",
-        "title": "Workshop 3A: Pitch and Poster Rehearsal, Round 1",
+        "title": "Workshop 3A: Pitch and Poster Rehearsal",
         "details": [
           "Agata Braja"
         ]
