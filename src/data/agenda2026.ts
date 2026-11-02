@@ -434,11 +434,12 @@ export const agendaDays: AgendaDay[] = [
       {
         "time": "2:45–4:00 PM",
         "title": "Workshop 3B: Answering Investor Questions Practice",
-        "details": [
-          "Soody Tronson",
-          "Hamid Farzaneh",
-          "Anna Timofiejczuk"
-        ]
+        "details": []
+      },
+      {
+        "time": "2:45–4:00 PM",
+        "title": "Breakout: PolSV Session with the Polish TTOs",
+        "details": []
       },
       {
         "time": "4:00–4:20 PM",
