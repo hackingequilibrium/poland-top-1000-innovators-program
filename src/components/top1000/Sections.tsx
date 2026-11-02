@@ -59,6 +59,7 @@ import artChmielewskiAsset from "@/assets/art-chmielewski.png.asset.json";
 import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
+import parpPfrAsset from "@/assets/parp-pfr-white.png.asset.json";
 
 
 
@@ -1062,6 +1063,7 @@ const taubePhilanthropies = taubePhilanthropiesAsset.url;
 const renaissanceDevelopments = renaissanceDevelopmentsAsset.url;
 const sfStartupLabs = sfStartupLabsAsset.url;
 const zbp = zbpAsset.url;
+const parpPfr = parpPfrAsset.url;
 
 type Partner = {
   name: string;
@@ -1111,6 +1113,12 @@ const honoraryPatronage: Partner[] = [
     name: "Związek Banków Polskich",
     href: "https://www.zbp.pl/",
     img: zbp,
+    imgClass: "h-16 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Polish Agency for Enterprise Development · PFR Group",
+    href: "https://en.parp.gov.pl/",
+    img: parpPfr,
     imgClass: "h-16 md:h-20 w-auto object-contain",
   },
 ];
