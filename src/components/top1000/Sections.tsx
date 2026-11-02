@@ -24,6 +24,7 @@ import alexandreBayenAsset from "@/assets/alexandre-bayen.png.asset.json";
 import martinKawalskiAsset from "@/assets/martin-kawalski.png.asset.json";
 import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
+import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
@@ -98,6 +99,7 @@ const alexandreBayen = alexandreBayenAsset.url;
 const martinKawalski = martinKawalskiAsset.url;
 const michalNedoszytko = michalNedoszytkoAsset.url;
 const joannaJaworekKorjakowska = joannaJaworekKorjakowskaAsset.url;
+const michalMajerczak = michalMajerczakAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -743,6 +745,17 @@ const speakers = [
     bio: [
       "Prof. Joanna Jaworek-Korjakowska is a leading Polish artificial intelligence researcher, entrepreneur, and expert in AI governance. She serves as Director of the Centre of Excellence in Artificial Intelligence at AGH University of Krakow, CEO of DataSphereLab, and Chair of the Scientific Council of NASK, Poland’s National Research Institute. With over 15 years of experience, her research focuses on machine learning, computer vision, explainable AI, and medical applications, particularly AI-assisted melanoma detection.",
       "She leads the ARTIQ AI Centre initiative, supported by Poland’s national research funding agencies, and actively advances responsible AI adoption and regulatory compliance. A former visiting researcher at Stanford University and alumna of the TOP 500 Innovators program, she bridges academic research, entrepreneurship, and international collaboration. In 2026, she received the title of Professor from the President of Poland and was recognized by Forbes Women Polska as one of Poland’s 25 leading women in AI.",
+    ],
+  },
+  {
+    id: "michal-majerczak",
+    name: "Michał Majerczak",
+    role: "Founder & CEO, Actaware | AI Entrepreneur & Former MSCI Executive",
+    image: michalMajerczak,
+    imageClass: "object-center",
+    bio: [
+      "Michał Majerczak is the Founder and CEO of Actaware, an AI intelligence platform that transforms unstructured information into contextual, verifiable insights for enterprises and investors. Previously, he spent over 15 years in leadership roles at MSCI, where he built global data teams, led strategic acquisitions and integrations, and developed financial data systems used by major asset managers.",
+      "A UC Berkeley-trained decision scientist and former Polish whitewater kayaking champion, he brings a multidisciplinary perspective to technology, leadership, and innovation. He is also the co-creator of Vistula Valley, an initiative connecting entrepreneurs, technologists, and creative leaders across Poland and its global diaspora.",
     ],
   },
 ];
