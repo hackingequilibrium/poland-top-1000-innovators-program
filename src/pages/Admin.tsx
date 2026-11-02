@@ -79,6 +79,12 @@ interface SpeakerSuggestion {
   created_at: string;
 }
 
+interface TicketRegistration {
+  id: string; ticket_type: string; quantity: number; contact_name: string; contact_email: string;
+  contact_phone: string; country: string; holders: any; billing_org: string; billing_address: string;
+  tax_id: string | null; notes: string | null; created_at: string;
+}
+
 interface PartnerInquiry {
   id: string;
   name: string;
@@ -126,6 +132,7 @@ const Admin = () => {
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
   const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
+  const [ticketRegs, setTicketRegs] = useState<TicketRegistration[]>([]);
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
 
   const [newAdminEmail, setNewAdminEmail] = useState("");
@@ -194,6 +201,11 @@ const Admin = () => {
       fetchSpeakerSuggestions();
       fetchPartnerInquiries();
       fetchContactMessages();
+      supabase.from('ticket_registrations').select('*').order('created_at', { ascending: false })
+        .then(({ data, error }) => {
+          if (error) toast.error("Failed to load ticket registrations");
+          else setTicketRegs((data as TicketRegistration[]) || []);
+        });
     }
   }, [isAdmin, user]);
 
@@ -852,6 +864,9 @@ const Admin = () => {
             <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
             </TabsTrigger>
+            <TabsTrigger value="tickets" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Ticket Registrations
+            </TabsTrigger>
             <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Partners 2026
             </TabsTrigger>
@@ -1306,6 +1321,35 @@ const Admin = () => {
                </Card>
              )}
           </TabsContent>
+
+            <TabsContent value="tickets" className="mt-0">
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold text-white mb-6">Ticket Registrations</h3>
+                {ticketRegs.length === 0 ? (
+                  <p className="text-gray-400 text-center py-12">No ticket registrations yet.</p>
+                ) : (
+                  <div className="space-y-4">
+                    {ticketRegs.map((r) => (
+                      <div key={r.id} className="bg-white/5 border border-white/10 rounded-lg p-4 text-sm text-gray-300">
+                        <div className="flex flex-wrap justify-between gap-2 mb-2">
+                          <span className="text-white font-semibold capitalize">{r.ticket_type} × {r.quantity}</span>
+                          <span className="text-gray-500 text-xs">{new Date(r.created_at).toLocaleString()}</span>
+                        </div>
+                        <div><span className="text-gray-500">Contact:</span> {r.contact_name} · {r.contact_email} · {r.contact_phone} · {r.country}</div>
+                        <div className="mt-2 text-gray-500">Ticket holders:</div>
+                        <ol className="list-decimal pl-5">
+                          {(Array.isArray(r.holders) ? r.holders : []).map((h: any, i: number) => (
+                            <li key={i}>{h.full_name} — {h.position}, {h.organization}</li>
+                          ))}
+                        </ol>
+                        <div className="mt-2"><span className="text-gray-500">Billing:</span> {r.billing_org}, {r.billing_address}{r.tax_id ? ` · Tax ID ${r.tax_id}` : ""}</div>
+                        {r.notes && <div className="mt-1"><span className="text-gray-500">Notes:</span> {r.notes}</div>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </TabsContent>
 
             <TabsContent value="partners" className="mt-0">
               <div className="p-6">

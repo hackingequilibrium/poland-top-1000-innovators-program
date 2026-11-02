@@ -410,6 +410,54 @@ export type Database = {
         }
         Relationships: []
       }
+      ticket_registrations: {
+        Row: {
+          billing_address: string
+          billing_org: string
+          contact_email: string
+          contact_name: string
+          contact_phone: string
+          country: string
+          created_at: string
+          holders: Json
+          id: string
+          notes: string | null
+          quantity: number
+          tax_id: string | null
+          ticket_type: string
+        }
+        Insert: {
+          billing_address: string
+          billing_org: string
+          contact_email: string
+          contact_name: string
+          contact_phone: string
+          country: string
+          created_at?: string
+          holders: Json
+          id?: string
+          notes?: string | null
+          quantity: number
+          tax_id?: string | null
+          ticket_type: string
+        }
+        Update: {
+          billing_address?: string
+          billing_org?: string
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string
+          country?: string
+          created_at?: string
+          holders?: Json
+          id?: string
+          notes?: string | null
+          quantity?: number
+          tax_id?: string | null
+          ticket_type?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string

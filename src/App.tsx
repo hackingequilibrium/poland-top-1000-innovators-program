@@ -16,6 +16,7 @@ import Program from "./pages/Program";
 import Workshops from "./pages/Workshops";
 import EventifyApp from "./pages/EventifyApp";
 import Tickets from "./pages/Tickets";
+import Tickets2 from "./pages/Tickets2";
 import { Navigate } from "react-router-dom";
 import Hotels from "./pages/Hotels";
 import Agenda from "./pages/Agenda";
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/workshops" element={<Workshops />} />
           <Route path="/eventify-app" element={<EventifyApp />} />
           <Route path="/tickets" element={<Tickets />} />
+          <Route path="/tickets-2" element={<Tickets2 />} />
           <Route path="/business-ticket-registration" element={<Navigate to="/tickets?type=business" replace />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/agenda" element={<Agenda />} />
