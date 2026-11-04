@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -72,7 +72,10 @@ const Field = ({
 );
 
 const Tickets2 = () => {
-  const [type, setType] = useState<TicketType>("university");
+  const [params] = useSearchParams();
+  const [type, setType] = useState<TicketType>(
+    params.get("type") === "business" ? "business" : "university"
+  );
   const [quantity, setQuantity] = useState(1);
   const [contact, setContact] = useState({
     contact_name: "",

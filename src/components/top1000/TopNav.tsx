@@ -34,7 +34,7 @@ const TopNav = () => {
         <Link to="/hotels" className={linkClass}>
           Travel &amp; Stay
         </Link>
-        <Link to="/tickets" className={linkClass}>
+        <Link to="/tickets-2" className={linkClass}>
           Get a Ticket
         </Link>
       </div>

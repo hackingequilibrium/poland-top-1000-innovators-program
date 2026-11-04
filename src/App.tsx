@@ -59,7 +59,7 @@ const App = () => (
           <Route path="/eventify-app" element={<EventifyApp />} />
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/tickets-2" element={<Tickets2 />} />
-          <Route path="/business-ticket-registration" element={<Navigate to="/tickets?type=business" replace />} />
+          <Route path="/business-ticket-registration" element={<Navigate to="/tickets-2?type=business" replace />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
