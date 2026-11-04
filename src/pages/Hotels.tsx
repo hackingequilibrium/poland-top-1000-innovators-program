@@ -215,7 +215,7 @@ const Hotels = () => {
           Back to home
         </Link>
         <span className="mx-2">|</span>
-        <Link to="/tickets" className="hover:text-white transition-colors">
+        <Link to="/tickets-2" className="hover:text-white transition-colors">
           Tickets
         </Link>
         <span className="mx-2">|</span>

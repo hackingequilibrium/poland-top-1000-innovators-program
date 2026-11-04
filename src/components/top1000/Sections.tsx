@@ -1204,7 +1204,7 @@ const tiers = [
     price: "$4,499",
     note: "Standard rate",
     featured: false,
-    href: "/tickets",
+    href: "/tickets-2?type=university",
     body: "For researchers, faculty, university leaders, and university technology transfer officers seeking to accelerate innovation, commercialization, and international collaboration.",
   },
   {
@@ -1212,7 +1212,7 @@ const tiers = [
     price: "$6,499",
     note: "Standard rate",
     featured: false,
-    href: "/tickets?type=business",
+    href: "/tickets-2?type=business",
     body: "For entrepreneurs, startups, investors, corporate innovators, and industry leaders looking to build partnerships, explore emerging technologies, and connect with Silicon Valley's innovation ecosystem.",
   },
 ];
@@ -1297,7 +1297,7 @@ export const FinalCtaSection = () => (
     </p>
     <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
       <Link
-        to="/tickets"
+        to="/tickets-2"
         className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
       >
         <span className="text-base font-medium tracking-wide text-white">Get a Ticket</span>

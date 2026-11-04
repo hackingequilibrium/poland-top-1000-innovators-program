@@ -98,7 +98,7 @@ const Index2026 = () => {
           {/* CTAs */}
           <div className="relative z-10 mt-10 flex flex-col sm:flex-row gap-4">
             <Link
-              to="/tickets"
+              to="/tickets-2"
               className="group flex items-center justify-between gap-10 h-14 px-6 border border-[#3661F6] bg-[#3661F6] transition-colors duration-300 hover:bg-[#2a4fd4] hover:border-[#2a4fd4]"
             >
               <span className="text-base font-medium tracking-wide text-white">

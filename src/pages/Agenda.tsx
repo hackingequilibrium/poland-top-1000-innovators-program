@@ -81,7 +81,7 @@ const Agenda = () => (
           </section>
         ))}
         <Button asChild variant="summit" size="lg" className="rounded-none">
-          <Link to="/tickets">Get a Ticket <ArrowRight aria-hidden="true" /></Link>
+          <Link to="/tickets-2">Get a Ticket <ArrowRight aria-hidden="true" /></Link>
         </Button>
       </div>
     </main>
