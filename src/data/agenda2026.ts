@@ -44,6 +44,7 @@ import photo42 from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import photo43 from "@/assets/michal-majerczak.png.asset.json";
 import photo44 from "@/assets/jerzy-orkiszewski.png.asset.json";
 import photo45 from "@/assets/michal-jaros.png.asset.json";
+import photo46 from "@/assets/mike-lyons.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -92,6 +93,7 @@ export const agendaPhotos: Record<string, string> = {
   "Michał Majerczak": photo43.url,
   "Jerzy Orkiszewski": photo44.url,
   "Michał Jaros": photo45.url,
+  "Mike Lyons": photo46.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -273,7 +275,8 @@ export const agendaDays: AgendaDay[] = [
         "time": "10:15–10:35 AM",
         "title": "Defense-Tech Ecosystem",
         "details": [
-          "Adam Januszko"
+          "Adam Januszko",
+          "Mike Lyons"
         ]
       },
       {
