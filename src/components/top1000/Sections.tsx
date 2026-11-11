@@ -30,6 +30,7 @@ import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
 import skipRossAsset from "@/assets/skip-ross.png.asset.json";
+import jerzyOrkiszewskiAsset from "@/assets/jerzy-orkiszewski.png.asset.json";
 import paulBryzekAsset from "@/assets/paul-bryzek.png.asset.json";
 import estherWojcickiAsset from "@/assets/esther-wojcicki.png.asset.json";
 import zuzannaStamirowskaAsset from "@/assets/zuzanna-stamirowska.png.asset.json";
@@ -83,6 +84,7 @@ const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
 const skipRoss = skipRossAsset.url;
+const jerzyOrkiszewski = jerzyOrkiszewskiAsset.url;
 const paulBryzek = paulBryzekAsset.url;
 const estherWojcicki = estherWojcickiAsset.url;
 const zuzannaStamirowska = zuzannaStamirowskaAsset.url;
@@ -426,6 +428,17 @@ const speakers = [
     bio: [
       "Skip Ross is the founder of Exponent, originally established as Failure Analysis Associates, and a pioneer in engineering failure analysis and accident investigation. An aeronautical engineer by training, he has led investigations and research spanning aviation, heavy equipment, structural and mechanical systems, fracture mechanics, vibration, impact, and product design.",
       "Before founding the firm, Skip worked in the aerospace industry and served as an engineering program manager at Stanford Research Institute. He later served as a Consulting Professor in Stanford University’s School of Engineering, where he taught graduate-level failure analysis, and as a member of the School of Engineering Advisory Board. He holds a Ph.D. and M.Sc. in Aeronautical Engineering from Stanford University and has published more than 50 technical papers.",
+    ],
+  },
+  {
+    id: "jerzy-orkiszewski",
+    name: "Jerzy Orkiszewski",
+    role: "Chairman of the Board, PolSV | President, U.S.-Polish Trade Council | Former VP of Software & Electrical Engineering, Cutera",
+    image: jerzyOrkiszewski,
+    imageClass: "object-center",
+    bio: [
+      "Jerzy Orkiszewski is a Silicon Valley technology executive and engineering leader with more than three decades of experience in medical technology, software, and electrical engineering. He is Chairman of the Board of Directors of the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship (PolSV) and President of the U.S.-Polish Trade Council.",
+      "Jerzy spent more than 20 years at Cutera, a medical aesthetics technology company, where he held senior engineering leadership positions, including Vice President of Software & Electrical Engineering. His earlier career includes leadership roles at Ellex Medical and Coherent Medical Group. A graduate of Warsaw University of Technology, he has long been involved in strengthening business and technology connections between Poland and the United States.",
     ],
   },
   {
