@@ -42,6 +42,7 @@ import photo40 from "@/assets/martin-kawalski.png.asset.json";
 import photo41 from "@/assets/michal-nedoszytko.png.asset.json";
 import photo42 from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import photo43 from "@/assets/michal-majerczak.png.asset.json";
+import photo44 from "@/assets/jerzy-orkiszewski.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -88,6 +89,7 @@ export const agendaPhotos: Record<string, string> = {
   "Michał Nedoszytko": photo41.url,
   "Joanna Jaworek-Korjakowska": photo42.url,
   "Michał Majerczak": photo43.url,
+  "Jerzy Orkiszewski": photo44.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -130,7 +132,7 @@ export const agendaDays: AgendaDay[] = [
         "details": [
           "Piotr D. Moncarz",
           "Dianne Taube",
-          "Paul Marca",
+          "Jerzy Orkiszewski",
           "Mark Chandler"
         ]
       },
