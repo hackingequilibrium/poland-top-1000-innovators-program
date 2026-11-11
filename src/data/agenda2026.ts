@@ -43,6 +43,7 @@ import photo41 from "@/assets/michal-nedoszytko.png.asset.json";
 import photo42 from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import photo43 from "@/assets/michal-majerczak.png.asset.json";
 import photo44 from "@/assets/jerzy-orkiszewski.png.asset.json";
+import photo45 from "@/assets/michal-jaros.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -90,6 +91,7 @@ export const agendaPhotos: Record<string, string> = {
   "Joanna Jaworek-Korjakowska": photo42.url,
   "Michał Majerczak": photo43.url,
   "Jerzy Orkiszewski": photo44.url,
+  "Michał Jaros": photo45.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -283,7 +285,8 @@ export const agendaDays: AgendaDay[] = [
         "time": "10:55–11:15 AM",
         "title": "Semiconductors Sovereignty",
         "details": [
-          "Dominik J. Schmidt"
+          "Dominik J. Schmidt",
+          "Michał Jaros"
         ]
       },
       {
