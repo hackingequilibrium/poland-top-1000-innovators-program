@@ -238,21 +238,21 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:20 AM",
+        "time": "9:00–9:15 AM",
         "title": "Rethinking Sustainability",
         "details": [
           "Michael Lepech"
         ]
       },
       {
-        "time": "9:25–9:45 AM",
+        "time": "9:20–9:40 AM",
         "title": "Poland as a Rising Hub for the Next Era of Higher Education",
         "details": [
           "Ministry of Science and Higher Education of Poland, TBA"
         ]
       },
       {
-        "time": "9:45–10:05 AM",
+        "time": "9:40–10:00 AM",
         "title": "Understanding the AI Frontier",
         "details": [
           "Łukasz Kaiser",
@@ -260,7 +260,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:05–10:20 AM",
+        "time": "10:00–10:15 AM",
         "title": "Building a Silicon Valley Legend",
         "details": [
           "Piotr D. Moncarz",
@@ -268,19 +268,19 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:20–10:40 AM",
+        "time": "10:15–10:35 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "10:40–11:00 AM",
+        "time": "10:35–10:55 AM",
         "title": "Cybersecurity: Who is in Charge?",
         "details": [
           "Joanna Jaworek-Korjakowska"
         ]
       },
       {
-        "time": "11:00–11:20 AM",
+        "time": "10:55–11:15 AM",
         "title": "Panel: Dual-Use Technologies, From University Lab to Defense and Civilian Markets",
         "details": [
           "Adam Januszko",
@@ -288,55 +288,55 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:20–11:40 AM",
+        "time": "11:15–11:35 AM",
         "title": "Powering AI: The Energy Question",
         "details": [
           "Piotr D. Moncarz"
         ]
       },
       {
-        "time": "11:40 AM–12:05 PM",
+        "time": "11:35 AM–12:00 PM",
         "title": "Diplomacy in a World Without Borders",
         "details": [
           "Dariusz Rosati"
         ]
       },
       {
-        "time": "12:05–1:00 PM",
+        "time": "12:00–12:55 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:00–2:15 PM",
+        "time": "12:55–2:10 PM",
         "title": "Workshop: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:15–3:30 PM",
+        "time": "2:10–3:25 PM",
         "title": "Workshop: IP Essentials Applied to the Disclosures",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "3:30–3:45 PM",
+        "time": "3:25–3:40 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "3:45–4:05 PM",
+        "time": "3:40–4:00 PM",
         "title": "Team Meeting 2",
         "details": []
       },
       {
-        "time": "4:05–4:20 PM",
+        "time": "4:00–4:15 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:20–6:15 PM",
+        "time": "4:15–6:15 PM",
         "title": "Reception",
         "details": []
       },
