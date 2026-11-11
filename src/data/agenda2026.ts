@@ -260,27 +260,26 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:05–10:25 AM",
-        "title": "Powering AI: The Energy Question",
+        "time": "10:05–10:20 AM",
+        "title": "Building a Silicon Valley Legend",
         "details": [
-          "Piotr D. Moncarz",
           "Skip Ross"
         ]
       },
       {
-        "time": "10:25–10:45 AM",
+        "time": "10:20–10:40 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "10:45–11:05 AM",
+        "time": "10:40–11:00 AM",
         "title": "Cybersecurity: Who is in Charge?",
         "details": [
           "Joanna Jaworek-Korjakowska"
         ]
       },
       {
-        "time": "11:05–11:55 AM",
+        "time": "11:00–11:50 AM",
         "title": "Panel: Dual-Use Technologies, From University Lab to Defense and Civilian Markets",
         "details": [
           "Adam Januszko",
@@ -288,48 +287,48 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:55 AM–12:20 PM",
+        "time": "11:50 AM–12:15 PM",
         "title": "Diplomacy in a World Without Borders",
         "details": [
           "Dariusz Rosati"
         ]
       },
       {
-        "time": "12:20–1:15 PM",
+        "time": "12:15–1:10 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:15–2:30 PM",
+        "time": "1:10–2:25 PM",
         "title": "Workshop: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:30–3:45 PM",
+        "time": "2:25–3:40 PM",
         "title": "Workshop: IP Essentials Applied to the Disclosures",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "3:45–4:00 PM",
+        "time": "3:40–3:55 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "4:00–4:20 PM",
+        "time": "3:55–4:15 PM",
         "title": "Team Meeting 2",
         "details": []
       },
       {
-        "time": "4:20–4:35 PM",
+        "time": "4:15–4:30 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:35–6:15 PM",
+        "time": "4:30–6:15 PM",
         "title": "Reception",
         "details": []
       },
