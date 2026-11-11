@@ -280,7 +280,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:00–11:50 AM",
+        "time": "11:00–11:20 AM",
         "title": "Panel: Dual-Use Technologies, From University Lab to Defense and Civilian Markets",
         "details": [
           "Adam Januszko",
@@ -288,48 +288,55 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:50 AM–12:15 PM",
+        "time": "11:20–11:40 AM",
+        "title": "Powering AI: The Energy Question",
+        "details": [
+          "Piotr D. Moncarz"
+        ]
+      },
+      {
+        "time": "11:40 AM–12:05 PM",
         "title": "Diplomacy in a World Without Borders",
         "details": [
           "Dariusz Rosati"
         ]
       },
       {
-        "time": "12:15–1:10 PM",
+        "time": "12:05–1:00 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:10–2:25 PM",
+        "time": "1:00–2:15 PM",
         "title": "Workshop: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:25–3:40 PM",
+        "time": "2:15–3:30 PM",
         "title": "Workshop: IP Essentials Applied to the Disclosures",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "3:40–3:55 PM",
+        "time": "3:30–3:45 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "3:55–4:15 PM",
+        "time": "3:45–4:05 PM",
         "title": "Team Meeting 2",
         "details": []
       },
       {
-        "time": "4:15–4:30 PM",
+        "time": "4:05–4:20 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:30–6:15 PM",
+        "time": "4:20–6:15 PM",
         "title": "Reception",
         "details": []
       },
