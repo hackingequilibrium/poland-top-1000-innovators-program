@@ -281,9 +281,8 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "10:55–11:15 AM",
-        "title": "Panel: Dual-Use Technologies, From University Lab to Defense and Civilian Markets",
+        "title": "Semiconductors Sovereignty",
         "details": [
-          "Adam Januszko",
           "Dominik J. Schmidt"
         ]
       },
