@@ -26,6 +26,7 @@ import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
+import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
 import nuriCapanogluAsset from "@/assets/nuri-capanoglu.jpg.asset.json";
 import renateFruchterAsset from "@/assets/renate-fruchter.png.asset.json";
@@ -80,6 +81,7 @@ const lukaszKaiser = lukaszKaiserAsset.url;
 const maciejKawecki = maciejKaweckiAsset.url;
 const michaelLepech = michaelLepechAsset.url;
 const markChandler = markChandlerAsset.url;
+const michalJaros = michalJarosAsset.url;
 const piotrMoncarz = piotrMoncarzAsset.url;
 const nuriCapanoglu = nuriCapanogluAsset.url;
 const renateFruchter = renateFruchterAsset.url;
@@ -384,6 +386,16 @@ const speakers = [
     bio: [
       "Mark Chandler is Director of the San Francisco Mayor’s Office of Global Engagement, where he leads the city’s international trade, investment, and economic diplomacy efforts. With more than 33 years in San Francisco city government and service under eight mayors, he oversees initiatives spanning technology and innovation exchange, international aviation, smart cities, trade and investment promotion, and diplomatic relations.",
       "Mark has participated in more than 30 international missions across Asia, Europe, North America, and the Middle East. He holds a BA in Economics from UC Davis and an MBA in International Marketing from UC Berkeley’s Haas School of Business.",
+    ],
+  },
+  {
+    id: "michal-jaros",
+    name: "Michał Jaros",
+    role: "Secretary of State, Ministry of Economic Development and Technology | Member of the Polish Parliament | Economist",
+    image: michalJaros,
+    bio: [
+      "Michał Jaros is a Polish politician and economist serving as Secretary of State at the Ministry of Economic Development and Technology since October 2024. He has been a Member of the Sejm, Poland's lower house of parliament, since 2007, representing the Wrocław constituency.",
+      "Throughout his parliamentary career, he has worked on economic policy, public finance, and regional development. He serves on the Public Finance Committee and has chaired the Lower Silesian Parliamentary Group. He previously served on the Wrocław City Council and has led the Civic Platform party organization in Lower Silesia since 2021. He graduated from the Wrocław University of Economics in 2006.",
     ],
   },
   {
