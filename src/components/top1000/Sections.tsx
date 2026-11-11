@@ -1011,27 +1011,31 @@ export const VenuesSection = () => (
 const days = [
   {
     day: "Day 1",
+    date: "Dec 14",
     venue: "UC San Francisco",
-    title: "Kickoff & Innovation Readiness",
-    items: ["Opening keynote", "Innovation Readiness diagnostic", "Personalized pathway", "Networking mixer"],
+    title: "Biomed, Education & Innovation Readiness",
+    items: ["AI in healthcare and education", "Stem cell innovation", "Innovation & technology readiness", "Commercial opportunity workshops"],
   },
   {
     day: "Day 2",
+    date: "Dec 15",
     venue: "Stanford University",
-    title: "Vertical Workshops",
-    items: ["Four sector workshops", "Mentoring", "AI across all tracks", "Partner networking"],
+    title: "AI, Dual-Use & Intellectual Property",
+    items: ["AI, energy & sustainability", "Defense tech & semiconductors", "Intellectual property workshops", "Networking & gala dinner"],
   },
   {
     day: "Day 3",
+    date: "Dec 16",
     venue: "UC Berkeley",
-    title: "Capital & Partnership Tracks",
-    items: ["Investor preparation", "Industry meetings", "Partnership discussions", "Polish Independence Day Reception"],
+    title: "Space, Aviation & Pitch Preparation",
+    items: ["Aerospace innovation & startups", "Space security & deep learning", "Pitching & poster rehearsals", "Investor Q&A practice"],
   },
   {
     day: "Day 4",
-    venue: "Computer History Museum, Mountain View",
-    title: "Showcase & Next Steps",
-    items: ["Project showcase", "Networking", "Action plans", "Closing reception"],
+    date: "Dec 17",
+    venue: "Computer History Museum",
+    title: "Commercialization, Capital & Showcase",
+    items: ["Deep tech go-to-market strategies", "Angel & VC funding", "Startup pitches & poster showcase", "Investor meetings & closing reception"],
   },
 ];
 
@@ -1047,7 +1051,7 @@ export const ProgramSection = () => (
             <span className="font-display text-sm font-semibold text-[#8FC7F5] uppercase tracking-widest">
               {d.day}
             </span>
-            <span className="text-white/40 text-sm md:text-base font-light">· {d.venue}</span>
+            <span className="text-white/40 text-sm md:text-base font-light">· {d.date} · {d.venue}</span>
           </div>
           <h3 className="font-display text-xl md:text-2xl font-semibold text-white mt-3">{d.title}</h3>
           <ul className="mt-4 space-y-2">
