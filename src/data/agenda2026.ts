@@ -263,6 +263,7 @@ export const agendaDays: AgendaDay[] = [
         "time": "10:05–10:20 AM",
         "title": "Building a Silicon Valley Legend",
         "details": [
+          "Piotr D. Moncarz",
           "Skip Ross"
         ]
       },
