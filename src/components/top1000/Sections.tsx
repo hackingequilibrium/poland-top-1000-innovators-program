@@ -25,6 +25,7 @@ import martinKawalskiAsset from "@/assets/martin-kawalski.png.asset.json";
 import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
+import mikeLyonsAsset from "@/assets/mike-lyons.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -104,6 +105,7 @@ const martinKawalski = martinKawalskiAsset.url;
 const michalNedoszytko = michalNedoszytkoAsset.url;
 const joannaJaworekKorjakowska = joannaJaworekKorjakowskaAsset.url;
 const michalMajerczak = michalMajerczakAsset.url;
+const mikeLyons = mikeLyonsAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -781,6 +783,16 @@ const speakers = [
     bio: [
       "Michał Majerczak is the Founder and CEO of Actaware, an AI intelligence platform that transforms unstructured information into contextual, verifiable insights for enterprises and investors. Previously, he spent over 15 years in leadership roles at MSCI, where he built global data teams, led strategic acquisitions and integrations, and developed financial data systems used by major asset managers.",
       "A UC Berkeley-trained decision scientist and former Polish whitewater kayaking champion, he brings a multidisciplinary perspective to technology, leadership, and innovation. He is also the co-creator of Vistula Valley, an initiative connecting entrepreneurs, technologists, and creative leaders across Poland and its global diaspora.",
+    ],
+  },
+  {
+    id: "mike-lyons",
+    name: "Mike Lyons",
+    role: "Managing Partner, Newline Ventures | Adjunct Professor, Stanford University | Venture Capitalist & Entrepreneur",
+    image: mikeLyons,
+    bio: [
+      "Mike Lyons is a Silicon Valley entrepreneur, venture capitalist, and educator with more than four decades of experience in technology commercialization, startup development, and venture investing. He is Managing Partner of Newline Ventures and an Adjunct Professor at Stanford University, where he has taught entrepreneurship since 1988.",
+      "Mike co-founded Zilkha Venture Partners and served as a Venture Partner at Paladin Capital Group and ePlanet Ventures. He also co-founded SafeView, a security technology company acquired by L3-Harris, and helped establish the Stanford Technology Ventures Program (STVP). As the founding professor of Stanford's Technology Venture Formation course, he has played a significant role in entrepreneurship education, helping researchers, engineers, and business leaders turn technological innovations into successful ventures.",
     ],
   },
 ];
