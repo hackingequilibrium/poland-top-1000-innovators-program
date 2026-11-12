@@ -322,41 +322,41 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "12:25–1:20 PM",
+        "time": "12:25–1:30 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:20–2:35 PM",
+        "time": "1:30–2:45 PM",
         "title": "Workshop: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:35–3:50 PM",
+        "time": "2:45–4:00 PM",
         "title": "Workshop: IP Essentials Applied to the Disclosures",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "3:50–4:05 PM",
+        "time": "4:00–4:15 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "4:05–4:25 PM",
+        "time": "4:15–4:35 PM",
         "title": "Team Meeting 2",
         "details": []
       },
       {
-        "time": "4:25–4:40 PM",
+        "time": "4:35–4:50 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:40–6:15 PM",
+        "time": "4:50–6:15 PM",
         "title": "Reception",
         "details": []
       },
