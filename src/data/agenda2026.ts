@@ -242,21 +242,29 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:15 AM",
+        "time": "9:00–9:10 AM",
+        "title": "Collaboration Agreement Between Poland’s Foundation for Science, Innovation, and Entrepreneurship and PolSV",
+        "details": [
+          "Piotr D. Moncarz",
+          "Dariusz Rosati"
+        ]
+      },
+      {
+        "time": "9:10–9:25 AM",
         "title": "Rethinking Sustainability",
         "details": [
           "Michael Lepech"
         ]
       },
       {
-        "time": "9:20–9:40 AM",
+        "time": "9:30–9:50 AM",
         "title": "Poland as a Rising Hub for the Next Era of Higher Education",
         "details": [
           "Ministry of Science and Higher Education of Poland, TBA"
         ]
       },
       {
-        "time": "9:40–10:00 AM",
+        "time": "9:50–10:10 AM",
         "title": "Understanding the AI Frontier",
         "details": [
           "Łukasz Kaiser",
@@ -264,7 +272,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:00–10:15 AM",
+        "time": "10:10–10:25 AM",
         "title": "Building a Silicon Valley Legend",
         "details": [
           "Piotr D. Moncarz",
@@ -272,7 +280,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:15–10:35 AM",
+        "time": "10:25–10:45 AM",
         "title": "Defense-Tech Ecosystem",
         "details": [
           "Adam Januszko",
@@ -280,19 +288,19 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:35–10:55 AM",
+        "time": "10:45–11:05 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "10:55–11:15 AM",
+        "time": "11:05–11:25 AM",
         "title": "Cybersecurity: Who is in Charge?",
         "details": [
           "Joanna Jaworek-Korjakowska"
         ]
       },
       {
-        "time": "11:15–11:35 AM",
+        "time": "11:25–11:45 AM",
         "title": "Semiconductors Sovereignty",
         "details": [
           "Dominik J. Schmidt",
@@ -300,55 +308,55 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:35–11:55 AM",
+        "time": "11:45–12:05 PM",
         "title": "Powering AI: The Energy Question",
         "details": [
           "Piotr D. Moncarz"
         ]
       },
       {
-        "time": "11:55 AM–12:20 PM",
+        "time": "12:05–12:30 PM",
         "title": "Diplomacy in a World Without Borders",
         "details": [
           "Dariusz Rosati"
         ]
       },
       {
-        "time": "12:20–1:15 PM",
+        "time": "12:30–1:25 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:15–2:30 PM",
+        "time": "1:25–2:40 PM",
         "title": "Workshop: Intellectual Property, From Disclosure to Protection",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:30–3:45 PM",
+        "time": "2:40–3:55 PM",
         "title": "Workshop: IP Essentials Applied to the Disclosures",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "3:45–4:00 PM",
+        "time": "3:55–4:10 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "4:00–4:20 PM",
+        "time": "4:10–4:30 PM",
         "title": "Team Meeting 2",
         "details": []
       },
       {
-        "time": "4:20–4:35 PM",
+        "time": "4:30–4:45 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:35–6:15 PM",
+        "time": "4:45–6:15 PM",
         "title": "Reception",
         "details": []
       },
