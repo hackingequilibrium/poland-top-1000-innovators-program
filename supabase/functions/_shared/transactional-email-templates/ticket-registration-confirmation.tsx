@@ -17,9 +17,10 @@ interface Props {
   billingOrg?: string
   billingAddress?: string
   taxId?: string
+  discountCodes?: string
 }
 
-const Email = ({ contactName, ticketLabel, unitPrice, quantity, total, holders = [], billingOrg, billingAddress, taxId }: Props) => (
+const Email = ({ contactName, ticketLabel, unitPrice, quantity, total, holders = [], billingOrg, billingAddress, taxId, discountCodes }: Props) => (
   <Html lang="en" dir="ltr">
     <Head />
     <Preview>Your TOP 1000 Summit II registration — invoice coming soon</Preview>
@@ -57,6 +58,11 @@ const Email = ({ contactName, ticketLabel, unitPrice, quantity, total, holders =
           <Text style={row}>Organization: {billingOrg}</Text>
           <Text style={row}>Address: {billingAddress}</Text>
           <Text style={row}>Tax ID: {taxId || '—'}</Text>
+          {discountCodes ? (
+            <Text style={row}>
+              Discount code(s) submitted: {discountCodes} — our team will review them and reflect any applicable discounts in your invoice.
+            </Text>
+          ) : null}
         </Section>
 
         <Text style={p}>

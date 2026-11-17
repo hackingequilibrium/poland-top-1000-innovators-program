@@ -19,6 +19,7 @@ interface Props {
   billingOrg?: string
   billingAddress?: string
   taxId?: string
+  discountCodes?: string
   notes?: string
 }
 
@@ -54,6 +55,7 @@ const Email = (d: Props) => (
           <Text style={row}>Organization: {d.billingOrg}</Text>
           <Text style={row}>Address: {d.billingAddress}</Text>
           <Text style={row}>Tax ID: {d.taxId || '—'}</Text>
+          <Text style={row}>Discount code(s): {d.discountCodes || '—'}</Text>
         </Section>
         {d.notes ? (
           <Section style={card}>

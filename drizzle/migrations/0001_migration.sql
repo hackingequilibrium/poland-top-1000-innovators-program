@@ -1,0 +1,1 @@
+ALTER TABLE public.ticket_registrations ADD COLUMN IF NOT EXISTS discount_codes text;

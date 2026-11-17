@@ -48,6 +48,7 @@ const schema = z.object({
   billing_org: req("Organization name", 200),
   billing_address: req("Billing address", 500),
   tax_id: z.string().trim().max(100),
+  discount_codes: z.string().trim().max(500),
   notes: z.string().trim().max(2000),
 });
 
@@ -84,7 +85,12 @@ const Tickets2 = () => {
     country: "",
   });
   const [holders, setHolders] = useState<Holder[]>([emptyHolder()]);
-  const [billing, setBilling] = useState({ billing_org: "", billing_address: "", tax_id: "" });
+  const [billing, setBilling] = useState({
+    billing_org: "",
+    billing_address: "",
+    tax_id: "",
+    discount_codes: "",
+  });
   const [notes, setNotes] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -136,6 +142,7 @@ const Tickets2 = () => {
       billing_org: d.billing_org,
       billing_address: d.billing_address,
       tax_id: d.tax_id || null,
+      discount_codes: d.discount_codes || null,
       notes: d.notes || null,
     });
     if (error) {
@@ -158,6 +165,7 @@ const Tickets2 = () => {
       billingOrg: d.billing_org,
       billingAddress: d.billing_address,
       taxId: d.tax_id || undefined,
+      discountCodes: d.discount_codes || undefined,
       notes: d.notes || undefined,
     };
     const send = (templateName: string, recipientEmail: string, key: string) =>
@@ -380,6 +388,18 @@ const Tickets2 = () => {
                       onChange={(e) => setBilling({ ...billing, billing_address: e.target.value })}
                       className={inputCls}
                     />
+                  </Field>
+                  <Field label="Discount code(s) (optional)" error={errors.discount_codes}>
+                    <Input
+                      value={billing.discount_codes}
+                      onChange={(e) => setBilling({ ...billing, discount_codes: e.target.value })}
+                      placeholder="Enter discount code(s)"
+                      className={inputCls}
+                    />
+                    <span className="mt-1.5 block font-inter font-light text-xs text-white/55">
+                      Have more than one discount code? Separate them with commas. Any applicable
+                      discounts will be reflected in your invoice.
+                    </span>
                   </Field>
                 </section>
 

@@ -419,6 +419,7 @@ export type Database = {
           contact_phone: string
           country: string
           created_at: string
+          discount_codes: string | null
           holders: Json
           id: string
           notes: string | null
@@ -434,6 +435,7 @@ export type Database = {
           contact_phone: string
           country: string
           created_at?: string
+          discount_codes?: string | null
           holders: Json
           id?: string
           notes?: string | null
@@ -449,6 +451,7 @@ export type Database = {
           contact_phone?: string
           country?: string
           created_at?: string
+          discount_codes?: string | null
           holders?: Json
           id?: string
           notes?: string | null

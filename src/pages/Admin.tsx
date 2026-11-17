@@ -82,7 +82,7 @@ interface SpeakerSuggestion {
 interface TicketRegistration {
   id: string; ticket_type: string; quantity: number; contact_name: string; contact_email: string;
   contact_phone: string; country: string; holders: any; billing_org: string; billing_address: string;
-  tax_id: string | null; notes: string | null; created_at: string;
+  tax_id: string | null; discount_codes: string | null; notes: string | null; created_at: string;
 }
 
 interface PartnerInquiry {
@@ -1343,6 +1343,7 @@ const Admin = () => {
                           ))}
                         </ol>
                         <div className="mt-2"><span className="text-gray-500">Billing:</span> {r.billing_org}, {r.billing_address}{r.tax_id ? ` · Tax ID ${r.tax_id}` : ""}</div>
+                        {r.discount_codes && <div className="mt-1"><span className="text-gray-500">Discount code(s):</span> {r.discount_codes}</div>}
                         {r.notes && <div className="mt-1"><span className="text-gray-500">Notes:</span> {r.notes}</div>}
                       </div>
                     ))}
