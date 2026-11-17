@@ -79,6 +79,11 @@ const ROUTE_META: Record<string, Meta> = {
     title: "Suggest a Speaker — TOP 1000 Innovators",
     description: "Nominate a speaker or workshop leader for Summit II.",
   },
+  "/ip-workshop": {
+    title: "IP Workshop Sign-Up — TOP 1000 Innovators Summit II",
+    description:
+      "Sign up for the Intellectual Property workshop with Soody Tronson, Tuesday, December 15, 2026 at Stanford University.",
+  },
   "/partner": {
     title: "Partner With Us — TOP 1000 Innovators",
     description: "Partnership and sponsorship opportunities for Summit II.",

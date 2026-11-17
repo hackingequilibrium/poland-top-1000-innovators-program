@@ -21,6 +21,7 @@ import { Navigate } from "react-router-dom";
 import Hotels from "./pages/Hotels";
 import Agenda from "./pages/Agenda";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
+import IpWorkshop from "./pages/IpWorkshop";
 import Partner from "./pages/Partner";
 import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
@@ -63,6 +64,7 @@ const App = () => (
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
+          <Route path="/ip-workshop" element={<IpWorkshop />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />

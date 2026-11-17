@@ -209,6 +209,36 @@ export type Database = {
         }
         Relationships: []
       }
+      ip_workshop_signups: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          mobile: string | null
+          name: string
+          organization: string
+          surname: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          mobile?: string | null
+          name: string
+          organization: string
+          surname: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          mobile?: string | null
+          name?: string
+          organization?: string
+          surname?: string
+        }
+        Relationships: []
+      }
       partner_inquiries: {
         Row: {
           area_of_interest: string

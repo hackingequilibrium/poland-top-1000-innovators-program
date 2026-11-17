@@ -79,6 +79,16 @@ interface SpeakerSuggestion {
   created_at: string;
 }
 
+interface IpWorkshopSignup {
+  id: string;
+  name: string;
+  surname: string;
+  organization: string;
+  email: string;
+  mobile: string | null;
+  created_at: string;
+}
+
 interface TicketRegistration {
   id: string; ticket_type: string; quantity: number; contact_name: string; contact_email: string;
   contact_phone: string; country: string; holders: any; billing_org: string; billing_address: string;
@@ -131,6 +141,7 @@ const Admin = () => {
   const [adminUsers, setAdminUsers] = useState<AdminUser[]>([]);
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
+  const [ipWorkshopSignups, setIpWorkshopSignups] = useState<IpWorkshopSignup[]>([]);
   const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
   const [ticketRegs, setTicketRegs] = useState<TicketRegistration[]>([]);
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
@@ -199,6 +210,7 @@ const Admin = () => {
       fetchAdminUsers();
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
+      fetchIpWorkshopSignups();
       fetchPartnerInquiries();
       fetchContactMessages();
       supabase.from('ticket_registrations').select('*').order('created_at', { ascending: false })
@@ -319,6 +331,51 @@ const Admin = () => {
     } catch (error) {
       console.error('Unexpected error:', error);
     }
+  };
+
+  const fetchIpWorkshopSignups = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('ip_workshop_signups')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching IP workshop signups:', error);
+        toast.error("Failed to load IP workshop signups");
+      } else {
+        setIpWorkshopSignups(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const handleExportIpWorkshopSignups = () => {
+    if (ipWorkshopSignups.length === 0) {
+      toast.error("No IP workshop signups to export");
+      return;
+    }
+    const csv = [
+      ['Name', 'Surname', 'Organization', 'Email', 'Mobile', 'Submitted At'].join(','),
+      ...ipWorkshopSignups.map(s => [
+        `"${s.name}"`,
+        `"${s.surname}"`,
+        `"${s.organization.replace(/"/g, '""')}"`,
+        `"${s.email}"`,
+        `"${s.mobile ?? ''}"`,
+        `"${new Date(s.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `ip-workshop-signups-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("IP workshop signups exported successfully");
   };
 
   const handleExportSpeakerSuggestions = () => {
@@ -861,6 +918,9 @@ const Admin = () => {
             <TabsTrigger value="speakers-2026" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Speakers 2026
             </TabsTrigger>
+            <TabsTrigger value="ip-workshop" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              IP Workshop
+            </TabsTrigger>
             <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
             </TabsTrigger>
@@ -1151,6 +1211,50 @@ const Admin = () => {
                         <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Submitted By</p>
                         <p><strong>Name:</strong> {s.submitter_name}</p>
                         <p><strong>Email:</strong> {s.submitter_email}</p>
+                        <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="ip-workshop">
+            {ipWorkshopSignups.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportIpWorkshopSignups}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export IP Workshop Signups to CSV
+                </Button>
+              </div>
+            )}
+            {ipWorkshopSignups.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No IP workshop signups yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {ipWorkshopSignups.map((s) => (
+                  <Card key={s.id} className="rounded-none">
+                    <CardHeader className="flex flex-row items-center justify-between">
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {s.name} {s.surname}
+                      </CardTitle>
+                      <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
+                        IP Workshop
+                      </span>
+                    </CardHeader>
+                    <CardContent className="space-y-3 font-inter text-sm">
+                      <div>
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Participant</p>
+                        <p><strong>Organization:</strong> {s.organization}</p>
+                        <p><strong>Email:</strong> {s.email}</p>
+                        {s.mobile && <p><strong>Mobile:</strong> {s.mobile}</p>}
                         <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
                       </div>
                     </CardContent>

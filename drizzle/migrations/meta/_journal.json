@@ -15,6 +15,13 @@
       "when": 1794945762680,
       "tag": "0001_migration",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794952945676,
+      "tag": "0002_create_ip_workshop_signups",
+      "breakpoints": true
     }
   ]
 }
