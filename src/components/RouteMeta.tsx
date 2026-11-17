@@ -84,6 +84,11 @@ const ROUTE_META: Record<string, Meta> = {
     description:
       "Sign up for the Intellectual Property workshop with Soody Tronson, Tuesday, December 15, 2026 at Stanford University.",
   },
+  "/consent": {
+    title: "Media and Poster Publication Consent Form — TOP 1000 Innovators Summit II",
+    description:
+      "Consent preferences for photography, video, and poster publication at Summit II, December 14–17, 2026.",
+  },
   "/partner": {
     title: "Partner With Us — TOP 1000 Innovators",
     description: "Partnership and sponsorship opportunities for Summit II.",

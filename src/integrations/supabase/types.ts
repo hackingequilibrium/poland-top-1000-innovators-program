@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      consent_submissions: {
+        Row: {
+          acknowledged: boolean
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          organization: string
+          photo_video_consent: string
+          poster_consent: string
+          workshop_photo_consent: string
+        }
+        Insert: {
+          acknowledged?: boolean
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          organization: string
+          photo_video_consent: string
+          poster_consent: string
+          workshop_photo_consent: string
+        }
+        Update: {
+          acknowledged?: boolean
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          organization?: string
+          photo_video_consent?: string
+          poster_consent?: string
+          workshop_photo_consent?: string
+        }
+        Relationships: []
+      }
       contact_messages: {
         Row: {
           created_at: string

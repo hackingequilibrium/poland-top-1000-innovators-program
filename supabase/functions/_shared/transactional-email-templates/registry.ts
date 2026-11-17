@@ -15,6 +15,7 @@ import { template as contactMessageAdmin } from './contact-message-admin.tsx'
 import { template as ticketRegistrationConfirmation } from './ticket-registration-confirmation.tsx'
 import { template as ticketRegistrationAdmin } from './ticket-registration-admin.tsx'
 import { template as ipWorkshopSignupAdmin } from './ip-workshop-signup-admin.tsx'
+import { template as consentSubmissionAdmin } from './consent-submission-admin.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'speaker-suggestion-admin': speakerSuggestionAdmin,
@@ -23,4 +24,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'ticket-registration-confirmation': ticketRegistrationConfirmation,
   'ticket-registration-admin': ticketRegistrationAdmin,
   'ip-workshop-signup-admin': ipWorkshopSignupAdmin,
+  'consent-submission-admin': consentSubmissionAdmin,
 }

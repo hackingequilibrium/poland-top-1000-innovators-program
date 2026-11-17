@@ -89,6 +89,18 @@ interface IpWorkshopSignup {
   created_at: string;
 }
 
+interface ConsentSubmission {
+  id: string;
+  full_name: string;
+  email: string;
+  organization: string;
+  photo_video_consent: string;
+  workshop_photo_consent: string;
+  poster_consent: string;
+  acknowledged: boolean;
+  created_at: string;
+}
+
 interface TicketRegistration {
   id: string; ticket_type: string; quantity: number; contact_name: string; contact_email: string;
   contact_phone: string; country: string; holders: any; billing_org: string; billing_address: string;
@@ -142,6 +154,7 @@ const Admin = () => {
   const [waitlistEntries, setWaitlistEntries] = useState<WaitlistEntry[]>([]);
   const [speakerSuggestions, setSpeakerSuggestions] = useState<SpeakerSuggestion[]>([]);
   const [ipWorkshopSignups, setIpWorkshopSignups] = useState<IpWorkshopSignup[]>([]);
+  const [consentSubmissions, setConsentSubmissions] = useState<ConsentSubmission[]>([]);
   const [partnerInquiries, setPartnerInquiries] = useState<PartnerInquiry[]>([]);
   const [ticketRegs, setTicketRegs] = useState<TicketRegistration[]>([]);
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
@@ -211,6 +224,7 @@ const Admin = () => {
       fetchWaitlistEntries();
       fetchSpeakerSuggestions();
       fetchIpWorkshopSignups();
+      fetchConsentSubmissions();
       fetchPartnerInquiries();
       fetchContactMessages();
       supabase.from('ticket_registrations').select('*').order('created_at', { ascending: false })
@@ -376,6 +390,55 @@ const Admin = () => {
     link.click();
     document.body.removeChild(link);
     toast.success("IP workshop signups exported successfully");
+  };
+
+  const fetchConsentSubmissions = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('consent_submissions')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (error) {
+        console.error('Error fetching consent submissions:', error);
+        toast.error("Failed to load consent submissions");
+      } else {
+        setConsentSubmissions(data || []);
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+    }
+  };
+
+  const consentLabel = (v: string) =>
+    v === 'consent' ? 'I consent' : v === 'do_not_consent' ? 'I do not consent' : 'Not applicable';
+
+  const handleExportConsentSubmissions = () => {
+    if (consentSubmissions.length === 0) {
+      toast.error("No consent submissions to export");
+      return;
+    }
+    const csv = [
+      ['Full Name', 'Email', 'Organization', 'Photo/Video Consent', 'Workshop Photo Consent', 'Poster Consent', 'Submitted At'].join(','),
+      ...consentSubmissions.map(s => [
+        `"${s.full_name}"`,
+        `"${s.email}"`,
+        `"${s.organization.replace(/"/g, '""')}"`,
+        `"${consentLabel(s.photo_video_consent)}"`,
+        `"${consentLabel(s.workshop_photo_consent)}"`,
+        `"${consentLabel(s.poster_consent)}"`,
+        `"${new Date(s.created_at).toLocaleString()}"`
+      ].join(','))
+    ].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', `consent-submissions-${new Date().toISOString().split('T')[0]}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    toast.success("Consent submissions exported successfully");
   };
 
   const handleExportSpeakerSuggestions = () => {
@@ -921,6 +984,9 @@ const Admin = () => {
             <TabsTrigger value="ip-workshop" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               IP Workshop
             </TabsTrigger>
+            <TabsTrigger value="consent" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Consent Forms
+            </TabsTrigger>
             <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
             </TabsTrigger>
@@ -1255,6 +1321,55 @@ const Admin = () => {
                         <p><strong>Organization:</strong> {s.organization}</p>
                         <p><strong>Email:</strong> {s.email}</p>
                         {s.mobile && <p><strong>Mobile:</strong> {s.mobile}</p>}
+                        <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="consent">
+            {consentSubmissions.length > 0 && (
+              <div className="mb-4 flex justify-end">
+                <Button
+                  onClick={handleExportConsentSubmissions}
+                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                >
+                  Export Consent Forms to CSV
+                </Button>
+              </div>
+            )}
+            {consentSubmissions.length === 0 ? (
+              <Card className="rounded-none">
+                <CardContent className="py-12 text-center">
+                  <p className="font-inter text-[#797B8E]">No consent form submissions yet</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <div className="grid gap-6">
+                {consentSubmissions.map((s) => (
+                  <Card key={s.id} className="rounded-none">
+                    <CardHeader className="flex flex-row items-center justify-between">
+                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                        {s.full_name}
+                      </CardTitle>
+                      <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
+                        Consent Form
+                      </span>
+                    </CardHeader>
+                    <CardContent className="space-y-3 font-inter text-sm">
+                      <div className="border-b border-gray-200 pb-3">
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Participant</p>
+                        <p><strong>Email:</strong> {s.email}</p>
+                        <p><strong>Organization:</strong> {s.organization}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-[#797B8E] uppercase font-semibold mb-2">Consent Preferences</p>
+                        <p><strong>Photography and video:</strong> {consentLabel(s.photo_video_consent)}</p>
+                        <p><strong>Workshop photography:</strong> {consentLabel(s.workshop_photo_consent)}</p>
+                        <p><strong>Poster publication:</strong> {consentLabel(s.poster_consent)}</p>
                         <p className="text-[#797B8E] text-xs mt-2"><strong>Submitted:</strong> {new Date(s.created_at).toLocaleString()}</p>
                       </div>
                     </CardContent>

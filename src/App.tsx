@@ -22,6 +22,7 @@ import Hotels from "./pages/Hotels";
 import Agenda from "./pages/Agenda";
 import SuggestSpeaker from "./pages/SuggestSpeaker";
 import IpWorkshop from "./pages/IpWorkshop";
+import Consent from "./pages/Consent";
 import Partner from "./pages/Partner";
 import Contact from "./pages/Contact";
 import Unsubscribe from "./pages/Unsubscribe";
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/suggest-speaker" element={<SuggestSpeaker />} />
           <Route path="/ip-workshop" element={<IpWorkshop />} />
+          <Route path="/consent" element={<Consent />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
