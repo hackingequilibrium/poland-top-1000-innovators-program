@@ -1339,7 +1339,7 @@ const Admin = () => {
                         <div className="mt-2 text-gray-500">Ticket holders:</div>
                         <ol className="list-decimal pl-5">
                           {(Array.isArray(r.holders) ? r.holders : []).map((h: any, i: number) => (
-                            <li key={i}>{h.full_name} — {h.position}, {h.organization}</li>
+                            <li key={i}>{h.full_name} — {h.position}, {h.organization}{h.email ? ` · ${h.email}` : ""}</li>
                           ))}
                         </ol>
                         <div className="mt-2"><span className="text-gray-500">Billing:</span> {r.billing_org}, {r.billing_address}{r.tax_id ? ` · Tax ID ${r.tax_id}` : ""}</div>

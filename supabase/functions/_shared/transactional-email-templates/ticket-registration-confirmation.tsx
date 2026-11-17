@@ -5,7 +5,7 @@ import {
 } from 'npm:@react-email/components@0.0.22'
 import type { TemplateEntry } from './registry.ts'
 
-export interface Holder { full_name?: string; position?: string; organization?: string }
+export interface Holder { full_name?: string; position?: string; organization?: string; email?: string }
 
 interface Props {
   contactName?: string
@@ -48,7 +48,7 @@ const Email = ({ contactName, ticketLabel, unitPrice, quantity, total, holders =
           <Text style={title}>Ticket holders</Text>
           {holders.map((h, i) => (
             <Text key={i} style={row}>
-              {i + 1}. {h.full_name} — {h.position}, {h.organization}
+              {i + 1}. {h.full_name} — {h.position}, {h.organization}{h.email ? ` · ${h.email}` : ''}
             </Text>
           ))}
         </Section>

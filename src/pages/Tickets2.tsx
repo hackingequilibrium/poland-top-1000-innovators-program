@@ -27,8 +27,8 @@ const tiers: { type: TicketType; eligibility: string }[] = [
   },
 ];
 
-type Holder = { full_name: string; position: string; organization: string };
-const emptyHolder = (): Holder => ({ full_name: "", position: "", organization: "" });
+type Holder = { full_name: string; position: string; organization: string; email: string };
+const emptyHolder = (): Holder => ({ full_name: "", position: "", organization: "", email: "" });
 
 const req = (label: string, max: number) =>
   z.string().trim().min(1, `${label} is required`).max(max, `${label} is too long`);
@@ -43,6 +43,7 @@ const schema = z.object({
       full_name: req("Full name", 150),
       position: req("Position / role", 150),
       organization: req("Organization", 200),
+      email: z.string().trim().email("Enter a valid email").max(255),
     })
   ),
   billing_org: req("Organization name", 200),
@@ -336,12 +337,13 @@ const Tickets2 = () => {
                   {holders.map((h, i) => (
                     <div key={i} className="border-l-2 border-[#8FC7F5]/60 pl-4 space-y-4">
                       <div className="font-inter text-sm text-[#8FC7F5]">Ticket {i + 1}</div>
-                      <div className="grid sm:grid-cols-3 gap-4">
+                      <div className="grid sm:grid-cols-2 gap-4">
                         {(
                           [
                             ["full_name", "Full name *"],
                             ["position", "Position / role *"],
                             ["organization", "Organization *"],
+                            ["email", "Email *"],
                           ] as const
                         ).map(([k, label]) => (
                           <Field key={k} label={label} error={errors[`holders.${i}.${k}`]}>

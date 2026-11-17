@@ -47,7 +47,7 @@ const Email = (d: Props) => (
         <Section style={card}>
           <Text style={title}>Ticket holders</Text>
           {(d.holders || []).map((h, i) => (
-            <Text key={i} style={row}>{i + 1}. {h.full_name} — {h.position}, {h.organization}</Text>
+            <Text key={i} style={row}>{i + 1}. {h.full_name} — {h.position}, {h.organization}{h.email ? ` · ${h.email}` : ''}</Text>
           ))}
         </Section>
         <Section style={card}>
