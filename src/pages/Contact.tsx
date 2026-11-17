@@ -78,22 +78,29 @@ const Contact = () => {
         return;
       }
 
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "contact-message-admin",
-            recipientEmail: "agata.braja@polsv.org",
-            idempotencyKey: `contact-${data.email}-${Date.now()}`,
-            templateData: {
-              name: data.name,
-              email: data.email,
-              organization: data.organization || undefined,
-              subject: data.subject,
-              message: data.message,
-            },
-          },
-        })
-        .catch((e) => console.error("Notification email failed:", e));
+      const notifyBody = {
+        templateName: "contact-message-admin",
+        idempotencyKey: `contact-${data.email}-${Date.now()}`,
+        templateData: {
+          name: data.name,
+          email: data.email,
+          organization: data.organization || undefined,
+          subject: data.subject,
+          message: data.message,
+        },
+      };
+      ["info@polsv.org", "agata.braja@polsv.org", "kamila.krawiec@polsv.org"].forEach(
+        (recipientEmail, i) =>
+          supabase.functions
+            .invoke("send-transactional-email", {
+              body: {
+                ...notifyBody,
+                recipientEmail,
+                idempotencyKey: `${notifyBody.idempotencyKey}-${i}`,
+              },
+            })
+            .catch((e) => console.error("Notification email failed:", e))
+      );
 
       setIsSubmitted(true);
     } catch (error) {

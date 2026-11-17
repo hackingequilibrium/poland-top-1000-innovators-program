@@ -142,27 +142,34 @@ const Partner = () => {
         return;
       }
 
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "partner-inquiry-admin",
-            recipientEmail: "agata.braja@polsv.org",
-            idempotencyKey: `partner-inquiry-${data.email}-${Date.now()}`,
-            templateData: {
-              name: data.name,
-              organization: data.organization,
-              role: data.role || undefined,
-              email: data.email,
-              orgType: data.orgType,
-              areaOfInterest: data.areaOfInterest,
-              collaborationType: data.collaborationType,
-              details: data.details || undefined,
-              website: data.website || undefined,
-              linkedin: data.linkedin || undefined,
-            },
-          },
-        })
-        .catch((e) => console.error("Notification email failed:", e));
+      const notifyBody = {
+        templateName: "partner-inquiry-admin",
+        idempotencyKey: `partner-inquiry-${data.email}-${Date.now()}`,
+        templateData: {
+          name: data.name,
+          organization: data.organization,
+          role: data.role || undefined,
+          email: data.email,
+          orgType: data.orgType,
+          areaOfInterest: data.areaOfInterest,
+          collaborationType: data.collaborationType,
+          details: data.details || undefined,
+          website: data.website || undefined,
+          linkedin: data.linkedin || undefined,
+        },
+      };
+      ["info@polsv.org", "agata.braja@polsv.org", "kamila.krawiec@polsv.org"].forEach(
+        (recipientEmail, i) =>
+          supabase.functions
+            .invoke("send-transactional-email", {
+              body: {
+                ...notifyBody,
+                recipientEmail,
+                idempotencyKey: `${notifyBody.idempotencyKey}-${i}`,
+              },
+            })
+            .catch((e) => console.error("Notification email failed:", e))
+      );
 
       setIsSubmitted(true);
     } catch (error) {

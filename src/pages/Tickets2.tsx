@@ -178,6 +178,7 @@ const Tickets2 = () => {
     send("ticket-registration-confirmation", d.contact_email, "ticket-confirm");
     send("ticket-registration-admin", "info@polsv.org", "ticket-admin-info");
     send("ticket-registration-admin", "agata.braja@polsv.org", "ticket-admin-agata");
+    send("ticket-registration-admin", "kamila.krawiec@polsv.org", "ticket-admin-kamila");
 
     setSubmitting(false);
     setDone(true);

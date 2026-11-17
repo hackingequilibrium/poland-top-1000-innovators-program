@@ -123,26 +123,33 @@ const SuggestSpeaker = () => {
         return;
       }
 
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "speaker-suggestion-admin",
-            recipientEmail: "agata.braja@polsv.org",
-            idempotencyKey: `speaker-suggestion-${data.submitterEmail}-${data.speakerName}`,
-            templateData: {
-              speakerName: data.speakerName,
-              speakerEmail: data.speakerEmail || undefined,
-              speakerTitle: data.speakerTitle || undefined,
-              speakerOrganization: data.speakerOrganization || undefined,
-              speakerLinkedin: data.speakerLinkedin || undefined,
-              focusArea: data.focusArea,
-              whySpeaker: data.whySpeaker || undefined,
-              submitterName: data.submitterName,
-              submitterEmail: data.submitterEmail,
-            },
-          },
-        })
-        .catch((e) => console.error("Notification email failed:", e));
+      const notifyBody = {
+        templateName: "speaker-suggestion-admin",
+        idempotencyKey: `speaker-suggestion-${data.submitterEmail}-${data.speakerName}`,
+        templateData: {
+          speakerName: data.speakerName,
+          speakerEmail: data.speakerEmail || undefined,
+          speakerTitle: data.speakerTitle || undefined,
+          speakerOrganization: data.speakerOrganization || undefined,
+          speakerLinkedin: data.speakerLinkedin || undefined,
+          focusArea: data.focusArea,
+          whySpeaker: data.whySpeaker || undefined,
+          submitterName: data.submitterName,
+          submitterEmail: data.submitterEmail,
+        },
+      };
+      ["info@polsv.org", "agata.braja@polsv.org", "kamila.krawiec@polsv.org"].forEach(
+        (recipientEmail, i) =>
+          supabase.functions
+            .invoke("send-transactional-email", {
+              body: {
+                ...notifyBody,
+                recipientEmail,
+                idempotencyKey: `${notifyBody.idempotencyKey}-${i}`,
+              },
+            })
+            .catch((e) => console.error("Notification email failed:", e))
+      );
 
       setIsSubmitted(true);
 
