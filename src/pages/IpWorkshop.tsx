@@ -141,7 +141,7 @@ const IpWorkshop = () => {
             Intellectual Property: From Disclosure to Protection — with Soody Tronson
           </p>
           <p className="text-center font-inter font-light text-sm text-[#8FC7F5] mb-10">
-            Tuesday, December 15, 2026 · Stanford University · Summit II, Day 2
+            Tuesday, December 15, 2026 · Stanford University
           </p>
 
           {isSubmitted ? (
