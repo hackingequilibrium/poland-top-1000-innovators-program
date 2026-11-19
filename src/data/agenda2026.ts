@@ -272,15 +272,14 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:10–10:25 AM",
-        "title": "Building a Silicon Valley Legend",
+        "time": "10:10–10:30 AM",
+        "title": "Diplomacy in a World Without Borders",
         "details": [
-          "Piotr D. Moncarz",
-          "Skip Ross"
+          "Dariusz Rosati"
         ]
       },
       {
-        "time": "10:25–10:45 AM",
+        "time": "10:30–10:50 AM",
         "title": "Defense-Tech Ecosystem",
         "details": [
           "Adam Januszko",
@@ -288,19 +287,19 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "10:45–11:05 AM",
+        "time": "10:50–11:10 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "11:05–11:25 AM",
+        "time": "11:10–11:30 AM",
         "title": "Cybersecurity: Who is in Charge?",
         "details": [
           "Joanna Jaworek-Korjakowska"
         ]
       },
       {
-        "time": "11:25–11:45 AM",
+        "time": "11:30–11:50 AM",
         "title": "Semiconductors Sovereignty",
         "details": [
           "Dominik J. Schmidt",
@@ -308,17 +307,18 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:45–12:05 PM",
+        "time": "11:50–12:10 PM",
         "title": "Powering AI: The Energy Question",
         "details": [
           "Piotr D. Moncarz"
         ]
       },
       {
-        "time": "12:05–12:25 PM",
-        "title": "Diplomacy in a World Without Borders",
+        "time": "12:10–12:25 PM",
+        "title": "Building a Silicon Valley Legend",
         "details": [
-          "Dariusz Rosati"
+          "Piotr D. Moncarz",
+          "Skip Ross"
         ]
       },
       {
