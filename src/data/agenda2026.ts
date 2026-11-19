@@ -170,7 +170,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "11:15–11:35 AM",
-        "title": "Fireside: Medicine Discovery in the Age of AI",
+        "title": "Fireside: Drug Discovery in the Age of AI",
         "details": [
           "Jerzy Orkiszewski"
         ]
