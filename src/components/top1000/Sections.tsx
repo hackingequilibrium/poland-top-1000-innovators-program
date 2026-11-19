@@ -70,6 +70,7 @@ import parpPfrAsset from "@/assets/parp-pfr-white.png.asset.json";
 import paihAsset from "@/assets/paih-full.png.asset.json";
 import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json";
 import ministerScienceAsset from "@/assets/minister-science-education.png.asset.json";
+import ncbrAsset from "@/assets/ncbr-logo-white.png.asset.json";
 
 
 
@@ -1163,6 +1164,7 @@ const parpPfr = parpPfrAsset.url;
 const paih = paihAsset.url;
 const ministry = ministryAsset.url;
 const ministerScience = ministerScienceAsset.url;
+const ncbr = ncbrAsset.url;
 
 type Partner = {
   name: string;
@@ -1237,6 +1239,12 @@ const honoraryPatronage: Partner[] = [
     href: "https://www.zbp.pl/",
     img: zbp,
     imgClass: "h-14 md:h-24 w-auto object-contain",
+  },
+  {
+    name: "National Centre for Research and Development",
+    href: "https://www.gov.pl/web/ncbr-en",
+    img: ncbr,
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
 ];
 
