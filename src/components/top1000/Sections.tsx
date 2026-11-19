@@ -27,6 +27,7 @@ import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.p
 import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
 import mikeLyonsAsset from "@/assets/mike-lyons.png.asset.json";
 import nicoFaraAsset from "@/assets/nico-fara-v2.png.asset.json";
+import sunilMaulikAsset from "@/assets/sunil-maulik.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -108,6 +109,7 @@ const joannaJaworekKorjakowska = joannaJaworekKorjakowskaAsset.url;
 const michalMajerczak = michalMajerczakAsset.url;
 const mikeLyons = mikeLyonsAsset.url;
 const nicoFara = nicoFaraAsset.url;
+const sunilMaulik = sunilMaulikAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -806,6 +808,17 @@ const speakers = [
     bio: [
       "Nico Fara is a go-to-market executive and entrepreneur who helps founders of AI and technical B2B companies launch products, enter the U.S. market, and grow beyond founder-led sales. Through Product Market Pro, she helps teams decide which customers to pursue first, how to package and price their products, and how to communicate the value of complex technology to buyers.",
       "Based in San Francisco, Nico brings a background in electrical engineering and firsthand experience building companies. She mentors founders through Start2 Group and has worked with the Canadian Technology Accelerator’s Agentic & Enterprise AI cohort on adapting their go-to-market strategies for U.S. buyers. She also leads hands-on working sessions for founders and hosts Why Growth Stops, a series in which investors and operators discuss what stalls startup growth and how founders can respond.",
+    ],
+  },
+  {
+    id: "sunil-maulik",
+    name: "Sunil Maulik",
+    role: "CEO, PathoVis.ai | Biotech, Deep Tech Commercialization",
+    image: sunilMaulik,
+    imageClass: "object-center",
+    bio: [
+      "Sunil Maulik is a technology executive and startup advisor with more than 30 years of experience in Silicon Valley. As CEO of PathoVis.ai, he leads a company focused on broadening access to digital pathology. He advises founders across AI, digital health, biotechnology, and semiconductors, helping them evaluate market opportunities, build product roadmaps, and develop go-to-market strategies.",
+      "Sunil has mentored more than 500 startups through programs including the NIH and U.S. Department of Energy Small Business Innovation Research programs, Stanford SPARK, FundRx, and Larta Institute. His own startup experience spans five companies, two of which went public and two of which were acquired.",
     ],
   },
 ];
