@@ -26,7 +26,7 @@ import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
 import mikeLyonsAsset from "@/assets/mike-lyons.png.asset.json";
-import nicoFaraAsset from "@/assets/nico-fara.png.asset.json";
+import nicoFaraAsset from "@/assets/nico-fara-v2.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
