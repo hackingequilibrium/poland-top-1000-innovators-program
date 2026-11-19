@@ -242,18 +242,18 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:10 AM",
+        "time": "9:00–9:15 AM",
+        "title": "Rethinking Sustainability",
+        "details": [
+          "Michael Lepech"
+        ]
+      },
+      {
+        "time": "9:15–9:25 AM",
         "title": "Collaboration Agreement Between Poland’s Foundation for Science, Innovation, and Entrepreneurship and PolSV",
         "details": [
           "Piotr D. Moncarz",
           "Dariusz Rosati"
-        ]
-      },
-      {
-        "time": "9:10–9:25 AM",
-        "title": "Rethinking Sustainability",
-        "details": [
-          "Michael Lepech"
         ]
       },
       {
