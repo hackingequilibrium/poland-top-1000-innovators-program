@@ -72,6 +72,7 @@ import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json
 import ministerScienceAsset from "@/assets/minister-science-education.png.asset.json";
 import ncbrAsset from "@/assets/ncbr-logo-white.png.asset.json";
 import panAsset from "@/assets/pan-logo-white.png.asset.json";
+import ministerForeignAsset from "@/assets/minister-foreign-affairs-white.png.asset.json";
 
 
 
@@ -1167,6 +1168,7 @@ const ministry = ministryAsset.url;
 const ministerScience = ministerScienceAsset.url;
 const ncbr = ncbrAsset.url;
 const pan = panAsset.url;
+const ministerForeign = ministerForeignAsset.url;
 
 type Partner = {
   name: string;
@@ -1223,6 +1225,12 @@ const honoraryPatronage: Partner[] = [
     href: "https://www.gov.pl/web/science/",
     img: ministerScience,
     imgClass: "h-12 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Minister of Foreign Affairs, Republic of Poland",
+    href: "https://www.gov.pl/web/diplomacy",
+    img: ministerForeign,
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
   {
     name: "Polish Agency for Enterprise Development",
