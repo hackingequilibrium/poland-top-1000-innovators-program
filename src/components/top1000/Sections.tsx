@@ -72,6 +72,7 @@ import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json
 import ministerScienceAsset from "@/assets/minister-science-education.png.asset.json";
 import ncbrAsset from "@/assets/ncbr-logo-white.png.asset.json";
 import panAsset from "@/assets/pan-logo-white.png.asset.json";
+import lukasiewiczAsset from "@/assets/lukasiewicz-logo-white.png.asset.json";
 import ministerForeignAsset from "@/assets/minister-foreign-affairs-white.png.asset.json";
 
 
@@ -1168,6 +1169,7 @@ const ministry = ministryAsset.url;
 const ministerScience = ministerScienceAsset.url;
 const ncbr = ncbrAsset.url;
 const pan = panAsset.url;
+const lukasiewicz = lukasiewiczAsset.url;
 const ministerForeign = ministerForeignAsset.url;
 
 type Partner = {
@@ -1260,6 +1262,12 @@ const honoraryPatronage: Partner[] = [
     name: "Polish Academy of Sciences",
     href: "https://pan.pl/en/",
     img: pan,
+    imgClass: "h-24 md:h-28 w-auto object-contain",
+  },
+  {
+    name: "Łukasiewicz Research Network",
+    href: "https://lukasiewicz.gov.pl/en/",
+    img: lukasiewicz,
     imgClass: "h-24 md:h-28 w-auto object-contain",
   },
 ];
