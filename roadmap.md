@@ -14,3 +14,4 @@
 - [x] Add Polish Investment and Trade Agency to Honorary Patronage and remove PFR Group from the Polish Agency for Enterprise Development label.
 - [x] Move Związek Banków Polskich to the third honorary patronage position.
 - [x] Add Ministry of Economic Development and Technology as the first honorary patronage; fit four tiles on one row.
+- [x] Add Minister of Science and Higher Education as the second honorary patronage; fit five tiles on one row.

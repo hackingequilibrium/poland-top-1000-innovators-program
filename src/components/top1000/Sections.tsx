@@ -69,6 +69,7 @@ import zbpAsset from "@/assets/zbp.png.asset.json";
 import parpPfrAsset from "@/assets/parp-pfr-white.png.asset.json";
 import paihAsset from "@/assets/paih-full.png.asset.json";
 import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json";
+import ministerScienceAsset from "@/assets/minister-science-education.png.asset.json";
 
 
 
@@ -1161,6 +1162,7 @@ const zbp = zbpAsset.url;
 const parpPfr = parpPfrAsset.url;
 const paih = paihAsset.url;
 const ministry = ministryAsset.url;
+const ministerScience = ministerScienceAsset.url;
 
 type Partner = {
   name: string;
@@ -1213,6 +1215,12 @@ const honoraryPatronage: Partner[] = [
     imgClass: "h-9 md:h-10 w-auto object-contain",
   },
   {
+    name: "Minister of Science and Higher Education, Republic of Poland",
+    href: "https://www.gov.pl/web/science/",
+    img: ministerScience,
+    imgClass: "h-12 md:h-14 w-auto object-contain",
+  },
+  {
     name: "Polish Agency for Enterprise Development",
     href: "https://en.parp.gov.pl/",
     img: parpPfr,
@@ -1242,8 +1250,8 @@ const partnerGroups = [
   {
     label: "Honorary Patronage",
     partners: honoraryPatronage,
-    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
-    maxW: "max-w-[996px]",
+    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
+    maxW: "max-w-[1152px]",
   },
   {
     label: "Sponsors & Partners",
