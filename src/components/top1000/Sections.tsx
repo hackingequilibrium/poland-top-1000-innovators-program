@@ -1182,7 +1182,7 @@ const organizers: Partner[] = [
     name: "Taube Philanthropies",
     href: "https://taubephilanthropies.org/",
     img: taubePhilanthropies,
-    imgClass: "h-20 md:h-24 w-auto object-contain",
+    imgClass: "h-20 md:h-28 w-auto object-contain",
   },
 ];
 
@@ -1191,19 +1191,19 @@ const sponsorsAndPartners: Partner[] = [
     name: "South Bay Solutions",
     href: "https://southbaysolutions.com/",
     img: sbsSolutionsLogo,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-16 md:h-28 w-auto object-contain",
   },
   {
     name: "Renaissance Developments Group S.A.",
     href: "https://www.rdgeurope.com/",
     img: renaissanceDevelopments,
-    imgClass: "h-20 md:h-24 w-auto object-contain",
+    imgClass: "h-20 md:h-28 w-auto object-contain",
   },
   {
     name: "SF Startup Labs",
     href: "https://sfstartuplabs.com/",
     img: sfStartupLabs,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
 ];
 
@@ -1212,36 +1212,36 @@ const honoraryPatronage: Partner[] = [
     name: "Ministry of Economic Development and Technology, Republic of Poland",
     href: "https://www.gov.pl/web/development-technology/",
     img: ministry,
-    imgClass: "h-9 md:h-10 w-auto object-contain",
+    imgClass: "h-9 md:h-14 w-auto object-contain",
   },
   {
     name: "Minister of Science and Higher Education, Republic of Poland",
     href: "https://www.gov.pl/web/science/",
     img: ministerScience,
-    imgClass: "h-12 md:h-16 w-auto object-contain",
+    imgClass: "h-12 md:h-20 w-auto object-contain",
   },
   {
     name: "Polish Agency for Enterprise Development",
     href: "https://en.parp.gov.pl/",
     img: parpPfr,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
   {
     name: "Polish Investment and Trade Agency",
     href: "https://www.paih.gov.pl/en/",
     img: paih,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
   {
     name: "Związek Banków Polskich",
     href: "https://www.zbp.pl/",
     img: zbp,
-    imgClass: "h-14 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-24 w-auto object-contain",
   },
 ];
 
-const PARTNER_COLS = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
-const PARTNER_MAX_W = "max-w-[1152px]";
+const PARTNER_COLS = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4";
+const PARTNER_MAX_W = "max-w-[1600px]";
 
 const partnerGroups = [
   {
