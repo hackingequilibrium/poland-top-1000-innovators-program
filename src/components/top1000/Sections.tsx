@@ -1308,7 +1308,7 @@ export const TravelSection = () => (
           rates at $209/night.
         </p>
         <p className="mt-2 text-white/45 text-xs md:text-sm font-light">
-          Book by November 20, 2026
+          Book by November 30, 2026
         </p>
       </div>
       <Link

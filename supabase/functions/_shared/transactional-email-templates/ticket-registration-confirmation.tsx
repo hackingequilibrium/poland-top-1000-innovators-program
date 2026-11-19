@@ -71,7 +71,7 @@ const Email = ({ contactName, ticketLabel, unitPrice, quantity, total, holders =
         </Text>
         <Text style={p}>
           <strong>Planning your stay:</strong> our group rate at the San Francisco Airport Marriott Waterfront is USD 209/night
-          (13–18 December 2026); book by 20 November 2026 via the link on our{' '}
+          (13–18 December 2026); book by 30 November 2026 via the link on our{' '}
           <Link href="https://top1000.polsv.org/hotels" style={link}>Travel &amp; Stay page</Link>.
         </Text>
         <Text style={p}>We look forward to welcoming you in December.</Text>
