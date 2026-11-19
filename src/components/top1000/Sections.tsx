@@ -1218,7 +1218,7 @@ const honoraryPatronage: Partner[] = [
     name: "Minister of Science and Higher Education, Republic of Poland",
     href: "https://www.gov.pl/web/science/",
     img: ministerScience,
-    imgClass: "h-12 md:h-14 w-auto object-contain",
+    imgClass: "h-12 md:h-16 w-auto object-contain",
   },
   {
     name: "Polish Agency for Enterprise Development",
@@ -1236,28 +1236,31 @@ const honoraryPatronage: Partner[] = [
     name: "Związek Banków Polskich",
     href: "https://www.zbp.pl/",
     img: zbp,
-    imgClass: "h-14 md:h-16 w-auto object-contain",
+    imgClass: "h-14 md:h-20 w-auto object-contain",
   },
 ];
+
+const PARTNER_COLS = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+const PARTNER_MAX_W = "max-w-[1152px]";
 
 const partnerGroups = [
   {
     label: "Organizers",
     partners: organizers,
-    cols: "grid-cols-1 sm:grid-cols-2",
-    maxW: "max-w-[660px]",
+    cols: PARTNER_COLS,
+    maxW: PARTNER_MAX_W,
   },
   {
     label: "Honorary Patronage",
     partners: honoraryPatronage,
-    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5",
-    maxW: "max-w-[1152px]",
+    cols: PARTNER_COLS,
+    maxW: PARTNER_MAX_W,
   },
   {
     label: "Sponsors & Partners",
     partners: sponsorsAndPartners,
-    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-    maxW: "max-w-[996px]",
+    cols: PARTNER_COLS,
+    maxW: PARTNER_MAX_W,
   },
 ];
 
