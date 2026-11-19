@@ -67,6 +67,7 @@ import alojzyNowakAsset from "@/assets/alojzy-nowak.png.asset.json";
 import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
 import parpPfrAsset from "@/assets/parp-pfr-white.png.asset.json";
+import paihAsset from "@/assets/paih-full.png.asset.json";
 
 
 
@@ -1157,6 +1158,7 @@ const renaissanceDevelopments = renaissanceDevelopmentsAsset.url;
 const sfStartupLabs = sfStartupLabsAsset.url;
 const zbp = zbpAsset.url;
 const parpPfr = parpPfrAsset.url;
+const paih = paihAsset.url;
 
 type Partner = {
   name: string;
@@ -1209,9 +1211,15 @@ const honoraryPatronage: Partner[] = [
     imgClass: "h-16 md:h-20 w-auto object-contain",
   },
   {
-    name: "Polish Agency for Enterprise Development · PFR Group",
+    name: "Polish Agency for Enterprise Development",
     href: "https://en.parp.gov.pl/",
     img: parpPfr,
+    imgClass: "h-16 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Polish Investment and Trade Agency",
+    href: "https://www.paih.gov.pl/en/",
+    img: paih,
     imgClass: "h-16 md:h-20 w-auto object-contain",
   },
 ];
@@ -1226,8 +1234,8 @@ const partnerGroups = [
   {
     label: "Honorary Patronage",
     partners: honoraryPatronage,
-    cols: "grid-cols-1 sm:grid-cols-2",
-    maxW: "max-w-[660px]",
+    cols: "grid-cols-1 sm:grid-cols-3",
+    maxW: "max-w-[996px]",
   },
   {
     label: "Sponsors & Partners",
