@@ -1205,12 +1205,6 @@ const sponsorsAndPartners: Partner[] = [
 
 const honoraryPatronage: Partner[] = [
   {
-    name: "Związek Banków Polskich",
-    href: "https://www.zbp.pl/",
-    img: zbp,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
-  },
-  {
     name: "Polish Agency for Enterprise Development",
     href: "https://en.parp.gov.pl/",
     img: parpPfr,
@@ -1220,6 +1214,12 @@ const honoraryPatronage: Partner[] = [
     name: "Polish Investment and Trade Agency",
     href: "https://www.paih.gov.pl/en/",
     img: paih,
+    imgClass: "h-16 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Związek Banków Polskich",
+    href: "https://www.zbp.pl/",
+    img: zbp,
     imgClass: "h-16 md:h-20 w-auto object-contain",
   },
 ];

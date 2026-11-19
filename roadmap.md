@@ -12,3 +12,4 @@
 - [x] Move Summit II dates to 14-17 December 2026 across agenda, home, tickets, travel and page metadata.
 - [x] Hotel booking deadline to November 30 and early bird to November 15.
 - [x] Add Polish Investment and Trade Agency to Honorary Patronage and remove PFR Group from the Polish Agency for Enterprise Development label.
+- [x] Move Związek Banków Polskich to the third honorary patronage position.
