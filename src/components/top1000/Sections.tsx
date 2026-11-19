@@ -71,6 +71,7 @@ import paihAsset from "@/assets/paih-full.png.asset.json";
 import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json";
 import ministerScienceAsset from "@/assets/minister-science-education.png.asset.json";
 import ncbrAsset from "@/assets/ncbr-logo-white.png.asset.json";
+import panAsset from "@/assets/pan-logo-white.png.asset.json";
 
 
 
@@ -1165,6 +1166,7 @@ const paih = paihAsset.url;
 const ministry = ministryAsset.url;
 const ministerScience = ministerScienceAsset.url;
 const ncbr = ncbrAsset.url;
+const pan = panAsset.url;
 
 type Partner = {
   name: string;
@@ -1245,6 +1247,12 @@ const honoraryPatronage: Partner[] = [
     href: "https://www.gov.pl/web/ncbr-en",
     img: ncbr,
     imgClass: "h-14 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Polish Academy of Sciences",
+    href: "https://pan.pl/en/",
+    img: pan,
+    imgClass: "h-24 md:h-28 w-auto object-contain",
   },
 ];
 
