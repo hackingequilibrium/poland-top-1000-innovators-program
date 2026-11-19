@@ -68,6 +68,7 @@ import wojciechBalczunAsset from "@/assets/wojciech-balczun.png.asset.json";
 import zbpAsset from "@/assets/zbp.png.asset.json";
 import parpPfrAsset from "@/assets/parp-pfr-white.png.asset.json";
 import paihAsset from "@/assets/paih-full.png.asset.json";
+import ministryAsset from "@/assets/ministry-economic-development.svg.asset.json";
 
 
 
@@ -1159,6 +1160,7 @@ const sfStartupLabs = sfStartupLabsAsset.url;
 const zbp = zbpAsset.url;
 const parpPfr = parpPfrAsset.url;
 const paih = paihAsset.url;
+const ministry = ministryAsset.url;
 
 type Partner = {
   name: string;
@@ -1205,22 +1207,28 @@ const sponsorsAndPartners: Partner[] = [
 
 const honoraryPatronage: Partner[] = [
   {
+    name: "Ministry of Economic Development and Technology, Republic of Poland",
+    href: "https://www.gov.pl/web/development-technology/",
+    img: ministry,
+    imgClass: "h-9 md:h-10 w-auto object-contain",
+  },
+  {
     name: "Polish Agency for Enterprise Development",
     href: "https://en.parp.gov.pl/",
     img: parpPfr,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
   {
     name: "Polish Investment and Trade Agency",
     href: "https://www.paih.gov.pl/en/",
     img: paih,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
   {
     name: "Związek Banków Polskich",
     href: "https://www.zbp.pl/",
     img: zbp,
-    imgClass: "h-16 md:h-20 w-auto object-contain",
+    imgClass: "h-14 md:h-16 w-auto object-contain",
   },
 ];
 
@@ -1234,7 +1242,7 @@ const partnerGroups = [
   {
     label: "Honorary Patronage",
     partners: honoraryPatronage,
-    cols: "grid-cols-1 sm:grid-cols-3",
+    cols: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
     maxW: "max-w-[996px]",
   },
   {
