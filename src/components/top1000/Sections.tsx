@@ -26,6 +26,7 @@ import michalNedoszytkoAsset from "@/assets/michal-nedoszytko.png.asset.json";
 import joannaJaworekKorjakowskaAsset from "@/assets/joanna-jaworek-korjakowska.png.asset.json";
 import michalMajerczakAsset from "@/assets/michal-majerczak.png.asset.json";
 import mikeLyonsAsset from "@/assets/mike-lyons.png.asset.json";
+import nicoFaraAsset from "@/assets/nico-fara.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -106,6 +107,7 @@ const michalNedoszytko = michalNedoszytkoAsset.url;
 const joannaJaworekKorjakowska = joannaJaworekKorjakowskaAsset.url;
 const michalMajerczak = michalMajerczakAsset.url;
 const mikeLyons = mikeLyonsAsset.url;
+const nicoFara = nicoFaraAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -793,6 +795,17 @@ const speakers = [
     bio: [
       "Mike Lyons is a Silicon Valley entrepreneur, venture capitalist, and educator with more than four decades of experience in technology commercialization, startup development, and venture investing. He is Managing Partner of Newline Ventures and an Adjunct Professor at Stanford University, where he has taught entrepreneurship since 1988.",
       "Mike co-founded Zilkha Venture Partners and served as a Venture Partner at Paladin Capital Group and ePlanet Ventures. He also co-founded SafeView, a security technology company acquired by L3-Harris, and helped establish the Stanford Technology Ventures Program (STVP). As the founding professor of Stanford's Technology Venture Formation course, he has played a significant role in entrepreneurship education, helping researchers, engineers, and business leaders turn technological innovations into successful ventures.",
+    ],
+  },
+  {
+    id: "nico-fara",
+    name: "Nico Fara",
+    role: "Fractional Go-to-Market Executive, Product Market Pro | U.S. Market Entry & Product Marketing",
+    image: nicoFara,
+    imageClass: "object-center",
+    bio: [
+      "Nico Fara is a go-to-market executive and entrepreneur who helps founders of AI and technical B2B companies launch products, enter the U.S. market, and grow beyond founder-led sales. Through Product Market Pro, she helps teams decide which customers to pursue first, how to package and price their products, and how to communicate the value of complex technology to buyers.",
+      "Based in San Francisco, Nico brings a background in electrical engineering and firsthand experience building companies. She mentors founders through Start2 Group and has worked with the Canadian Technology Accelerator’s Agentic & Enterprise AI cohort on adapting their go-to-market strategies for U.S. buyers. She also leads hands-on working sessions for founders and hosts Why Growth Stops, a series in which investors and operators discuss what stalls startup growth and how founders can respond.",
     ],
   },
 ];
