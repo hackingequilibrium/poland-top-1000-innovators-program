@@ -802,7 +802,7 @@ const speakers = [
     name: "Nico Fara",
     role: "Fractional Go-to-Market Executive, Product Market Pro | U.S. Market Entry & Product Marketing",
     image: nicoFara,
-    imageClass: "object-center",
+    imageClass: "object-top",
     bio: [
       "Nico Fara is a go-to-market executive and entrepreneur who helps founders of AI and technical B2B companies launch products, enter the U.S. market, and grow beyond founder-led sales. Through Product Market Pro, she helps teams decide which customers to pursue first, how to package and price their products, and how to communicate the value of complex technology to buyers.",
       "Based in San Francisco, Nico brings a background in electrical engineering and firsthand experience building companies. She mentors founders through Start2 Group and has worked with the Canadian Technology Accelerator’s Agentic & Enterprise AI cohort on adapting their go-to-market strategies for U.S. buyers. She also leads hands-on working sessions for founders and hosts Why Growth Stops, a series in which investors and operators discuss what stalls startup growth and how founders can respond.",
