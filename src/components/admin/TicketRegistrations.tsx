@@ -141,9 +141,9 @@ export function TicketRegistrations({ registrations }: { registrations: TicketRe
         </Select>
       </div>
     </div>
-    <dl aria-label="Registration summary" className="grid grid-cols-2 xl:grid-cols-5 gap-x-6 gap-y-4 border-y border-summit-foreground/15 py-5 mb-6">
-      {([['Registrations', summary.registrations], ['Tickets', summary.tickets], ['Invoices', summary.invoices], ['Invoices issued', summary.issued], ['Invoices paid', summary.paid]] as const).map(([label, count]) =>
-        <div key={label}><dt className="text-sm text-summit-muted">{label}</dt><dd className="text-2xl font-semibold mt-1">{!ready && label.startsWith('Invoice') ? '—' : count}</dd></div>)}
+    <dl aria-label="Registration summary" className="grid grid-cols-2 gap-x-6 gap-y-4 border-y border-summit-foreground/15 py-5 mb-6">
+      {([['Registrations', summary.registrations], ['Tickets', summary.tickets]] as const).map(([label, count]) =>
+        <div key={label}><dt className="text-sm text-summit-muted">{label}</dt><dd className="text-2xl font-semibold mt-1">{count}</dd></div>)}
     </dl>
     {!ready && <div role="status" className="mb-4 text-summit-muted">{failed ? <><span>Invoice tracking could not be loaded. </span><Button variant="summit" size="sm" onClick={refresh}>Retry</Button></> : 'Loading invoice tracking…'}</div>}
     {registrations.length === 0 ? <p className="text-summit-muted text-center py-12">No ticket registrations yet.</p>
