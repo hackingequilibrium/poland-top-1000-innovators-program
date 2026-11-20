@@ -33,7 +33,7 @@ function StatusFields({ label, status, disabled, onChange }: { label: string; st
     <span className="min-w-0 basis-full font-medium lg:basis-auto lg:flex-1">{label}</span>
     {(['issued', 'paid'] as const).map(field => <label key={field} className="flex items-center gap-2 cursor-pointer">
       <Checkbox aria-label={`${label}: ${field === 'issued' ? 'Invoice issued' : 'Paid'}`} checked={status[field]} disabled={disabled}
-        className="border-summit-muted data-[state=checked]:bg-summit-accent data-[state=checked]:text-summit focus-visible:ring-summit-accent"
+        className="border-input data-[state=checked]:bg-[#C70828] data-[state=checked]:border-[#C70828] data-[state=checked]:text-white focus-visible:ring-[#C70828]"
         onCheckedChange={checked => onChange({ ...status, [field]: checked === true })} />
       {field === 'issued' ? 'Invoice issued' : 'Paid'}
     </label>)}
@@ -63,33 +63,33 @@ function RegistrationCard({ registration: r, tracking, ready, selected, onSelect
     } finally { setSaving(false); }
   }
 
-  return <article className="rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 p-4 text-sm text-summit-foreground break-words">
+  return <article className="rounded-lg border border-border bg-card p-4 text-sm text-foreground break-words shadow-sm">
     <div className="flex flex-wrap justify-between gap-2 mb-2">
       <span className="font-semibold capitalize">{r.ticket_type} × {r.quantity}</span>
       <span className="flex items-center gap-3">
-        <span className="text-summit-muted text-xs">{new Date(r.created_at).toLocaleString()}</span>
-        <label className="flex items-center gap-1.5 cursor-pointer text-xs text-summit-muted">
+        <span className="text-muted-foreground text-xs">{new Date(r.created_at).toLocaleString()}</span>
+        <label className="flex items-center gap-1.5 cursor-pointer text-xs text-muted-foreground">
           <Checkbox aria-label={`Select registration for ${r.contact_name}`} checked={selected}
-            className="border-summit-muted data-[state=checked]:bg-summit-accent data-[state=checked]:text-summit focus-visible:ring-summit-accent"
+            className="border-input data-[state=checked]:bg-[#C70828] data-[state=checked]:border-[#C70828] data-[state=checked]:text-white focus-visible:ring-[#C70828]"
             onCheckedChange={checked => onSelectedChange(r.id, checked === true)} />
           Select
         </label>
       </span>
     </div>
-    <div><span className="text-summit-muted">Contact:</span> {r.contact_name} · {r.contact_email} · {r.contact_phone} · {r.country}</div>
-    <div className="mt-2 text-summit-muted">Ticket holders:</div>
+    <div><span className="text-muted-foreground">Contact:</span> {r.contact_name} · {r.contact_email} · {r.contact_phone} · {r.country}</div>
+    <div className="mt-2 text-muted-foreground">Ticket holders:</div>
     <ol className="list-decimal pl-5">{holders.map((h, i) => <li key={i}>{h.full_name} — {h.position}, {h.organization}{h.email ? ` · ${h.email}` : ''}</li>)}</ol>
-    <div className="mt-2"><span className="text-summit-muted">Billing:</span> {r.billing_org}, {r.billing_address}{r.tax_id ? ` · Tax ID ${r.tax_id}` : ''}</div>
-    {r.discount_codes && <div className="mt-1"><span className="text-summit-muted">Discount code(s):</span> {r.discount_codes}</div>}
-    {r.notes && <div className="mt-1"><span className="text-summit-muted">Notes:</span> {r.notes}</div>}
-    <div className="mt-4 border-t border-summit-foreground/15 pt-4">
+    <div className="mt-2"><span className="text-muted-foreground">Billing:</span> {r.billing_org}, {r.billing_address}{r.tax_id ? ` · Tax ID ${r.tax_id}` : ''}</div>
+    {r.discount_codes && <div className="mt-1"><span className="text-muted-foreground">Discount code(s):</span> {r.discount_codes}</div>}
+    {r.notes && <div className="mt-1"><span className="text-muted-foreground">Notes:</span> {r.notes}</div>}
+    <div className="mt-4 border-t border-border pt-4">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
         <div role="group" aria-label={`Invoice type for ${r.contact_name}`} className="flex flex-wrap gap-1">
-          {(['group', 'individual'] as const).map(mode => <Button key={mode} size="sm" variant="summit" aria-pressed={draft.invoice_mode === mode}
-            className={draft.invoice_mode === mode ? 'bg-summit-foreground text-summit' : ''} disabled={!ready || saving}
+          {(['group', 'individual'] as const).map(mode => <Button key={mode} size="sm" variant="outline" aria-pressed={draft.invoice_mode === mode}
+            className={draft.invoice_mode === mode ? 'bg-foreground text-background hover:bg-foreground hover:text-background' : ''} disabled={!ready || saving}
             onClick={() => persist({ ...draft, invoice_mode: mode })}>{mode === 'group' ? 'Group invoice' : 'Individual invoices'}</Button>)}
         </div>
-        <span role="status" aria-live="polite" className="text-xs text-summit-muted">{saving ? 'Saving…' : 'Changes save automatically'}</span>
+        <span role="status" aria-live="polite" className="text-xs text-muted-foreground">{saving ? 'Saving…' : 'Changes save automatically'}</span>
       </div>
       {draft.invoice_mode === 'group'
         ? <StatusFields label="Group invoice" status={{ issued: draft.group_issued, paid: draft.group_paid }} disabled={!ready || saving}
@@ -162,47 +162,47 @@ export function TicketRegistrations({ registrations, onDeleted }: { registration
     else toast.success(deleted.length === 1 ? 'Registration deleted' : `${deleted.length} registrations deleted`);
   }
 
-  return <div className="p-6 text-summit-foreground">
+  return <div className="p-6 text-foreground">
     <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
       <h3 className="text-2xl font-semibold">Ticket Registrations 2026</h3>
-      <Button variant="summit" onClick={exportAll} disabled={exporting || !ready || !registrations.length}><Download />{exporting ? 'Exporting…' : 'Export spreadsheet (.csv)'}</Button>
+      <Button variant="outline" onClick={exportAll} disabled={exporting || !ready || !registrations.length}><Download />{exporting ? 'Exporting…' : 'Export spreadsheet (.csv)'}</Button>
     </div>
     <div className="flex flex-wrap gap-4 mb-6">
       <div className="w-full sm:w-44">
-        <label className="block text-sm text-summit-muted mb-2" id="ticket-type-label">Ticket type</label>
+        <label className="block text-sm text-muted-foreground mb-2" id="ticket-type-label">Ticket type</label>
         <Select value={ticketType} onValueChange={value => { setTicketType(value); if (value === 'business') setUniversity('all'); }}>
-          <SelectTrigger aria-labelledby="ticket-type-label" className="bg-summit-foreground/5 border-summit-foreground/20"><SelectValue /></SelectTrigger>
+          <SelectTrigger aria-labelledby="ticket-type-label" className="bg-card border-border"><SelectValue /></SelectTrigger>
           <SelectContent><SelectItem value="all">All ticket types</SelectItem><SelectItem value="university">University</SelectItem><SelectItem value="business">Business</SelectItem></SelectContent>
         </Select>
       </div>
       <div className="min-w-0 w-full sm:flex-1">
-        <label className="block text-sm text-summit-muted mb-2" id="university-label">University / institution</label>
+        <label className="block text-sm text-muted-foreground mb-2" id="university-label">University / institution</label>
         <Select value={university} onValueChange={value => { setUniversity(value); if (value !== 'all') setTicketType('university'); }}>
-          <SelectTrigger aria-labelledby="university-label" className="bg-summit-foreground/5 border-summit-foreground/20 [&>span]:truncate"><SelectValue /></SelectTrigger>
+          <SelectTrigger aria-labelledby="university-label" className="bg-card border-border [&>span]:truncate"><SelectValue /></SelectTrigger>
           <SelectContent className="max-w-[min(600px,90vw)]"><SelectItem value="all">All universities / institutions</SelectItem>{universities.map(name => <SelectItem key={name} value={name} className="break-words">{name}</SelectItem>)}</SelectContent>
         </Select>
       </div>
     </div>
-    <dl aria-label="Registration summary" className="grid grid-cols-2 gap-x-6 gap-y-4 border-y border-summit-foreground/15 py-5 mb-6">
+    <dl aria-label="Registration summary" className="grid grid-cols-2 gap-x-6 gap-y-4 border-y border-border py-5 mb-6">
       {([['Registrations', summary.registrations], ['Tickets', summary.tickets]] as const).map(([label, count]) =>
-        <div key={label}><dt className="text-sm text-summit-muted">{label}</dt><dd className="text-2xl font-semibold mt-1">{count}</dd></div>)}
+        <div key={label}><dt className="text-sm text-muted-foreground">{label}</dt><dd className="text-2xl font-semibold mt-1">{count}</dd></div>)}
     </dl>
-    {!ready && <div role="status" className="mb-4 text-summit-muted">{failed ? <><span>Invoice tracking could not be loaded. </span><Button variant="summit" size="sm" onClick={refresh}>Retry</Button></> : 'Loading invoice tracking…'}</div>}
-    {selectedIds.size > 0 && <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 px-4 py-3">
-      <span className="text-sm text-summit-muted">{selectedIds.size} selected</span>
+    {!ready && <div role="status" className="mb-4 text-muted-foreground">{failed ? <><span>Invoice tracking could not be loaded. </span><Button variant="outline" size="sm" onClick={refresh}>Retry</Button></> : 'Loading invoice tracking…'}</div>}
+    {selectedIds.size > 0 && <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-border bg-muted/50 px-4 py-3">
+      <span className="text-sm text-muted-foreground">{selectedIds.size} selected</span>
       {confirmingDelete
         ? <span className="flex flex-wrap items-center gap-2">
-            <span className="text-xs text-summit-muted">Delete {selectedIds.size === 1 ? 'this registration' : `these ${selectedIds.size} registrations`} and their invoice tracking? This cannot be undone.</span>
+            <span className="text-xs text-muted-foreground">Delete {selectedIds.size === 1 ? 'this registration' : `these ${selectedIds.size} registrations`} and their invoice tracking? This cannot be undone.</span>
             <Button size="sm" variant="destructive" disabled={deleting} onClick={deleteSelected}>{deleting ? 'Deleting…' : 'Yes, delete'}</Button>
-            <Button size="sm" variant="summit" disabled={deleting} onClick={() => setConfirmingDelete(false)}>Cancel</Button>
+            <Button size="sm" variant="outline" disabled={deleting} onClick={() => setConfirmingDelete(false)}>Cancel</Button>
           </span>
         : <span className="flex items-center gap-2">
-            <Button size="sm" variant="summit" onClick={() => setSelectedIds(new Set())}>Clear selection</Button>
+            <Button size="sm" variant="outline" onClick={() => setSelectedIds(new Set())}>Clear selection</Button>
             <Button size="sm" variant="destructive" onClick={() => setConfirmingDelete(true)}>Delete selected</Button>
           </span>}
     </div>}
-    {registrations.length === 0 ? <p className="text-summit-muted text-center py-12">No ticket registrations yet.</p>
-      : filtered.length === 0 ? <p className="text-summit-muted text-center py-12">No registrations match these filters.</p>
+    {registrations.length === 0 ? <p className="text-muted-foreground text-center py-12">No ticket registrations yet.</p>
+      : filtered.length === 0 ? <p className="text-muted-foreground text-center py-12">No registrations match these filters.</p>
       : <div className="space-y-4">{filtered.map(r => <RegistrationCard key={r.id} registration={r} ready={ready}
           selected={selectedIds.has(r.id)} onSelectedChange={onSelectedChange}
           tracking={trackingByRegistration.get(r.id) ?? defaultTracking(r.id)}

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
-import polsvLogo from "@/assets/polsv-logo-color-dark-bg.svg.asset.json";
+import polsvLogo from "@/assets/polsv-logo.png";
 import type { User, Session } from "@supabase/supabase-js";
 import { z } from "zod";
 import { TicketRegistrations, loadTicketRegistrations } from '@/components/admin/TicketRegistrations';
@@ -908,15 +908,15 @@ const Admin = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0F1435] flex items-center justify-center">
-        <p className="text-white font-inter">Loading...</p>
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <p className="text-muted-foreground font-inter">Loading...</p>
       </div>
     );
   }
 
   if (!user || !isAdmin) {
     return (
-      <div className="min-h-screen bg-[#0F1435] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <Card className="rounded-none max-w-md w-full">
           <CardContent className="pt-6 space-y-4">
             <p className="font-inter text-[#797B8E] text-center">
@@ -944,17 +944,17 @@ const Admin = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#0F1435] p-8">
+    <div className="min-h-screen bg-background p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
             <img src={polsvLogo.url} alt="PolSV Logo" className="h-20 w-auto" />
             <div>
-              <h1 className="font-inter font-extrabold text-2xl text-white uppercase">
+              <h1 className="font-inter font-extrabold text-2xl text-foreground uppercase">
                 Admin Panel
               </h1>
               {user && (
-                <p className="font-inter text-sm text-gray-400 mt-1">
+                <p className="font-inter text-sm text-muted-foreground mt-1">
                   Logged in as: {user.email}
                 </p>
               )}
@@ -962,48 +962,48 @@ const Admin = () => {
           </div>
           <Button
             onClick={handleSignOut}
-            className="bg-white text-[#0F1435] hover:bg-gray-100 rounded-none font-inter font-semibold"
+            variant="outline" className="rounded-none font-inter font-semibold bg-card"
           >
             Sign Out
           </Button>
         </div>
 
         <Tabs defaultValue="tickets" className="w-full flex gap-6">
-          <TabsList className="flex flex-col h-fit w-64 shrink-0 bg-[#0C0F24] rounded-none p-2 gap-1">
-            <TabsTrigger value="tickets" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+          <TabsList className="flex flex-col h-fit w-64 shrink-0 bg-card border border-border rounded-lg p-2 gap-1">
+            <TabsTrigger value="tickets" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Ticket Registrations 2026
             </TabsTrigger>
-            <TabsTrigger value="speakers-2026" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="speakers-2026" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Speakers 2026
             </TabsTrigger>
-            <TabsTrigger value="ip-workshop" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="ip-workshop" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               IP Workshop
             </TabsTrigger>
-            <TabsTrigger value="consent" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="consent" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Consent Forms
             </TabsTrigger>
-            <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="waitlist" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Waitlist 2026
             </TabsTrigger>
-            <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="partners" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Partners 2026
             </TabsTrigger>
-            <TabsTrigger value="contact" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="contact" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Contact Messages
             </TabsTrigger>
-            <TabsTrigger value="submissions" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="submissions" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Session Submissions
             </TabsTrigger>
-            <TabsTrigger value="rsvp" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="rsvp" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               RSVP Submissions
             </TabsTrigger>
-            <TabsTrigger value="guest-rsvp" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="guest-rsvp" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Guest RSVPs
             </TabsTrigger>
-            <TabsTrigger value="experts" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="experts" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               Expert Recommendations
             </TabsTrigger>
-            <TabsTrigger value="admins" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+            <TabsTrigger value="admins" className="rounded-md justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-muted-foreground hover:text-foreground">
               User Management
             </TabsTrigger>
           </TabsList>
@@ -1014,7 +1014,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportSubmissions}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export All Sessions to CSV
                 </Button>
@@ -1031,7 +1031,7 @@ const Admin = () => {
                 {submissions.map((submission) => (
                   <Card key={submission.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {submission.name}
                       </CardTitle>
                       <Button
@@ -1062,7 +1062,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportRSVPs}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export All RSVPs to CSV
                 </Button>
@@ -1079,7 +1079,7 @@ const Admin = () => {
                 {rsvpSubmissions.map((rsvp) => (
                   <Card key={rsvp.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {rsvp.name}
                       </CardTitle>
                       <Button
@@ -1123,7 +1123,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportGuestRSVPs}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export All Guest RSVPs to CSV
                 </Button>
@@ -1140,7 +1140,7 @@ const Admin = () => {
                 {guestRsvpSubmissions.map((rsvp) => (
                   <Card key={rsvp.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {rsvp.name} {rsvp.surname}
                       </CardTitle>
                       <Button
@@ -1196,7 +1196,7 @@ const Admin = () => {
                 {expertRecommendations.map((recommendation) => (
                   <Card key={recommendation.id} className="rounded-none">
                     <CardHeader>
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {recommendation.expert_full_name}
                       </CardTitle>
                     </CardHeader>
@@ -1229,7 +1229,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportSpeakerSuggestions}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export Speakers 2026 to CSV
                 </Button>
@@ -1246,7 +1246,7 @@ const Admin = () => {
                 {speakerSuggestions.map((s) => (
                   <Card key={s.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {s.speaker_name}
                       </CardTitle>
                       <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
@@ -1283,7 +1283,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportIpWorkshopSignups}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export IP Workshop Signups to CSV
                 </Button>
@@ -1300,7 +1300,7 @@ const Admin = () => {
                 {ipWorkshopSignups.map((s) => (
                   <Card key={s.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {s.name} {s.surname}
                       </CardTitle>
                       <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
@@ -1327,7 +1327,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportConsentSubmissions}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export Consent Forms to CSV
                 </Button>
@@ -1344,7 +1344,7 @@ const Admin = () => {
                 {consentSubmissions.map((s) => (
                   <Card key={s.id} className="rounded-none">
                     <CardHeader className="flex flex-row items-center justify-between">
-                      <CardTitle className="font-inter font-bold text-lg text-[#0F1435]">
+                      <CardTitle className="font-inter font-bold text-lg text-foreground">
                         {s.full_name}
                       </CardTitle>
                       <span className="font-inter text-xs uppercase tracking-wide bg-[#C70828] text-white px-2 py-1">
@@ -1377,7 +1377,7 @@ const Admin = () => {
               <div className="mb-4 flex justify-end">
                 <Button
                   onClick={handleExportWaitlist}
-                  className="bg-[#0F1435] hover:bg-[#1a1f4d] text-white rounded-none font-inter font-semibold"
+                  variant="outline" className="rounded-md font-inter font-semibold bg-card"
                 >
                   Export Waitlist to CSV
                 </Button>
@@ -1395,8 +1395,8 @@ const Admin = () => {
                   <Card key={entry.id} className="rounded-none">
                     <CardContent className="py-4 flex justify-between items-start">
                       <div className="space-y-1 font-inter text-sm">
-                        <p className="font-bold text-base text-[#0F1435]">{entry.name}</p>
-                        <p className="text-[#0F1435]">{entry.email}</p>
+                        <p className="font-bold text-base text-foreground">{entry.name}</p>
+                        <p className="text-foreground">{entry.email}</p>
                         <p className="text-[#797B8E] text-xs">
                           Signed up: {new Date(entry.created_at).toLocaleString()}
                         </p>
@@ -1420,7 +1420,7 @@ const Admin = () => {
             {!showCreateAdmin ? (
               <>
                 <div className="flex justify-between items-center">
-                  <h2 className="font-inter font-extrabold text-xl text-white">Admin Users</h2>
+                  <h2 className="font-inter font-extrabold text-xl text-foreground">Admin Users</h2>
                   <Button
                     onClick={() => setShowCreateAdmin(true)}
                     className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold rounded-none"
@@ -1442,7 +1442,7 @@ const Admin = () => {
                         <CardContent className="py-4">
                           <div className="flex justify-between items-start">
                             <div className="space-y-1">
-                              <p className="font-inter font-bold text-base text-[#0F1435]">
+                              <p className="font-inter font-bold text-base text-foreground">
                                 {admin.full_name || 'No name'}
                                 {admin.user_id === user?.id && (
                                   <span className="ml-2 text-xs font-normal text-[#C70828]">(You)</span>
@@ -1476,7 +1476,7 @@ const Admin = () => {
               <Card className="rounded-none">
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle className="font-inter font-bold text-xl text-[#0F1435]">
+                    <CardTitle className="font-inter font-bold text-xl text-foreground">
                       Create New Admin User
                     </CardTitle>
                     <Button
@@ -1540,7 +1540,7 @@ const Admin = () => {
             <TabsContent value="partners" className="mt-0">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-semibold text-white">Partners 2026</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">Partners 2026</h3>
                   <Button
                     onClick={handleExportPartnerInquiries}
                     className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
@@ -1550,54 +1550,54 @@ const Admin = () => {
                 </div>
 
                 {partnerInquiries.length === 0 ? (
-                  <p className="text-gray-400 text-center py-12">No partner inquiries yet.</p>
+                  <p className="text-muted-foreground text-center py-12">No partner inquiries yet.</p>
                 ) : (
                   <div className="space-y-4">
                     {partnerInquiries.map((p) => (
-                      <div key={p.id} className="bg-white/5 border border-white/10 rounded-lg p-4">
+                      <div key={p.id} className="bg-card border border-border rounded-lg p-4 shadow-sm">
                         <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                           <div>
-                            <span className="text-white font-semibold">{p.name}</span>
-                            <span className="text-gray-400 ml-2">{p.organization}</span>
+                            <span className="text-foreground font-semibold">{p.name}</span>
+                            <span className="text-muted-foreground ml-2">{p.organization}</span>
                           </div>
-                          <span className="text-gray-500 text-xs">
+                          <span className="text-muted-foreground text-xs">
                             {new Date(p.created_at).toLocaleString()}
                           </span>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-300">
-                          {p.role && <div><span className="text-gray-500">Role:</span> {p.role}</div>}
-                          <div><span className="text-gray-500">Email:</span> {p.email}</div>
-                          <div><span className="text-gray-500">Type:</span> {p.org_type}</div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-foreground/80">
+                          {p.role && <div><span className="text-muted-foreground">Role:</span> {p.role}</div>}
+                          <div><span className="text-muted-foreground">Email:</span> {p.email}</div>
+                          <div><span className="text-muted-foreground">Type:</span> {p.org_type}</div>
                           {p.website && (
                             <div>
-                              <span className="text-gray-500">Website:</span>{" "}
-                              <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                              <span className="text-muted-foreground">Website:</span>{" "}
+                              <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">
                                 {p.website}
                               </a>
                             </div>
                           )}
                           {p.linkedin && (
                             <div>
-                              <span className="text-gray-500">LinkedIn:</span>{" "}
-                              <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#8FC7F5] hover:underline">
+                              <span className="text-muted-foreground">LinkedIn:</span>{" "}
+                              <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C70828] hover:underline">
                                 {p.linkedin}
                               </a>
                             </div>
                           )}
                         </div>
                         {p.area_of_interest && (
-                          <div className="mt-2 text-sm text-gray-300">
-                            <span className="text-gray-500">Area of interest:</span> {p.area_of_interest}
+                          <div className="mt-2 text-sm text-foreground/80">
+                            <span className="text-muted-foreground">Area of interest:</span> {p.area_of_interest}
                           </div>
                         )}
                         {p.collaboration_type && (
-                          <div className="mt-1 text-sm text-gray-300">
-                            <span className="text-gray-500">Collaboration type:</span> {p.collaboration_type}
+                          <div className="mt-1 text-sm text-foreground/80">
+                            <span className="text-muted-foreground">Collaboration type:</span> {p.collaboration_type}
                           </div>
                         )}
                         {p.details && (
-                          <div className="mt-1 text-sm text-gray-300">
-                            <span className="text-gray-500">Details:</span> {p.details}
+                          <div className="mt-1 text-sm text-foreground/80">
+                            <span className="text-muted-foreground">Details:</span> {p.details}
                           </div>
                         )}
                       </div>
@@ -1610,7 +1610,7 @@ const Admin = () => {
             <TabsContent value="contact" className="mt-0">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-semibold text-white">Contact Messages</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">Contact Messages</h3>
                   <Button
                     onClick={handleExportContactMessages}
                     className="bg-[#C70828] hover:bg-[#A80E34] text-white font-inter font-semibold text-sm uppercase rounded-none"
@@ -1620,29 +1620,29 @@ const Admin = () => {
                 </div>
 
                 {contactMessages.length === 0 ? (
-                  <p className="text-gray-400 text-center py-12">No contact messages yet.</p>
+                  <p className="text-muted-foreground text-center py-12">No contact messages yet.</p>
                 ) : (
                   <div className="space-y-4">
                     {contactMessages.map((c) => (
-                      <div key={c.id} className="bg-white/5 border border-white/10 rounded-lg p-4">
+                      <div key={c.id} className="bg-card border border-border rounded-lg p-4 shadow-sm">
                         <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                           <div>
-                            <span className="text-white font-semibold">{c.name}</span>
-                            <span className="text-gray-400 ml-2">{c.email}</span>
+                            <span className="text-foreground font-semibold">{c.name}</span>
+                            <span className="text-muted-foreground ml-2">{c.email}</span>
                           </div>
-                          <span className="text-gray-500 text-xs">
+                          <span className="text-muted-foreground text-xs">
                             {new Date(c.created_at).toLocaleString()}
                           </span>
                         </div>
                         {c.organization && (
-                          <div className="text-sm text-gray-300 mb-1">
-                            <span className="text-gray-500">Organization:</span> {c.organization}
+                          <div className="text-sm text-foreground/80 mb-1">
+                            <span className="text-muted-foreground">Organization:</span> {c.organization}
                           </div>
                         )}
-                        <div className="text-sm text-gray-300 mb-2">
-                          <span className="text-gray-500">Subject:</span> {c.subject}
+                        <div className="text-sm text-foreground/80 mb-2">
+                          <span className="text-muted-foreground">Subject:</span> {c.subject}
                         </div>
-                        <div className="text-sm text-gray-300 mt-2 whitespace-pre-wrap">
+                        <div className="text-sm text-foreground/80 mt-2 whitespace-pre-wrap">
                           {c.message}
                         </div>
                       </div>
