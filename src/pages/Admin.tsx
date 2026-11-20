@@ -976,8 +976,11 @@ const Admin = () => {
           </Button>
         </div>
 
-        <Tabs defaultValue="speakers-2026" className="w-full flex gap-6">
+        <Tabs defaultValue="tickets" className="w-full flex gap-6">
           <TabsList className="flex flex-col h-fit w-64 shrink-0 bg-[#0C0F24] rounded-none p-2 gap-1">
+            <TabsTrigger value="tickets" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
+              Ticket Registrations 2026
+            </TabsTrigger>
             <TabsTrigger value="speakers-2026" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Speakers 2026
             </TabsTrigger>
@@ -989,9 +992,6 @@ const Admin = () => {
             </TabsTrigger>
             <TabsTrigger value="waitlist" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Waitlist 2026
-            </TabsTrigger>
-            <TabsTrigger value="tickets" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
-              Ticket Registrations
             </TabsTrigger>
             <TabsTrigger value="partners" className="rounded-none justify-start w-full text-left data-[state=active]:bg-[#C70828] data-[state=active]:text-white text-gray-300">
               Partners 2026
