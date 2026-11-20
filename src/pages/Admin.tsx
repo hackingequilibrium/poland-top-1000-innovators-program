@@ -1534,7 +1534,7 @@ const Admin = () => {
           </TabsContent>
 
             <TabsContent value="tickets" className="mt-0">
-              <TicketRegistrations registrations={ticketRegs} />
+              <TicketRegistrations registrations={ticketRegs} onDeleted={id => setTicketRegs(current => current.filter(r => r.id !== id))} />
             </TabsContent>
 
             <TabsContent value="partners" className="mt-0">

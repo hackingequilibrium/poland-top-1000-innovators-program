@@ -40,9 +40,11 @@ function StatusFields({ label, status, disabled, onChange }: { label: string; st
   </div>;
 }
 
-function RegistrationCard({ registration: r, tracking, ready, onSaved }: { registration: TicketRegistration; tracking: InvoiceTracking; ready: boolean; onSaved: (tracking: InvoiceTracking) => void }) {
+function RegistrationCard({ registration: r, tracking, ready, onSaved, onDeleted }: { registration: TicketRegistration; tracking: InvoiceTracking; ready: boolean; onSaved: (tracking: InvoiceTracking) => void; onDeleted: (id: string) => void }) {
   const [draft, setDraft] = useState(tracking);
   const [saving, setSaving] = useState(false);
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const saved = useRef(tracking);
   useEffect(() => { saved.current = tracking; setDraft(tracking); }, [tracking]);
   const holders = Array.isArray(r.holders) ? r.holders : [];
@@ -61,6 +63,19 @@ function RegistrationCard({ registration: r, tracking, ready, onSaved }: { regis
       setDraft(saved.current);
       toast.error('Could not save invoice tracking. Your change was not saved.');
     } finally { setSaving(false); }
+  }
+
+  async function remove() {
+    setDeleting(true);
+    try {
+      const { error } = await supabase.from('ticket_registrations').delete().eq('id', r.id);
+      if (error) throw error;
+      onDeleted(r.id);
+      toast.success('Registration deleted');
+    } catch {
+      setConfirmingDelete(false);
+      toast.error('Could not delete this registration.');
+    } finally { setDeleting(false); }
   }
 
   return <article className="rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 p-4 text-sm text-summit-foreground break-words">
@@ -88,11 +103,20 @@ function RegistrationCard({ registration: r, tracking, ready, onSaved }: { regis
             onChange={status => persist({ ...draft, group_issued: status.issued, group_paid: status.paid })} />
         : holders.map((h, i) => <StatusFields key={i} label={`${i + 1}. ${h.full_name}`} status={draft.individual_statuses[String(i)] ?? { issued: false, paid: false }} disabled={!ready || saving}
             onChange={status => persist({ ...draft, individual_statuses: { ...draft.individual_statuses, [String(i)]: status } })} />)}
+      <div className="mt-4 flex flex-wrap items-center justify-end gap-2">
+        {confirmingDelete
+          ? <>
+              <span className="text-xs text-summit-muted">Delete this registration and its invoice tracking? This cannot be undone.</span>
+              <Button size="sm" variant="destructive" disabled={deleting} onClick={remove}>{deleting ? 'Deleting…' : 'Yes, delete'}</Button>
+              <Button size="sm" variant="summit" disabled={deleting} onClick={() => setConfirmingDelete(false)}>Cancel</Button>
+            </>
+          : <Button size="sm" variant="summit" disabled={!ready || saving} onClick={() => setConfirmingDelete(true)}>Delete</Button>}
+      </div>
     </div>
   </article>;
 }
 
-export function TicketRegistrations({ registrations }: { registrations: TicketRegistration[] }) {
+export function TicketRegistrations({ registrations, onDeleted }: { registrations: TicketRegistration[]; onDeleted: (id: string) => void }) {
   const [tracking, setTracking] = useState<InvoiceTracking[]>([]);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
@@ -155,6 +179,7 @@ export function TicketRegistrations({ registrations }: { registrations: TicketRe
       : filtered.length === 0 ? <p className="text-summit-muted text-center py-12">No registrations match these filters.</p>
       : <div className="space-y-4">{filtered.map(r => <RegistrationCard key={r.id} registration={r} ready={ready}
           tracking={trackingByRegistration.get(r.id) ?? defaultTracking(r.id)}
-          onSaved={saved => setTracking(current => [...current.filter(t => t.registration_id !== saved.registration_id), saved])} />)}</div>}
+          onSaved={saved => setTracking(current => [...current.filter(t => t.registration_id !== saved.registration_id), saved])}
+          onDeleted={onDeleted} />)}</div>}
   </div>;
 }

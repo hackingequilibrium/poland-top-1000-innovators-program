@@ -36,6 +36,13 @@
       "when": 1795212323414,
       "tag": "0004_ticket_invoice_tracking",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795212812165,
+      "tag": "0005_admin_delete_ticket_registrations",
+      "breakpoints": true
     }
   ]
 }
