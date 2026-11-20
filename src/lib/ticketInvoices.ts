@@ -30,6 +30,51 @@ export function holderStatus(tracking: InvoiceTracking, index: number): InvoiceS
   return { issued: status?.issued === true, paid: status?.paid === true };
 }
 
+const organizationKey = (name: string) => name.trim().replace(/\s+/g, ' ').toLocaleLowerCase();
+
+export function universityOptions(registrations: TicketRegistration[]): string[] {
+  const names = new Map<string, string>();
+  for (const r of registrations.filter(r => r.ticket_type === 'university')) {
+    const holders = Array.isArray(r.holders) ? r.holders : [];
+    for (const name of holders.length ? holders.map(h => h.organization) : [r.billing_org]) {
+      if (name?.trim()) names.set(organizationKey(name), name.trim().replace(/\s+/g, ' '));
+    }
+  }
+  return [...names.values()].sort((a, b) => a.localeCompare(b));
+}
+
+export function filterRegistrations(registrations: TicketRegistration[], ticketType: string, university: string): TicketRegistration[] {
+  return registrations.filter(r => (ticketType === 'all' || r.ticket_type === ticketType) &&
+    (university === 'all' || (r.ticket_type === 'university' &&
+      (Array.isArray(r.holders) && r.holders.length ? r.holders.some(h => organizationKey(h.organization ?? '') === organizationKey(university))
+        : organizationKey(r.billing_org) === organizationKey(university)))));
+}
+
+export function registrationSummary(registrations: TicketRegistration[], tracking: InvoiceTracking[], university = 'all') {
+  const summary = { registrations: registrations.length, tickets: 0, invoices: 0, issued: 0, paid: 0 };
+  const statuses = new Map(tracking.map(t => [t.registration_id, t]));
+  for (const r of registrations) {
+    const t = statuses.get(r.id) ?? defaultTracking(r.id);
+    const holders = Array.isArray(r.holders) ? r.holders : [];
+    const indexes = holders.flatMap((h, i) => university === 'all' || organizationKey(h.organization ?? '') === organizationKey(university) ? [i] : []);
+    summary.tickets += university === 'all' || !holders.length ? r.quantity : indexes.length;
+    if (t.invoice_mode === 'group') {
+      summary.invoices += 1;
+      summary.issued += Number(t.group_issued);
+      summary.paid += Number(t.group_paid);
+    } else {
+      const invoiceIndexes = holders.length ? indexes : Array.from({ length: r.quantity }, (_, i) => i);
+      summary.invoices += invoiceIndexes.length;
+      for (const i of invoiceIndexes) {
+        const status = holderStatus(t, i);
+        summary.issued += Number(status.issued);
+        summary.paid += Number(status.paid);
+      }
+    }
+  }
+  return summary;
+}
+
 // Quote every cell, preserve Unicode, and neutralize spreadsheet formula injection.
 export function spreadsheetCell(value: unknown): string {
   const text = String(value ?? '');

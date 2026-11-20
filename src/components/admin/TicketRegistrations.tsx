@@ -4,7 +4,8 @@ import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { defaultTracking, registrationsCsv, type TicketRegistration, type InvoiceTracking, type InvoiceStatus } from '@/lib/ticketInvoices';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { defaultTracking, registrationsCsv, universityOptions, filterRegistrations, registrationSummary, type TicketRegistration, type InvoiceTracking, type InvoiceStatus } from '@/lib/ticketInvoices';
 import type { Json } from '@/integrations/supabase/types';
 
 async function loadTracking(): Promise<InvoiceTracking[]> {
@@ -91,6 +92,11 @@ export function TicketRegistrations({ registrations }: { registrations: TicketRe
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [ticketType, setTicketType] = useState('all');
+  const [university, setUniversity] = useState('all');
+  const universities = useMemo(() => universityOptions(registrations), [registrations]);
+  const filtered = useMemo(() => filterRegistrations(registrations, ticketType, university), [registrations, ticketType, university]);
+  const summary = useMemo(() => registrationSummary(filtered, tracking, university), [filtered, tracking, university]);
   const trackingByRegistration = useMemo(() => new Map(registrations.map(r => [r.id, tracking.find(t => t.registration_id === r.id) ?? defaultTracking(r.id)])), [registrations, tracking]);
   async function refresh() {
     setReady(false); setFailed(false);
@@ -119,9 +125,30 @@ export function TicketRegistrations({ registrations }: { registrations: TicketRe
       <h3 className="text-2xl font-semibold">Ticket Registrations 2026</h3>
       <Button variant="summit" onClick={exportAll} disabled={exporting || !ready || !registrations.length}><Download />{exporting ? 'Exporting…' : 'Export spreadsheet (.csv)'}</Button>
     </div>
+    <div className="flex flex-wrap gap-4 mb-6">
+      <div className="w-full sm:w-44">
+        <label className="block text-sm text-summit-muted mb-2" id="ticket-type-label">Ticket type</label>
+        <Select value={ticketType} onValueChange={value => { setTicketType(value); if (value === 'business') setUniversity('all'); }}>
+          <SelectTrigger aria-labelledby="ticket-type-label" className="bg-summit-foreground/5 border-summit-foreground/20"><SelectValue /></SelectTrigger>
+          <SelectContent><SelectItem value="all">All ticket types</SelectItem><SelectItem value="university">University</SelectItem><SelectItem value="business">Business</SelectItem></SelectContent>
+        </Select>
+      </div>
+      <div className="min-w-0 w-full sm:flex-1">
+        <label className="block text-sm text-summit-muted mb-2" id="university-label">University / institution</label>
+        <Select value={university} onValueChange={value => { setUniversity(value); if (value !== 'all') setTicketType('university'); }}>
+          <SelectTrigger aria-labelledby="university-label" className="bg-summit-foreground/5 border-summit-foreground/20 [&>span]:truncate"><SelectValue /></SelectTrigger>
+          <SelectContent className="max-w-[min(600px,90vw)]"><SelectItem value="all">All universities / institutions</SelectItem>{universities.map(name => <SelectItem key={name} value={name} className="break-words">{name}</SelectItem>)}</SelectContent>
+        </Select>
+      </div>
+    </div>
+    <dl aria-label="Registration summary" className="grid grid-cols-2 xl:grid-cols-5 gap-x-6 gap-y-4 border-y border-summit-foreground/15 py-5 mb-6">
+      {([['Registrations', summary.registrations], ['Tickets', summary.tickets], ['Invoices', summary.invoices], ['Invoices issued', summary.issued], ['Invoices paid', summary.paid]] as const).map(([label, count]) =>
+        <div key={label}><dt className="text-sm text-summit-muted">{label}</dt><dd className="text-2xl font-semibold mt-1">{!ready && label.startsWith('Invoice') ? '—' : count}</dd></div>)}
+    </dl>
     {!ready && <div role="status" className="mb-4 text-summit-muted">{failed ? <><span>Invoice tracking could not be loaded. </span><Button variant="summit" size="sm" onClick={refresh}>Retry</Button></> : 'Loading invoice tracking…'}</div>}
     {registrations.length === 0 ? <p className="text-summit-muted text-center py-12">No ticket registrations yet.</p>
-      : <div className="space-y-4">{registrations.map(r => <RegistrationCard key={r.id} registration={r} ready={ready}
+      : filtered.length === 0 ? <p className="text-summit-muted text-center py-12">No registrations match these filters.</p>
+      : <div className="space-y-4">{filtered.map(r => <RegistrationCard key={r.id} registration={r} ready={ready}
           tracking={trackingByRegistration.get(r.id) ?? defaultTracking(r.id)}
           onSaved={saved => setTracking(current => [...current.filter(t => t.registration_id !== saved.registration_id), saved])} />)}</div>}
   </div>;
