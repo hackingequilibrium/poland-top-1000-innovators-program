@@ -948,7 +948,7 @@ const Admin = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <img src={polsvLogo.url} alt="PolSV Logo" className="h-20 w-auto" />
+            <img src={polsvLogo} alt="PolSV Logo" className="h-20 w-auto" />
             <div>
               <h1 className="font-inter font-extrabold text-2xl text-foreground uppercase">
                 Admin Panel
