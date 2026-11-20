@@ -476,6 +476,38 @@ export type Database = {
         }
         Relationships: []
       }
+      ticket_invoice_tracking: {
+        Row: {
+          group_issued: boolean
+          group_paid: boolean
+          individual_statuses: Json
+          invoice_mode: string
+          registration_id: string
+        }
+        Insert: {
+          group_issued?: boolean
+          group_paid?: boolean
+          individual_statuses?: Json
+          invoice_mode?: string
+          registration_id: string
+        }
+        Update: {
+          group_issued?: boolean
+          group_paid?: boolean
+          individual_statuses?: Json
+          invoice_mode?: string
+          registration_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ticket_invoice_tracking_registration_id_fkey"
+            columns: ["registration_id"]
+            isOneToOne: true
+            referencedRelation: "ticket_registrations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       ticket_registrations: {
         Row: {
           billing_address: string

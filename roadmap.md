@@ -15,3 +15,6 @@
 - [x] Move Związek Banków Polskich to the third honorary patronage position.
 - [x] Add Ministry of Economic Development and Technology as the first honorary patronage; fit four tiles on one row.
 - [x] Add Minister of Science and Higher Education as the second honorary patronage; fit five tiles on one row.
+- [x] Add admin-only group and individual invoice issued/payment tracking.
+- [x] Export all ticket registration, holder, billing, and invoice status data to a spreadsheet.
+- [x] Verify saved tracking and spreadsheet download in the signed-in admin panel.
