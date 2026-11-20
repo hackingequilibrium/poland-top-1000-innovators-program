@@ -40,11 +40,9 @@ function StatusFields({ label, status, disabled, onChange }: { label: string; st
   </div>;
 }
 
-function RegistrationCard({ registration: r, tracking, ready, onSaved, onDeleted }: { registration: TicketRegistration; tracking: InvoiceTracking; ready: boolean; onSaved: (tracking: InvoiceTracking) => void; onDeleted: (id: string) => void }) {
+function RegistrationCard({ registration: r, tracking, ready, selected, onSelectedChange, onSaved }: { registration: TicketRegistration; tracking: InvoiceTracking; ready: boolean; selected: boolean; onSelectedChange: (id: string, selected: boolean) => void; onSaved: (tracking: InvoiceTracking) => void }) {
   const [draft, setDraft] = useState(tracking);
   const [saving, setSaving] = useState(false);
-  const [confirmingDelete, setConfirmingDelete] = useState(false);
-  const [deleting, setDeleting] = useState(false);
   const saved = useRef(tracking);
   useEffect(() => { saved.current = tracking; setDraft(tracking); }, [tracking]);
   const holders = Array.isArray(r.holders) ? r.holders : [];
@@ -65,23 +63,18 @@ function RegistrationCard({ registration: r, tracking, ready, onSaved, onDeleted
     } finally { setSaving(false); }
   }
 
-  async function remove() {
-    setDeleting(true);
-    try {
-      const { error } = await supabase.from('ticket_registrations').delete().eq('id', r.id);
-      if (error) throw error;
-      onDeleted(r.id);
-      toast.success('Registration deleted');
-    } catch {
-      setConfirmingDelete(false);
-      toast.error('Could not delete this registration.');
-    } finally { setDeleting(false); }
-  }
-
   return <article className="rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 p-4 text-sm text-summit-foreground break-words">
     <div className="flex flex-wrap justify-between gap-2 mb-2">
       <span className="font-semibold capitalize">{r.ticket_type} × {r.quantity}</span>
-      <span className="text-summit-muted text-xs">{new Date(r.created_at).toLocaleString()}</span>
+      <span className="flex items-center gap-3">
+        <span className="text-summit-muted text-xs">{new Date(r.created_at).toLocaleString()}</span>
+        <label className="flex items-center gap-1.5 cursor-pointer text-xs text-summit-muted">
+          <Checkbox aria-label={`Select registration for ${r.contact_name}`} checked={selected}
+            className="border-summit-muted data-[state=checked]:bg-summit-accent data-[state=checked]:text-summit focus-visible:ring-summit-accent"
+            onCheckedChange={checked => onSelectedChange(r.id, checked === true)} />
+          Select
+        </label>
+      </span>
     </div>
     <div><span className="text-summit-muted">Contact:</span> {r.contact_name} · {r.contact_email} · {r.contact_phone} · {r.country}</div>
     <div className="mt-2 text-summit-muted">Ticket holders:</div>
@@ -103,26 +96,20 @@ function RegistrationCard({ registration: r, tracking, ready, onSaved, onDeleted
             onChange={status => persist({ ...draft, group_issued: status.issued, group_paid: status.paid })} />
         : holders.map((h, i) => <StatusFields key={i} label={`${i + 1}. ${h.full_name}`} status={draft.individual_statuses[String(i)] ?? { issued: false, paid: false }} disabled={!ready || saving}
             onChange={status => persist({ ...draft, individual_statuses: { ...draft.individual_statuses, [String(i)]: status } })} />)}
-      <div className="mt-4 flex flex-wrap items-center justify-end gap-2">
-        {confirmingDelete
-          ? <>
-              <span className="text-xs text-summit-muted">Delete this registration and its invoice tracking? This cannot be undone.</span>
-              <Button size="sm" variant="destructive" disabled={deleting} onClick={remove}>{deleting ? 'Deleting…' : 'Yes, delete'}</Button>
-              <Button size="sm" variant="summit" disabled={deleting} onClick={() => setConfirmingDelete(false)}>Cancel</Button>
-            </>
-          : <Button size="sm" variant="summit" disabled={!ready || saving} onClick={() => setConfirmingDelete(true)}>Delete</Button>}
-      </div>
     </div>
   </article>;
 }
 
-export function TicketRegistrations({ registrations, onDeleted }: { registrations: TicketRegistration[]; onDeleted: (id: string) => void }) {
+export function TicketRegistrations({ registrations, onDeleted }: { registrations: TicketRegistration[]; onDeleted: (ids: string[]) => void }) {
   const [tracking, setTracking] = useState<InvoiceTracking[]>([]);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [ticketType, setTicketType] = useState('all');
   const [university, setUniversity] = useState('all');
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const universities = useMemo(() => universityOptions(registrations), [registrations]);
   const filtered = useMemo(() => filterRegistrations(registrations, ticketType, university), [registrations, ticketType, university]);
   const summary = useMemo(() => registrationSummary(filtered, tracking, university), [filtered, tracking, university]);
@@ -147,6 +134,32 @@ export function TicketRegistrations({ registrations, onDeleted }: { registration
       setTimeout(() => URL.revokeObjectURL(url), 30_000);
     } catch { toast.error('Could not export ticket registrations'); }
     finally { setExporting(false); }
+  }
+
+  function onSelectedChange(id: string, selected: boolean) {
+    setSelectedIds(current => {
+      const next = new Set(current);
+      if (selected) next.add(id); else next.delete(id);
+      return next;
+    });
+    setConfirmingDelete(false);
+  }
+
+  async function deleteSelected() {
+    setDeleting(true);
+    const ids = [...selectedIds];
+    const failed: string[] = [];
+    for (const id of ids) {
+      const { error } = await supabase.from('ticket_registrations').delete().eq('id', id);
+      if (error) failed.push(id);
+    }
+    const deleted = ids.filter(id => !failed.includes(id));
+    if (deleted.length) onDeleted(deleted);
+    setSelectedIds(new Set(failed));
+    setConfirmingDelete(false);
+    setDeleting(false);
+    if (failed.length) toast.error(`Could not delete ${failed.length} registration${failed.length === 1 ? '' : 's'}. They remain selected so you can retry.`);
+    else toast.success(deleted.length === 1 ? 'Registration deleted' : `${deleted.length} registrations deleted`);
   }
 
   return <div className="p-6 text-summit-foreground">
@@ -175,11 +188,24 @@ export function TicketRegistrations({ registrations, onDeleted }: { registration
         <div key={label}><dt className="text-sm text-summit-muted">{label}</dt><dd className="text-2xl font-semibold mt-1">{count}</dd></div>)}
     </dl>
     {!ready && <div role="status" className="mb-4 text-summit-muted">{failed ? <><span>Invoice tracking could not be loaded. </span><Button variant="summit" size="sm" onClick={refresh}>Retry</Button></> : 'Loading invoice tracking…'}</div>}
+    {selectedIds.size > 0 && <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 px-4 py-3">
+      <span className="text-sm text-summit-muted">{selectedIds.size} selected</span>
+      {confirmingDelete
+        ? <span className="flex flex-wrap items-center gap-2">
+            <span className="text-xs text-summit-muted">Delete {selectedIds.size === 1 ? 'this registration' : `these ${selectedIds.size} registrations`} and their invoice tracking? This cannot be undone.</span>
+            <Button size="sm" variant="destructive" disabled={deleting} onClick={deleteSelected}>{deleting ? 'Deleting…' : 'Yes, delete'}</Button>
+            <Button size="sm" variant="summit" disabled={deleting} onClick={() => setConfirmingDelete(false)}>Cancel</Button>
+          </span>
+        : <span className="flex items-center gap-2">
+            <Button size="sm" variant="summit" onClick={() => setSelectedIds(new Set())}>Clear selection</Button>
+            <Button size="sm" variant="destructive" onClick={() => setConfirmingDelete(true)}>Delete selected</Button>
+          </span>}
+    </div>}
     {registrations.length === 0 ? <p className="text-summit-muted text-center py-12">No ticket registrations yet.</p>
       : filtered.length === 0 ? <p className="text-summit-muted text-center py-12">No registrations match these filters.</p>
       : <div className="space-y-4">{filtered.map(r => <RegistrationCard key={r.id} registration={r} ready={ready}
+          selected={selectedIds.has(r.id)} onSelectedChange={onSelectedChange}
           tracking={trackingByRegistration.get(r.id) ?? defaultTracking(r.id)}
-          onSaved={saved => setTracking(current => [...current.filter(t => t.registration_id !== saved.registration_id), saved])}
-          onDeleted={onDeleted} />)}</div>}
+          onSaved={saved => setTracking(current => [...current.filter(t => t.registration_id !== saved.registration_id), saved])} />)}</div>}
   </div>;
 }
