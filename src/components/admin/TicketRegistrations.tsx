@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Download, Save } from 'lucide-react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Download } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
@@ -43,19 +43,24 @@ function StatusFields({ label, status, disabled, onChange }: { label: string; st
 function RegistrationCard({ registration: r, tracking, ready, onSaved }: { registration: TicketRegistration; tracking: InvoiceTracking; ready: boolean; onSaved: (tracking: InvoiceTracking) => void }) {
   const [draft, setDraft] = useState(tracking);
   const [saving, setSaving] = useState(false);
-  useEffect(() => setDraft(tracking), [tracking]);
-  const dirty = JSON.stringify(draft) !== JSON.stringify(tracking);
+  const saved = useRef(tracking);
+  useEffect(() => { saved.current = tracking; setDraft(tracking); }, [tracking]);
   const holders = Array.isArray(r.holders) ? r.holders : [];
 
-  async function save() {
+  async function persist(next: InvoiceTracking) {
+    setDraft(next);
     setSaving(true);
     try {
-      const { data, error } = await supabase.from('ticket_invoice_tracking').upsert({ ...draft, individual_statuses: draft.individual_statuses as unknown as Json }).select().single();
+      const { data, error } = await supabase.from('ticket_invoice_tracking').upsert({ ...next, individual_statuses: next.individual_statuses as unknown as Json }).select().single();
       if (error) throw error;
-      onSaved({ ...data, invoice_mode: data.invoice_mode as InvoiceTracking['invoice_mode'], individual_statuses: data.individual_statuses as unknown as InvoiceTracking['individual_statuses'] });
-      toast.success('Invoice tracking saved');
-    } catch { toast.error('Could not save invoice tracking. Your changes have not been saved.'); }
-    finally { setSaving(false); }
+      const confirmed: InvoiceTracking = { ...data, invoice_mode: data.invoice_mode as InvoiceTracking['invoice_mode'], individual_statuses: data.individual_statuses as unknown as InvoiceTracking['individual_statuses'] };
+      saved.current = confirmed;
+      setDraft(confirmed);
+      onSaved(confirmed);
+    } catch {
+      setDraft(saved.current);
+      toast.error('Could not save invoice tracking. Your change was not saved.');
+    } finally { setSaving(false); }
   }
 
   return <article className="rounded-lg border border-summit-foreground/15 bg-summit-foreground/5 p-4 text-sm text-summit-foreground break-words">
@@ -74,15 +79,15 @@ function RegistrationCard({ registration: r, tracking, ready, onSaved }: { regis
         <div role="group" aria-label={`Invoice type for ${r.contact_name}`} className="flex flex-wrap gap-1">
           {(['group', 'individual'] as const).map(mode => <Button key={mode} size="sm" variant="summit" aria-pressed={draft.invoice_mode === mode}
             className={draft.invoice_mode === mode ? 'bg-summit-foreground text-summit' : ''} disabled={!ready || saving}
-            onClick={() => setDraft({ ...draft, invoice_mode: mode })}>{mode === 'group' ? 'Group invoice' : 'Individual invoices'}</Button>)}
+            onClick={() => persist({ ...draft, invoice_mode: mode })}>{mode === 'group' ? 'Group invoice' : 'Individual invoices'}</Button>)}
         </div>
-        <Button variant="summit" size="sm" disabled={!ready || saving || !dirty} onClick={save}><Save />{saving ? 'Saving…' : 'Save changes'}</Button>
+        <span role="status" aria-live="polite" className="text-xs text-summit-muted">{saving ? 'Saving…' : 'Changes save automatically'}</span>
       </div>
       {draft.invoice_mode === 'group'
         ? <StatusFields label="Group invoice" status={{ issued: draft.group_issued, paid: draft.group_paid }} disabled={!ready || saving}
-            onChange={status => setDraft({ ...draft, group_issued: status.issued, group_paid: status.paid })} />
+            onChange={status => persist({ ...draft, group_issued: status.issued, group_paid: status.paid })} />
         : holders.map((h, i) => <StatusFields key={i} label={`${i + 1}. ${h.full_name}`} status={draft.individual_statuses[String(i)] ?? { issued: false, paid: false }} disabled={!ready || saving}
-            onChange={status => setDraft({ ...draft, individual_statuses: { ...draft.individual_statuses, [String(i)]: status } })} />)}
+            onChange={status => persist({ ...draft, individual_statuses: { ...draft.individual_statuses, [String(i)]: status } })} />)}
     </div>
   </article>;
 }
