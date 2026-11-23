@@ -374,20 +374,19 @@ export const agendaDays: AgendaDay[] = [
             "details": [
               "Sunil Maulik"
             ]
-          },
-          {
-            "title": "Innovation Readiness Clinic (optional, to be confirmed)"
           }
         ]
       },
       {
-        "time": "3:15–4:15 PM",
+        "time": "3:15–4:30 PM",
         "title": "Parallel Workshops – Session B",
         "details": [],
         "tracks": [
           {
             "title": "Intellectual Property Working Session – Continued",
-            "note": "Until 4:00 PM, followed by a break"
+            "details": [
+              "Soody Tronson"
+            ]
           },
           {
             "title": "Commercialization: From Technology to Market Opportunity",
@@ -396,33 +395,36 @@ export const agendaDays: AgendaDay[] = [
             ]
           },
           {
-            "title": "Innovation Readiness Clinic (optional, to be confirmed)"
+            "title": "Sales for Scientists and Engineers",
+            "details": [
+              "Sunil Maulik"
+            ]
           }
         ]
       },
       {
-        "time": "4:15–4:30 PM",
+        "time": "4:30–4:45 PM",
         "title": "Break",
         "details": []
       },
       {
-        "time": "4:30–5:15 PM",
+        "time": "4:45–5:30 PM",
         "title": "Workshop: AI for Research Admin",
         "subtitle": "All participants · Parallel breakout groups",
         "details": []
       },
       {
-        "time": "5:15–5:30 PM",
+        "time": "5:30–5:45 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "5:30–6:30 PM",
+        "time": "5:45–6:45 PM",
         "title": "Reception",
         "details": []
       },
       {
-        "time": "6:30–8:30 PM",
+        "time": "6:45–8:45 PM",
         "title": "Gala Dinner",
         "details": []
       }
