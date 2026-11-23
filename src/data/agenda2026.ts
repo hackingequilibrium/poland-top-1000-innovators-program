@@ -46,6 +46,7 @@ import photo44 from "@/assets/jerzy-orkiszewski.png.asset.json";
 import photo45 from "@/assets/michal-jaros.png.asset.json";
 import photo46 from "@/assets/mike-lyons.png.asset.json";
 import photo47 from "@/assets/stefan-cichowski.png.asset.json";
+import photo48 from "@/assets/marta-gajowa.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -96,6 +97,7 @@ export const agendaPhotos: Record<string, string> = {
   "Michał Jaros": photo45.url,
   "Mike Lyons": photo46.url,
   "Stefan Cichowski": photo47.url,
+  "Marta Gajowa": photo48.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -312,7 +314,8 @@ export const agendaDays: AgendaDay[] = [
         "title": "Powering AI: The Energy Question",
         "details": [
           "Piotr D. Moncarz",
-          "Stefan Cichowski"
+          "Stefan Cichowski",
+          "Marta Gajowa"
         ]
       },
       {
