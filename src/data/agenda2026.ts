@@ -48,6 +48,7 @@ import photo46 from "@/assets/mike-lyons.png.asset.json";
 import photo47 from "@/assets/stefan-cichowski.png.asset.json";
 import photo48 from "@/assets/marta-gajowa.png.asset.json";
 import photo49 from "@/assets/sunil-maulik.png.asset.json";
+import photo50 from "@/assets/nico-fara-v2.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -100,6 +101,7 @@ export const agendaPhotos: Record<string, string> = {
   "Stefan Cichowski": photo47.url,
   "Marta Gajowa": photo48.url,
   "Sunil Maulik": photo49.url,
+  "Nico Fara": photo50.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -111,6 +113,7 @@ export const agendaPhotoClasses: Record<string, string> = {
   "Dariusz Rosati": "object-top",
   "Michael Lepech": "object-top",
   "Marcin Kulasek": "object-top",
+  "Nico Fara": "object-top",
 };
 
 export type AgendaTrack = { title: string; details?: string[]; note?: string };
@@ -362,7 +365,7 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nicole"
+              "Nico Fara"
             ],
             "note": "Extended session · 2:00–4:00 PM · Prior registration required"
           },
@@ -389,7 +392,7 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nicole"
+              "Nico Fara"
             ]
           },
           {
