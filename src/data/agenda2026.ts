@@ -409,7 +409,7 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "4:45–5:30 PM",
+        "time": "4:45–5:45 PM",
         "title": "Workshop: AI for Research Admin",
         "subtitle": "All participants · Parallel breakout groups",
         "details": [
@@ -420,12 +420,12 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "5:30–5:45 PM",
+        "time": "5:45–6:00 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "5:45–6:30 PM",
+        "time": "6:00–6:30 PM",
         "title": "Reception",
         "details": []
       },
