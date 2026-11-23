@@ -47,6 +47,7 @@ import photo45 from "@/assets/michal-jaros.png.asset.json";
 import photo46 from "@/assets/mike-lyons.png.asset.json";
 import photo47 from "@/assets/stefan-cichowski.png.asset.json";
 import photo48 from "@/assets/marta-gajowa.png.asset.json";
+import photo49 from "@/assets/sunil-maulik.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -98,6 +99,7 @@ export const agendaPhotos: Record<string, string> = {
   "Mike Lyons": photo46.url,
   "Stefan Cichowski": photo47.url,
   "Marta Gajowa": photo48.url,
+  "Sunil Maulik": photo49.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -111,7 +113,14 @@ export const agendaPhotoClasses: Record<string, string> = {
   "Marcin Kulasek": "object-top",
 };
 
-export type AgendaSession = { time: string; title: string; details: string[] };
+export type AgendaTrack = { title: string; details?: string[]; note?: string };
+export type AgendaSession = {
+  time: string;
+  title: string;
+  details: string[];
+  subtitle?: string;
+  tracks?: AgendaTrack[];
+};
 export type AgendaDay = { id: string; day: string; date: string; venue: string; theme: string; sessions: AgendaSession[] };
 
 // Schedule rows kept in the data below but not shown on the page.
@@ -332,41 +341,85 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "1:30–2:45 PM",
-        "title": "Workshop: Intellectual Property, From Disclosure to Protection",
+        "time": "1:30–2:00 PM",
+        "title": "Intellectual Property: From Disclosure to Protection",
+        "subtitle": "Plenary session · All participants",
         "details": [
           "Soody Tronson"
         ]
       },
       {
-        "time": "2:45–4:00 PM",
-        "title": "Workshop: IP Essentials Applied to the Disclosures",
-        "details": [
-          "Soody Tronson"
+        "time": "2:00–3:15 PM",
+        "title": "Parallel Workshops – Session A",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Intellectual Property: Applying IP Essentials to Your Invention",
+            "details": [
+              "Soody Tronson"
+            ]
+          },
+          {
+            "title": "Commercialization: From Technology to Market Opportunity",
+            "details": [
+              "Nicole"
+            ],
+            "note": "Extended session · 2:00–4:00 PM · Prior registration required"
+          },
+          {
+            "title": "Sales for Scientists and Engineers",
+            "details": [
+              "Sunil Maulik"
+            ]
+          },
+          {
+            "title": "Innovation Readiness Clinic (optional, to be confirmed)"
+          }
+        ]
+      },
+      {
+        "time": "3:15–4:30 PM",
+        "title": "Parallel Workshops – Session B",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Intellectual Property Working Session – Continued",
+            "note": "Until 4:00 PM, followed by a break"
+          },
+          {
+            "title": "Commercialization: From Technology to Market Opportunity",
+            "details": [
+              "Nicole"
+            ]
+          },
+          {
+            "title": "Innovation Readiness Clinic (optional, to be confirmed)"
+          }
         ]
       },
       {
         "time": "4:00–4:15 PM",
-        "title": "Coffee Break",
+        "title": "Break",
         "details": []
       },
       {
-        "time": "4:15–4:35 PM",
-        "title": "Team Meeting 2",
-        "details": []
-      },
-      {
-        "time": "4:35–4:50 PM",
+        "time": "4:15–4:30 PM",
         "title": "Open Mic",
         "details": []
       },
       {
-        "time": "4:50–6:15 PM",
+        "time": "4:30–5:15 PM",
+        "title": "Workshop: AI for Research Admin",
+        "subtitle": "All participants · Parallel breakout groups",
+        "details": []
+      },
+      {
+        "time": "5:15–6:30 PM",
         "title": "Reception",
         "details": []
       },
       {
-        "time": "6:15–8:15 PM",
+        "time": "6:30–8:30 PM",
         "title": "Gala Dinner",
         "details": []
       }

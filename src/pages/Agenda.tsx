@@ -3,12 +3,48 @@ import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import TopNav from "@/components/top1000/TopNav";
 import { Button } from "@/components/ui/button";
 
-import { agendaDays, agendaPhotos, agendaPhotoClasses, isHiddenSession, type AgendaSession } from "@/data/agenda2026";
+import { agendaDays, agendaPhotos, agendaPhotoClasses, isHiddenSession, type AgendaSession, type AgendaTrack } from "@/data/agenda2026";
 
 const cleanName = (name: string) => name.replace(/\s*\((proposed|tentative)\)$/, ""), photoFor = (name: string) => agendaPhotos[cleanName(name)];
 
 // Logistics rows (breaks, lunches, registrations, receptions) are styled more quietly than program sessions.
-const isBreakRow = (title: string) => /(coffee break|networking|lunch|reception|registration)/i.test(title);
+const isBreakRow = (title: string) => /(coffee break|break|networking|lunch|reception|registration)/i.test(title);
+
+const People = ({ names }: { names: string[] }) => (
+  <div className="mt-2.5 flex flex-wrap items-start gap-x-4 gap-y-3">
+    {names.map((person) => (
+      <figure key={person} className="flex w-24 flex-col items-center">
+        <img
+          src={photoFor(person)}
+          alt={cleanName(person)}
+          width={80}
+          height={80}
+          loading="lazy"
+          className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover ${agendaPhotoClasses[cleanName(person)] ?? "object-top"}`}
+        />
+        <figcaption className="mt-1 text-center text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
+      </figure>
+    ))}
+  </div>
+);
+
+const Track = ({ track }: { track: AgendaTrack }) => {
+  const people = (track.details ?? []).filter((detail) => photoFor(detail));
+  const notes = (track.details ?? []).filter((detail) => !photoFor(detail));
+
+  return (
+    <div>
+      <h4 className="text-sm font-medium leading-snug text-summit-foreground md:text-base">{cleanName(track.title)}</h4>
+      {track.note && <p className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{track.note}</p>}
+      {people.length > 0 && <People names={people} />}
+      {notes.length > 0 && (
+        <div className="mt-2 space-y-1 text-sm font-light leading-relaxed text-summit-muted">
+          {notes.map((note) => <p key={note}>{cleanName(note)}</p>)}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Session = ({ session }: { session: AgendaSession }) => {
   const people = session.details.filter((detail) => photoFor(detail));
@@ -19,26 +55,16 @@ const Session = ({ session }: { session: AgendaSession }) => {
       <p className="text-sm font-light leading-relaxed text-summit-accent md:pt-0.5">{session.time}</p>
       <div className="min-w-0">
         <h3 className={isBreakRow(session.title) ? "text-sm font-light leading-snug text-summit-foreground/85 md:text-base" : "text-base font-medium leading-snug md:text-lg"}>{session.title}</h3>
-        {people.length > 0 && (
-          <div className="mt-2.5 flex flex-wrap items-start gap-x-4 gap-y-3">
-            {people.map((person) => (
-              <figure key={person} className="flex w-24 flex-col items-center">
-                <img
-                  src={photoFor(person)}
-                  alt={cleanName(person)}
-                  width={80}
-                  height={80}
-                  loading="lazy"
-                  className={`h-20 w-20 rounded-full border border-summit-foreground/20 object-cover ${agendaPhotoClasses[cleanName(person)] ?? "object-top"}`}
-                />
-                <figcaption className="mt-1 text-center text-xs font-light leading-relaxed text-summit-muted">{cleanName(person)}</figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
+        {session.subtitle && <p className="mt-1 text-xs font-light leading-relaxed text-summit-muted">{session.subtitle}</p>}
+        {people.length > 0 && <People names={people} />}
         {notes.length > 0 && (
           <div className="mt-2.5 space-y-1 text-sm font-light leading-relaxed text-summit-muted">
             {notes.map((note) => <p key={note}>{cleanName(note)}</p>)}
+          </div>
+        )}
+        {session.tracks && session.tracks.length > 0 && (
+          <div className="mt-3 space-y-4 border-l border-summit-foreground/15 pl-4 md:pl-5">
+            {session.tracks.map((track) => <Track key={track.title} track={track} />)}
           </div>
         )}
       </div>

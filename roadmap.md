@@ -21,3 +21,4 @@
 - [x] Add and verify ticket registration summary counts and university filters.
 - [x] Remove the Invoices, Invoices issued and Invoices paid counts from the ticket registration summary.
 - [x] Remove the Save button: invoice type and status changes save on click.
+- [x] Rewrite Tuesday's after-lunch program: IP plenary, Parallel Workshops Session A and B with tracks, break, Open Mic, AI for Research Admin workshop, shifted Reception and Gala.
