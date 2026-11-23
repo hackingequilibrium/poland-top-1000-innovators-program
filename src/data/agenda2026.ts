@@ -51,6 +51,7 @@ import photo49 from "@/assets/sunil-maulik.png.asset.json";
 import photo50 from "@/assets/nico-fara-v2.png.asset.json";
 import photo51 from "@/assets/jacek-chmielewski.png.asset.json";
 import photo52 from "@/assets/waldemar-miksa.png.asset.json";
+import photo53 from "@/assets/patrick-consorti.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -106,6 +107,7 @@ export const agendaPhotos: Record<string, string> = {
   "Nico Fara": photo50.url,
   "Jacek Chmielewski": photo51.url,
   "Waldemar Miksa": photo52.url,
+  "Patrick Consorti": photo53.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -562,7 +564,8 @@ export const agendaDays: AgendaDay[] = [
             "title": "Pitch Rehearsal: Refining Your Innovation Pitch",
             "details": [
               "Agata Braja",
-              "Hamid Farzaneh"
+              "Hamid Farzaneh",
+              "Patrick Consorti"
             ]
           }
         ]
@@ -582,7 +585,8 @@ export const agendaDays: AgendaDay[] = [
             "title": "Defending Your Pitch: Investor Q&A Practice",
             "details": [
               "Agata Braja",
-              "Hamid Farzaneh"
+              "Hamid Farzaneh",
+              "Patrick Consorti"
             ]
           }
         ]

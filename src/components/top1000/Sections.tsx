@@ -32,6 +32,7 @@ import stefanCichowskiAsset from "@/assets/stefan-cichowski.png.asset.json";
 import martaGajowaAsset from "@/assets/marta-gajowa.png.asset.json";
 import jacekChmielewskiAsset from "@/assets/jacek-chmielewski.png.asset.json";
 import waldemarMiksaAsset from "@/assets/waldemar-miksa.png.asset.json";
+import patrickConsortiAsset from "@/assets/patrick-consorti.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -125,6 +126,7 @@ const stefanCichowski = stefanCichowskiAsset.url;
 const martaGajowa = martaGajowaAsset.url;
 const jacekChmielewski = jacekChmielewskiAsset.url;
 const waldemarMiksa = waldemarMiksaAsset.url;
+const patrickConsorti = patrickConsortiAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -880,6 +882,18 @@ const speakers = [
       "Waldemar Miksa is an education entrepreneur and advocate for universal bilingual education. He serves as President of Yellow House Education and Chairman of the Bilingual Future Foundation. He is the creator of Bilingers, a comprehensive bilingual education system implemented in more than 3,000 educational institutions in cooperation with over 500 local governments, with a growing international presence.",
       "His work focuses on integrating linguistic research, educational innovation, and artificial intelligence to make early bilingual education accessible to all children. Through collaboration with academic institutions, including the University of Warsaw, he develops scalable educational solutions that support parents, educators, and public institutions.",
       "With an academic background in musicology, composition, and conducting, and professional experience in media and Polish Radio, Waldemar brings an interdisciplinary perspective to educational transformation and the responsible application of AI in early childhood education.",
+    ],
+  },
+  {
+    id: "patrick-consorti",
+    name: "Patrick Consorti",
+    role: "Founder & Managing Partner, Bridge2 | Strategic Advisor, PolSV | Investor & Board Member",
+    image: patrickConsorti,
+    imageClass: "object-center",
+    bio: [
+      "Patrick Consorti is a Silicon Valley entrepreneur, investor, and strategic advisor specializing in international business development, innovation strategy, and technology commercialization. As Founder and Managing Partner of Bridge2, he has spent over 14 years advising governments, corporations, and senior executives on U.S. market entry, growth strategies, access to capital, and international partnerships.",
+      "Patrick serves as a Strategic Advisor to PolSV, a Board Member of Vistula Valley and Chargebotic, and an investor in HyLight. He holds an MBA in International Business Management from the Thunderbird School of Global Management.",
+      "In November 2026, Patrick was awarded the Bene Merito Honorary Decoration by Poland's Minister of Foreign Affairs in recognition of his contributions to strengthening Poland's international relationships and fostering collaboration between Poland and the United States.",
     ],
   },
 ];
