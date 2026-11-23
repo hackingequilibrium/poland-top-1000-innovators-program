@@ -368,8 +368,7 @@ export const agendaDays: AgendaDay[] = [
             "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
               "Nico Fara"
-            ],
-            "note": "Extended session · 2:00–4:00 PM · Prior registration required"
+            ]
           },
           {
             "title": "Sales for Scientists and Engineers",
