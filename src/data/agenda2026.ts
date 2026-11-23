@@ -355,7 +355,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:00–3:15 PM",
-        "title": "Parallel Workshops – Session A",
+        "title": "Parallel Workshops – 2A",
         "details": [],
         "tracks": [
           {
@@ -380,7 +380,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "3:15–4:30 PM",
-        "title": "Parallel Workshops – Session B",
+        "title": "Parallel Workshops – 2B",
         "details": [],
         "tracks": [
           {
