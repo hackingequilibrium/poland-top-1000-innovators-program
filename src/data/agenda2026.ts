@@ -50,6 +50,7 @@ import photo48 from "@/assets/marta-gajowa.png.asset.json";
 import photo49 from "@/assets/sunil-maulik.png.asset.json";
 import photo50 from "@/assets/nico-fara-v2.png.asset.json";
 import photo51 from "@/assets/jacek-chmielewski.png.asset.json";
+import photo52 from "@/assets/waldemar-miksa.png.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -104,6 +105,7 @@ export const agendaPhotos: Record<string, string> = {
   "Sunil Maulik": photo49.url,
   "Nico Fara": photo50.url,
   "Jacek Chmielewski": photo51.url,
+  "Waldemar Miksa": photo52.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
