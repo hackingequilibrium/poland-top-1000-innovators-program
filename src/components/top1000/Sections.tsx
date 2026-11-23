@@ -29,6 +29,7 @@ import mikeLyonsAsset from "@/assets/mike-lyons.png.asset.json";
 import nicoFaraAsset from "@/assets/nico-fara-v2.png.asset.json";
 import sunilMaulikAsset from "@/assets/sunil-maulik.png.asset.json";
 import stefanCichowskiAsset from "@/assets/stefan-cichowski.png.asset.json";
+import martaGajowaAsset from "@/assets/marta-gajowa.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -119,6 +120,7 @@ const mikeLyons = mikeLyonsAsset.url;
 const nicoFara = nicoFaraAsset.url;
 const sunilMaulik = sunilMaulikAsset.url;
 const stefanCichowski = stefanCichowskiAsset.url;
+const martaGajowa = martaGajowaAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -839,6 +841,18 @@ const speakers = [
     bio: [
       "Stefan Cichowski is the founder and CEO of MOON Energies Inc., where he leads the development of renewable energy technologies for urban environments. A Boston University astrophysics graduate based in Boston, he brings experience in ocean current research with the Polish Academy of Sciences and Woods Hole Oceanographic Institution, as well as applied work in hydrogen technology with ASE Technology Group.",
       "Stefan also founded the My Space Love Story Foundation, through which he has organized international science conferences and built partnerships among researchers, astronauts, and industry leaders. His work spans scientific research, clean energy development, and international collaboration.",
+    ],
+  },
+  {
+    id: "marta-gajowa",
+    name: "Marta Gajowa",
+    role: "Neuroscientist & AI Entrepreneur | Founder, Stealth NeuroAI Startup | Former Researcher, UC Berkeley",
+    image: martaGajowa,
+    imageClass: "object-center",
+    bio: [
+      "Marta Gajowa is a neuroscientist and entrepreneur with 15 years of experience investigating how the brain processes information. She is currently building a NeuroAI research lab in Silicon Valley, supported by the NVIDIA Inception program, focused on developing energy-efficient AI architectures inspired by biological principles.",
+      "Prior to becoming a founder, Marta spent six years as a postdoctoral researcher at UC Berkeley's Adesnik Lab, where she developed high-throughput neural connectivity mapping methods combining optogenetics, computational neuroscience, and advanced imaging technologies. Her contributions earned her the Outstanding Postdoc Award and the Postdoc Achievement Award at UC Berkeley in 2023.",
+      "She holds a PhD from Université Paris Cité, where her research focused on neuronal computation and neurophysiology. Her current work bridges neuroscience, artificial intelligence, and entrepreneurship to address the growing energy and computational demands of AI.",
     ],
   },
 ];
