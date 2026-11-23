@@ -215,14 +215,14 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Innovation and Technology Readiness",
             "details": [
-              "Hamid Farzaneh",
-              "Agata Braja"
+              "Hamid Farzaneh"
             ]
           },
           {
-            "title": "From Technology to Commercial Opportunity",
+            "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nico Fara"
+              "Nico Fara",
+              "Agata Braja"
             ]
           },
           {
@@ -246,14 +246,14 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Innovation and Technology Readiness",
             "details": [
-              "Hamid Farzaneh",
-              "Agata Braja"
+              "Hamid Farzaneh"
             ]
           },
           {
-            "title": "From Technology to Commercial Opportunity",
+            "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nico Fara"
+              "Nico Fara",
+              "Agata Braja"
             ]
           }
         ]
@@ -400,7 +400,8 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nico Fara"
+              "Nico Fara",
+              "Agata Braja"
             ]
           },
           {
@@ -425,7 +426,8 @@ export const agendaDays: AgendaDay[] = [
           {
             "title": "Commercialization: From Technology to Market Opportunity",
             "details": [
-              "Nico Fara"
+              "Nico Fara",
+              "Agata Braja"
             ]
           },
           {
