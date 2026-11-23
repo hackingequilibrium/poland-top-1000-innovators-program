@@ -209,10 +209,28 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "1:10–2:25 PM",
-        "title": "Workshop 1A: Innovation and Technology Readiness",
-        "details": [
-          "Hamid Farzaneh",
-          "Agata Braja"
+        "title": "Parallel Workshops – 1A",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Innovation and Technology Readiness",
+            "details": [
+              "Hamid Farzaneh",
+              "Agata Braja"
+            ]
+          },
+          {
+            "title": "From Technology to Commercial Opportunity",
+            "details": [
+              "Nico Fara"
+            ]
+          },
+          {
+            "title": "Sales for Scientists and Engineers",
+            "details": [
+              "Sunil Maulik"
+            ]
+          }
         ]
       },
       {
@@ -222,8 +240,23 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:40–3:55 PM",
-        "title": "Workshop 1B: From Technology to Commercial Opportunity",
-        "details": []
+        "title": "Parallel Workshops – 1B",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Innovation and Technology Readiness",
+            "details": [
+              "Hamid Farzaneh",
+              "Agata Braja"
+            ]
+          },
+          {
+            "title": "From Technology to Commercial Opportunity",
+            "details": [
+              "Nico Fara"
+            ]
+          }
+        ]
       },
       {
         "time": "3:55–4:30 PM",
