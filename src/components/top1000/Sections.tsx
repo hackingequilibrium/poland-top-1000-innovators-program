@@ -30,6 +30,7 @@ import nicoFaraAsset from "@/assets/nico-fara-v2.png.asset.json";
 import sunilMaulikAsset from "@/assets/sunil-maulik.png.asset.json";
 import stefanCichowskiAsset from "@/assets/stefan-cichowski.png.asset.json";
 import martaGajowaAsset from "@/assets/marta-gajowa.png.asset.json";
+import jacekChmielewskiAsset from "@/assets/jacek-chmielewski.png.asset.json";
 import markChandlerAsset from "@/assets/mark-chandler.png.asset.json";
 import michalJarosAsset from "@/assets/michal-jaros.png.asset.json";
 import piotrMoncarzAsset from "@/assets/piotr-moncarz.png.asset.json";
@@ -121,6 +122,7 @@ const nicoFara = nicoFaraAsset.url;
 const sunilMaulik = sunilMaulikAsset.url;
 const stefanCichowski = stefanCichowskiAsset.url;
 const martaGajowa = martaGajowaAsset.url;
+const jacekChmielewski = jacekChmielewskiAsset.url;
 const darrenCooke = darrenCookeAsset.url;
 const christinaHarvey = christinaHarveyAsset.url;
 const leahWalker = leahWalkerAsset.url;
@@ -853,6 +855,17 @@ const speakers = [
       "Marta Gajowa is a neuroscientist and entrepreneur with 15 years of experience investigating how the brain processes information. She is currently building a NeuroAI research lab in Silicon Valley, supported by the NVIDIA Inception program, focused on developing energy-efficient AI architectures inspired by biological principles.",
       "Prior to becoming a founder, Marta spent six years as a postdoctoral researcher at UC Berkeley's Adesnik Lab, where she developed high-throughput neural connectivity mapping methods combining optogenetics, computational neuroscience, and advanced imaging technologies. Her contributions earned her the Outstanding Postdoc Award and the Postdoc Achievement Award at UC Berkeley in 2023.",
       "She holds a PhD from Université Paris Cité, where her research focused on neuronal computation and neurophysiology. Her current work bridges neuroscience, artificial intelligence, and entrepreneurship to address the growing energy and computational demands of AI.",
+    ],
+  },
+  {
+    id: "jacek-chmielewski",
+    name: "Jacek Chmielewski",
+    role: "Chief Information Officer, PolSV | Professor, Cracow University of Technology | Research Fellow, Auburn University",
+    image: jacekChmielewski,
+    imageClass: "object-center",
+    bio: [
+      "Jacek Chmielewski is a civil engineer, researcher, and academic with over 30 years of experience in transportation engineering, traffic modeling, road safety, and data analytics. He serves as Chief Information Officer at the Poland in Silicon Valley Center for Science, Innovation, and Entrepreneurship (PolSV), Professor at Cracow University of Technology, and Research Fellow at Auburn University in Alabama.",
+      "His research focuses on transportation network planning, predictive traffic modeling, infrastructure safety, and large-scale data processing. He combines engineering expertise with software development and computational methods to address real-world transportation challenges. His current research includes collaboration with Orange Polska on vehicle speed prediction using mobile network data to improve road safety.",
     ],
   },
 ];
