@@ -378,7 +378,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "3:15–4:30 PM",
+        "time": "3:15–4:15 PM",
         "title": "Parallel Workshops – Session B",
         "details": [],
         "tracks": [
@@ -398,13 +398,8 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "4:00–4:15 PM",
-        "title": "Break",
-        "details": []
-      },
-      {
         "time": "4:15–4:30 PM",
-        "title": "Open Mic",
+        "title": "Break",
         "details": []
       },
       {
@@ -414,7 +409,12 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "5:15–6:30 PM",
+        "time": "5:15–5:30 PM",
+        "title": "Open Mic",
+        "details": []
+      },
+      {
+        "time": "5:30–6:30 PM",
         "title": "Reception",
         "details": []
       },
