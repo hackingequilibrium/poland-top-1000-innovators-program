@@ -554,9 +554,17 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "1:25–2:30 PM",
-        "title": "Workshop 3A: Pitch and Poster Rehearsal",
-        "details": [
-          "Agata Braja"
+        "title": "Parallel Workshops – 3A",
+        "subtitle": "Three parallel groups · Mentor feedback",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Pitch Rehearsal: Refining Your Innovation Pitch",
+            "details": [
+              "Agata Braja",
+              "Hamid Farzaneh"
+            ]
+          }
         ]
       },
       {
@@ -566,8 +574,18 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "2:45–4:00 PM",
-        "title": "Workshop 3B: Answering Investor Questions Practice",
-        "details": []
+        "title": "Parallel Workshops – 3B",
+        "subtitle": "Three parallel groups · Mentor feedback",
+        "details": [],
+        "tracks": [
+          {
+            "title": "Defending Your Pitch: Investor Q&A Practice",
+            "details": [
+              "Agata Braja",
+              "Hamid Farzaneh"
+            ]
+          }
+        ]
       },
       {
         "time": "2:45–4:00 PM",
@@ -575,12 +593,7 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "4:00–4:20 PM",
-        "title": "Team Meeting 3",
-        "details": []
-      },
-      {
-        "time": "4:20–4:30 PM",
+        "time": "4:00–4:10 PM",
         "title": "Open Mic",
         "details": []
       }
