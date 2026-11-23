@@ -62,7 +62,6 @@ import mariaKaszynskaAsset from "@/assets/maria-kaszynska.png.asset.json";
 import dariuszRosatiAsset from "@/assets/dariusz-rosati.png.asset.json";
 import tadeuszUhlAsset from "@/assets/tadeusz-uhl.png.asset.json";
 import pawelMorkiszAsset from "@/assets/pawel-morkisz.png.asset.json";
-import waldemarPriebeAsset from "@/assets/waldemar-priebe.png.asset.json";
 import adamJanuszkoAsset from "@/assets/adam-januszko.png.asset.json";
 import shanaPennAsset from "@/assets/shana-penn.png.asset.json";
 import julieMaigretShapiroAsset from "@/assets/julie-maigret-shapiro.png.asset.json";
@@ -741,17 +740,6 @@ const speakers = [
     ],
   },
   {
-    id: "waldemar-priebe",
-    name: "Waldemar Priebe",
-    role: "Professor of Medicinal Chemistry, MD Anderson Cancer Center | Cancer Drug Discovery & Biotechnology Entrepreneur",
-    image: waldemarPriebeAsset.url,
-    imageClass: "object-center",
-    bio: [
-      "Prof. Waldemar Priebe is a Professor of Medicinal Chemistry at the University of Texas MD Anderson Cancer Center, specializing in the discovery and development of innovative cancer therapeutics. His research combines chemistry and biology to develop drugs targeting DNA, cellular signaling, and metabolic pathways involved in cancer progression.",
-      "He has developed thousands of novel compounds, several of which have advanced into clinical trials. A prolific scientist and inventor, he has authored more than 200 peer-reviewed publications and holds over 40 patents. His work bridges fundamental scientific discovery, drug development, and the commercialization of new cancer treatments.",
-    ],
-  },
-  {
     id: "bob-klein",
     name: "Bob Klein",
     role: "Founder, California Institute for Regenerative Medicine (CIRM) | Stem Cell Research Advocate",
@@ -906,7 +894,11 @@ const speakers = [
 
 // Speakers kept in the list below but not shown on the page. Remove an id here to publish the card again.
 const hiddenSpeakerIds = ["maria-kaszynska", "wojciech-balczun"];
-const visibleSpeakers = speakers.filter((s) => !hiddenSpeakerIds.includes(s.id));
+// Names are compared ignoring case and diacritics, so "Łukasz" sits under L and "Paweł" under P.
+const speakerCollator = new Intl.Collator("en", { sensitivity: "base" });
+const visibleSpeakers = speakers
+  .filter((s) => !hiddenSpeakerIds.includes(s.id))
+  .sort((a, b) => speakerCollator.compare(a.name, b.name));
 
 export const SpeakersSection = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
