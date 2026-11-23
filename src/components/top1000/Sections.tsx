@@ -896,9 +896,15 @@ const speakers = [
 const hiddenSpeakerIds = ["maria-kaszynska", "wojciech-balczun"];
 // Names are compared ignoring case and diacritics, so "Łukasz" sits under L and "Paweł" under P.
 const speakerCollator = new Intl.Collator("en", { sensitivity: "base" });
+// Surname = the last word of the name, so middle initials ("Alojzy Z. Nowak") sort under N.
+const surnameOf = (name: string) => name.trim().split(/\s+/).slice(-1)[0];
 const visibleSpeakers = speakers
   .filter((s) => !hiddenSpeakerIds.includes(s.id))
-  .sort((a, b) => speakerCollator.compare(a.name, b.name));
+  .sort(
+    (a, b) =>
+      speakerCollator.compare(surnameOf(a.name), surnameOf(b.name)) ||
+      speakerCollator.compare(a.name, b.name),
+  );
 
 export const SpeakersSection = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
