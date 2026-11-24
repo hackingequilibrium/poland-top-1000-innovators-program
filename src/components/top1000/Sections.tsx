@@ -78,6 +78,7 @@ import panAsset from "@/assets/pan-logo-white.png.asset.json";
 import lukasiewiczAsset from "@/assets/lukasiewicz-logo-white.png.asset.json";
 import ministerForeignAsset from "@/assets/minister-foreign-affairs-white.png.asset.json";
 import ministerDigitalAsset from "@/assets/minister-digital-affairs.png.asset.json";
+import honoraryConsulateAsset from "@/assets/honorary-consulate-poland-san-francisco.png.asset.json";
 
 
 
@@ -1226,6 +1227,7 @@ const pan = panAsset.url;
 const lukasiewicz = lukasiewiczAsset.url;
 const ministerForeign = ministerForeignAsset.url;
 const ministerDigital = ministerDigitalAsset.url;
+const honoraryConsulate = honoraryConsulateAsset.url;
 
 type Partner = {
   name: string;
@@ -1330,6 +1332,12 @@ const honoraryPatronage: Partner[] = [
     href: "https://lukasiewicz.gov.pl/en/",
     img: lukasiewicz,
     imgClass: "h-24 md:h-28 w-auto object-contain",
+  },
+  {
+    name: "Honorary Consulate of the Republic of Poland in San Francisco",
+    href: "https://sanfrancisco.consulate.gov.pl/",
+    img: honoraryConsulate,
+    imgClass: "h-16 md:h-24 w-auto object-contain",
   },
 ];
 
