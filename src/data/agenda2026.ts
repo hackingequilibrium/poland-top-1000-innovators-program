@@ -508,31 +508,31 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "9:50–10:15 AM",
-        "title": "Securing the Next Frontier: Space Technologies and National Security",
+        "time": "9:50–10:20 AM",
+        "title": "Panel: The Aerospace Startup Conveyor Belt",
         "details": [
-          "Leah Walker"
+          "Tadeusz Uhl",
+          "Artur Chmielewski",
+          "Alexandre M. Bayen"
         ]
       },
       {
-        "time": "10:15–10:40 AM",
+        "time": "10:20–10:45 AM",
         "title": "Nature's Blueprint: Designing the Next Generation of Aircraft",
         "details": [
           "Christina Harvey"
         ]
       },
       {
-        "time": "10:40–11:00 AM",
+        "time": "10:45–11:05 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "11:00–11:30 AM",
-        "title": "Panel: The Aerospace Startup Conveyor Belt",
+        "time": "11:05–11:30 AM",
+        "title": "Securing the Next Frontier: Space Technologies and National Security",
         "details": [
-          "Tadeusz Uhl",
-          "Artur Chmielewski",
-          "Alexandre M. Bayen"
+          "Leah Walker"
         ]
       },
       {
