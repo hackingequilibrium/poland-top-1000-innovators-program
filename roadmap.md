@@ -23,3 +23,5 @@
 - [x] Remove the Save button: invoice type and status changes save on click.
 - [x] Rewrite Tuesday's after-lunch program: IP plenary, Parallel Workshops Session A and B with tracks, break, Open Mic, AI for Research Admin workshop, shifted Reception and Gala.
 - [x] Add Jacek Chmielewski to the speakers grid and his photo under the AI for Research Admin workshop.
+- [x] Replace Michał Jaros speaker photo with the supplied portrait.
+- [x] Move Jaros, Kulasek and Rosati to the top row of the speakers grid.

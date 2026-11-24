@@ -900,10 +900,17 @@ const hiddenSpeakerIds = ["maria-kaszynska", "wojciech-balczun"];
 const speakerCollator = new Intl.Collator("en", { sensitivity: "base" });
 // Surname = the last word of the name, so middle initials ("Alojzy Z. Nowak") sort under N.
 const surnameOf = (name: string) => name.trim().split(/\s+/).slice(-1)[0];
+// Speakers pinned to the front of the grid, in this order; everyone else stays alphabetical by surname.
+const pinnedSpeakerIds = ["michal-jaros", "marcin-kulasek", "dariusz-rosati"];
+const pinRank = (id: string) => {
+  const i = pinnedSpeakerIds.indexOf(id);
+  return i === -1 ? pinnedSpeakerIds.length : i;
+};
 const visibleSpeakers = speakers
   .filter((s) => !hiddenSpeakerIds.includes(s.id))
   .sort(
     (a, b) =>
+      pinRank(a.id) - pinRank(b.id) ||
       speakerCollator.compare(surnameOf(a.name), surnameOf(b.name)) ||
       speakerCollator.compare(a.name, b.name),
   );
