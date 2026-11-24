@@ -461,12 +461,12 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "6:00–6:30 PM",
+        "time": "6:00–6:45 PM",
         "title": "Reception",
         "details": []
       },
       {
-        "time": "6:30–8:30 PM",
+        "time": "6:45–8:45 PM",
         "title": "Gala Dinner",
         "details": []
       }
