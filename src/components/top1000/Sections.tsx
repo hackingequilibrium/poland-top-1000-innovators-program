@@ -77,6 +77,7 @@ import ncbrAsset from "@/assets/ncbr-logo-white.png.asset.json";
 import panAsset from "@/assets/pan-logo-white.png.asset.json";
 import lukasiewiczAsset from "@/assets/lukasiewicz-logo-white.png.asset.json";
 import ministerForeignAsset from "@/assets/minister-foreign-affairs-white.png.asset.json";
+import ministerDigitalAsset from "@/assets/minister-digital-affairs.png.asset.json";
 
 
 
@@ -1224,6 +1225,7 @@ const ncbr = ncbrAsset.url;
 const pan = panAsset.url;
 const lukasiewicz = lukasiewiczAsset.url;
 const ministerForeign = ministerForeignAsset.url;
+const ministerDigital = ministerDigitalAsset.url;
 
 type Partner = {
   name: string;
@@ -1285,6 +1287,12 @@ const honoraryPatronage: Partner[] = [
     name: "Minister of Foreign Affairs, Republic of Poland",
     href: "https://www.gov.pl/web/diplomacy",
     img: ministerForeign,
+    imgClass: "h-14 md:h-20 w-auto object-contain",
+  },
+  {
+    name: "Minister of Digital Affairs, Republic of Poland",
+    href: "https://www.gov.pl/web/cyfryzacja",
+    img: ministerDigital,
     imgClass: "h-14 md:h-20 w-auto object-contain",
   },
   {
