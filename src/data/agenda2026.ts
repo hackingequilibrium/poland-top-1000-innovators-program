@@ -153,36 +153,38 @@ export const agendaDays: AgendaDay[] = [
         "details": []
       },
       {
-        "time": "9:00–9:35 AM",
+        "time": "9:00–9:40 AM",
         "title": "Summit Opening",
         "details": [
           "Piotr D. Moncarz",
+          "Marcin Kulasek",
+          "Michał Jaros",
           "Dianne Taube",
           "Jerzy Orkiszewski",
           "Mark Chandler"
         ]
       },
       {
-        "time": "9:35–10:05 AM",
+        "time": "9:40–10:10 AM",
         "title": "AI Instead of Humboldt: The University of the Future",
         "details": [
           "Alojzy Z. Nowak"
         ]
       },
       {
-        "time": "10:05–10:25 AM",
+        "time": "10:10–10:30 AM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "10:25–10:50 AM",
+        "time": "10:30–10:55 AM",
         "title": "California's Stem Cell Strategy: Turning Science into Impact",
         "details": [
           "Bob Klein"
         ]
       },
       {
-        "time": "10:50–11:15 AM",
+        "time": "10:55–11:20 AM",
         "title": "Fireside: AI in Clinical Practice and Health Technology",
         "details": [
           "Jeremy Sewell",
@@ -191,14 +193,14 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "11:15–11:35 AM",
+        "time": "11:20–11:40 AM",
         "title": "Fireside: Drug Discovery in the Age of AI",
         "details": [
           "Jerzy Orkiszewski"
         ]
       },
       {
-        "time": "11:35 AM–12:10 PM",
+        "time": "11:40 AM–12:15 PM",
         "title": "PolSV: Mission, Funding Model and the 2027 Quarterly Program",
         "details": [
           "Piotr D. Moncarz",
@@ -207,12 +209,12 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "12:10–1:10 PM",
+        "time": "12:15–1:15 PM",
         "title": "Networking Lunch",
         "details": []
       },
       {
-        "time": "1:10–2:25 PM",
+        "time": "1:15–2:30 PM",
         "title": "Parallel Workshops – 1A",
         "details": [],
         "tracks": [
@@ -238,12 +240,12 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "2:25–2:40 PM",
+        "time": "2:30–2:45 PM",
         "title": "Coffee Break",
         "details": []
       },
       {
-        "time": "2:40–3:55 PM",
+        "time": "2:45–4:00 PM",
         "title": "Parallel Workshops – 1B",
         "details": [],
         "tracks": [
@@ -263,7 +265,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "3:55–4:20 PM",
+        "time": "4:00–4:25 PM",
         "title": "Education for the Future",
         "details": [
           "Esther Wojcicki",
@@ -271,7 +273,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "4:20–4:45 PM",
+        "time": "4:25–4:50 PM",
         "title": "Project-Based Learning",
         "details": [
           "Renate Fruchter",
@@ -279,7 +281,7 @@ export const agendaDays: AgendaDay[] = [
         ]
       },
       {
-        "time": "4:45–4:55 PM",
+        "time": "4:50–5:00 PM",
         "title": "Open Mic",
         "details": []
       }
