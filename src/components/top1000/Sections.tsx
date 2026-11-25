@@ -655,12 +655,13 @@ const speakers = [
   {
     id: "maria-kaszynska",
     name: "Maria Kaszyńska",
-    role: "Chair, Polish Academy of Sciences Civil & Water Engineering Committee | President, Polish Association of Civil Engineers and Technicians",
+    role: "Chairwoman, Polish Association of Construction Engineers and Technicians (PZITB) | Professor, West Pomeranian University of Technology | Civil Engineering Expert",
     image: mariaKaszynska,
     imageClass: "object-center",
     bio: [
-      "Prof. Maria Kaszyńska is a civil engineering scholar and leader in construction materials research. She chairs the Committee on Civil and Water Engineering of the Polish Academy of Sciences and serves as President of the Polish Association of Civil Engineers and Technicians (PZITB), the first woman to hold the position in the organization's 90-year history.",
-      "A former Dean of the Faculty of Civil Engineering and Architecture at the West Pomeranian University of Technology, she has authored over 150 scientific publications focused on concrete technology. She is a Fellow of the American Concrete Institute (ACI) and has served on its International Advisory Board. Her contributions to engineering, research, and international collaboration have earned numerous honors, including the Knight's Cross of the Order of Polonia Restituta.",
+      "Prof. Maria Kaszyńska is a civil engineer, researcher, and academic leader specializing in concrete technology, reinforced concrete structures, and construction materials engineering. She serves as Chairwoman of the Polish Association of Construction Engineers and Technicians (PZITB) and heads the Department of Reinforced Concrete Structures and Concrete Technology at the West Pomeranian University of Technology in Szczecin, where she served as Dean of the Faculty of Civil Engineering and Architecture from 2012 to 2020.",
+      "She chairs the Construction Materials Engineering Section of the Polish Academy of Sciences' Committee on Civil and Hydraulic Engineering and has led the organizing committee of the International Conference on Structural Failures since 1994.",
+      "Her contributions to engineering, science, and education have earned her numerous distinctions, including the Knight's Cross of the Order of Polonia Restituta and the Sapientia et Veritas Silver Medal.",
     ],
   },
   {
@@ -895,7 +896,7 @@ const speakers = [
 
 
 // Speakers kept in the list below but not shown on the page. Remove an id here to publish the card again.
-const hiddenSpeakerIds = ["maria-kaszynska", "wojciech-balczun"];
+const hiddenSpeakerIds = ["wojciech-balczun"];
 // Names are compared ignoring case and diacritics, so "Łukasz" sits under L and "Paweł" under P.
 const speakerCollator = new Intl.Collator("en", { sensitivity: "base" });
 // Surname = the last word of the name, so middle initials ("Alojzy Z. Nowak") sort under N.
