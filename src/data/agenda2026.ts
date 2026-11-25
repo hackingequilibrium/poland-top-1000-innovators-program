@@ -314,7 +314,7 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "9:30–9:50 AM",
-        "title": "Poland as a Rising Hub for the Next Era of Higher Education",
+        "title": "Poland as a Rising Hub for Science and Higher Education",
         "details": [
           "Marcin Kulasek"
         ]
