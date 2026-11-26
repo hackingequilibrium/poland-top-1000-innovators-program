@@ -52,6 +52,7 @@ import photo50 from "@/assets/nico-fara-v2.png.asset.json";
 import photo51 from "@/assets/jacek-chmielewski.png.asset.json";
 import photo52 from "@/assets/waldemar-miksa.png.asset.json";
 import photo53 from "@/assets/patrick-consorti.png.asset.json";
+import photo54 from "@/assets/robert-grey.jpg.asset.json";
 
 export const agendaPhotos: Record<string, string> = {
   "Piotr D. Moncarz": photo0.url,
@@ -108,6 +109,7 @@ export const agendaPhotos: Record<string, string> = {
   "Jacek Chmielewski": photo51.url,
   "Waldemar Miksa": photo52.url,
   "Patrick Consorti": photo53.url,
+  "Robert Grey": photo54.url,
 };
 
 // Per-speaker crop positions so small circular photos match the homepage cards.
@@ -275,9 +277,10 @@ export const agendaDays: AgendaDay[] = [
       },
       {
         "time": "4:25–4:50 PM",
-        "title": "Project-Based Learning",
+        "title": "The University as a Testbed for Emerging Technologies",
         "details": [
-          "Renate Fruchter"
+          "Renate Fruchter",
+          "Robert Grey"
         ]
       },
       {
