@@ -79,6 +79,7 @@ import lukasiewiczAsset from "@/assets/lukasiewicz-logo-white.png.asset.json";
 import ministerForeignAsset from "@/assets/minister-foreign-affairs-white.png.asset.json";
 import ministerDigitalAsset from "@/assets/minister-digital-affairs.png.asset.json";
 import honoraryConsulateAsset from "@/assets/honorary-consulate-poland-san-francisco.png.asset.json";
+import robertGreyAsset from "@/assets/robert-grey.jpg.asset.json";
 
 
 
@@ -140,6 +141,7 @@ const shanaPenn = shanaPennAsset.url;
 const julieMaigretShapiro = julieMaigretShapiroAsset.url;
 const alojzyNowak = alojzyNowakAsset.url;
 const wojciechBalczun = wojciechBalczunAsset.url;
+const robertGrey = robertGreyAsset.url;
 
 
 
@@ -885,6 +887,17 @@ const speakers = [
       "Patrick Consorti is a Silicon Valley entrepreneur, investor, and strategic advisor specializing in international business development, innovation strategy, and technology commercialization. As Founder and Managing Partner of Bridge2, he has spent over 14 years advising governments, corporations, and senior executives on U.S. market entry, growth strategies, access to capital, and international partnerships.",
       "Patrick serves as a Strategic Advisor to PolSV, a Board Member of Vistula Valley and Chargebotic, and an investor in HyLight. He holds an MBA in International Business Management from the Thunderbird School of Global Management.",
       "In November 2026, Patrick was awarded the Bene Merito Honorary Decoration by Poland's Minister of Foreign Affairs in recognition of his contributions to strengthening Poland's international relationships and fostering collaboration between Poland and the United States.",
+    ],
+  },
+  {
+    id: "robert-grey",
+    name: "Robert Grey",
+    role: "Chancellor, University of Warsaw | Former Deputy Minister of Foreign Affairs, Poland",
+    image: robertGrey,
+    imageClass: "object-center",
+    bio: [
+      "Robert Grey is Chancellor of the University of Warsaw. His work focuses on institutional development, international academic cooperation, and partnerships between academia, industry, and government. He is particularly interested in the role of artificial intelligence in modern management, governance, and economic policymaking.",
+      "He previously served as Poland's Deputy Minister of Foreign Affairs with responsibility for economic diplomacy, where he helped build international partnerships and supported Polish companies expanding into new markets.",
     ],
   },
 ];
